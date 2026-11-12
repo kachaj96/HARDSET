@@ -84,5 +84,24 @@ class ValidationTests(unittest.TestCase):
         self.assertEqual(p,c)
     def test_no_external_profile_assumptions(self):
         p=base();self.assertEqual(set(p['areas']),set(CORE))
+    def test_non_object_plan_rejected(self):
+        for bad in ([1], 'plan', None, 3):
+            with self.assertRaises(TypeError): evaluate(bad)
+    def test_non_object_constraints_or_review_rejected(self):
+        for key in ('constraints','human_review'):
+            p=base(); p[key]=[]
+            with self.assertRaises(ValueError): evaluate(p)
+    def test_cli_malformed_input_exit_code_2(self):
+        import subprocess, tempfile, os
+        for payload in ('[1]', '"x"', '{"constraints": []}', '{not json'):
+            with tempfile.NamedTemporaryFile('w',suffix='.json',delete=False,encoding='utf-8') as f:
+                f.write(payload)
+            try:
+                r=subprocess.run([sys.executable,str(ROOT/'validation'/'validator.py'),f.name],
+                                 capture_output=True,text=True)
+            finally:
+                os.unlink(f.name)
+            self.assertEqual(r.returncode,2,payload)
+            self.assertNotIn('Traceback',r.stderr,payload)
 
 if __name__=='__main__': unittest.main()

@@ -39,14 +39,16 @@ def evaluate(plan: dict) -> dict:
     issues = []
     ledger = {}
     session_estimates = {}
+    if not isinstance(plan,dict):
+        raise TypeError('Plan must be a JSON object')
     profile = plan.get('constraints', {})
     area_data = plan.get('areas', {})
     sessions = plan.get('sessions', [])
     overrides = plan.get('functional_overrides', {})
-    if not isinstance(plan,dict):
-        raise TypeError('Plan must be a JSON object')
     if not isinstance(area_data,dict) or not isinstance(sessions,list) or not isinstance(overrides,dict):
         raise ValueError('areas and functional_overrides must be objects; sessions must be list')
+    if not isinstance(profile,dict) or not isinstance(plan.get('human_review', {}),dict):
+        raise ValueError('constraints and human_review must be objects')
     if not isinstance(plan.get('goals'),list) or not plan.get('goals'):
         issues.append(finding('CONDITIONAL','GOALS_UNSPECIFIED','Provide at least one explicit declared goal; no goal fit can be inferred.'))
     reviews = plan.get('human_review', {})
@@ -203,6 +205,10 @@ def main() -> int:
         return 0 if result['status']=='PASS' else (1 if result['status']=='CONDITIONAL' else 2)
     except (OSError, ValueError, TypeError) as error:
         print(f'Cannot validate: {error}',file=sys.stderr)
+        return 2
+    except (AttributeError, KeyError) as error:
+        # Fail closed: an unanticipated input shape must never surface as exit 1 (CONDITIONAL).
+        print(f'Cannot validate: malformed plan structure ({type(error).__name__}: {error})',file=sys.stderr)
         return 2
 
 if __name__ == '__main__':

@@ -24,8 +24,9 @@ python -m unittest discover -s validation/tests -v
 14. Duplicate session identifiers are rejected rather than merged silently.
 15. Missing warm-up/time-budget interpretation gives a Conditional warning.
 16. Extra muscles must be declared as Functional Overrides and may not shadow Fixed Core.
+17. Malformed input (non-object JSON, non-object `constraints`/`human_review`, invalid JSON) -> rejected with CLI exit code 2, never exit 1 (CONDITIONAL) and never an unhandled traceback.
 
-Additional production cases to implement before any user-facing release: actual scenario-level safety review, reliability of exercise P/S tagging, explicit patient exclusion rules, time-estimation calibration, machine substitution provenance, duplicate session IDs, inconsistent goals and priorities, repeated data imports, recovery/resilience checks and fuzz/property-based tests.
+Additional production cases to implement before any user-facing release: actual scenario-level safety review, reliability of exercise P/S tagging, explicit patient exclusion rules, time-estimation calibration, machine substitution provenance, inconsistent goals and priorities, repeated data imports, recovery/resilience checks and fuzz/property-based tests.
 
 ## Important contrast
 

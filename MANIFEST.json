@@ -1,14 +1,14 @@
 {
   "name": "HARDSET Knowledge Pack",
-  "version": "1.0",
+  "version": "1.0.1",
   "created": "2026-11-12",
   "includes_personal_user_training_data": false,
   "source_type": "approved rule reconstruction/normalization + original support tooling",
   "files": [
     {
       "path": "CHANGELOG.md",
-      "bytes": 857,
-      "sha256": "162f112a4cba4732447a64f810fb565229c01d87f2b3751380945064645db23a"
+      "bytes": 1685,
+      "sha256": "3926d4cb280fd2c6360cf3967141ff9844da55d0ffc0e438bfdee28e63148a33"
     },
     {
       "path": "CLAUDE.md",
@@ -17,8 +17,8 @@
     },
     {
       "path": "HARDSET_MASTER.md",
-      "bytes": 97496,
-      "sha256": "13e0ed090bdd7aabc37ec84cba93662612b7a10197e51b7253e5136cba088b0c"
+      "bytes": 97661,
+      "sha256": "bb79696355362935eb8e1026045522b84985edc8503b45562ad15c461b7cd611"
     },
     {
       "path": "PROVENANCE.md",
@@ -152,8 +152,8 @@
     },
     {
       "path": "scripts/build_manifest.py",
-      "bytes": 881,
-      "sha256": "41abe0bd5cb02363b196055aa6a0d0642a16efc5dd4851acb88b64c15dfafda4"
+      "bytes": 1147,
+      "sha256": "e83922d1045c3723f4e144016f31e4988f651af15c49425d68752de87fa9d56a"
     },
     {
       "path": "scripts/build_master.py",
@@ -177,8 +177,8 @@
     },
     {
       "path": "validation/TEST_CASES.md",
-      "bytes": 1970,
-      "sha256": "cb9c07ade9a9cd4a44a568abbd6964065b6f25be5f169f9b0b12b06fcce898b0"
+      "bytes": 2135,
+      "sha256": "d1b95ad4124419f32428a4d8c17f233f7dd9955c5fa5db024a2db7bff60cab2b"
     },
     {
       "path": "validation/tests/test_integrity.py",
@@ -187,13 +187,13 @@
     },
     {
       "path": "validation/tests/test_validator.py",
-      "bytes": 4864,
-      "sha256": "e05ec158debbf75c8f2a79ca82d5a91339cd85f547514a21b877023a274c5e16"
+      "bytes": 5863,
+      "sha256": "0a3067fbc752ab3df64aa554e6cb2b1e3234bfd32830b600946bf78fbfbf2c17"
     },
     {
       "path": "validation/validator.py",
-      "bytes": 12802,
-      "sha256": "3f580690509080fd9d82aece6d6b1f13c2c39a6052b5e440cd12a1252a3f384b"
+      "bytes": 13236,
+      "sha256": "10113384b3e64ba15adc2a5042f65c5b50ccb9530fe3849ae624627ccb3a1c56"
     }
   ]
 }
