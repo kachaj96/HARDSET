@@ -1,0 +1,631 @@
+<title>HARDSET Kreator Planu</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap">
+<style>
+/* Layout: sticky status bar + 9-step rail; one working column; status colors = competition plate colors (green PASS, yellow CONDITIONAL, red FAIL). */
+:root{
+  --bg:#f2f4f6; --surface:#ffffff; --surface-2:#e9edf1; --fg:#14181d; --muted:#5b6672; --line:#d5dbe2;
+  --accent:#1f4fbf; --accent-fg:#ffffff;
+  --pass:#2e7d4f; --pass-soft:#e2f2e8; --cond:#9a6b00; --cond-soft:#f7eed3; --fail:#c0362c; --fail-soft:#fbe6e3; --info-soft:#e3ebf8;
+  --f-display:"Space Grotesk",ui-sans-serif,system-ui,sans-serif;
+  --f-body:"Inter",ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;
+  --f-mono:"JetBrains Mono",ui-monospace,SFMono-Regular,Menlo,monospace;
+  --r:10px;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#0f1317; --surface:#171c22; --surface-2:#212831; --fg:#e7ebef; --muted:#9aa5b1; --line:#2c343e;
+    --accent:#7aa2f7; --accent-fg:#0f1317;
+    --pass:#5fc38a; --pass-soft:#173326; --cond:#e2b84a; --cond-soft:#33290f; --fail:#f07a6e; --fail-soft:#3a1d1a; --info-soft:#1a2740;
+    color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0f1317; --surface:#171c22; --surface-2:#212831; --fg:#e7ebef; --muted:#9aa5b1; --line:#2c343e;
+  --accent:#7aa2f7; --accent-fg:#0f1317;
+  --pass:#5fc38a; --pass-soft:#173326; --cond:#e2b84a; --cond-soft:#33290f; --fail:#f07a6e; --fail-soft:#3a1d1a; --info-soft:#1a2740;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--fg);font:15px/1.5 var(--f-body)}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--surface)}
+.wrap{max-width:920px;margin:0 auto;padding-block:16px 72px;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+h1,h2,h3{font-family:var(--f-display);text-wrap:balance;margin:0}
+h1{font-size:1.5rem;letter-spacing:-.015em}
+h2{font-size:1.2rem}
+h3{font-size:1rem}
+p{margin:0}
+.muted{color:var(--muted)}
+.small{font-size:.85rem}
+.mono{font-family:var(--f-mono);font-variant-numeric:tabular-nums}
+button,select,input,textarea{font:inherit;color:inherit}
+button{cursor:pointer}
+.btn{border:1px solid var(--line);background:var(--surface);border-radius:8px;padding:7px 12px;font-weight:500}
+.btn.primary{background:var(--accent);border-color:var(--accent);color:var(--accent-fg)}
+.btn.danger{color:var(--fail);border-color:var(--fail)}
+.btn.sm{padding:4px 9px;font-size:.85rem}
+.btn:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:2px solid var(--accent);outline-offset:1px}
+input[type=text],input[type=number],select,textarea{width:100%;min-width:0;padding:7px 9px;border:1px solid var(--line);border-radius:8px;background:var(--surface-2);font-size:16px}
+textarea{min-height:64px;resize:vertical}
+input[type=number]{font-family:var(--f-mono)}
+label.f{display:grid;gap:4px;font-size:.88rem;font-weight:500}
+label.f .hint{font-weight:400;color:var(--muted);font-size:.8rem}
+.chk{display:flex;gap:8px;align-items:flex-start;font-size:.92rem}
+.chk input{margin-top:4px}
+header.top{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:10px}
+.planbar{display:flex;gap:6px;flex-wrap:wrap;align-items:center}
+.planbar select{width:auto;max-width:220px}
+.statusbar{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--surface);border:1px solid var(--line);border-radius:var(--r);
+  padding:8px 12px;display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-bottom:10px}
+.pill{font:700 .78rem var(--f-display);letter-spacing:.06em;text-transform:uppercase;padding:3px 10px;border-radius:999px;border:1.5px solid currentColor}
+.pill.PASS{color:var(--pass);background:var(--pass-soft)} .pill.CONDITIONAL{color:var(--cond);background:var(--cond-soft)} .pill.FAIL{color:var(--fail);background:var(--fail-soft)}
+.counts{display:flex;gap:12px;font-size:.85rem;color:var(--muted);flex-wrap:wrap}
+.counts b{color:var(--fg)}
+.save{margin-left:auto;font-size:.8rem;color:var(--muted)}
+nav.steps{display:grid;grid-template-columns:repeat(9,minmax(0,1fr));gap:4px;margin-bottom:14px}
+nav.steps button{border:1px solid var(--line);background:var(--surface);border-radius:8px;padding:6px 2px;display:grid;gap:0;min-width:0}
+nav.steps button .n{font:600 .95rem var(--f-display)}
+nav.steps button .t{font-size:.68rem;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+nav.steps button[aria-current="step"]{background:var(--fg);color:var(--bg);border-color:var(--fg)}
+nav.steps button[aria-current="step"] .t{color:var(--bg)}
+.panel{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:16px;display:grid;gap:14px}
+.grid2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.grid3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.help{font-size:.86rem;color:var(--muted);background:var(--surface-2);border-radius:8px;padding:8px 12px}
+.note{border-radius:8px;padding:8px 12px;font-size:.88rem;background:var(--info-soft)}
+.note.warn{background:var(--cond-soft)} .note.fail{background:var(--fail-soft)}
+.tablewrap{overflow-x:auto;border:1px solid var(--line);border-radius:8px}
+table{border-collapse:collapse;width:100%;font-size:.86rem}
+th,td{padding:6px 8px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+th{font-weight:600;background:var(--surface-2);white-space:nowrap}
+td.num,th.num{text-align:right;font-family:var(--f-mono);font-variant-numeric:tabular-nums}
+td select,td input{padding:4px 6px;font-size:16px}
+tr:last-child td{border-bottom:0}
+.session{border:1px solid var(--line);border-radius:var(--r);padding:12px;display:grid;gap:10px;background:var(--surface)}
+.session-head{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.session-head input{flex:1 1 160px}
+.ex{border:1px solid var(--line);border-radius:8px;padding:10px;display:grid;gap:8px;background:var(--surface-2)}
+.ex-top{display:flex;justify-content:space-between;gap:6px 10px;flex-wrap:wrap;align-items:baseline}
+.ex-name{font-weight:600}
+.chips{display:flex;flex-wrap:wrap;gap:4px}
+.chip{font-size:.72rem;padding:1px 7px;border-radius:999px;border:1px solid var(--line);background:var(--surface)}
+.chip.P{border-color:var(--accent);color:var(--accent);font-weight:600}
+.chip.Sq{border-style:dashed;color:var(--muted)}
+.ex-fields{display:grid;grid-template-columns:70px 110px minmax(0,1fr) 90px 90px;gap:8px;align-items:end}
+.rirs{display:flex;gap:4px}
+.rirs input{width:72px;padding:6px}
+.ex-actions{display:flex;gap:4px;flex-wrap:wrap}
+.picker{border:1px dashed var(--accent);border-radius:8px;padding:10px;display:grid;gap:8px}
+.picker-list{display:grid;gap:4px;max-height:360px;overflow:auto}
+.pick{display:flex;justify-content:space-between;gap:8px;align-items:center;padding:6px 8px;border-radius:6px;background:var(--surface-2)}
+.pick .meta{font-size:.78rem;color:var(--muted)}
+.stimgrid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px}
+.findings{display:grid;gap:6px}
+.finding{display:grid;grid-template-columns:auto minmax(0,1fr);gap:8px;align-items:start;padding:8px 10px;border-radius:8px;background:var(--surface-2)}
+.finding .lvl{font:700 .68rem var(--f-display);letter-spacing:.05em;padding:2px 6px;border-radius:4px}
+.lvl.FAIL{background:var(--fail-soft);color:var(--fail)} .lvl.CONDITIONAL{background:var(--cond-soft);color:var(--cond)} .lvl.INFO{background:var(--info-soft);color:var(--accent)}
+.finding .en{font-size:.78rem;color:var(--muted)}
+.footer-nav{display:flex;justify-content:space-between;gap:8px;margin-top:14px}
+.empty{display:grid;gap:10px;justify-items:start}
+.confirm{display:flex;gap:6px;align-items:center;flex-wrap:wrap;font-size:.88rem}
+.plan-view .day{display:grid;gap:6px}
+@media (max-width:640px){
+  .grid2,.grid3{grid-template-columns:1fr}
+  .ex-fields{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .ex-fields .rirwrap{grid-column:1 / -1}
+  nav.steps button .t{display:none}
+  .stimgrid{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+
+<div class="wrap">
+  <header class="top">
+    <h1>HARDSET Kreator Planu</h1>
+    <div class="planbar" id="planbar"></div>
+  </header>
+  <div class="statusbar" id="statusbar" role="status"><span class="muted small">Ładowanie…</span></div>
+  <nav class="steps" id="steps" aria-label="Kroki kreatora"></nav>
+  <main id="main"></main>
+</div>
+
+<script src="engine.js"></script>
+<script>
+(function(){
+'use strict';
+const E=window.HardsetEngine;
+const CORE=E.CORE;
+const STEPS=['Profil','Priorytety','Dawka','Sesje','Ćwiczenia','Walidacja','Focus Block','Akceptacja','Plan'];
+const LP='Lead-Set (Ch05): gdy Lead Set osiągnie górę zakresu przy docelowym RIR, a Supporting Set co najmniej dół zakresu przy porównywalnym wykonaniu, w następnej sesji najmniejszy dostępny krok ciężaru.';
+const PL={
+  GOALS_UNSPECIFIED:'Brak zadeklarowanego celu',HUMAN_REVIEW_PENDING:'Przegląd niepotwierdzony',NO_SESSIONS:'Brak sesji',
+  MISSING_CORE:'Brakuje obszarów Fixed Core',EXTRA_FIXED_CORE:'Obszar spoza Fixed Core',OVERRIDE_COLLISION:'Override koliduje z Fixed Core',
+  BAD_AREA:'Nieprawidłowy obszar',BAD_PRIORITY:'Brak Programming Priority',MISSING_INTENT:'Brak Training Intent',
+  WARMUP_BUDGET_UNKNOWN:'Nie wiadomo, czy limit czasu obejmuje rozgrzewkę',BAD_SESSION:'Nieprawidłowa sesja',DUPLICATE_SESSION_NAME:'Powtórzona nazwa sesji',
+  BAD_EXERCISES:'Nieprawidłowa lista ćwiczeń',BAD_EXERCISE:'Nieprawidłowe ćwiczenie',SETS_INVALID:'Nieprawidłowa liczba serii',
+  SET_JUSTIFICATION:'Liczba serii inna niż 2 bez uzasadnienia',UNUSUAL_SET_COUNT:'Więcej niż 3 serie',VARIANT_MISSING:'Brak wariantu',
+  PROGRESSION_MISSING:'Brak reguły progresji',RIR_INVALID:'Nieprawidłowe RIR',UNSAFE_FAILURE_ACCESS:'RIR < 1 bez potwierdzonego bezpiecznego stopu',
+  SAFETY_BLOCKER:'Znana przeszkoda bezpieczeństwa',EXIT_NOT_EVALUATED:'Bezpieczny stop nieoceniony',NO_P_S:'Brak mapy P/S',
+  UNKNOWN_AREA:'Obszar nieaktywny (włącz Functional Override)',INVALID_STIMULUS:'Nieprawidłowy tag P/S',TIME_INPUT_INVALID:'Nieprawidłowy czas serii lub przerwy',
+  TIME_CONFIGURATION:'Nieprawidłowe ustawienia czasu',WARMUP_UNSPECIFIED:'Brak minut rozgrzewki',TIME_LIMIT_UNKNOWN:'Brak limitu czasu sesji',
+  TIME_OVER:'Przekroczony czas sesji',TIME_TIGHT:'Czas sesji powyżej 90% limitu',EXPOSURE_EXCEPTION:'Mniej ekspozycji: zaakceptowany wyjątek',
+  TOO_FEW_EXPOSURES:'Za mało ekspozycji',S_ONLY_EXCEPTION:'Tylko S+S: zaakceptowany wyjątek',SECONDARY_ONLY:'Tylko S+S, brak ekspozycji P',
+  FUNCTIONAL_GAP_EXCEPTION:'Luka funkcjonalna: zaakceptowany wyjątek',FUNCTIONAL_GAP:'Nierozwiązana luka funkcjonalna',
+  LIBRARY_UNVERIFIED:'Ćwiczenie spoza biblioteki (P/S niezweryfikowane)',LIBRARY_NOT_APPROVED:'Ćwiczenie z biblioteki bez zatwierdzenia',
+  RIR_BELOW_FLOOR:'RIR poniżej minimum z biblioteki',SAFETY_GATE_OPEN:'Bramka bezpieczeństwa otwarta',PRIORITY_DILUTED:'Dużo obszarów Priority',
+  FOCUS_BLOCK_PENDING:'Focus Block niezaakceptowany'
+};
+const REVIEW_PL={goal_fit:'dopasowanie do celu',ps_mechanics:'mechanika P/S',exercise_safety:'bezpieczeństwo ćwiczeń',recovery:'regeneracja'};
+const SPLIT_HINT={1:'Zwykle Full Body; jawnie zaakceptuj brak domyślnych 2 ekspozycji.',2:'Zwykle Full Body ×2.',3:'Full Body ×3 albo układ hybrydowy.',4:'Upper/Lower ×2, Full Body albo hybryda.',5:'Hybryda z konkretnym powodem piątej sesji.',6:'PPL ×2 albo inna dobrze regenerowana architektura.'};
+
+let LIB={exercises:[]}, LIBMAP=new Map();
+let db=null, plans={}, currentId=null, ui={step:0,picker:null,custom:null,confirmDelete:false,pickArea:'',pickQ:''};
+try{const s=JSON.parse(localStorage.getItem('hardset-builder-ui')||'null'); if(s){ui.step=s.step||0;currentId=s.current||null;}}catch(e){}
+const saveUi=()=>{try{localStorage.setItem('hardset-builder-ui',JSON.stringify({step:ui.step,current:currentId}));}catch(e){}};
+let saveState='', dlAvailable=false; const lastEdit={};
+
+/* ---------- helpers ---------- */
+const $=s=>document.querySelector(s);
+const esc=s=>String(s==null?'':s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const uid=()=>Math.random().toString(36).slice(2,10);
+const num=v=>{if(v===''||v==null)return null;const n=parseFloat(String(v).replace(',','.'));return Number.isFinite(n)?n:null;};
+const cur=()=>plans[currentId];
+function newPlan(name){
+  const areas={}; for(const a of CORE) areas[a]={priority:'',intent:'',functional_note:'',functional_gap:false,accepted_exception:'',exception_accepted_by_user:false};
+  return {id:'p'+uid(),name:name||'Nowy plan',created:new Date().toISOString(),updated:new Date().toISOString(),
+    profile:{goals:'',experience:'',recent_volume:'',days:3,session_time_limit_min:60,time_includes_warmup:null,warmup_min:10,equipment:'',
+      safety_injury:'',safety_medical:'',safety_notes:'',other_activity:'',notes:''},
+    areas,overrides:[],targets:{},
+    constraints:{transition_min_per_exercise:1.5,margin_min_per_session:5},
+    sessions:[{id:uid(),name:'A',exercises:[]},{id:uid(),name:'B',exercises:[]},{id:uid(),name:'C',exercises:[]}],
+    focus_block:{enabled:false,target:'',phases:'',test:'',accepted:false},
+    review:{goal_fit:false,ps_mechanics:false,exercise_safety:false,recovery:false}};
+}
+function safetyAnswered(p){return ['nie','tak'].includes(p.profile.safety_injury)&&['nie','tak'].includes(p.profile.safety_medical);}
+function exSafeExit(ex){
+  const lib=ex.library_id?LIBMAP.get(ex.library_id):null;
+  if(!lib) return ex.safe_exit===undefined?null:ex.safe_exit;
+  if(lib.safe_exit===true) return true;
+  if(lib.safe_exit===false) return false;
+  return ex.safe_exit_confirmed===true;
+}
+function toEngine(p){
+  const areas={}; for(const a of CORE){const s=p.areas[a]||{}; const o={};
+    if(s.priority) o.priority=s.priority; if(s.intent) o.intent=s.intent; if(s.functional_note) o.functional_note=s.functional_note;
+    if(s.functional_gap) o.functional_gap=true; if(s.accepted_exception) o.accepted_exception=s.accepted_exception; if(s.exception_accepted_by_user) o.exception_accepted_by_user=true;
+    areas[a]=o;}
+  const overrides={}; for(const o of p.overrides){ if(!o.name)continue; const x={}; if(o.priority)x.priority=o.priority; if(o.intent)x.intent=o.intent;
+    if(o.accepted_exception) x.accepted_exception=o.accepted_exception; if(o.exception_accepted_by_user) x.exception_accepted_by_user=true; overrides[o.name]=x;}
+  const c={transition_min_per_exercise:p.constraints.transition_min_per_exercise,margin_min_per_session:p.constraints.margin_min_per_session};
+  const lim=num(p.profile.session_time_limit_min); if(lim!=null) c.session_time_limit_min=lim;
+  if(p.profile.time_includes_warmup===true||p.profile.time_includes_warmup===false) c.time_includes_warmup=p.profile.time_includes_warmup;
+  if(p.profile.time_includes_warmup===true){const w=num(p.profile.warmup_min); if(w!=null) c.warmup_min=w;}
+  const sessions=p.sessions.map(s=>({name:s.name,exercises:s.exercises.map(ex=>{
+    const o={name:ex.name,library_id:ex.library_id||null,variant:ex.variant,sets:ex.sets,rep_range:ex.rep_range,
+      rir_targets:ex.rir_targets.map(num),rest_sec:num(ex.rest_sec),seconds_per_set:num(ex.seconds_per_set),
+      progression_rule:ex.progression_rule,stimulus:ex.stimulus,safe_exit:exSafeExit(ex)};
+    if(ex.set_reason) o.set_reason=ex.set_reason; if(ex.notes) o.notes=ex.notes; return o;})}));
+  return {goals:p.profile.goals.split('\n').map(s=>s.trim()).filter(Boolean),human_review:Object.assign({},p.review),constraints:c,areas,
+    functional_overrides:overrides,sessions,
+    profile:Object.assign({},p.profile,{safety_answered:safetyAnswered(p)}),focus_block:p.focus_block.enabled?Object.assign({},p.focus_block):undefined,
+    plan_meta:{name:p.name,builder:'HARDSET Kreator Planu',library_version:LIB.version||null,exported:new Date().toISOString()}};
+}
+function evaluatePlan(p){
+  const plan=toEngine(p);
+  let res; try{res=E.evaluate(plan);}catch(e){return {error:e.message};}
+  const extra=E.builderChecks(plan,LIB);
+  return {res,extra,status:E.combinedStatus(res,extra),all:res.findings.concat(extra),plan};
+}
+function volLabel(n){if(n<=1)return 'Below Low';if(n<=4)return 'Low';if(n<=8)return 'Moderate';if(n<=14)return 'Expanded';return 'Individual High Volume';}
+function libDefaults(lib){
+  const rir=lib.safe_exit===true&&lib.rir_floor_default<1?[1,0.5]:[Math.max(1,lib.rir_floor_default),Math.max(1,lib.rir_floor_default)];
+  return {uid:uid(),library_id:lib.id,name:lib.name_pl,variant:lib.variant||lib.equipment,sets:2,rep_range:lib.rep_template,rir_targets:rir,
+    rest_sec:lib.rest_sec,seconds_per_set:lib.seconds_per_set,set_reason:'',safe_exit_confirmed:false,stimulus:Object.assign({},lib.stimulus),
+    progression_rule:LP,notes:''};
+}
+
+/* ---------- persistence ---------- */
+const timers={},chains={};
+function touch(){const p=cur(); if(!p)return; p.updated=new Date().toISOString(); persist(p.id); renderStatus();}
+function persist(id){
+  lastEdit[id]=Date.now(); saveState='Zapisywanie…'; renderSave();
+  clearTimeout(timers[id]);
+  timers[id]=setTimeout(()=>{
+    const p=plans[id];
+    if(!db){ try{localStorage.setItem('hardset-builder-plans',JSON.stringify(plans));saveState='Zapisano w tej przeglądarce';}catch(e){saveState='Nie udało się zapisać';} renderSave(); return; }
+    const ref=db.collection('plans').doc(id);
+    const body=p?JSON.parse(JSON.stringify(p)):null;
+    chains[id]=(chains[id]||Promise.resolve()).then(()=>body?ref.set(body):ref.delete()).then(()=>{saveState='Zapisano';renderSave();})
+      .catch(err=>{saveState=err&&err.code==='quota_exceeded'?'Baza pełna: usuń stare plany':'Nie udało się zapisać';renderSave();});
+  },700);
+}
+function renderSave(){const el=$('#saveState'); if(el) el.textContent=saveState;}
+
+/* ---------- render: top ---------- */
+function renderPlanbar(){
+  const ids=Object.keys(plans).sort((a,b)=>(plans[b].updated||'').localeCompare(plans[a].updated||''));
+  let h='';
+  if(ids.length){
+    h+=`<select id="planSelect" aria-label="Wybierz plan">${ids.map(id=>`<option value="${id}" ${id===currentId?'selected':''}>${esc(plans[id].name)}</option>`).join('')}</select>`;
+  }
+  h+=`<button class="btn sm" data-act="new-plan">Nowy</button>`;
+  if(cur()){
+    h+=`<button class="btn sm" data-act="dup-plan">Duplikuj</button>`;
+    h+= ui.confirmDelete
+      ? `<span class="confirm">Usunąć „${esc(cur().name)}”? <button class="btn sm danger" data-act="del-yes">Usuń</button><button class="btn sm" data-act="del-no">Anuluj</button></span>`
+      : `<button class="btn sm danger" data-act="del-plan">Usuń</button>`;
+  }
+  $('#planbar').innerHTML=h;
+}
+function renderStatus(){
+  const p=cur(); const el=$('#statusbar');
+  if(!p){el.innerHTML='<span class="muted small">Brak otwartego planu.</span>';return;}
+  const v=evaluatePlan(p);
+  if(v.error){el.innerHTML=`<span class="pill FAIL">Błąd</span><span class="small">${esc(v.error)}</span>`;return;}
+  const f=v.all.filter(x=>x.level==='FAIL').length, c=v.all.filter(x=>x.level==='CONDITIONAL').length;
+  const times=Object.entries(v.res.session_time_estimates_min).map(([k,t])=>`${esc(k)} ${t.toFixed(0)}′`).join(' · ');
+  el.innerHTML=`<span class="pill ${v.status}">${v.status}</span>
+    <span class="counts"><span><b>${f}</b> blokujących</span><span><b>${c}</b> warunkowych</span><span><b>${v.res.summary.total_hard_sets}</b> Hard Sets</span>${times?`<span class="mono">${times}${num(p.profile.session_time_limit_min)!=null?' / '+num(p.profile.session_time_limit_min)+'′':''}</span>`:''}</span>
+    <span class="save" id="saveState">${esc(saveState)}</span>`;
+}
+function renderSteps(){
+  $('#steps').innerHTML=STEPS.map((t,i)=>`<button type="button" data-step="${i}" ${i===ui.step?'aria-current="step"':''} title="${esc(t)}"><span class="n">${i+1}</span><span class="t">${esc(t)}</span></button>`).join('');
+}
+function render(){renderPlanbar();renderStatus();renderSteps();renderMain();}
+function rerenderKeepScroll(){const y=window.scrollY; renderMain(); renderStatus(); window.scrollTo(0,y);}
+
+/* ---------- render: steps ---------- */
+function opt(v,cur,label){return `<option value="${esc(v)}" ${String(v)===String(cur)?'selected':''}>${esc(label??v)}</option>`;}
+function footerNav(){
+  return `<div class="footer-nav">${ui.step>0?`<button class="btn" data-step="${ui.step-1}">← ${esc(STEPS[ui.step-1])}</button>`:'<span></span>'}${ui.step<STEPS.length-1?`<button class="btn primary" data-step="${ui.step+1}">${esc(STEPS[ui.step+1])} →</button>`:''}</div>`;
+}
+function renderMain(){
+  const m=$('#main'); const p=cur();
+  if(!p){
+    m.innerHTML=`<section class="panel empty"><h2>Zacznij od nowego planu</h2>
+      <p class="muted">Kreator prowadzi przez 9 kroków: profil, priorytety, dawkę, sesje, ćwiczenia z biblioteki, walidację, opcjonalny Focus Block, akceptację i gotowy plan. Na każdym etapie pasek u góry pokazuje status HARDSET.</p>
+      <button class="btn primary" data-act="new-plan">Utwórz plan</button></section>`;
+    return;
+  }
+  const fn=[stepProfile,stepPriorities,stepDose,stepSessions,stepExercises,stepValidation,stepFocus,stepAccept,stepPlan][ui.step];
+  m.innerHTML=fn(p)+footerNav();
+}
+function bind(path,type){return `data-bind="${path}"${type?` data-type="${type}"`:''}`;}
+
+function stepProfile(p){
+  const pr=p.profile;
+  const tri=(path,val)=>`<select ${bind(path)}>${opt('',val,'– wybierz –')}${opt('nie',val,'Nie')}${opt('tak',val,'Tak')}${opt('nie wiem',val,'Nie wiem')}</select>`;
+  return `<section class="panel">
+    <h2>1. Profil</h2>
+    <p class="help">Zbieraj tylko to, co wpływa na program (Ch09 §9.1). Nie zakładaj danych z wcześniejszych planów.</p>
+    <label class="f">Nazwa planu<input type="text" ${bind('name')} value="${esc(p.name)}"></label>
+    <label class="f">Cele <span class="hint">jeden cel w linii, od najważniejszego</span><textarea ${bind('profile.goals')}>${esc(pr.goals)}</textarea></label>
+    <div class="grid2">
+      <label class="f">Doświadczenie<input type="text" ${bind('profile.experience')} value="${esc(pr.experience)}"></label>
+      <label class="f">Ostatnia tolerowana objętość <span class="hint">sesje/tydz., serie</span><input type="text" ${bind('profile.recent_volume')} value="${esc(pr.recent_volume)}"></label>
+    </div>
+    <div class="grid3">
+      <label class="f">Dni w tygodniu<input type="number" min="1" max="7" ${bind('profile.days','num')} value="${esc(pr.days)}"></label>
+      <label class="f">Limit sesji (min)<input type="number" min="10" ${bind('profile.session_time_limit_min','num')} value="${esc(pr.session_time_limit_min)}"></label>
+      <label class="f">Limit obejmuje rozgrzewkę?<select ${bind('profile.time_includes_warmup','bool')} data-rerender>${opt('',pr.time_includes_warmup===null?'':String(pr.time_includes_warmup),'– wybierz –')}${opt('true',String(pr.time_includes_warmup),'Tak')}${opt('false',String(pr.time_includes_warmup),'Nie')}</select></label>
+    </div>
+    ${pr.time_includes_warmup===true?`<label class="f">Rozgrzewka w limicie (min) <span class="hint">ogólna + serie rozgrzewkowe</span><input type="number" min="0" ${bind('profile.warmup_min','num')} value="${esc(pr.warmup_min)}"></label>`:''}
+    <label class="f">Sprzęt<textarea ${bind('profile.equipment')}>${esc(pr.equipment)}</textarea></label>
+    <h3>Bezpieczeństwo (Ch09 §9.2)</h3>
+    <div class="grid2">
+      <label class="f">Ból, kontuzja lub ograniczenie ruchu?${tri('profile.safety_injury',pr.safety_injury)}</label>
+      <label class="f">Zalecenia lekarza lub fizjoterapeuty?${tri('profile.safety_medical',pr.safety_medical)}</label>
+    </div>
+    <label class="f">Szczegóły i ćwiczenia wykluczone<textarea ${bind('profile.safety_notes')}>${esc(pr.safety_notes)}</textarea></label>
+    ${safetyAnswered(p)?'':'<p class="note warn">Dopóki oba pytania nie mają odpowiedzi Tak/Nie, plan nie może zawierać serii z RIR &lt; 1.</p>'}
+    <label class="f">Inne aktywności<input type="text" ${bind('profile.other_activity')} value="${esc(pr.other_activity)}"></label>
+  </section>`;
+}
+function stepPriorities(p){
+  const rows=CORE.map(a=>{const s=p.areas[a];
+    return `<tr><td>${esc(a)}</td>
+      <td><select ${bind(`areas.${a}.priority`)} data-rerender-status>${opt('',s.priority,'–')}${opt('Priority',s.priority)}${opt('Standard',s.priority)}${opt('Optional',s.priority)}</select></td>
+      <td><select ${bind(`areas.${a}.intent`)} data-rerender-status>${opt('',s.intent,'–')}${opt('Development',s.intent)}${opt('Maintenance',s.intent)}</select></td>
+      <td><input type="text" ${bind(`areas.${a}.functional_note`)} value="${esc(s.functional_note)}" placeholder="opcjonalnie"></td></tr>`;}).join('');
+  const nPri=CORE.filter(a=>p.areas[a].priority==='Priority').length+p.overrides.filter(o=>o.priority==='Priority').length;
+  const ov=p.overrides.map((o,i)=>`<tr><td><input type="text" ${bind(`overrides.${i}.name`)} value="${esc(o.name)}" placeholder="np. Hip Abduction"></td>
+      <td><select ${bind(`overrides.${i}.priority`)} data-rerender-status>${opt('',o.priority,'–')}${opt('Priority',o.priority)}${opt('Standard',o.priority)}${opt('Optional',o.priority)}</select></td>
+      <td><select ${bind(`overrides.${i}.intent`)} data-rerender-status>${opt('',o.intent,'–')}${opt('Development',o.intent)}${opt('Maintenance',o.intent)}</select></td>
+      <td><button class="btn sm danger" data-act="del-override" data-i="${i}">Usuń</button></td></tr>`).join('');
+  return `<section class="panel">
+    <h2>2. Programming Priorities i Training Intent</h2>
+    <p class="help">Priority: pierwszeństwo do zasobów, domyślnie P+P. Standard: P+P albo wiarygodne P+S. Optional: bez minimum. Intent (Development/Maintenance) jest niezależny od priorytetu (Ch02 §6, Ch08 §8.3). Brak wartości domyślnych.</p>
+    ${nPri>=5?`<p class="note warn">${nPri} obszarów ma Priority. Gdy większość ma priorytet, przestaje on cokolwiek rozróżniać.</p>`:''}
+    <div class="tablewrap"><table><thead><tr><th>Obszar</th><th>Priority</th><th>Intent</th><th>Functional Note</th></tr></thead><tbody>${rows}</tbody></table></div>
+    <h3>Functional Overrides</h3>
+    <p class="help">Dodatkowy cel poza 12 obszarami, np. „Hip Abduction” (Ch02 §7). Nazwa musi zgadzać się z tagiem ćwiczenia w bibliotece.</p>
+    ${p.overrides.length?`<div class="tablewrap"><table><thead><tr><th>Nazwa</th><th>Priority</th><th>Intent</th><th></th></tr></thead><tbody>${ov}</tbody></table></div>`:''}
+    <div><button class="btn sm" data-act="add-override">Dodaj Override</button></div>
+  </section>`;
+}
+function stepDose(p){
+  const v=evaluatePlan(p); const L=v.res?v.res.ledger:{};
+  const areas=CORE.concat(p.overrides.map(o=>o.name).filter(Boolean));
+  const rows=areas.map(a=>{const l=L[a]||{P_sets:0,S_sets:0,S_uncertain_sets:0,exposures:{}}; const t=p.targets[a]||{};
+    const pr=(p.areas[a]||p.overrides.find(o=>o.name===a)||{}).priority||'–';
+    const exp=Object.values(l.exposures||{}); const ep=exp.filter(x=>x==='P').length, es=exp.filter(x=>x==='S').length;
+    const tp=num(t.p_sets), te=num(t.exposures);
+    const diff=(tp!=null&&tp!==l.P_sets)||(te!=null&&te!==exp.length);
+    return `<tr><td>${esc(a)}</td><td>${esc(pr)}</td>
+      <td><input type="number" min="0" style="width:72px" ${bind(`targets.${a}.p_sets`,'num')} value="${esc(t.p_sets??'')}"></td>
+      <td><input type="number" min="0" style="width:72px" ${bind(`targets.${a}.exposures`,'num')} value="${esc(t.exposures??'')}"></td>
+      <td class="num">${l.P_sets}</td><td class="num">${l.S_sets}${l.S_uncertain_sets?` <span class="muted">(+${l.S_uncertain_sets} S?)</span>`:''}</td>
+      <td class="num">${exp.length} <span class="muted">(${ep}P/${es}S)</span></td><td>${volLabel(l.P_sets)}</td><td>${diff?'<span class="pill CONDITIONAL" style="font-size:.65rem">różnica</span>':''}</td></tr>`;}).join('');
+  return `<section class="panel">
+    <h2>3. Dawka wyjściowa (Baseline + Response)</h2>
+    <p class="help">Wpisz docelowe P sets i ekspozycje na tydzień. Jeśli masz skuteczną i tolerowaną dawkę z przeszłości, zacznij w jej okolicy; jeśli nie, zacznij zachowawczo (Ch06 §6.4). Kolumny „plan” liczą się z ćwiczeń z kroku 5. Etykieta Appendix A jest wyłącznie informacyjna i nie jest normą.</p>
+    <div class="tablewrap"><table><thead><tr><th>Obszar</th><th>Priority</th><th>Cel P</th><th>Cel eksp.</th><th class="num">Plan P</th><th class="num">Plan S</th><th class="num">Plan eksp.</th><th>App. A</th><th></th></tr></thead><tbody>${rows}</tbody></table></div>
+  </section>`;
+}
+function stepSessions(p){
+  const n=p.sessions.length;
+  const list=p.sessions.map((s,i)=>`<div class="session-head"><span class="mono muted">${i+1}.</span><input type="text" ${bind(`sessions.${i}.name`)} value="${esc(s.name)}" aria-label="Nazwa sesji">
+      <span class="muted small">${s.exercises.length} ćw.</span>
+      <button class="btn sm" data-act="sess-up" data-i="${i}" ${i===0?'disabled':''} aria-label="W górę">↑</button>
+      <button class="btn sm" data-act="sess-down" data-i="${i}" ${i===n-1?'disabled':''} aria-label="W dół">↓</button>
+      <button class="btn sm danger" data-act="sess-del" data-i="${i}">Usuń</button></div>`).join('');
+  return `<section class="panel">
+    <h2>4. Sesje i split</h2>
+    <p class="help">Split wynika z celów i tygodniowego bodźca, nie odwrotnie (Ch06 §6.6). Testy: Coverage, Capacity, Quality, Recovery. Wszystkie układy są dozwolone.</p>
+    ${SPLIT_HINT[n]?`<p class="note">Dla ${n} sesji: ${esc(SPLIT_HINT[n])} To punkt wyjścia, nie wymóg.</p>`:''}
+    ${num(p.profile.days)!=null&&num(p.profile.days)!==n?`<p class="note warn">Profil mówi ${esc(p.profile.days)} dni, a plan ma ${n} sesji.</p>`:''}
+    <div style="display:grid;gap:8px">${list}</div>
+    <div><button class="btn sm" data-act="sess-add">Dodaj sesję</button></div>
+  </section>`;
+}
+function chipList(stim){return Object.entries(stim||{}).map(([a,t])=>`<span class="chip ${t==='P'?'P':(t==='S?'||t==='?')?'Sq':''}">${esc(a)} ${esc(t)}</span>`).join('');}
+function exCard(p,si,ei){
+  const ex=p.sessions[si].exercises[ei]; const lib=ex.library_id?LIBMAP.get(ex.library_id):null; const base=`sessions.${si}.exercises.${ei}`;
+  let safe='';
+  if(!lib) safe=`<label class="f">Bezpieczny stop<select ${bind(base+'.safe_exit','tri')} data-rerender-status>${opt('',ex.safe_exit==null?'':String(ex.safe_exit),'nieoceniony')}${opt('true',String(ex.safe_exit),'tak')}${opt('false',String(ex.safe_exit),'nie')}</select></label>`;
+  else if(lib.safe_exit===true) safe=`<span class="small muted">Bezpieczny stop: tak</span>`;
+  else if(lib.safe_exit===false) safe=`<span class="small muted">Bezpieczny stop: nie (min RIR ${lib.rir_floor_default})</span>`;
+  else safe=`<label class="chk small"><input type="checkbox" ${bind(base+'.safe_exit_confirmed','check')} data-rerender-status ${ex.safe_exit_confirmed?'checked':''}> Potwierdzam warunek bezpiecznego stopu: ${esc(lib.safe_exit_condition)}</label>`;
+  const rirs=ex.rir_targets.map((r,k)=>`<input type="number" step="0.5" min="0" ${bind(`${base}.rir_targets.${k}`,'num')} data-rerender-status value="${esc(r)}" aria-label="RIR serii ${k+1}">`).join('');
+  return `<div class="ex">
+    <div class="ex-top"><span class="ex-name">${esc(ex.name)}${lib?'':' <span class="pill CONDITIONAL" style="font-size:.6rem">spoza biblioteki</span>'}</span><div class="chips">${chipList(ex.stimulus)}</div></div>
+    <div class="small muted">${esc(ex.variant||'')}${lib&&lib.functional_notes?' · '+esc(lib.functional_notes):''}</div>
+    <div class="ex-fields">
+      <label class="f">Serie<select ${bind(base+'.sets','sets')} data-rerender>${[1,2,3,4,5].map(n=>opt(n,ex.sets)).join('')}</select></label>
+      <label class="f">Zakres<input type="text" ${bind(base+'.rep_range')} value="${esc(ex.rep_range)}"></label>
+      <label class="f rirwrap">RIR (Lead / Supporting) <span class="hint">0.5 = 0–1</span><span class="rirs">${rirs}</span></label>
+      <label class="f">Przerwa s<input type="number" min="0" ${bind(base+'.rest_sec','num')} data-rerender-status value="${esc(ex.rest_sec)}"></label>
+      <label class="f">Seria s<input type="number" min="1" ${bind(base+'.seconds_per_set','num')} data-rerender-status value="${esc(ex.seconds_per_set)}"></label>
+    </div>
+    ${ex.sets!==2?`<label class="f">Uzasadnienie liczby serii (Purpose / Value / Recovery)<input type="text" ${bind(base+'.set_reason')} data-rerender-status value="${esc(ex.set_reason)}"></label>`:''}
+    ${safe}
+    <div class="ex-actions">
+      <button class="btn sm" data-act="ex-up" data-si="${si}" data-ei="${ei}" ${ei===0?'disabled':''} aria-label="W górę">↑</button>
+      <button class="btn sm" data-act="ex-down" data-si="${si}" data-ei="${ei}" ${ei===p.sessions[si].exercises.length-1?'disabled':''} aria-label="W dół">↓</button>
+      <button class="btn sm danger" data-act="ex-del" data-si="${si}" data-ei="${ei}">Usuń</button>
+    </div>
+  </div>`;
+}
+function picker(p,si){
+  const q=ui.pickQ.toLowerCase(), a=ui.pickArea;
+  const items=LIB.exercises.filter(e=>(!a||e.stimulus[a]==='P')&&(!q||(e.name_pl+' '+e.name_en+' '+e.id).toLowerCase().includes(q)));
+  const areas=CORE.concat(['Hip Abduction']);
+  return `<div class="picker">
+    <div class="grid2"><label class="f">Obszar (P)<select id="pickArea">${opt('',a,'wszystkie')}${areas.map(x=>opt(x,a)).join('')}</select></label>
+      <label class="f">Szukaj<input type="text" id="pickQ" value="${esc(ui.pickQ)}" placeholder="np. press, curl"></label></div>
+    <div class="picker-list">${items.map(e=>`<div class="pick"><div><div>${esc(e.name_pl)}</div><div class="meta">${esc(e.name_en)} · ${esc(e.rep_template)} · ${e.safe_exit===true?'bezpieczny stop':e.safe_exit===false?'bez bezpiecznego stopu':'stop warunkowy'}</div><div class="chips">${chipList(e.stimulus)}</div></div>
+      <button class="btn sm primary" data-act="pick" data-si="${si}" data-id="${esc(e.id)}">Dodaj</button></div>`).join('')||'<p class="muted small">Brak wyników.</p>'}</div>
+    <div class="ex-actions"><button class="btn sm" data-act="custom-open" data-si="${si}">Ćwiczenie spoza biblioteki</button><button class="btn sm" data-act="pick-close">Zamknij</button></div>
+  </div>`;
+}
+function customForm(p,si){
+  const c=ui.custom;
+  const areas=CORE.concat(p.overrides.map(o=>o.name).filter(Boolean));
+  return `<div class="picker">
+    <h3>Ćwiczenie spoza biblioteki</h3>
+    <p class="help">P/S przypisujesz ręcznie. Takie ćwiczenie daje najwyżej CONDITIONAL, bo tagi nie są zweryfikowane.</p>
+    <div class="grid2"><label class="f">Nazwa<input type="text" id="cName" value="${esc(c.name)}"></label><label class="f">Wariant / sprzęt<input type="text" id="cVariant" value="${esc(c.variant)}"></label></div>
+    <div class="stimgrid">${areas.map(a=>`<label class="f">${esc(a)}<select data-cstim="${esc(a)}">${['','P','S','S?'].map(t=>opt(t,c.stimulus[a]||'',t||'—')).join('')}</select></label>`).join('')}</div>
+    <div class="grid3"><label class="f">Zakres<input type="text" id="cReps" value="${esc(c.rep_range)}"></label>
+      <label class="f">Bezpieczny stop<select id="cSafe">${opt('',c.safe,'nieoceniony')}${opt('true',c.safe,'tak')}${opt('false',c.safe,'nie')}</select></label>
+      <label class="f">Przerwa s<input type="number" id="cRest" value="${esc(c.rest)}"></label></div>
+    <div class="ex-actions"><button class="btn sm primary" data-act="custom-add" data-si="${si}">Dodaj</button><button class="btn sm" data-act="custom-close">Anuluj</button></div>
+  </div>`;
+}
+function stepExercises(p){
+  const sess=p.sessions.map((s,si)=>`<section class="session">
+    <div class="session-head"><h3>${esc(s.name)}</h3><span class="muted small">${s.exercises.reduce((n,e)=>n+e.sets,0)} Hard Sets</span></div>
+    ${s.exercises.map((_,ei)=>exCard(p,si,ei)).join('')||'<p class="muted small">Brak ćwiczeń.</p>'}
+    ${ui.custom&&ui.custom.si===si?customForm(p,si):ui.picker===si?picker(p,si):`<div><button class="btn sm" data-act="pick-open" data-si="${si}">Dodaj ćwiczenie</button></div>`}
+  </section>`).join('');
+  return `<section class="panel">
+    <h2>5. Ćwiczenia</h2>
+    <p class="help">Domyślnie 2 Hard Sets: Lead Set ~1 RIR, Supporting Set 0–1 RIR, tylko gdy stop jest bezpieczny (Ch01, Ch03). 1 lub 3 serie wymagają uzasadnienia. Tagi P/S pochodzą z zatwierdzonej biblioteki.</p>
+    ${!safetyAnswered(p)?'<p class="note warn">Bramka bezpieczeństwa w profilu jest otwarta: RIR &lt; 1 zablokuje plan.</p>':''}
+  </section>${sess}`;
+}
+function findingRow(f){
+  let label=PL[f.code]||f.code; if(f.code==='HUMAN_REVIEW_PENDING'){const k=(f.message.split(': ')[1]||'').trim(); label+=': '+(REVIEW_PL[k]||k);}
+  return `<div class="finding"><span class="lvl ${f.level}">${f.level==='CONDITIONAL'?'WARUNK.':f.level==='FAIL'?'BLOKUJE':'INFO'}</span><div><div>${esc(label)}${f.scope&&f.scope!=='plan'?` <span class="muted">· ${esc(f.scope)}</span>`:''}</div><div class="en">${esc(f.message)}</div></div></div>`;
+}
+function stepValidation(p){
+  const v=evaluatePlan(p);
+  if(v.error) return `<section class="panel"><h2>6. Walidacja</h2><p class="note fail">${esc(v.error)}</p></section>`;
+  const order={FAIL:0,CONDITIONAL:1,INFO:2};
+  const fs=v.all.slice().sort((a,b)=>order[a.level]-order[b.level]);
+  const L=v.res.ledger;
+  const rows=Object.keys(L).map(a=>{const l=L[a]; const exp=Object.entries(l.exposures).map(([s,t])=>`${esc(s)} ${t}`).join(', ')||'–';
+    return `<tr><td>${esc(a)}</td><td>${esc(l.priority||'–')}</td><td>${esc(l.intent||'–')}</td><td class="num">${l.P_sets}</td><td class="num">${l.S_sets}</td><td class="num">${l.S_uncertain_sets}</td><td>${exp}</td></tr>`;}).join('');
+  const lim=num(p.profile.session_time_limit_min);
+  const times=Object.entries(v.res.session_time_estimates_min).map(([s,t])=>`<tr><td>${esc(s)}</td><td class="num">${t.toFixed(1)}</td><td class="num">${lim??'–'}</td><td class="num">${lim?Math.round(t/lim*100)+'%':'–'}</td></tr>`).join('');
+  return `<section class="panel">
+    <h2>6. Walidacja</h2>
+    <p class="help">PASS oznacza tylko zgodność strukturalną z zadeklarowanymi danymi. Nie potwierdza skuteczności, optymalnej objętości ani bezpieczeństwa medycznego (Ch09 §9.2). Mechanikę P/S i realny czas sesji sprawdzasz sam.</p>
+    <div class="findings">${fs.map(findingRow).join('')||'<p class="note">Brak uwag.</p>'}</div>
+    <h3>P/S Ledger i ekspozycje</h3>
+    <div class="tablewrap"><table><thead><tr><th>Obszar</th><th>Priority</th><th>Intent</th><th class="num">P</th><th class="num">S</th><th class="num">S?</th><th>Ekspozycje</th></tr></thead><tbody>${rows}</tbody></table></div>
+    <h3>Czas sesji (model walidatora)</h3>
+    <div class="grid2"><label class="f">Zmiana stanowiska (min/ćw.)<input type="number" step="0.5" min="0" ${bind('constraints.transition_min_per_exercise','num')} data-rerender value="${esc(p.constraints.transition_min_per_exercise)}"></label>
+      <label class="f">Bufor na sesję (min)<input type="number" step="0.5" min="0" ${bind('constraints.margin_min_per_session','num')} data-rerender value="${esc(p.constraints.margin_min_per_session)}"></label></div>
+    <div class="tablewrap"><table><thead><tr><th>Sesja</th><th class="num">Szac. min</th><th class="num">Limit</th><th class="num">%</th></tr></thead><tbody>${times}</tbody></table></div>
+  </section>`;
+}
+function stepFocus(p){
+  const f=p.focus_block;
+  return `<section class="panel">
+    <h2>7. Focus Block (opcjonalnie)</h2>
+    <p class="help">Domyślnie HARDSET to Continuous Progression bez obowiązkowych faz i kalendarza deloadów. Periodyzacja może służyć celowi stricte siłowemu (Ch08 §8.1). Wymaga konkretnego celu, punktu wyjścia, miary wyniku i orientacyjnego punktu przeglądu (Ch08 §8.4).</p>
+    <label class="chk"><input type="checkbox" ${bind('focus_block.enabled','check')} data-rerender ${f.enabled?'checked':''}> Włącz Focus Block</label>
+    ${f.enabled?`<label class="f">Cel i kryterium sukcesu<input type="text" ${bind('focus_block.target')} value="${esc(f.target)}"></label>
+      <label class="f">Fazy <span class="hint">np. tygodnie, zakres, RIR dla ćwiczenia docelowego</span><textarea ${bind('focus_block.phases')}>${esc(f.phases)}</textarea></label>
+      <label class="f">Test / punkt przeglądu<input type="text" ${bind('focus_block.test')} value="${esc(f.test)}"></label>
+      <label class="chk"><input type="checkbox" ${bind('focus_block.accepted','check')} data-rerender-status ${f.accepted?'checked':''}> Akceptuję Focus Block jako świadome odstępstwo od Continuous Progression</label>`:''}
+  </section>`;
+}
+function stepAccept(p){
+  const r=p.review;
+  const item=(k,txt)=>`<label class="chk"><input type="checkbox" ${bind('review.'+k,'check')} data-rerender-status ${r[k]?'checked':''}> <span><b>${esc(REVIEW_PL[k])}</b><br><span class="small muted">${txt}</span></span></label>`;
+  const v=evaluatePlan(p);
+  return `<section class="panel">
+    <h2>8. Akceptacja</h2>
+    <p class="help">Potwierdzasz, że przejrzałeś to, czego narzędzie nie sprawdzi. Bez wszystkich czterech potwierdzeń najwyższy możliwy status to CONDITIONAL.</p>
+    ${item('goal_fit','Priorytety, intent i dawka odpowiadają celom z profilu.')}
+    ${item('ps_mechanics','Tagi P/S pasują do faktycznego wykonania ćwiczeń, którymi planujesz trenować.')}
+    ${item('exercise_safety','Sprzęt i ustawienia pozwalają bezpiecznie zakończyć serię; ograniczenia z profilu są uwzględnione.')}
+    ${item('recovery','Rozkład sesji, inne aktywności i objętość są do zregenerowania.')}
+    ${v.status!=='PASS'&&!v.error?`<p class="note ${v.status==='FAIL'?'fail':'warn'}">Aktualny status: ${v.status}. Szczegóły w kroku 6.</p>`:''}
+  </section>`;
+}
+function stepPlan(p){
+  const v=evaluatePlan(p); if(v.error) return `<section class="panel"><p class="note fail">${esc(v.error)}</p></section>`;
+  const days=p.sessions.map(s=>`<div class="day"><h3>${esc(s.name)} <span class="muted small mono">${(v.res.session_time_estimates_min[s.name]??0).toFixed(0)} min</span></h3>
+    <div class="tablewrap"><table><thead><tr><th>Ćwiczenie</th><th class="num">Serie</th><th>Zakres</th><th>RIR</th><th class="num">Przerwa</th><th>P / S</th></tr></thead><tbody>
+    ${s.exercises.map(ex=>`<tr><td>${esc(ex.name)}<div class="small muted">${esc(ex.variant||'')}</div></td><td class="num">${ex.sets}</td><td>${esc(ex.rep_range)}</td>
+      <td class="mono">${ex.rir_targets.map(r=>num(r)===0.5?'0–1':num(r)===1.5?'1–2':esc(r)).join(' / ')}</td><td class="num">${Math.round((num(ex.rest_sec)||0)/15)/4} min</td>
+      <td class="small">${Object.entries(ex.stimulus).map(([a,t])=>esc(a)+' '+esc(t)).join(', ')}</td></tr>`).join('')}
+    </tbody></table></div></div>`).join('');
+  return `<section class="panel plan-view">
+    <div class="session-head"><h2>9. ${esc(p.name)}</h2><span class="pill ${v.status}">${v.status}</span></div>
+    ${p.profile.goals?`<p><b>Cele:</b> ${esc(p.profile.goals.split('\n').filter(Boolean).join(' · '))}</p>`:''}
+    ${days}
+    <div class="help"><b>Progresja:</b> ${esc(LP)}<br><b>Deload:</b> tylko z potrzeby, nie z kalendarza (Ch05 §7).</div>
+    ${p.focus_block.enabled?`<div class="help"><b>Focus Block:</b> ${esc(p.focus_block.target)}<br>${esc(p.focus_block.phases).replace(/\n/g,'<br>')}<br>${esc(p.focus_block.test)}</div>`:''}
+    <div class="ex-actions"><button class="btn primary" data-act="export" id="exportBtn" ${dlAvailable?'':'hidden'}>Eksportuj JSON</button><button class="btn" data-act="copy">Kopiuj JSON</button><span class="small muted" id="exportMsg" role="status"></span></div>
+    <textarea id="copyArea" hidden readonly></textarea>
+    <p class="small muted">JSON jest zgodny z <span class="mono">validation/SCHEMA.md</span>, więc możesz go sprawdzić także walidatorem w Pythonie.</p>
+  </section>`;
+}
+
+/* ---------- events ---------- */
+function setPath(obj,path,val){const ks=path.split('.');let o=obj;for(let i=0;i<ks.length-1;i++){const k=ks[i];if(o[k]==null)o[k]=/^\d+$/.test(ks[i+1])?[]:{};o=o[k];}o[ks[ks.length-1]]=val;}
+function readVal(el){
+  const t=el.dataset.type;
+  if(t==='check') return el.checked;
+  if(t==='num') return el.value===''?'':(num(el.value)??el.value);
+  if(t==='bool') return el.value===''?null:el.value==='true';
+  if(t==='tri') return el.value===''?null:el.value==='true';
+  if(t==='sets') return parseInt(el.value,10);
+  return el.value;
+}
+function onField(e){
+  const el=e.target; const path=el.dataset&&el.dataset.bind; if(!path) return;
+  const p=cur(); if(!p) return;
+  const val=readVal(el);
+  if(path.endsWith('.sets')){
+    const ex=path.split('.').slice(0,-1).reduce((o,k)=>o[k],p);
+    ex.sets=val; const r=ex.rir_targets.slice();
+    while(r.length<val) r.unshift(1);
+    ex.rir_targets=r.slice(r.length-val);
+  } else setPath(p,path,val);
+  if(path==='name') renderPlanbar();
+  touch();
+  if(e.type==='change'&&el.hasAttribute('data-rerender')) rerenderKeepScroll();
+}
+document.addEventListener('input',e=>{if(e.target.dataset&&e.target.dataset.bind&&e.target.tagName!=='SELECT'&&e.target.type!=='checkbox')onField(e);
+  if(e.target.id==='pickQ'){ui.pickQ=e.target.value; const pos=e.target.selectionStart; rerenderKeepScroll(); const q=$('#pickQ'); if(q){q.focus(); q.setSelectionRange(pos,pos);} }
+  if(e.target.id==='cName'||e.target.id==='cVariant'||e.target.id==='cReps'||e.target.id==='cRest'){const k={cName:'name',cVariant:'variant',cReps:'rep_range',cRest:'rest'}[e.target.id]; ui.custom[k]=e.target.value;}
+});
+document.addEventListener('change',e=>{
+  const el=e.target;
+  if(el.id==='planSelect'){currentId=el.value;ui.confirmDelete=false;ui.picker=null;ui.custom=null;saveUi();render();return;}
+  if(el.id==='pickArea'){ui.pickArea=el.value;rerenderKeepScroll();return;}
+  if(el.dataset&&el.dataset.cstim){ui.custom.stimulus[el.dataset.cstim]=el.value;return;}
+  if(el.id==='cSafe'){ui.custom.safe=el.value;return;}
+  if(el.dataset&&el.dataset.bind&&(el.tagName==='SELECT'||el.type==='checkbox')){onField(e);}
+  if(el.dataset&&el.dataset.bind&&(el.hasAttribute('data-rerender'))&&el.tagName!=='SELECT'&&el.type!=='checkbox'){rerenderKeepScroll();}
+});
+document.addEventListener('focusout',e=>{const el=e.target; if(el.dataset&&el.dataset.bind&&el.hasAttribute('data-rerender-status')) renderStatus();});
+document.addEventListener('click',async e=>{
+  const st=e.target.closest('[data-step]'); if(st){ui.step=+st.dataset.step;ui.picker=null;ui.custom=null;saveUi();renderSteps();renderMain();window.scrollTo({top:0});return;}
+  const b=e.target.closest('[data-act]'); if(!b) return;
+  const a=b.dataset.act, p=cur(), si=+b.dataset.si, ei=+b.dataset.ei, i=+b.dataset.i;
+  const swap=(arr,x,y)=>{[arr[x],arr[y]]=[arr[y],arr[x]];};
+  switch(a){
+    case 'new-plan':{const np=newPlan('Plan '+(Object.keys(plans).length+1)); plans[np.id]=np; currentId=np.id; ui.step=0; saveUi(); persist(np.id); render(); return;}
+    case 'dup-plan':{const np=JSON.parse(JSON.stringify(p)); np.id='p'+uid(); np.name=p.name+' (kopia)'; np.created=np.updated=new Date().toISOString(); np.review={goal_fit:false,ps_mechanics:false,exercise_safety:false,recovery:false}; plans[np.id]=np; currentId=np.id; saveUi(); persist(np.id); render(); return;}
+    case 'del-plan': ui.confirmDelete=true; renderPlanbar(); return;
+    case 'del-no': ui.confirmDelete=false; renderPlanbar(); return;
+    case 'del-yes':{const id=currentId; delete plans[id]; persist(id); currentId=Object.keys(plans)[0]||null; ui.confirmDelete=false; saveUi(); render(); return;}
+    case 'add-override': p.overrides.push({name:'',priority:'',intent:''}); break;
+    case 'del-override': p.overrides.splice(i,1); break;
+    case 'sess-add': p.sessions.push({id:uid(),name:String.fromCharCode(65+p.sessions.length),exercises:[]}); break;
+    case 'sess-del': p.sessions.splice(i,1); break;
+    case 'sess-up': swap(p.sessions,i,i-1); break;
+    case 'sess-down': swap(p.sessions,i,i+1); break;
+    case 'pick-open': ui.picker=si; ui.custom=null; rerenderKeepScroll(); return;
+    case 'pick-close': ui.picker=null; rerenderKeepScroll(); return;
+    case 'pick':{const lib=LIBMAP.get(b.dataset.id); p.sessions[si].exercises.push(libDefaults(lib)); break;}
+    case 'custom-open': ui.custom={si,name:'',variant:'',stimulus:{},rep_range:'8-12',safe:'',rest:90}; ui.picker=null; rerenderKeepScroll(); return;
+    case 'custom-close': ui.custom=null; rerenderKeepScroll(); return;
+    case 'custom-add':{const c=ui.custom; if(!c.name.trim()){alertMsg('Podaj nazwę ćwiczenia.');return;}
+      const stim={}; for(const [k,v] of Object.entries(c.stimulus)) if(v) stim[k]=v;
+      p.sessions[si].exercises.push({uid:uid(),library_id:null,name:c.name.trim(),variant:c.variant,sets:2,rep_range:c.rep_range,rir_targets:[1,1],rest_sec:num(c.rest)??90,seconds_per_set:45,set_reason:'',safe_exit:c.safe===''?null:c.safe==='true',stimulus:stim,progression_rule:LP,notes:''});
+      ui.custom=null; break;}
+    case 'ex-del': p.sessions[si].exercises.splice(ei,1); break;
+    case 'ex-up': swap(p.sessions[si].exercises,ei,ei-1); break;
+    case 'ex-down': swap(p.sessions[si].exercises,ei,ei+1); break;
+    case 'export':{const msg=$('#exportMsg'); try{const dl=await window.claude.use('downloads'); const data=JSON.stringify(evaluatePlan(p).plan,null,2);
+        await dl.save({filename:(p.name||'plan').replace(/[^\w\-]+/g,'_')+'.json',data:new Blob([data],{type:'application/json'})}); msg.textContent='Zapisano plik.';}
+      catch(err){msg.textContent=err&&err.code==='declined'?'Pobieranie anulowane.':'Eksport niedostępny; użyj „Kopiuj JSON”.';} return;}
+    case 'copy':{const data=JSON.stringify(evaluatePlan(p).plan,null,2); const msg=$('#exportMsg');
+      try{await navigator.clipboard.writeText(data); msg.textContent='Skopiowano JSON.';}
+      catch(err){const ta=$('#copyArea'); ta.hidden=false; ta.value=data; ta.focus(); ta.select(); msg.textContent='Zaznaczono JSON, skopiuj go ręcznie.';} return;}
+    default: return;
+  }
+  touch(); rerenderKeepScroll();
+});
+function alertMsg(t){const m=$('#main'); const n=document.createElement('p'); n.className='note warn'; n.textContent=t; m.prepend(n); setTimeout(()=>n.remove(),4000);}
+
+/* ---------- boot ---------- */
+async function boot(){
+  try{ const r=await fetch('exercises.json'); LIB=await r.json(); }catch(e){ LIB={exercises:[]}; }
+  LIBMAP=new Map(LIB.exercises.map(x=>[x.id,x]));
+  render();
+  const c=window.claude;
+  if(c&&c.use){ try{ db=await c.use('db'); }catch(e){ db=null; } }
+  if(!db){
+    try{plans=JSON.parse(localStorage.getItem('hardset-builder-plans')||'{}')||{};}catch(e){plans={};}
+    saveState='Baza niedostępna w tym widoku: plany zapisują się tylko w tej przeglądarce';
+    if(!plans[currentId]) currentId=Object.keys(plans)[0]||null; render(); return;
+  }
+  saveState='Łączenie z bazą…'; renderSave();
+  const timer=setTimeout(()=>{saveState='Baza jeszcze nie odpowiada';renderSave();},10000);
+  let first=true;
+  db.collection('plans').onSnapshot(snap=>{
+    for(const ch of snap.docChanges()){
+      const recent=Date.now()-(lastEdit[ch.doc.id]||0)<4000;
+      if(ch.type==='removed'){ if(!recent) delete plans[ch.doc.id]; }
+      else if(!recent||!plans[ch.doc.id]) plans[ch.doc.id]=JSON.parse(JSON.stringify(ch.doc.data()));
+    }
+    if(!snap.metadata.fromCache){clearTimeout(timer); if(saveState.startsWith('Łączenie')||saveState.startsWith('Baza jeszcze'))saveState='Połączono';}
+    if(first||!plans[currentId]){ if(!plans[currentId]) currentId=Object.keys(plans)[0]||null; first=false; saveUi(); render(); return; }
+    const a=document.activeElement; if(!(a&&a.closest&&a.closest('#main')&&/INPUT|TEXTAREA|SELECT/.test(a.tagName))){renderPlanbar();renderStatus();}
+  },err=>{clearTimeout(timer);saveState='Utracono połączenie z bazą';renderSave();});
+  try{const dl=await c.use('downloads'); if(dl){dlAvailable=true; const btn=$('#exportBtn'); if(btn) btn.hidden=false;}}catch(e){}
+}
+boot();
+})();
+</script>
