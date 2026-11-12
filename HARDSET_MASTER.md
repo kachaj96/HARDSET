@@ -1258,6 +1258,87 @@ The periods above are implementation suggestions, not validated biological thres
 
 ---
 
+**Uzupełnienie v1.1.0 (2026-11-12): trening siłowy a bieganie.** Weryfikacja przez PubMed (NCBI E-utilities): metadane, abstrakt, noty o wycofaniu i korekcie. Zakres opisany w `RESEARCH_AUDIT.md`.
+
+## R24 — Balsalobre-Fernández et al. (2016)
+
+**Tytuł:** Effects of Strength Training on Running Economy in Highly Trained Runners: A Systematic Review With Meta-Analysis of Controlled Trials.  
+**Rodzaj:** Systematic review / meta-analysis.  
+**DOI:** [10.1519/JSC.0000000000001316](https://doi.org/10.1519/JSC.0000000000001316).  
+**Link bibliograficzny:** https://doi.org/10.1519/JSC.0000000000001316
+
+**Uzasadniony wniosek:** Strength training (resistance plus plyometric, 2-3x/week, 8-12 weeks) improved running economy in highly trained middle- and long-distance runners (SMD -1.42).
+
+**Granice interpretacji:** Only 5 studies, 93 runners with VO2max >60; wide confidence interval; mostly low-moderate loads combined with jumps and sprints.
+
+## R25 — Llanos-Lagos et al. (2024)
+
+**Tytuł:** Effect of Strength Training Programs in Middle- and Long-Distance Runners' Economy at Different Running Speeds: A Systematic Review with Meta-analysis.  
+**Rodzaj:** Systematic review / three-level meta-analysis.  
+**DOI:** [10.1007/s40279-023-01978-y](https://doi.org/10.1007/s40279-023-01978-y).  
+**Link bibliograficzny:** https://doi.org/10.1007/s40279-023-01978-y
+
+**Uzasadniony wniosek:** High-load (>=80% 1RM), plyometric and combined strength training improved running economy (small to moderate effects); submaximal-load (40-79% 1RM) and isometric training did not.
+
+**Granice interpretacji:** Certainty moderate (low for combined); effects depend on running speed and VO2max; runner populations only.
+
+## R26 — Llanos-Lagos et al. (2024)
+
+**Tytuł:** The Effect of Strength Training Methods on Middle-Distance and Long-Distance Runners' Athletic Performance: A Systematic Review with Meta-analysis.  
+**Rodzaj:** Systematic review / meta-analysis.  
+**DOI:** [10.1007/s40279-024-02018-z](https://doi.org/10.1007/s40279-024-02018-z).  
+**Link bibliograficzny:** https://doi.org/10.1007/s40279-024-02018-z
+
+**Uzasadniony wniosek:** High-load and combined strength training improved running performance (time trial, time to exhaustion); plyometric alone not significant; no method changed VO2max, vVO2max, MMSS or sprint capacity.
+
+**Granice interpretacji:** Certainty very low to moderate; heterogeneous protocols and populations.
+
+## R27 — Lauersen et al. (2018)
+
+**Tytuł:** Strength training as superior, dose-dependent and safe prevention of acute and overuse sports injuries: a systematic review, qualitative analysis and meta-analysis.  
+**Rodzaj:** Systematic review / meta-analysis of RCTs.  
+**DOI:** [10.1136/bjsports-2018-099078](https://doi.org/10.1136/bjsports-2018-099078).  
+**Link bibliograficzny:** https://doi.org/10.1136/bjsports-2018-099078
+
+**Uzasadniony wniosek:** Strength-training-based prevention programmes reduced sports injury risk (RR 0.338) in athletes aged 12-40, with a dose-response association.
+
+**Granice interpretacji:** Only 6 RCTs, 177 injuries; mixed sports and ages; not specific to runners.
+
+## R28 — Wu et al. (2024)
+
+**Tytuł:** Do Exercise-Based Prevention Programs Reduce Injury in Endurance Runners? A Systematic Review and Meta-Analysis.  
+**Rodzaj:** Systematic review / meta-analysis of RCTs.  
+**DOI:** [10.1007/s40279-024-01993-7](https://doi.org/10.1007/s40279-024-01993-7).  
+**Link bibliograficzny:** https://doi.org/10.1007/s40279-024-01993-7
+
+**Uzasadniony wniosek:** In endurance runners, exercise-based prevention programmes did not significantly reduce running-related injury risk or rate overall; a post hoc analysis of supervised programmes only showed lower risk.
+
+**Granice interpretacji:** 9 RCTs, 1904 participants, 7 of low quality; supervised-only finding is post hoc and may reflect compliance.
+
+## R29 — Bohm et al. (2015)
+
+**Tytuł:** Human tendon adaptation in response to mechanical loading: a systematic review and meta-analysis of exercise intervention studies on healthy adults.  
+**Rodzaj:** Systematic review / meta-analysis.  
+**DOI:** [10.1186/s40798-015-0009-9](https://doi.org/10.1186/s40798-015-0009-9).  
+**Link bibliograficzny:** https://doi.org/10.1186/s40798-015-0009-9
+
+**Uzasadniony wniosek:** Achilles and patellar tendons increased stiffness (SMD 0.70), Young's modulus and CSA after >=8-week loading interventions; stiffness adaptation depended on loading intensity, not contraction type.
+
+**Granice interpretacji:** Healthy adults 18-50; 264 participants; tendon properties, not injury or running outcomes.
+
+## R30 — Lazarczuk et al. (2022)
+
+**Tytuł:** Mechanical, Material and Morphological Adaptations of Healthy Lower Limb Tendons to Mechanical Loading: A Systematic Review and Meta-Analysis.  
+**Rodzaj:** Systematic review / meta-analysis.  
+**DOI:** [10.1007/s40279-022-01695-y](https://doi.org/10.1007/s40279-022-01695-y).  
+**Link bibliograficzny:** https://doi.org/10.1007/s40279-022-01695-y
+
+**Uzasadniony wniosek:** Mechanical loading, mainly resistance training, increased lower-limb tendon stiffness (SMD 0.74) and modulus; higher-strain resistance protocols produced greater adaptation.
+
+**Granice interpretacji:** Tendon properties only; does not show reduced injury or better running performance.
+
+---
+
 
 <!-- SOURCE: research/EVIDENCE_MATRIX.md -->
 
@@ -1299,6 +1380,12 @@ Każda pozycja ma jednoznaczną klasę: **SCIENTIFIC_EVIDENCE**, **HARDSET_DESIG
 | E30 | PASS/CONDITIONAL/FAIL validator statuses | HARDSET_DESIGN_DECISION | - | Decision hygiene | Automated pass cannot medically certify safety |
 | E31 | Lead Set RIR estimates are exact | NOT_SUPPORTED | R19;R20 | RIR can be useful but noisy | Treat estimate as estimate |
 | E32 | Full ROM always better than shorter ROM | NOT_SUPPORTED | R18 | Cannot generalize unconditionally | Useful repeatable tolerable ROM prioritized |
+| E33 | Strength training improves running economy in middle/long-distance runners | SCIENTIFIC_EVIDENCE | R24;R25 | Supported for high-load, plyometric and combined methods | Small-moderate effects; submaximal (40-79% 1RM) and isometric training not effective; runner populations |
+| E34 | High-load strength training improves running performance (time trial / time to exhaustion) | SCIENTIFIC_EVIDENCE | R26 | Supported in runners | Certainty very low-moderate; no change in VO2max or sprint capacity |
+| E35 | Strength training reduces sports injury risk | SCIENTIFIC_EVIDENCE | R27 | Supported across mixed sports, ages 12-40 | Few RCTs; not runner-specific |
+| E36 | Exercise-based programmes reduce running-related injuries in endurance runners | NOT_SUPPORTED | R28 | Pooled RCTs show no significant reduction | Only supervised programmes showed lower risk (post hoc); low study quality |
+| E37 | Resistance training increases lower-limb tendon stiffness; loading magnitude matters | SCIENTIFIC_EVIDENCE | R29;R30 | Supported in healthy adults | Tendon properties only; not an injury or running-performance outcome |
+| E38 | Run-support lower-body selection (calf work at straight and bent knee, unilateral leg work) | HARDSET_DESIGN_DECISION | R25;R29;R30 | Functional matching to running demands | Not a validated running programme; maintenance-range loads may fall into the submaximal category of R25 |
 
 ## Rules for Claude / implementer
 
@@ -1329,7 +1416,7 @@ Każda pozycja ma jednoznaczną klasę: **SCIENTIFIC_EVIDENCE**, **HARDSET_DESIG
 
 ## Important excluded article (retraction)
 
-**Do not cite as supporting evidence:** Hughes, Peiffer & Scott, *Estimating Repetitions in Reserve in Four Commonly Used Resistance Exercises*, DOI **10.1519/JSC.0000000000003865**. The publication is marked **RETRACTED** by the publisher, with a retraction notice DOI **10.1519/JSC.0000000000003977**. It is **not part of this package's 23 active references**. For the RIR-estimation discussion we instead rely on e.g. Mansfield et al. **R20**, Lovegrove et al. **R19**, and the broader methodological context. 
+**Do not cite as supporting evidence:** Hughes, Peiffer & Scott, *Estimating Repetitions in Reserve in Four Commonly Used Resistance Exercises*, DOI **10.1519/JSC.0000000000003865**. The publication is marked **RETRACTED** by the publisher, with a retraction notice DOI **10.1519/JSC.0000000000003977**. It is **not part of this package's active references**. For the RIR-estimation discussion we instead rely on e.g. Mansfield et al. **R20**, Lovegrove et al. **R19**, and the broader methodological context. 
 
 Publisher retraction status: https://doi.org/10.1519/JSC.0000000000003865  
 Retraction notice: https://doi.org/10.1519/JSC.0000000000003977
@@ -1353,6 +1440,20 @@ The package is current to **2026-11-12** for the cited studies. Evidence will ev
 ## Preservation and editorial honesty
 
 Approved HARDSET Chapters 01–09 are preserved at the **rule level**. Chapters 01–05 have been reconstructed from approved decisions because their exact final artifacts were not fully present in the available working context. Chapters 06–09 have been editorially normalized from final approved draft content. These distinctions are also documented in `PROVENANCE.md`.
+
+## Addendum v1.1.0 — strength training and running (2026-11-12)
+
+**Questions checked:** (1) does strength training improve running economy or performance; (2) does it reduce injury risk, in general and in endurance runners specifically; (3) does resistance training change lower-limb tendon (Achilles/patellar) properties. A fourth question, whether unilateral leg work transfers better to running than bilateral work, was not searched; no claim about it is made.
+
+**Method:** same as above. Systematic reviews and meta-analyses were preferred. Metadata, abstracts and PubMed retraction/erratum/expression-of-concern links were checked through NCBI E-utilities for R24–R30. None carried such a notice on the date of review. This is a targeted check, not a new systematic review.
+
+**Interpretation controls:**
+
+- **R24–R26** concern middle- and long-distance runners. R25 found no running-economy benefit from submaximal loads (40–79% 1RM), so moderate-load, higher-rep leg work should not be presented as proven running-economy training.
+- **R27** pools mixed sports and ages; it does not establish injury prevention in runners.
+- **R28** is the runner-specific evidence and found **no overall reduction** of running-related injuries; the lower risk with supervised programmes is a post hoc result. Claim E36 is therefore NOT_SUPPORTED.
+- **R29–R30** show tendon property adaptation (stiffness, modulus), not fewer injuries or better running.
+- Run-support exercise selection in HARDSET plans remains a **HARDSET Design Decision** (E38), informed by but not proven by R25, R29 and R30.
 
 ---
 

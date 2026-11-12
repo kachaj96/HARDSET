@@ -13,7 +13,7 @@
 
 ## Important excluded article (retraction)
 
-**Do not cite as supporting evidence:** Hughes, Peiffer & Scott, *Estimating Repetitions in Reserve in Four Commonly Used Resistance Exercises*, DOI **10.1519/JSC.0000000000003865**. The publication is marked **RETRACTED** by the publisher, with a retraction notice DOI **10.1519/JSC.0000000000003977**. It is **not part of this package's 23 active references**. For the RIR-estimation discussion we instead rely on e.g. Mansfield et al. **R20**, Lovegrove et al. **R19**, and the broader methodological context. 
+**Do not cite as supporting evidence:** Hughes, Peiffer & Scott, *Estimating Repetitions in Reserve in Four Commonly Used Resistance Exercises*, DOI **10.1519/JSC.0000000000003865**. The publication is marked **RETRACTED** by the publisher, with a retraction notice DOI **10.1519/JSC.0000000000003977**. It is **not part of this package's active references**. For the RIR-estimation discussion we instead rely on e.g. Mansfield et al. **R20**, Lovegrove et al. **R19**, and the broader methodological context. 
 
 Publisher retraction status: https://doi.org/10.1519/JSC.0000000000003865  
 Retraction notice: https://doi.org/10.1519/JSC.0000000000003977
@@ -37,3 +37,17 @@ The package is current to **2026-11-12** for the cited studies. Evidence will ev
 ## Preservation and editorial honesty
 
 Approved HARDSET Chapters 01–09 are preserved at the **rule level**. Chapters 01–05 have been reconstructed from approved decisions because their exact final artifacts were not fully present in the available working context. Chapters 06–09 have been editorially normalized from final approved draft content. These distinctions are also documented in `PROVENANCE.md`.
+
+## Addendum v1.1.0 — strength training and running (2026-11-12)
+
+**Questions checked:** (1) does strength training improve running economy or performance; (2) does it reduce injury risk, in general and in endurance runners specifically; (3) does resistance training change lower-limb tendon (Achilles/patellar) properties. A fourth question, whether unilateral leg work transfers better to running than bilateral work, was not searched; no claim about it is made.
+
+**Method:** same as above. Systematic reviews and meta-analyses were preferred. Metadata, abstracts and PubMed retraction/erratum/expression-of-concern links were checked through NCBI E-utilities for R24–R30. None carried such a notice on the date of review. This is a targeted check, not a new systematic review.
+
+**Interpretation controls:**
+
+- **R24–R26** concern middle- and long-distance runners. R25 found no running-economy benefit from submaximal loads (40–79% 1RM), so moderate-load, higher-rep leg work should not be presented as proven running-economy training.
+- **R27** pools mixed sports and ages; it does not establish injury prevention in runners.
+- **R28** is the runner-specific evidence and found **no overall reduction** of running-related injuries; the lower risk with supervised programmes is a post hoc result. Claim E36 is therefore NOT_SUPPORTED.
+- **R29–R30** show tendon property adaptation (stiffness, modulus), not fewer injuries or better running.
+- Run-support exercise selection in HARDSET plans remains a **HARDSET Design Decision** (E38), informed by but not proven by R25, R29 and R30.

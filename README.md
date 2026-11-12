@@ -26,8 +26,8 @@ See `START_HERE.md` for details.
 
 ## Scientific backbone
 
-- 23 scholarly references, DOI-verified for identity and relevant conclusions.
-- 32 evidence-matrix claims labeled by epistemic type.
+- 30 scholarly references, DOI-verified for identity and relevant conclusions.
+- 38 evidence-matrix claims labeled by epistemic type.
 - Audit of exclusion and limitations in `research/RESEARCH_AUDIT.md`.
 - Explicit warning that two sets/exercise, two exposures/week, P/S accounting, exact RIR targets, and heuristic volume bands are **HARDSET design decisions / implementation suggestions**, not universally proven optimal recipes.
 

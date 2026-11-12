@@ -12,7 +12,7 @@ for p in sorted(ROOT.rglob('*')):
             or any(part.startswith('.') for part in rel.parts)): continue
     data=p.read_bytes()
     files.append({'path':p.relative_to(ROOT).as_posix(), 'bytes':len(data), 'sha256':hashlib.sha256(data).hexdigest()})
-manifest={'name':'HARDSET Knowledge Pack','version':'1.0.1',
+manifest={'name':'HARDSET Knowledge Pack','version':'1.1.0',
           'created':'2026-11-12','includes_personal_user_training_data':False,
           'source_type':'approved rule reconstruction/normalization + original support tooling',
           'files':files}

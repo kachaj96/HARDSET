@@ -274,5 +274,89 @@
     "findings": "Early apparent increases in muscle cross-sectional area may include edema.",
     "limitations": "Small novice study and measurement methodology limit generalization.",
     "verification": "publisher/pubmed/pmc verified on 2026-11-12"
+  },
+  {
+    "id": "R24",
+    "authors": "Balsalobre-Fernández et al.",
+    "year": 2016,
+    "title": "Effects of Strength Training on Running Economy in Highly Trained Runners: A Systematic Review With Meta-Analysis of Controlled Trials",
+    "doi": "10.1519/JSC.0000000000001316",
+    "doi_url": "https://doi.org/10.1519/JSC.0000000000001316",
+    "study_type": "Systematic review / meta-analysis",
+    "findings": "Strength training (resistance plus plyometric, 2-3x/week, 8-12 weeks) improved running economy in highly trained middle- and long-distance runners (SMD -1.42).",
+    "limitations": "Only 5 studies, 93 runners with VO2max >60; wide confidence interval; mostly low-moderate loads combined with jumps and sprints.",
+    "verification": "PubMed (NCBI E-utilities) metadata, abstract and retraction/erratum notices checked on 2026-11-12"
+  },
+  {
+    "id": "R25",
+    "authors": "Llanos-Lagos et al.",
+    "year": 2024,
+    "title": "Effect of Strength Training Programs in Middle- and Long-Distance Runners' Economy at Different Running Speeds: A Systematic Review with Meta-analysis",
+    "doi": "10.1007/s40279-023-01978-y",
+    "doi_url": "https://doi.org/10.1007/s40279-023-01978-y",
+    "study_type": "Systematic review / three-level meta-analysis",
+    "findings": "High-load (>=80% 1RM), plyometric and combined strength training improved running economy (small to moderate effects); submaximal-load (40-79% 1RM) and isometric training did not.",
+    "limitations": "Certainty moderate (low for combined); effects depend on running speed and VO2max; runner populations only.",
+    "verification": "PubMed (NCBI E-utilities) metadata, abstract and retraction/erratum notices checked on 2026-11-12"
+  },
+  {
+    "id": "R26",
+    "authors": "Llanos-Lagos et al.",
+    "year": 2024,
+    "title": "The Effect of Strength Training Methods on Middle-Distance and Long-Distance Runners' Athletic Performance: A Systematic Review with Meta-analysis",
+    "doi": "10.1007/s40279-024-02018-z",
+    "doi_url": "https://doi.org/10.1007/s40279-024-02018-z",
+    "study_type": "Systematic review / meta-analysis",
+    "findings": "High-load and combined strength training improved running performance (time trial, time to exhaustion); plyometric alone not significant; no method changed VO2max, vVO2max, MMSS or sprint capacity.",
+    "limitations": "Certainty very low to moderate; heterogeneous protocols and populations.",
+    "verification": "PubMed (NCBI E-utilities) metadata, abstract and retraction/erratum notices checked on 2026-11-12"
+  },
+  {
+    "id": "R27",
+    "authors": "Lauersen et al.",
+    "year": 2018,
+    "title": "Strength training as superior, dose-dependent and safe prevention of acute and overuse sports injuries: a systematic review, qualitative analysis and meta-analysis",
+    "doi": "10.1136/bjsports-2018-099078",
+    "doi_url": "https://doi.org/10.1136/bjsports-2018-099078",
+    "study_type": "Systematic review / meta-analysis of RCTs",
+    "findings": "Strength-training-based prevention programmes reduced sports injury risk (RR 0.338) in athletes aged 12-40, with a dose-response association.",
+    "limitations": "Only 6 RCTs, 177 injuries; mixed sports and ages; not specific to runners.",
+    "verification": "PubMed (NCBI E-utilities) metadata, abstract and retraction/erratum notices checked on 2026-11-12"
+  },
+  {
+    "id": "R28",
+    "authors": "Wu et al.",
+    "year": 2024,
+    "title": "Do Exercise-Based Prevention Programs Reduce Injury in Endurance Runners? A Systematic Review and Meta-Analysis",
+    "doi": "10.1007/s40279-024-01993-7",
+    "doi_url": "https://doi.org/10.1007/s40279-024-01993-7",
+    "study_type": "Systematic review / meta-analysis of RCTs",
+    "findings": "In endurance runners, exercise-based prevention programmes did not significantly reduce running-related injury risk or rate overall; a post hoc analysis of supervised programmes only showed lower risk.",
+    "limitations": "9 RCTs, 1904 participants, 7 of low quality; supervised-only finding is post hoc and may reflect compliance.",
+    "verification": "PubMed (NCBI E-utilities) metadata, abstract and retraction/erratum notices checked on 2026-11-12"
+  },
+  {
+    "id": "R29",
+    "authors": "Bohm et al.",
+    "year": 2015,
+    "title": "Human tendon adaptation in response to mechanical loading: a systematic review and meta-analysis of exercise intervention studies on healthy adults",
+    "doi": "10.1186/s40798-015-0009-9",
+    "doi_url": "https://doi.org/10.1186/s40798-015-0009-9",
+    "study_type": "Systematic review / meta-analysis",
+    "findings": "Achilles and patellar tendons increased stiffness (SMD 0.70), Young's modulus and CSA after >=8-week loading interventions; stiffness adaptation depended on loading intensity, not contraction type.",
+    "limitations": "Healthy adults 18-50; 264 participants; tendon properties, not injury or running outcomes.",
+    "verification": "PubMed (NCBI E-utilities) metadata, abstract and retraction/erratum notices checked on 2026-11-12"
+  },
+  {
+    "id": "R30",
+    "authors": "Lazarczuk et al.",
+    "year": 2022,
+    "title": "Mechanical, Material and Morphological Adaptations of Healthy Lower Limb Tendons to Mechanical Loading: A Systematic Review and Meta-Analysis",
+    "doi": "10.1007/s40279-022-01695-y",
+    "doi_url": "https://doi.org/10.1007/s40279-022-01695-y",
+    "study_type": "Systematic review / meta-analysis",
+    "findings": "Mechanical loading, mainly resistance training, increased lower-limb tendon stiffness (SMD 0.74) and modulus; higher-strain resistance protocols produced greater adaptation.",
+    "limitations": "Tendon properties only; does not show reduced injury or better running performance.",
+    "verification": "PubMed (NCBI E-utilities) metadata, abstract and retraction/erratum notices checked on 2026-11-12"
   }
 ]

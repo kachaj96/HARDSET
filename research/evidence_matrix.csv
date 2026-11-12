@@ -31,3 +31,9 @@ E29,Program reviews 6–8 weeks size reviews 8–12 weeks,IMPLEMENTATION_HEURIST
 E30,PASS/CONDITIONAL/FAIL validator statuses,HARDSET_DESIGN_DECISION,-,Decision hygiene,Automated pass cannot medically certify safety
 E31,Lead Set RIR estimates are exact,NOT_SUPPORTED,R19;R20,RIR can be useful but noisy,Treat estimate as estimate
 E32,Full ROM always better than shorter ROM,NOT_SUPPORTED,R18,Cannot generalize unconditionally,Useful repeatable tolerable ROM prioritized
+E33,Strength training improves running economy in middle/long-distance runners,SCIENTIFIC_EVIDENCE,R24;R25,"Supported for high-load, plyometric and combined methods",Small-moderate effects; submaximal (40-79% 1RM) and isometric training not effective; runner populations
+E34,High-load strength training improves running performance (time trial / time to exhaustion),SCIENTIFIC_EVIDENCE,R26,Supported in runners,Certainty very low-moderate; no change in VO2max or sprint capacity
+E35,Strength training reduces sports injury risk,SCIENTIFIC_EVIDENCE,R27,"Supported across mixed sports, ages 12-40",Few RCTs; not runner-specific
+E36,Exercise-based programmes reduce running-related injuries in endurance runners,NOT_SUPPORTED,R28,Pooled RCTs show no significant reduction,Only supervised programmes showed lower risk (post hoc); low study quality
+E37,Resistance training increases lower-limb tendon stiffness; loading magnitude matters,SCIENTIFIC_EVIDENCE,R29;R30,Supported in healthy adults,Tendon properties only; not an injury or running-performance outcome
+E38,"Run-support lower-body selection (calf work at straight and bent knee, unilateral leg work)",HARDSET_DESIGN_DECISION,R25;R29;R30,Functional matching to running demands,Not a validated running programme; maintenance-range loads may fall into the submaximal category of R25

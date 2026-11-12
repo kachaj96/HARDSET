@@ -15,7 +15,7 @@ class DocumentIntegrityTests(unittest.TestCase):
         cited=set(re.findall(r'\bR\d{2}\b',text))
         actual={d['id'] for d in json.loads((ROOT/'research/references.json').read_text(encoding='utf-8'))}
         self.assertFalse(cited-actual, f'Unknown references: {cited-actual}')
-        self.assertEqual(len(actual),23)
+        self.assertEqual(len(actual),30)
     def test_retracted_source_not_in_active_bibliography(self):
         refs=json.loads((ROOT/'research/references.json').read_text(encoding='utf-8'))
         self.assertFalse(any('0000000000003865' in d['doi'] for d in refs))
@@ -23,7 +23,7 @@ class DocumentIntegrityTests(unittest.TestCase):
         import csv
         with (ROOT/'research/evidence_matrix.csv').open(encoding='utf-8',newline='') as f:
             rows=list(csv.DictReader(f))
-        self.assertEqual(len(rows),32)
+        self.assertEqual(len(rows),38)
         for d in rows:
             self.assertIn(d['classification'],{'SCIENTIFIC_EVIDENCE','HARDSET_DESIGN_DECISION',
                     'IMPLEMENTATION_HEURISTIC','PRACTICAL_SAFETY_RULE',

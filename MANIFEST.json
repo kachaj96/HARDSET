@@ -1,14 +1,14 @@
 {
   "name": "HARDSET Knowledge Pack",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "created": "2026-11-12",
   "includes_personal_user_training_data": false,
   "source_type": "approved rule reconstruction/normalization + original support tooling",
   "files": [
     {
       "path": "CHANGELOG.md",
-      "bytes": 1685,
-      "sha256": "3926d4cb280fd2c6360cf3967141ff9844da55d0ffc0e438bfdee28e63148a33"
+      "bytes": 2418,
+      "sha256": "542131aa30a017a42b04da2151173378ae7ad6b8f1177adb695ebfe8950159a6"
     },
     {
       "path": "CLAUDE.md",
@@ -17,8 +17,8 @@
     },
     {
       "path": "HARDSET_MASTER.md",
-      "bytes": 97661,
-      "sha256": "bb79696355362935eb8e1026045522b84985edc8503b45562ad15c461b7cd611"
+      "bytes": 106000,
+      "sha256": "a8d8ad4250c949a06f65b1ed7c961cc2c802b2d531a5181b536900798b85f9b6"
     },
     {
       "path": "PROVENANCE.md",
@@ -28,12 +28,12 @@
     {
       "path": "README.md",
       "bytes": 2211,
-      "sha256": "167558c9239a544087c0e236c21c4d5eb3f9de311f442b1b4f0222db523b62bf"
+      "sha256": "4c0d0c982bd3108966bed7645d2ed2f5aa805547cc270908aa97cfff9f66ea40"
     },
     {
       "path": "START_HERE.md",
-      "bytes": 3609,
-      "sha256": "d0455f86ed2c313c0e325bb0522c776b7de45c784ebc9f2f056a253761912903"
+      "bytes": 3611,
+      "sha256": "41dfcc9e00981b7502ac3f9cc7bf817b169e3f0c3b100d790a7d04879355c055"
     },
     {
       "path": "appendices/A_Volume_Reference_Guide.md",
@@ -127,33 +127,33 @@
     },
     {
       "path": "research/EVIDENCE_MATRIX.md",
-      "bytes": 5825,
-      "sha256": "355f477620dcb01d11208fb00b884cab705e0511d0c235d6b5b4636492da45be"
+      "bytes": 7238,
+      "sha256": "7b5ca9d34d60dcaca50a59b001556111d25d9901328cdf76fa3b3fcf5495a7f7"
     },
     {
       "path": "research/REFERENCES.md",
-      "bytes": 15194,
-      "sha256": "26115e2dde5b7e9d23d29ed8aed3fb9985687976da5f42bf45c150bedbe176ff"
+      "bytes": 20526,
+      "sha256": "1969cbbe31da4d86b31dd5fb73007470111fdc994ac3b9d22afd67b59b25883a"
     },
     {
       "path": "research/RESEARCH_AUDIT.md",
-      "bytes": 3466,
-      "sha256": "01c4ae40670c86ad68b06cb12054ae58b217bccd1d2121723948e7b664892ca0"
+      "bytes": 5060,
+      "sha256": "2a1b5e9fcc36c9219ce3bcedc04f8b95080522ed712216c1e903a56b70cb2730"
     },
     {
       "path": "research/evidence_matrix.csv",
-      "bytes": 4582,
-      "sha256": "281fd9a795f2e0088dddc52fc4ede4634963ba79b27f76e23ddda4f132aa527d"
+      "bytes": 5884,
+      "sha256": "6572c31bfe6e017950e218b59d92870df962f8049bbb1232eb05ca1c719bd986"
     },
     {
       "path": "research/references.json",
-      "bytes": 15818,
-      "sha256": "32c715508bb1769e6abbcde3591f8d89279485697dd40cc1baecef466949d4ed"
+      "bytes": 21671,
+      "sha256": "12af325cdf8d7d1d926f055b726efb39f5a68f6f0a3684c35f5bc066659e4679"
     },
     {
       "path": "scripts/build_manifest.py",
       "bytes": 1147,
-      "sha256": "e83922d1045c3723f4e144016f31e4988f651af15c49425d68752de87fa9d56a"
+      "sha256": "d9a04ea6cb983580fadcbe665143655dce33d5059411ea68f541f8c817cc0330"
     },
     {
       "path": "scripts/build_master.py",
@@ -183,7 +183,7 @@
     {
       "path": "validation/tests/test_integrity.py",
       "bytes": 2131,
-      "sha256": "e0571852ed7651a6dc39043c0e282ec45aeba19183171f2bd1d1b00c0a547d3f"
+      "sha256": "a8d443f847aca974789f74d450a9ae161bce0d80d6de3a5e5e8ed8a6890e6783"
     },
     {
       "path": "validation/tests/test_validator.py",

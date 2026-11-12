@@ -2,7 +2,7 @@
 
 ## Purpose
 
-Kompletna, samodzielna baza zasad **HARDSET** do użycia w Claude Chat / Claude Projects / Claude Code. Obejmuje **9 zatwierdzonych rozdziałów (na poziomie zasad)**, aneksy, 23 zweryfikowane naukowe źródła, 32 pozycje matrycy dowodów, opis konstrukcji planów, audyt P/S oraz uruchamialny **prototyp walidatora strukturalnego**.
+Kompletna, samodzielna baza zasad **HARDSET** do użycia w Claude Chat / Claude Projects / Claude Code. Obejmuje **9 zatwierdzonych rozdziałów (na poziomie zasad)**, aneksy, 30 zweryfikowanych naukowych źródeł, 38 pozycji matrycy dowodów, opis konstrukcji planów, audyt P/S oraz uruchamialny **prototyp walidatora strukturalnego**.
 
 **Paczka nie zawiera żadnego profilu ani planu treningowego konkretnej osoby.** Nowy program należy projektować od zera.
 
@@ -47,8 +47,8 @@ PROVENANCE.md               — pochodzenie/ograniczenia rekonstrukcji
 CHANGELOG.md                — historia wydania
 chapters/01...09             — zatwierdzone reguły rozdziałów
 appendices/                 — 5 aneksów pomocniczych
-research/REFERENCES.md      — 23 publikacje, DOI i interpretacja
-research/EVIDENCE_MATRIX.md — 32 reguły/tezy z typem dowodu
+research/REFERENCES.md      — 30 publikacji, DOI i interpretacja
+research/EVIDENCE_MATRIX.md — 38 reguł/tez z typem dowodu
 research/RESEARCH_AUDIT.md  — metoda weryfikacji i wycofane źródło
 validation/README.md        — walidator CLI i zakres
 validation/SCHEMA.md        — kontrakt wejścia/wyjścia

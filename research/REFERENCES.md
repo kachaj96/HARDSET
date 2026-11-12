@@ -256,3 +256,84 @@
 **Uzasadniony wniosek:** Early apparent increases in muscle cross-sectional area may include edema.
 
 **Granice interpretacji:** Small novice study and measurement methodology limit generalization.
+
+---
+
+**Uzupełnienie v1.1.0 (2026-11-12): trening siłowy a bieganie.** Weryfikacja przez PubMed (NCBI E-utilities): metadane, abstrakt, noty o wycofaniu i korekcie. Zakres opisany w `RESEARCH_AUDIT.md`.
+
+## R24 — Balsalobre-Fernández et al. (2016)
+
+**Tytuł:** Effects of Strength Training on Running Economy in Highly Trained Runners: A Systematic Review With Meta-Analysis of Controlled Trials.  
+**Rodzaj:** Systematic review / meta-analysis.  
+**DOI:** [10.1519/JSC.0000000000001316](https://doi.org/10.1519/JSC.0000000000001316).  
+**Link bibliograficzny:** https://doi.org/10.1519/JSC.0000000000001316
+
+**Uzasadniony wniosek:** Strength training (resistance plus plyometric, 2-3x/week, 8-12 weeks) improved running economy in highly trained middle- and long-distance runners (SMD -1.42).
+
+**Granice interpretacji:** Only 5 studies, 93 runners with VO2max >60; wide confidence interval; mostly low-moderate loads combined with jumps and sprints.
+
+## R25 — Llanos-Lagos et al. (2024)
+
+**Tytuł:** Effect of Strength Training Programs in Middle- and Long-Distance Runners' Economy at Different Running Speeds: A Systematic Review with Meta-analysis.  
+**Rodzaj:** Systematic review / three-level meta-analysis.  
+**DOI:** [10.1007/s40279-023-01978-y](https://doi.org/10.1007/s40279-023-01978-y).  
+**Link bibliograficzny:** https://doi.org/10.1007/s40279-023-01978-y
+
+**Uzasadniony wniosek:** High-load (>=80% 1RM), plyometric and combined strength training improved running economy (small to moderate effects); submaximal-load (40-79% 1RM) and isometric training did not.
+
+**Granice interpretacji:** Certainty moderate (low for combined); effects depend on running speed and VO2max; runner populations only.
+
+## R26 — Llanos-Lagos et al. (2024)
+
+**Tytuł:** The Effect of Strength Training Methods on Middle-Distance and Long-Distance Runners' Athletic Performance: A Systematic Review with Meta-analysis.  
+**Rodzaj:** Systematic review / meta-analysis.  
+**DOI:** [10.1007/s40279-024-02018-z](https://doi.org/10.1007/s40279-024-02018-z).  
+**Link bibliograficzny:** https://doi.org/10.1007/s40279-024-02018-z
+
+**Uzasadniony wniosek:** High-load and combined strength training improved running performance (time trial, time to exhaustion); plyometric alone not significant; no method changed VO2max, vVO2max, MMSS or sprint capacity.
+
+**Granice interpretacji:** Certainty very low to moderate; heterogeneous protocols and populations.
+
+## R27 — Lauersen et al. (2018)
+
+**Tytuł:** Strength training as superior, dose-dependent and safe prevention of acute and overuse sports injuries: a systematic review, qualitative analysis and meta-analysis.  
+**Rodzaj:** Systematic review / meta-analysis of RCTs.  
+**DOI:** [10.1136/bjsports-2018-099078](https://doi.org/10.1136/bjsports-2018-099078).  
+**Link bibliograficzny:** https://doi.org/10.1136/bjsports-2018-099078
+
+**Uzasadniony wniosek:** Strength-training-based prevention programmes reduced sports injury risk (RR 0.338) in athletes aged 12-40, with a dose-response association.
+
+**Granice interpretacji:** Only 6 RCTs, 177 injuries; mixed sports and ages; not specific to runners.
+
+## R28 — Wu et al. (2024)
+
+**Tytuł:** Do Exercise-Based Prevention Programs Reduce Injury in Endurance Runners? A Systematic Review and Meta-Analysis.  
+**Rodzaj:** Systematic review / meta-analysis of RCTs.  
+**DOI:** [10.1007/s40279-024-01993-7](https://doi.org/10.1007/s40279-024-01993-7).  
+**Link bibliograficzny:** https://doi.org/10.1007/s40279-024-01993-7
+
+**Uzasadniony wniosek:** In endurance runners, exercise-based prevention programmes did not significantly reduce running-related injury risk or rate overall; a post hoc analysis of supervised programmes only showed lower risk.
+
+**Granice interpretacji:** 9 RCTs, 1904 participants, 7 of low quality; supervised-only finding is post hoc and may reflect compliance.
+
+## R29 — Bohm et al. (2015)
+
+**Tytuł:** Human tendon adaptation in response to mechanical loading: a systematic review and meta-analysis of exercise intervention studies on healthy adults.  
+**Rodzaj:** Systematic review / meta-analysis.  
+**DOI:** [10.1186/s40798-015-0009-9](https://doi.org/10.1186/s40798-015-0009-9).  
+**Link bibliograficzny:** https://doi.org/10.1186/s40798-015-0009-9
+
+**Uzasadniony wniosek:** Achilles and patellar tendons increased stiffness (SMD 0.70), Young's modulus and CSA after >=8-week loading interventions; stiffness adaptation depended on loading intensity, not contraction type.
+
+**Granice interpretacji:** Healthy adults 18-50; 264 participants; tendon properties, not injury or running outcomes.
+
+## R30 — Lazarczuk et al. (2022)
+
+**Tytuł:** Mechanical, Material and Morphological Adaptations of Healthy Lower Limb Tendons to Mechanical Loading: A Systematic Review and Meta-Analysis.  
+**Rodzaj:** Systematic review / meta-analysis.  
+**DOI:** [10.1007/s40279-022-01695-y](https://doi.org/10.1007/s40279-022-01695-y).  
+**Link bibliograficzny:** https://doi.org/10.1007/s40279-022-01695-y
+
+**Uzasadniony wniosek:** Mechanical loading, mainly resistance training, increased lower-limb tendon stiffness (SMD 0.74) and modulus; higher-strain resistance protocols produced greater adaptation.
+
+**Granice interpretacji:** Tendon properties only; does not show reduced injury or better running performance.
