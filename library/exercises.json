@@ -1,0 +1,1729 @@
+{
+  "version": "0.1",
+  "status": "proposed - awaiting owner review",
+  "note": "P/S tags are planner judgments for a typical execution, not universal biomechanical truths (Appendix C). Only approved entries may yield PASS in the builder.",
+  "exercises": [
+    {
+      "id": "bench_paused",
+      "name_pl": "Wyciskanie leżąc z pauzą (zawodnicze)",
+      "name_en": "Paused Bench Press",
+      "family": "Compound Pattern",
+      "movement_tag": "horizontal_press",
+      "equipment": "barbell",
+      "variant": "płaska ławka, pauza na klatce",
+      "stimulus": {
+        "Chest": "P",
+        "Elbow Extensors": "S"
+      },
+      "functional_notes": "",
+      "safe_exit": "conditional",
+      "safe_exit_condition": "ławka w racku, safety bars tuż pod najniższym punktem ruchu",
+      "rir_floor_default": 0,
+      "rep_template": "5-8",
+      "rest_sec": 180,
+      "seconds_per_set": 40,
+      "review": {
+        "status": "proposed",
+        "date": null,
+        "comment": ""
+      }
+    },
+    {
+      "id": "bench_tng",
+      "name_pl": "Wyciskanie leżąc touch-and-go",
+      "name_en": "Bench Press (touch-and-go)",
+      "family": "Compound Pattern",
+      "movement_tag": "horizontal_press",
+      "equipment": "barbell",
+      "variant": "płaska ławka",
+      "stimulus": {
+        "Chest": "P",
+        "Elbow Extensors": "S"
+      },
+      "functional_notes": "",
+      "safe_exit": "conditional",
+      "safe_exit_condition": "ławka w racku, safety bars tuż pod najniższym punktem ruchu",
+      "rir_floor_default": 0,
+      "rep_template": "5-8",
+      "rest_sec": 180,
+      "seconds_per_set": 40,
+      "review": {
+        "status": "proposed",
+        "date": null,
+        "comment": ""
+      }
+    },
+    {
+      "id": "bench_close_grip",
+      "name_pl": "Wyciskanie wąsko",
+      "name_en": "Close-Grip Bench Press",
+      "family": "Compound Pattern",
+      "movement_tag": "horizontal_press",
+      "equipment": "barbell",
+      "variant": "chwyt na szerokość barków",
+      "stimulus": {
+        "Chest": "P",
+        "Elbow Extensors": "S"
+      },
+      "functional_notes": "większy udział tricepsa niż w zwykłym bench pressie",
+      "safe_exit": "conditional",
+      "safe_exit_condition": "ławka w racku, safety bars tuż pod najniższym punktem ruchu",
+      "rir_floor_default": 0,
+      "rep_template": "6-10",
+      "rest_sec": 180,
+      "seconds_per_set": 45,
+      "review": {
+        "status": "proposed",
+        "date": null,
+        "comment": ""
+      }
+    },
+    {
+      "id": "bench_incline_bb",
+      "name_pl": "Wyciskanie na skosie sztangą",
+      "name_en": "Incline Barbell Press",
+      "family": "Compound Pattern",
+      "movement_tag": "incline_press",
+      "equipment": "barbell",
+      "variant": "skos ~30°",
+      "stimulus": {
+        "Chest": "P",
+        "Elbow Extensors": "S"
+      },
+      "functional_notes": "akcent na górną część klatki",
+      "safe_exit": "conditional",
+      "safe_exit_condition": "ławka w racku, safety bars tuż pod najniższym punktem ruchu",
+      "rir_floor_default": 0,
+      "rep_template": "6-10",
+      "rest_sec": 150,
+      "seconds_per_set": 45,
+      "review": {
+        "status": "proposed",
+        "date": null,
+        "comment": ""
+      }
+    },
+    {
+      "id": "db_bench",
+      "name_pl": "Wyciskanie hantli na płaskiej",
+      "name_en": "Dumbbell Bench Press",
+      "family": "Compound Pattern",
+      "movement_tag": "horizontal_press",
+      "equipment": "dumbbells",
+      "variant": "płaska ławka",
+      "stimulus": {
+        "Chest": "P",
+        "Elbow Extensors": "S"
+      },
+      "functional_notes": "",
+      "safe_exit": "conditional",
+      "safe_exit_condition": "umiejętność bezpiecznego odłożenia hantli przy upadku",
+      "rir_floor_default": 1,
+      "rep_template": "6-10",
+      "rest_sec": 150,
+      "seconds_per_set": 45,
+      "review": {
+        "status": "proposed",
+        "date": null,
+        "comment": ""
+      }
+    },
+    {
+      "id": "db_incline",
+      "name_pl": "Wyciskanie hantli na skosie",
+      "name_en": "Incline Dumbbell Press",
+      "family": "Compound Pattern",
+      "movement_tag": "incline_press",
+      "equipment": "dumbbells",
+      "variant": "skos ~30°",
+      "stimulus": {
+        "Chest": "P",
+        "Elbow Extensors": "S"
+      },
+      "functional_notes": "akcent na górną część klatki",
+      "safe_exit": "conditional",
+      "safe_exit_condition": "umiejętność bezpiecznego odłożenia hantli przy upadku",
+      "rir_floor_default": 1,
+      "rep_template": "6-10",
+      "rest_sec": 150,
+      "seconds_per_set": 45,
+      "review": {
+        "status": "proposed",
+        "date": null,
+        "comment": ""
+      }
+    },
+    {
+      "id": "machine_chest_press",
+      "name_pl": "Chest press na maszynie",
+      "name_en": "Machine Chest Press",
+      "family": "Compound Pattern",
+      "movement_tag": "horizontal_press",
+      "equipment": "machine",
+      "variant": "płaski",
+      "stimulus": {
+        "Chest": "P",
+        "Elbow Extensors": "S"
+      },
+      "functional_notes": "",
+      "safe_exit": true,
+      "safe_exit_condition": "",
+      "rir_floor_default": 0,
+      "rep_template": "6-10",
+      "rest_sec": 150,
+      "seconds_per_set": 45,
+      "review": {
+        "status": "proposed",
+        "date": null,
+        "comment": ""
+      }
+    },
+    {
+      "id": "machine_incline_press",
+      "name_pl": "Incline press na maszynie",
+      "name_en": "Machine Incline Press",
+      "family": "Compound Pattern",
+      "movement_tag": "incline_press",
+      "equipment": "machine",
+      "variant": "skos",
+      "stimulus": {
+        "Chest": "P",
+        "Elbow Extensors": "S"
+      },
+      "functional_notes": "akcent na górną część klatki",
+      "safe_exit": true,
+      "safe_exit_condition": "",
+      "rir_floor_default": 0,
+      "rep_template": "6-10",
+      "rest_sec": 150,
+      "seconds_per_set": 45,
+      "review": {
+        "status": "proposed",
+        "date": null,
+        "comment": ""
+      }
+    },
+    {
+      "id": "smith_bench",
+      "name_pl": "Wyciskanie na suwnicy Smitha",
+      "name_en": "Smith Machine Bench Press",
+      "family": "Compound Pattern",
+      "movement_tag": "horizontal_press",
+      "equipment": "smith",
+      "variant": "płaska ławka",
+      "stimulus": {
+        "Chest": "P",
+        "Elbow Extensors": "S"
+      },
+      "functional_notes": "",
+      "safe_exit": "conditional",
+      "safe_exit_condition": "stopy bezpieczeństwa ustawione",
+      "rir_floor_default": 0,
+      "rep_template": "6-10",
+      "rest_sec": 150,
+      "seconds_per_set": 45,
+      "review": {
+        "status": "proposed",
+        "date": null,
+        "comment": ""
+      }
+    },
+    {
+      "id": "smith_incline",
+      "name_pl": "Wyciskanie na skosie na suwnicy Smitha",
+      "name_en": "Smith Machine Incline Press",
+      "family": "Compound Pattern",
+      "movement_tag": "incline_press",
+      "equipment": "smith",
+      "variant": "skos ~30°",
+      "stimulus": {
+        "Chest": "P",
+        "Elbow Extensors": "S"
+      },
+      "functional_notes": "akcent na górną część klatki",
+      "safe_exit": "conditional",
+      "safe_exit_condition": "stopy bezpieczeństwa ustawione",
+      "rir_floor_default": 0,
+      "rep_template": "6-10",
+      "rest_sec": 150,
+      "seconds_per_set": 45,
+      "review": {
+        "status": "proposed",
+        "date": null,
+        "comment": ""
+      }
+    },
+    {
+      "id": "pec_deck",
+      "name_pl": "Pec deck",
+      "name_en": "Pec Deck",
+      "family": "Targeted Function",
+      "movement_tag": "shoulder_horizontal_adduction",
+      "equipment": "machine",
+      "variant": "",
+      "stimulus": {
+        "Chest": "P"
+      },
+      "functional_notes": "",
+      "safe_exit": true,
+      "safe_exit_condition": "",
+      "rir_floor_default": 0,
+      "rep_template": "12-20",
+      "rest_sec": 90,
+      "seconds_per_set": 50,
+      "review": {
+        "status": "proposed",
+        "date": null,
+        "comment": ""
+      }
+    },
+    {
+      "id": "cable_fly",
+      "name_pl": "Rozpiętki na wyciągu",
+      "name_en": "Cable Fly",
+      "family": "Targeted Function",
+      "movement_tag": "shoulder_horizontal_adduction",
+      "equipment": "cable",
+      "variant": "na wysokości klatki",
+      "stimulus": {
+        "Chest": "P"
+      },
+      "functional_notes": "",
+      "safe_exit": true,
+      "safe_exit_condition": "",
+      "rir_floor_default": 0,
+      "rep_template": "12-15",
+      "rest_sec": 90,
+      "seconds_per_set": 45,
+      "review": {
+        "status": "proposed",
+        "date": null,
+        "comment": ""
+      }
+    },
+    {
+      "id": "cable_fly_low_high",
+      "name_pl": "Rozpiętki z dołu do góry",
+      "name_en": "Low-to-High Cable Fly",
+      "family": "Targeted Function",
+      "movement_tag": "shoulder_horizontal_adduction",
+      "equipment": "cable",
+      "variant": "z dołu do góry",
+      "stimulus": {
+        "Chest": "P"
+      },
+      "functional_notes": "akcent na górną część klatki",
+      "safe_exit": true,
+      "safe_exit_condition": "",
+      "rir_floor_default": 0,
+      "rep_template": "12-15",
+      "rest_sec": 75,
+      "seconds_per_set": 45,
+      "review": {
+        "status": "proposed",
+        "date": null,
+        "comment": ""
+      }
+    },
+    {
+      "id": "dips_bw",
+      "name_pl": "Pompki na poręczach",
+      "name_en": "Dips",
+      "family": "Compound Pattern",
+      "movement_tag": "vertical_press_down",
+      "equipment": "bodyweight",
+      "variant": "pochylenie zależne od celu",
+      "stimulus": {
+        "Elbow Extensors": "P",
+        "Chest": "S"
+      },
+      "functional_notes": "udział klatki rośnie z pochyleniem tułowia",
+      "safe_exit": "conditional",
+      "safe_exit_condition": "możliwość zejścia na podest przy upadku",
+      "rir_floor_default": 1,
+      "rep_template": "6-12",
+      "rest_sec": 150,
+      "seconds_per_set": 45,
+      "review": {
+        "status": "proposed",
+        "date": null,
+        "comment": ""
+      }
+    },
+    {
+      "id": "db_lateral",
+      "name_pl": "Wznosy bokiem z hantlami",
+      "name_en": "Dumbbell Lateral Raise",
+      "family": "Targeted Function",
+      "movement_tag": "shoulder_abduction",
+      "equipment": "dumbbells",
+      "variant": "",
+      "stimulus": {
+        "Lateral Delts": "P"
+      },
+      "functional_notes": "",
+      "safe_exit": true,
+      "safe_exit_condition": "",
+      "rir_floor_default": 0,
+      "rep_template": "12-20",
+      "rest_sec": 75,
+      "seconds_per_set": 50,
+      "review": {
+        "status": "proposed",
+        "date": null,
+        "comment": ""
+      }
+    },
+    {
+      "id": "cable_lateral",
+      "name_pl": "Wznosy bokiem na wyciągu",
+      "name_en": "Cable Lateral Raise",
+      "family": "Targeted Function",
+      "movement_tag": "shoulder_abduction",
+      "equipment": "cable",
+      "variant": "jednorącz",
+      "stimulus": {
+        "Lateral Delts": "P"
+      },
+      "functional_notes": "",
+      "safe_exit": true,
+      "safe_exit_condition": "",
+      "rir_floor_default": 0,
+      "rep_template": "12-20",
+      "rest_sec": 75,
+      "seconds_per_set": 50,
+      "review": {
+        "status": "proposed",
+        "date": null,
+        "comment": ""
+      }
+    },
+    {
+      "id": "machine_lateral",
+      "name_pl": "Wznosy bokiem na maszynie",
+      "name_en": "Machine Lateral Raise",
+      "family": "Targeted Function",
+      "movement_tag": "shoulder_abduction",
+      "equipment": "machine",
+      "variant": "",
+      "stimulus": {
+        "Lateral Delts": "P"
+      },
+      "functional_notes": "",
+      "safe_exit": true,
+      "safe_exit_condition": "",
+      "rir_floor_default": 0,
+      "rep_template": "12-20",
+      "rest_sec": 75,
+      "seconds_per_set": 50,
+      "review": {
+        "status": "proposed",
+        "date": null,
+        "comment": ""
+      }
+    },
+    {
+      "id": "machine_shoulder_press",
+      "name_pl": "Wyciskanie nad głowę na maszynie",
+      "name_en": "Machine Shoulder Press",
+      "family": "Compound Pattern",
+      "movement_tag": "vertical_press",
+      "equipment": "machine",
+      "variant": "",
+      "stimulus": {
+        "Elbow Extensors": "S",
+        "Lateral Delts": "S?"
+      },
+      "functional_notes": "główny cel to przedni akton barku, którego nie ma w Fixed Core (możliwy Functional Override)",
+      "safe_exit": true,
+      "safe_exit_condition": "",
+      "rir_floor_default": 0,
+      "rep_template": "6-10",
+      "rest_sec": 150,
+      "seconds_per_set": 45,
+      "review": {
+        "status": "proposed",
+        "date": null,
+        "comment": ""
+      }
+    },
+    {
+      "id": "db_shoulder_press",
+      "name_pl": "Wyciskanie hantli nad głowę",
+      "name_en": "Seated Dumbbell Shoulder Press",
+      "family": "Compound Pattern",
+      "movement_tag": "vertical_press",
+      "equipment": "dumbbells",
+      "variant": "siedząc",
+      "stimulus": {
+        "Elbow Extensors": "S",
+        "Lateral Delts": "S?"
+      },
+      "functional_notes": "jak wyżej",
+      "safe_exit": "conditional",
+      "safe_exit_condition": "umiejętność bezpiecznego odłożenia hantli",
+      "rir_floor_default": 1,
+      "rep_template": "6-10",
+      "rest_sec": 150,
+      "seconds_per_set": 45,
+      "review": {
+        "status": "proposed",
+        "date": null,
+        "comment": ""
+      }
+    },
+    {
+      "id": "pushdown",
+      "name_pl": "Prostowanie ramion na wyciągu",
+      "name_en": "Cable Triceps Pushdown",
+      "family": "Targeted Function",
+      "movement_tag": "elbow_extension",
+      "equipment": "cable",
+      "variant": "drążek lub lina",
+      "stimulus": {
+        "Elbow Extensors": "P"
+      },
+      "functional_notes": "",
+      "safe_exit": true,
+      "safe_exit_condition": "",
+      "rir_floor_default": 0,
+      "rep_template": "8-12",
+      "rest_sec": 90,
+      "seconds_per_set": 45,
+      "review": {
+        "status": "proposed",
+        "date": null,
+        "comment": ""
+      }
+    },
+    {
+      "id": "overhead_cable_ext",
+      "name_pl": "Prostowanie ramion nad głową na wyciągu",
+      "name_en": "Overhead Cable Triceps Extension",
+      "family": "Targeted Function",
+      "movement_tag": "elbow_extension",
+      "equipment": "cable",
+      "variant": "lina",
+      "stimulus": {
+        "Elbow Extensors": "P"
+      },
+      "functional_notes": "ramię uniesione: większe rozciągnięcie głowy długiej",
+      "safe_exit": true,
+      "safe_exit_condition": "",
+      "rir_floor_default": 0,
+      "rep_template": "8-12",
+      "rest_sec": 90,
+      "seconds_per_set": 45,
+      "review": {
+        "status": "proposed",
+        "date": null,
+        "comment": ""
+      }
+    },
+    {
+      "id": "machine_triceps_ext",
+      "name_pl": "Prostowanie ramion na maszynie",
+      "name_en": "Machine Triceps Extension",
+      "family": "Targeted Function",
+      "movement_tag": "elbow_extension",
+      "equipment": "machine",
+      "variant": "",
+      "stimulus": {
+        "Elbow Extensors": "P"
+      },
+      "functional_notes": "",
+      "safe_exit": true,
+      "safe_exit_condition": "",
+      "rir_floor_default": 0,
+      "rep_template": "8-12",
+      "rest_sec": 90,
+      "seconds_per_set": 45,
+      "review": {
+        "status": "proposed",
+        "date": null,
+        "comment": ""
+      }
+    },
+    {
+      "id": "dip_machine",
+      "name_pl": "Dipy na maszynie",
+      "name_en": "Seated Dip Machine",
+      "family": "Targeted Function",
+      "movement_tag": "elbow_extension",
+      "equipment": "machine",
+      "variant": "siedząc",
+      "stimulus": {
+        "Elbow Extensors": "P",
+        "Chest": "S?"
+      },
+      "functional_notes": "",
+      "safe_exit": true,
+      "safe_exit_condition": "",
+      "rir_floor_default": 0,
+      "rep_template": "8-12",
+      "rest_sec": 90,
+      "seconds_per_set": 45,
+      "review": {
+        "status": "proposed",
+        "date": null,
+        "comment": ""
+      }
+    },
+    {
+      "id": "skullcrusher",
+      "name_pl": "Wyciskanie francuskie leżąc",
+      "name_en": "EZ-Bar Skullcrusher",
+      "family": "Targeted Function",
+      "movement_tag": "elbow_extension",
+      "equipment": "ez_bar",
+      "variant": "leżąc",
+      "stimulus": {
+        "Elbow Extensors": "P"
+      },
+      "functional_notes": "",
+      "safe_exit": "conditional",
+      "safe_exit_condition": "kontrola sztangi nad twarzą; bez prób na upadek",
+      "rir_floor_default": 1,
+      "rep_template": "8-12",
+      "rest_sec": 90,
+      "seconds_per_set": 45,
+      "review": {
+        "status": "proposed",
+        "date": null,
+        "comment": ""
+      }
+    },
+    {
+      "id": "db_overhead_ext",
+      "name_pl": "Wyciskanie francuskie hantlą nad głową",
+      "name_en": "Overhead Dumbbell Triceps Extension",
+      "family": "Targeted Function",
+      "movement_tag": "elbow_extension",
+      "equipment": "dumbbells",
+      "variant": "oburącz",
+      "stimulus": {
+        "Elbow Extensors": "P"
+      },
+      "functional_notes": "",
+      "safe_exit": "conditional",
+      "safe_exit_condition": "bez prób na upadek",
+      "rir_floor_default": 1,
+      "rep_template": "8-12",
+      "rest_sec": 90,
+      "seconds_per_set": 45,
+      "review": {
+        "status": "proposed",
+        "date": null,
+        "comment": ""
+      }
+    },
+    {
+      "id": "lat_pulldown",
+      "name_pl": "Ściąganie drążka wyciągu górnego",
+      "name_en": "Lat Pulldown",
+      "family": "Compound Pattern",
+      "movement_tag": "vertical_pull",
+      "equipment": "cable",
+      "variant": "chwyt nachwytem, akcent na najszersze",
+      "stimulus": {
+        "Back": "P",
+        "Elbow Flexors": "S"
+      },
+      "functional_notes": "akcent: najszersze grzbietu",
+      "safe_exit": true,
+      "safe_exit_condition": "",
+      "rir_floor_default": 0,
+      "rep_template": "8-12",
+      "rest_sec": 120,
+      "seconds_per_set": 45,
+      "review": {
+        "status": "proposed",
+        "date": null,
+        "comment": ""
+      }
+    },
+    {
+      "id": "lat_pulldown_neutral",
+      "name_pl": "Ściąganie wąskim chwytem neutralnym",
+      "name_en": "Close Neutral-Grip Pulldown",
+      "family": "Compound Pattern",
+      "movement_tag": "vertical_pull",
+      "equipment": "cable",
+      "variant": "chwyt neutralny",
+      "stimulus": {
+        "Back": "P",
+        "Elbow Flexors": "S"
+      },
+      "functional_notes": "akcent: najszersze grzbietu",
+      "safe_exit": true,
+      "safe_exit_condition": "",
+      "rir_floor_default": 0,
+      "rep_template": "8-12",
+      "rest_sec": 120,
+      "seconds_per_set": 45,
+      "review": {
+        "status": "proposed",
+        "date": null,
+        "comment": ""
+      }
+    },
+    {
+      "id": "pull_up",
+      "name_pl": "Podciąganie nachwytem",
+      "name_en": "Pull-Up",
+      "family": "Compound Pattern",
+      "movement_tag": "vertical_pull",
+      "equipment": "bodyweight",
+      "variant": "",
+      "stimulus": {
+        "Back": "P",
+        "Elbow Flexors": "S"
+      },
+      "functional_notes": "",
+      "safe_exit": true,
+      "safe_exit_condition": "",
+      "rir_floor_default": 0,
+      "rep_template": "5-10",
+      "rest_sec": 150,
+      "seconds_per_set": 45,
+      "review": {
+        "status": "proposed",
+        "date": null,
+        "comment": ""
+      }
+    },
+    {
+      "id": "chin_up",
+      "name_pl": "Podciąganie podchwytem",
+      "name_en": "Chin-Up",
+      "family": "Compound Pattern",
+      "movement_tag": "vertical_pull",
+      "equipment": "bodyweight",
+      "variant": "",
+      "stimulus": {
+        "Back": "P",
+        "Elbow Flexors": "S"
+      },
+      "functional_notes": "",
+      "safe_exit": true,
+      "safe_exit_condition": "",
+      "rir_floor_default": 0,
+      "rep_template": "5-10",
+      "rest_sec": 150,
+      "seconds_per_set": 45,
+      "review": {
+        "status": "proposed",
+        "date": null,
+        "comment": ""
+      }
+    },
+    {
+      "id": "assisted_pull_up",
+      "name_pl": "Podciąganie na maszynie z odciążeniem",
+      "name_en": "Assisted Pull-Up Machine",
+      "family": "Compound Pattern",
+      "movement_tag": "vertical_pull",
+      "equipment": "machine",
+      "variant": "",
+      "stimulus": {
+        "Back": "P",
+        "Elbow Flexors": "S"
+      },
+      "functional_notes": "",
+      "safe_exit": true,
+      "safe_exit_condition": "",
+      "rir_floor_default": 0,
+      "rep_template": "6-10",
+      "rest_sec": 120,
+      "seconds_per_set": 45,
+      "review": {
+        "status": "proposed",
+        "date": null,
+        "comment": ""
+      }
+    },
+    {
+      "id": "chest_supported_row",
+      "name_pl": "Wiosłowanie z podparciem klatki (maszyna)",
+      "name_en": "Chest-Supported Machine Row",
+      "family": "Compound Pattern",
+      "movement_tag": "horizontal_pull",
+      "equipment": "machine",
+      "variant": "chwyt neutralny, łokcie blisko",
+      "stimulus": {
+        "Back": "P",
+        "Elbow Flexors": "S",
+        "Rear Delts": "S?"
+      },
+      "functional_notes": "",
+      "safe_exit": true,
+      "safe_exit_condition": "",
+      "rir_floor_default": 0,
+      "rep_template": "6-10",
+      "rest_sec": 120,
+      "seconds_per_set": 45,
+      "review": {
+        "status": "proposed",
+        "date": null,
+        "comment": ""
+      }
+    },
+    {
+      "id": "wide_machine_row",
+      "name_pl": "Wiosłowanie szerokim chwytem (maszyna)",
+      "name_en": "Wide-Grip Machine Row",
+      "family": "Compound Pattern",
+      "movement_tag": "horizontal_pull",
+      "equipment": "machine",
+      "variant": "łokcie ~45-60°",
+      "stimulus": {
+        "Back": "P",
+        "Rear Delts": "S",
+        "Elbow Flexors": "S"
+      },
+      "functional_notes": "akcent: górna część pleców; Rear Delts S zależy od toru łokci",
+      "safe_exit": true,
+      "safe_exit_condition": "",
+      "rir_floor_default": 0,
+      "rep_template": "8-12",
+      "rest_sec": 120,
+      "seconds_per_set": 45,
+      "review": {
+        "status": "proposed",
+        "date": null,
+        "comment": ""
+      }
+    },
+    {
+      "id": "seated_cable_row",
+      "name_pl": "Wiosłowanie siedząc na wyciągu",
+      "name_en": "Seated Cable Row",
+      "family": "Compound Pattern",
+      "movement_tag": "horizontal_pull",
+      "equipment": "cable",
+      "variant": "uchwyt neutralny",
+      "stimulus": {
+        "Back": "P",
+        "Elbow Flexors": "S",
+        "Rear Delts": "S?"
+      },
+      "functional_notes": "",
+      "safe_exit": true,
+      "safe_exit_condition": "",
+      "rir_floor_default": 0,
+      "rep_template": "8-12",
+      "rest_sec": 120,
+      "seconds_per_set": 45,
+      "review": {
+        "status": "proposed",
+        "date": null,
+        "comment": ""
+      }
+    },
+    {
+      "id": "db_row",
+      "name_pl": "Wiosłowanie hantlą jednorącz",
+      "name_en": "One-Arm Dumbbell Row",
+      "family": "Compound Pattern",
+      "movement_tag": "horizontal_pull",
+      "equipment": "dumbbells",
+      "variant": "podparcie na ławce",
+      "stimulus": {
+        "Back": "P",
+        "Elbow Flexors": "S"
+      },
+      "functional_notes": "",
+      "safe_exit": true,
+      "safe_exit_condition": "",
+      "rir_floor_default": 0,
+      "rep_template": "8-12",
+      "rest_sec": 90,
+      "seconds_per_set": 90,
+      "review": {
+        "status": "proposed",
+        "date": null,
+        "comment": ""
+      }
+    },
+    {
+      "id": "tbar_row_supported",
+      "name_pl": "Wiosłowanie T-bar z podparciem",
+      "name_en": "Chest-Supported T-Bar Row",
+      "family": "Compound Pattern",
+      "movement_tag": "horizontal_pull",
+      "equipment": "machine",
+      "variant": "",
+      "stimulus": {
+        "Back": "P",
+        "Elbow Flexors": "S",
+        "Rear Delts": "S?"
+      },
+      "functional_notes": "",
+      "safe_exit": true,
+      "safe_exit_condition": "",
+      "rir_floor_default": 0,
+      "rep_template": "6-10",
+      "rest_sec": 120,
+      "seconds_per_set": 45,
+      "review": {
+        "status": "proposed",
+        "date": null,
+        "comment": ""
+      }
+    },
+    {
+      "id": "barbell_row",
+      "name_pl": "Wiosłowanie sztangą w opadzie",
+      "name_en": "Barbell Row",
+      "family": "Compound Pattern",
+      "movement_tag": "horizontal_pull",
+      "equipment": "barbell",
+      "variant": "",
+      "stimulus": {
+        "Back": "P",
+        "Elbow Flexors": "S",
+        "Rear Delts": "S?"
+      },
+      "functional_notes": "duże obciążenie prostowników grzbietu",
+      "safe_exit": "conditional",
+      "safe_exit_condition": "odłożenie sztangi na podłogę; bez prób na upadek",
+      "rir_floor_default": 1,
+      "rep_template": "6-10",
+      "rest_sec": 150,
+      "seconds_per_set": 45,
+      "review": {
+        "status": "proposed",
+        "date": null,
+        "comment": ""
+      }
+    },
+    {
+      "id": "straight_arm_pulldown",
+      "name_pl": "Ściąganie prostymi ramionami",
+      "name_en": "Straight-Arm Pulldown",
+      "family": "Targeted Function",
+      "movement_tag": "shoulder_extension",
+      "equipment": "cable",
+      "variant": "",
+      "stimulus": {
+        "Back": "P"
+      },
+      "functional_notes": "akcent: najszersze grzbietu",
+      "safe_exit": true,
+      "safe_exit_condition": "",
+      "rir_floor_default": 0,
+      "rep_template": "10-15",
+      "rest_sec": 75,
+      "seconds_per_set": 45,
+      "review": {
+        "status": "proposed",
+        "date": null,
+        "comment": ""
+      }
+    },
+    {
+      "id": "reverse_pec_deck",
+      "name_pl": "Reverse pec deck",
+      "name_en": "Reverse Pec Deck",
+      "family": "Targeted Function",
+      "movement_tag": "shoulder_horizontal_abduction",
+      "equipment": "machine",
+      "variant": "",
+      "stimulus": {
+        "Rear Delts": "P"
+      },
+      "functional_notes": "",
+      "safe_exit": true,
+      "safe_exit_condition": "",
+      "rir_floor_default": 0,
+      "rep_template": "12-20",
+      "rest_sec": 75,
+      "seconds_per_set": 50,
+      "review": {
+        "status": "proposed",
+        "date": null,
+        "comment": ""
+      }
+    },
+    {
+      "id": "cable_rear_fly",
+      "name_pl": "Odwrotne rozpiętki na wyciągu",
+      "name_en": "Cable Rear Delt Fly",
+      "family": "Targeted Function",
+      "movement_tag": "shoulder_horizontal_abduction",
+      "equipment": "cable",
+      "variant": "",
+      "stimulus": {
+        "Rear Delts": "P"
+      },
+      "functional_notes": "",
+      "safe_exit": true,
+      "safe_exit_condition": "",
+      "rir_floor_default": 0,
+      "rep_template": "12-20",
+      "rest_sec": 75,
+      "seconds_per_set": 50,
+      "review": {
+        "status": "proposed",
+        "date": null,
+        "comment": ""
+      }
+    },
+    {
+      "id": "face_pull",
+      "name_pl": "Face pull",
+      "name_en": "Face Pull",
+      "family": "Targeted Function",
+      "movement_tag": "shoulder_horizontal_abduction",
+      "equipment": "cable",
+      "variant": "lina, na wysokości twarzy",
+      "stimulus": {
+        "Rear Delts": "P"
+      },
+      "functional_notes": "z rotacją zewnętrzną",
+      "safe_exit": true,
+      "safe_exit_condition": "",
+      "rir_floor_default": 0,
+      "rep_template": "12-20",
+      "rest_sec": 75,
+      "seconds_per_set": 45,
+      "review": {
+        "status": "proposed",
+        "date": null,
+        "comment": ""
+      }
+    },
+    {
+      "id": "db_rear_raise",
+      "name_pl": "Wznosy w opadzie z hantlami",
+      "name_en": "Bent-Over Dumbbell Rear Delt Raise",
+      "family": "Targeted Function",
+      "movement_tag": "shoulder_horizontal_abduction",
+      "equipment": "dumbbells",
+      "variant": "",
+      "stimulus": {
+        "Rear Delts": "P"
+      },
+      "functional_notes": "",
+      "safe_exit": true,
+      "safe_exit_condition": "",
+      "rir_floor_default": 0,
+      "rep_template": "12-20",
+      "rest_sec": 75,
+      "seconds_per_set": 45,
+      "review": {
+        "status": "proposed",
+        "date": null,
+        "comment": ""
+      }
+    },
+    {
+      "id": "machine_preacher",
+      "name_pl": "Uginanie na modlitewniku (maszyna)",
+      "name_en": "Machine Preacher Curl",
+      "family": "Targeted Function",
+      "movement_tag": "elbow_flexion",
+      "equipment": "machine",
+      "variant": "",
+      "stimulus": {
+        "Elbow Flexors": "P"
+      },
+      "functional_notes": "",
+      "safe_exit": true,
+      "safe_exit_condition": "",
+      "rir_floor_default": 0,
+      "rep_template": "8-12",
+      "rest_sec": 90,
+      "seconds_per_set": 45,
+      "review": {
+        "status": "proposed",
+        "date": null,
+        "comment": ""
+      }
+    },
+    {
+      "id": "machine_curl",
+      "name_pl": "Uginanie ramion na maszynie",
+      "name_en": "Machine Biceps Curl",
+      "family": "Targeted Function",
+      "movement_tag": "elbow_flexion",
+      "equipment": "machine",
+      "variant": "",
+      "stimulus": {
+        "Elbow Flexors": "P"
+      },
+      "functional_notes": "",
+      "safe_exit": true,
+      "safe_exit_condition": "",
+      "rir_floor_default": 0,
+      "rep_template": "8-12",
+      "rest_sec": 90,
+      "seconds_per_set": 45,
+      "review": {
+        "status": "proposed",
+        "date": null,
+        "comment": ""
+      }
+    },
+    {
+      "id": "bayesian_curl",
+      "name_pl": "Uginanie na wyciągu zza pleców",
+      "name_en": "Bayesian Cable Curl",
+      "family": "Targeted Function",
+      "movement_tag": "elbow_flexion",
+      "equipment": "cable",
+      "variant": "ramię za tułowiem",
+      "stimulus": {
+        "Elbow Flexors": "P"
+      },
+      "functional_notes": "",
+      "safe_exit": true,
+      "safe_exit_condition": "",
+      "rir_floor_default": 0,
+      "rep_template": "8-12",
+      "rest_sec": 90,
+      "seconds_per_set": 45,
+      "review": {
+        "status": "proposed",
+        "date": null,
+        "comment": ""
+      }
+    },
+    {
+      "id": "cable_curl",
+      "name_pl": "Uginanie ramion na wyciągu",
+      "name_en": "Cable Curl",
+      "family": "Targeted Function",
+      "movement_tag": "elbow_flexion",
+      "equipment": "cable",
+      "variant": "drążek",
+      "stimulus": {
+        "Elbow Flexors": "P"
+      },
+      "functional_notes": "",
+      "safe_exit": true,
+      "safe_exit_condition": "",
+      "rir_floor_default": 0,
+      "rep_template": "8-12",
+      "rest_sec": 90,
+      "seconds_per_set": 45,
+      "review": {
+        "status": "proposed",
+        "date": null,
+        "comment": ""
+      }
+    },
+    {
+      "id": "incline_db_curl",
+      "name_pl": "Uginanie hantlami na skosie",
+      "name_en": "Incline Dumbbell Curl",
+      "family": "Targeted Function",
+      "movement_tag": "elbow_flexion",
+      "equipment": "dumbbells",
+      "variant": "ramię za tułowiem",
+      "stimulus": {
+        "Elbow Flexors": "P"
+      },
+      "functional_notes": "",
+      "safe_exit": true,
+      "safe_exit_condition": "",
+      "rir_floor_default": 0,
+      "rep_template": "8-12",
+      "rest_sec": 90,
+      "seconds_per_set": 45,
+      "review": {
+        "status": "proposed",
+        "date": null,
+        "comment": ""
+      }
+    },
+    {
+      "id": "ez_curl",
+      "name_pl": "Uginanie sztangą łamaną",
+      "name_en": "EZ-Bar Curl",
+      "family": "Targeted Function",
+      "movement_tag": "elbow_flexion",
+      "equipment": "ez_bar",
+      "variant": "",
+      "stimulus": {
+        "Elbow Flexors": "P"
+      },
+      "functional_notes": "",
+      "safe_exit": true,
+      "safe_exit_condition": "",
+      "rir_floor_default": 0,
+      "rep_template": "8-12",
+      "rest_sec": 90,
+      "seconds_per_set": 45,
+      "review": {
+        "status": "proposed",
+        "date": null,
+        "comment": ""
+      }
+    },
+    {
+      "id": "hammer_curl",
+      "name_pl": "Uginanie młotkowe",
+      "name_en": "Dumbbell Hammer Curl",
+      "family": "Targeted Function",
+      "movement_tag": "elbow_flexion",
+      "equipment": "dumbbells",
+      "variant": "chwyt neutralny",
+      "stimulus": {
+        "Elbow Flexors": "P"
+      },
+      "functional_notes": "większy udział ramiennego i ramienno-promieniowego",
+      "safe_exit": true,
+      "safe_exit_condition": "",
+      "rir_floor_default": 0,
+      "rep_template": "8-12",
+      "rest_sec": 90,
+      "seconds_per_set": 45,
+      "review": {
+        "status": "proposed",
+        "date": null,
+        "comment": ""
+      }
+    },
+    {
+      "id": "back_squat",
+      "name_pl": "Przysiad ze sztangą",
+      "name_en": "Back Squat",
+      "family": "Compound Pattern",
+      "movement_tag": "squat",
+      "equipment": "barbell",
+      "variant": "",
+      "stimulus": {
+        "Quadriceps": "P",
+        "Glutes": "S",
+        "Hip Adductors": "S?"
+      },
+      "functional_notes": "",
+      "safe_exit": "conditional",
+      "safe_exit_condition": "rack z safety bars; bez prób na upadek",
+      "rir_floor_default": 1,
+      "rep_template": "5-8",
+      "rest_sec": 180,
+      "seconds_per_set": 50,
+      "review": {
+        "status": "proposed",
+        "date": null,
+        "comment": ""
+      }
+    },
+    {
+      "id": "leg_press",
+      "name_pl": "Prasa nożna 45°",
+      "name_en": "45° Leg Press",
+      "family": "Compound Pattern",
+      "movement_tag": "squat",
+      "equipment": "machine",
+      "variant": "",
+      "stimulus": {
+        "Quadriceps": "P",
+        "Glutes": "S?"
+      },
+      "functional_notes": "udział pośladków zależy od głębokości i ustawienia stóp",
+      "safe_exit": true,
+      "safe_exit_condition": "",
+      "rir_floor_default": 0,
+      "rep_template": "8-12",
+      "rest_sec": 150,
+      "seconds_per_set": 50,
+      "review": {
+        "status": "proposed",
+        "date": null,
+        "comment": ""
+      }
+    },
+    {
+      "id": "hack_squat",
+      "name_pl": "Hack squat",
+      "name_en": "Hack Squat",
+      "family": "Compound Pattern",
+      "movement_tag": "squat",
+      "equipment": "machine",
+      "variant": "",
+      "stimulus": {
+        "Quadriceps": "P",
+        "Glutes": "S?"
+      },
+      "functional_notes": "",
+      "safe_exit": "conditional",
+      "safe_exit_condition": "zaczepy bezpieczeństwa ustawione",
+      "rir_floor_default": 0,
+      "rep_template": "8-12",
+      "rest_sec": 150,
+      "seconds_per_set": 50,
+      "review": {
+        "status": "proposed",
+        "date": null,
+        "comment": ""
+      }
+    },
+    {
+      "id": "smith_split_squat",
+      "name_pl": "Wykroki bułgarskie / split squat na Smithie",
+      "name_en": "Smith Split Squat",
+      "family": "Compound Pattern",
+      "movement_tag": "lunge",
+      "equipment": "smith",
+      "variant": "tylna stopa na podłodze",
+      "stimulus": {
+        "Quadriceps": "P",
+        "Glutes": "S?"
+      },
+      "functional_notes": "jednonóż; seria = obie nogi",
+      "safe_exit": "conditional",
+      "safe_exit_condition": "stopy bezpieczeństwa ustawione",
+      "rir_floor_default": 0,
+      "rep_template": "8-12",
+      "rest_sec": 150,
+      "seconds_per_set": 100,
+      "review": {
+        "status": "proposed",
+        "date": null,
+        "comment": ""
+      }
+    },
+    {
+      "id": "bulgarian_split_squat",
+      "name_pl": "Przysiad bułgarski z hantlami",
+      "name_en": "Dumbbell Bulgarian Split Squat",
+      "family": "Compound Pattern",
+      "movement_tag": "lunge",
+      "equipment": "dumbbells",
+      "variant": "tylna stopa na ławce",
+      "stimulus": {
+        "Quadriceps": "P",
+        "Glutes": "S"
+      },
+      "functional_notes": "jednonóż; udział pośladków rośnie z pochyleniem tułowia",
+      "safe_exit": "conditional",
+      "safe_exit_condition": "możliwość odstawienia hantli; bez prób na upadek",
+      "rir_floor_default": 1,
+      "rep_template": "8-12",
+      "rest_sec": 120,
+      "seconds_per_set": 100,
+      "review": {
+        "status": "proposed",
+        "date": null,
+        "comment": ""
+      }
+    },
+    {
+      "id": "leg_extension",
+      "name_pl": "Prostowanie nóg na maszynie",
+      "name_en": "Leg Extension",
+      "family": "Targeted Function",
+      "movement_tag": "knee_extension",
+      "equipment": "machine",
+      "variant": "",
+      "stimulus": {
+        "Quadriceps": "P"
+      },
+      "functional_notes": "akcent: mięsień prosty uda w skróceniu",
+      "safe_exit": true,
+      "safe_exit_condition": "",
+      "rir_floor_default": 0,
+      "rep_template": "10-15",
+      "rest_sec": 90,
+      "seconds_per_set": 45,
+      "review": {
+        "status": "proposed",
+        "date": null,
+        "comment": ""
+      }
+    },
+    {
+      "id": "seated_leg_curl",
+      "name_pl": "Uginanie nóg siedząc",
+      "name_en": "Seated Leg Curl",
+      "family": "Targeted Function",
+      "movement_tag": "knee_flexion",
+      "equipment": "machine",
+      "variant": "",
+      "stimulus": {
+        "Hamstrings": "P"
+      },
+      "functional_notes": "zgięcie kolana przy zgiętym biodrze",
+      "safe_exit": true,
+      "safe_exit_condition": "",
+      "rir_floor_default": 0,
+      "rep_template": "8-12",
+      "rest_sec": 90,
+      "seconds_per_set": 45,
+      "review": {
+        "status": "proposed",
+        "date": null,
+        "comment": ""
+      }
+    },
+    {
+      "id": "lying_leg_curl",
+      "name_pl": "Uginanie nóg leżąc",
+      "name_en": "Lying Leg Curl",
+      "family": "Targeted Function",
+      "movement_tag": "knee_flexion",
+      "equipment": "machine",
+      "variant": "",
+      "stimulus": {
+        "Hamstrings": "P"
+      },
+      "functional_notes": "zgięcie kolana",
+      "safe_exit": true,
+      "safe_exit_condition": "",
+      "rir_floor_default": 0,
+      "rep_template": "8-12",
+      "rest_sec": 90,
+      "seconds_per_set": 45,
+      "review": {
+        "status": "proposed",
+        "date": null,
+        "comment": ""
+      }
+    },
+    {
+      "id": "rdl",
+      "name_pl": "Rumuński martwy ciąg",
+      "name_en": "Romanian Deadlift",
+      "family": "Compound Pattern",
+      "movement_tag": "hip_hinge",
+      "equipment": "barbell",
+      "variant": "",
+      "stimulus": {
+        "Hamstrings": "P",
+        "Glutes": "S",
+        "Back": "S?"
+      },
+      "functional_notes": "wyprost biodra; zwykle 1-2 RIR (Ch04)",
+      "safe_exit": "conditional",
+      "safe_exit_condition": "odłożenie sztangi; bez prób na upadek",
+      "rir_floor_default": 1,
+      "rep_template": "6-10",
+      "rest_sec": 150,
+      "seconds_per_set": 50,
+      "review": {
+        "status": "proposed",
+        "date": null,
+        "comment": ""
+      }
+    },
+    {
+      "id": "deadlift",
+      "name_pl": "Martwy ciąg klasyczny",
+      "name_en": "Conventional Deadlift",
+      "family": "Compound Pattern",
+      "movement_tag": "hip_hinge",
+      "equipment": "barbell",
+      "variant": "",
+      "stimulus": {
+        "Glutes": "S",
+        "Hamstrings": "S",
+        "Quadriceps": "S?",
+        "Back": "S?"
+      },
+      "functional_notes": "ćwiczenie siłowe; bodziec rozłożony, brak jednego P",
+      "safe_exit": "conditional",
+      "safe_exit_condition": "bez prób na upadek",
+      "rir_floor_default": 1,
+      "rep_template": "3-6",
+      "rest_sec": 180,
+      "seconds_per_set": 40,
+      "review": {
+        "status": "proposed",
+        "date": null,
+        "comment": ""
+      }
+    },
+    {
+      "id": "back_extension",
+      "name_pl": "Wyprosty tułowia na ławce 45°",
+      "name_en": "45° Back Extension",
+      "family": "Compound Pattern",
+      "movement_tag": "hip_hinge",
+      "equipment": "bench",
+      "variant": "ruch z bioder, neutralny kręgosłup",
+      "stimulus": {
+        "Glutes": "P",
+        "Hamstrings": "S"
+      },
+      "functional_notes": "wyprost biodra; Glutes P zależy od techniki",
+      "safe_exit": true,
+      "safe_exit_condition": "",
+      "rir_floor_default": 0,
+      "rep_template": "8-12",
+      "rest_sec": 90,
+      "seconds_per_set": 45,
+      "review": {
+        "status": "proposed",
+        "date": null,
+        "comment": ""
+      }
+    },
+    {
+      "id": "machine_hip_thrust",
+      "name_pl": "Hip thrust na maszynie",
+      "name_en": "Machine Hip Thrust",
+      "family": "Targeted Function",
+      "movement_tag": "hip_extension",
+      "equipment": "machine",
+      "variant": "",
+      "stimulus": {
+        "Glutes": "P"
+      },
+      "functional_notes": "",
+      "safe_exit": true,
+      "safe_exit_condition": "",
+      "rir_floor_default": 0,
+      "rep_template": "8-12",
+      "rest_sec": 120,
+      "seconds_per_set": 45,
+      "review": {
+        "status": "proposed",
+        "date": null,
+        "comment": ""
+      }
+    },
+    {
+      "id": "barbell_hip_thrust",
+      "name_pl": "Hip thrust ze sztangą",
+      "name_en": "Barbell Hip Thrust",
+      "family": "Targeted Function",
+      "movement_tag": "hip_extension",
+      "equipment": "barbell",
+      "variant": "",
+      "stimulus": {
+        "Glutes": "P"
+      },
+      "functional_notes": "",
+      "safe_exit": "conditional",
+      "safe_exit_condition": "możliwość opuszczenia sztangi na podłogę",
+      "rir_floor_default": 0,
+      "rep_template": "8-12",
+      "rest_sec": 120,
+      "seconds_per_set": 45,
+      "review": {
+        "status": "proposed",
+        "date": null,
+        "comment": ""
+      }
+    },
+    {
+      "id": "hip_abduction",
+      "name_pl": "Odwodzenie nóg na maszynie",
+      "name_en": "Hip Abduction Machine",
+      "family": "Targeted Function",
+      "movement_tag": "hip_abduction",
+      "equipment": "machine",
+      "variant": "",
+      "stimulus": {
+        "Hip Abduction": "P"
+      },
+      "functional_notes": "Functional Override „Hip Abduction” (Ch02 §7); wymaga aktywacji w planie",
+      "safe_exit": true,
+      "safe_exit_condition": "",
+      "rir_floor_default": 0,
+      "rep_template": "12-20",
+      "rest_sec": 75,
+      "seconds_per_set": 45,
+      "review": {
+        "status": "proposed",
+        "date": null,
+        "comment": ""
+      }
+    },
+    {
+      "id": "hip_adduction",
+      "name_pl": "Przywodzenie nóg na maszynie",
+      "name_en": "Hip Adduction Machine",
+      "family": "Targeted Function",
+      "movement_tag": "hip_adduction",
+      "equipment": "machine",
+      "variant": "",
+      "stimulus": {
+        "Hip Adductors": "P"
+      },
+      "functional_notes": "",
+      "safe_exit": true,
+      "safe_exit_condition": "",
+      "rir_floor_default": 0,
+      "rep_template": "12-15",
+      "rest_sec": 75,
+      "seconds_per_set": 45,
+      "review": {
+        "status": "proposed",
+        "date": null,
+        "comment": ""
+      }
+    },
+    {
+      "id": "standing_calf",
+      "name_pl": "Wspięcia na palce stojąc",
+      "name_en": "Standing Calf Raise",
+      "family": "Targeted Function",
+      "movement_tag": "plantar_flexion",
+      "equipment": "machine",
+      "variant": "proste kolano",
+      "stimulus": {
+        "Calves": "P"
+      },
+      "functional_notes": "proste kolano: akcent na mięsień brzuchaty",
+      "safe_exit": true,
+      "safe_exit_condition": "",
+      "rir_floor_default": 0,
+      "rep_template": "8-12",
+      "rest_sec": 90,
+      "seconds_per_set": 45,
+      "review": {
+        "status": "proposed",
+        "date": null,
+        "comment": ""
+      }
+    },
+    {
+      "id": "seated_calf",
+      "name_pl": "Wspięcia na palce siedząc",
+      "name_en": "Seated Calf Raise",
+      "family": "Targeted Function",
+      "movement_tag": "plantar_flexion",
+      "equipment": "machine",
+      "variant": "zgięte kolano",
+      "stimulus": {
+        "Calves": "P"
+      },
+      "functional_notes": "zgięte kolano: akcent na płaszczkowaty",
+      "safe_exit": true,
+      "safe_exit_condition": "",
+      "rir_floor_default": 0,
+      "rep_template": "10-15",
+      "rest_sec": 75,
+      "seconds_per_set": 45,
+      "review": {
+        "status": "proposed",
+        "date": null,
+        "comment": ""
+      }
+    },
+    {
+      "id": "leg_press_calf",
+      "name_pl": "Wspięcia na palce na prasie",
+      "name_en": "Leg Press Calf Raise",
+      "family": "Targeted Function",
+      "movement_tag": "plantar_flexion",
+      "equipment": "machine",
+      "variant": "proste kolano",
+      "stimulus": {
+        "Calves": "P"
+      },
+      "functional_notes": "proste kolano",
+      "safe_exit": true,
+      "safe_exit_condition": "",
+      "rir_floor_default": 0,
+      "rep_template": "10-15",
+      "rest_sec": 75,
+      "seconds_per_set": 45,
+      "review": {
+        "status": "proposed",
+        "date": null,
+        "comment": ""
+      }
+    },
+    {
+      "id": "cable_crunch",
+      "name_pl": "Spięcia brzucha na wyciągu",
+      "name_en": "Cable Crunch",
+      "family": "Targeted Function",
+      "movement_tag": "trunk_flexion",
+      "equipment": "cable",
+      "variant": "klęcząc",
+      "stimulus": {
+        "Trunk Musculature": "P"
+      },
+      "functional_notes": "zgięcie tułowia",
+      "safe_exit": true,
+      "safe_exit_condition": "",
+      "rir_floor_default": 0,
+      "rep_template": "10-15",
+      "rest_sec": 60,
+      "seconds_per_set": 45,
+      "review": {
+        "status": "proposed",
+        "date": null,
+        "comment": ""
+      }
+    },
+    {
+      "id": "ab_crunch_machine",
+      "name_pl": "Spięcia brzucha na maszynie",
+      "name_en": "Ab Crunch Machine",
+      "family": "Targeted Function",
+      "movement_tag": "trunk_flexion",
+      "equipment": "machine",
+      "variant": "",
+      "stimulus": {
+        "Trunk Musculature": "P"
+      },
+      "functional_notes": "zgięcie tułowia",
+      "safe_exit": true,
+      "safe_exit_condition": "",
+      "rir_floor_default": 0,
+      "rep_template": "10-15",
+      "rest_sec": 60,
+      "seconds_per_set": 45,
+      "review": {
+        "status": "proposed",
+        "date": null,
+        "comment": ""
+      }
+    },
+    {
+      "id": "hanging_knee_raise",
+      "name_pl": "Unoszenie kolan w zwisie",
+      "name_en": "Hanging Knee Raise",
+      "family": "Targeted Function",
+      "movement_tag": "trunk_flexion",
+      "equipment": "bodyweight",
+      "variant": "z podwinięciem miednicy",
+      "stimulus": {
+        "Trunk Musculature": "P"
+      },
+      "functional_notes": "bez podwinięcia miednicy pracują głównie zginacze biodra",
+      "safe_exit": true,
+      "safe_exit_condition": "",
+      "rir_floor_default": 0,
+      "rep_template": "8-15",
+      "rest_sec": 75,
+      "seconds_per_set": 45,
+      "review": {
+        "status": "proposed",
+        "date": null,
+        "comment": ""
+      }
+    },
+    {
+      "id": "pallof_press",
+      "name_pl": "Pallof press",
+      "name_en": "Pallof Press",
+      "family": "Targeted Function",
+      "movement_tag": "anti_rotation",
+      "equipment": "cable",
+      "variant": "",
+      "stimulus": {
+        "Trunk Musculature": "P"
+      },
+      "functional_notes": "funkcja: antyrotacja (Functional Note)",
+      "safe_exit": true,
+      "safe_exit_condition": "",
+      "rir_floor_default": 0,
+      "rep_template": "10-15",
+      "rest_sec": 60,
+      "seconds_per_set": 45,
+      "review": {
+        "status": "proposed",
+        "date": null,
+        "comment": ""
+      }
+    }
+  ]
+}
