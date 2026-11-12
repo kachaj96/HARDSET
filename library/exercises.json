@@ -1,6 +1,6 @@
 {
-  "version": "0.1",
-  "status": "proposed - awaiting owner review",
+  "version": "1.0",
+  "status": "approved by owner 2026-11-12",
   "note": "P/S tags are planner judgments for a typical execution, not universal biomechanical truths (Appendix C). Only approved entries may yield PASS in the builder.",
   "exercises": [
     {
@@ -23,9 +23,9 @@
       "rest_sec": 180,
       "seconds_per_set": 40,
       "review": {
-        "status": "proposed",
-        "date": null,
-        "comment": ""
+        "status": "approved",
+        "date": "2026-11-12",
+        "comment": "zatwierdzone zbiorczo przez właściciela"
       }
     },
     {
@@ -48,9 +48,9 @@
       "rest_sec": 180,
       "seconds_per_set": 40,
       "review": {
-        "status": "proposed",
-        "date": null,
-        "comment": ""
+        "status": "approved",
+        "date": "2026-11-12",
+        "comment": "zatwierdzone zbiorczo przez właściciela"
       }
     },
     {
@@ -73,9 +73,9 @@
       "rest_sec": 180,
       "seconds_per_set": 45,
       "review": {
-        "status": "proposed",
-        "date": null,
-        "comment": ""
+        "status": "approved",
+        "date": "2026-11-12",
+        "comment": "zatwierdzone zbiorczo przez właściciela"
       }
     },
     {
@@ -98,9 +98,9 @@
       "rest_sec": 150,
       "seconds_per_set": 45,
       "review": {
-        "status": "proposed",
-        "date": null,
-        "comment": ""
+        "status": "approved",
+        "date": "2026-11-12",
+        "comment": "zatwierdzone zbiorczo przez właściciela"
       }
     },
     {
@@ -123,9 +123,9 @@
       "rest_sec": 150,
       "seconds_per_set": 45,
       "review": {
-        "status": "proposed",
-        "date": null,
-        "comment": ""
+        "status": "approved",
+        "date": "2026-11-12",
+        "comment": "zatwierdzone zbiorczo przez właściciela"
       }
     },
     {
@@ -148,9 +148,9 @@
       "rest_sec": 150,
       "seconds_per_set": 45,
       "review": {
-        "status": "proposed",
-        "date": null,
-        "comment": ""
+        "status": "approved",
+        "date": "2026-11-12",
+        "comment": "zatwierdzone zbiorczo przez właściciela"
       }
     },
     {
@@ -173,9 +173,9 @@
       "rest_sec": 150,
       "seconds_per_set": 45,
       "review": {
-        "status": "proposed",
-        "date": null,
-        "comment": ""
+        "status": "approved",
+        "date": "2026-11-12",
+        "comment": "zatwierdzone zbiorczo przez właściciela"
       }
     },
     {
@@ -198,9 +198,9 @@
       "rest_sec": 150,
       "seconds_per_set": 45,
       "review": {
-        "status": "proposed",
-        "date": null,
-        "comment": ""
+        "status": "approved",
+        "date": "2026-11-12",
+        "comment": "zatwierdzone zbiorczo przez właściciela"
       }
     },
     {
@@ -223,9 +223,9 @@
       "rest_sec": 150,
       "seconds_per_set": 45,
       "review": {
-        "status": "proposed",
-        "date": null,
-        "comment": ""
+        "status": "approved",
+        "date": "2026-11-12",
+        "comment": "zatwierdzone zbiorczo przez właściciela"
       }
     },
     {
@@ -248,9 +248,9 @@
       "rest_sec": 150,
       "seconds_per_set": 45,
       "review": {
-        "status": "proposed",
-        "date": null,
-        "comment": ""
+        "status": "approved",
+        "date": "2026-11-12",
+        "comment": "zatwierdzone zbiorczo przez właściciela"
       }
     },
     {
@@ -272,9 +272,9 @@
       "rest_sec": 90,
       "seconds_per_set": 50,
       "review": {
-        "status": "proposed",
-        "date": null,
-        "comment": ""
+        "status": "approved",
+        "date": "2026-11-12",
+        "comment": "zatwierdzone zbiorczo przez właściciela"
       }
     },
     {
@@ -296,9 +296,9 @@
       "rest_sec": 90,
       "seconds_per_set": 45,
       "review": {
-        "status": "proposed",
-        "date": null,
-        "comment": ""
+        "status": "approved",
+        "date": "2026-11-12",
+        "comment": "zatwierdzone zbiorczo przez właściciela"
       }
     },
     {
@@ -320,9 +320,9 @@
       "rest_sec": 75,
       "seconds_per_set": 45,
       "review": {
-        "status": "proposed",
-        "date": null,
-        "comment": ""
+        "status": "approved",
+        "date": "2026-11-12",
+        "comment": "zatwierdzone zbiorczo przez właściciela"
       }
     },
     {
@@ -345,9 +345,9 @@
       "rest_sec": 150,
       "seconds_per_set": 45,
       "review": {
-        "status": "proposed",
-        "date": null,
-        "comment": ""
+        "status": "approved",
+        "date": "2026-11-12",
+        "comment": "zatwierdzone zbiorczo przez właściciela"
       }
     },
     {
@@ -369,9 +369,9 @@
       "rest_sec": 75,
       "seconds_per_set": 50,
       "review": {
-        "status": "proposed",
-        "date": null,
-        "comment": ""
+        "status": "approved",
+        "date": "2026-11-12",
+        "comment": "zatwierdzone zbiorczo przez właściciela"
       }
     },
     {
@@ -393,9 +393,9 @@
       "rest_sec": 75,
       "seconds_per_set": 50,
       "review": {
-        "status": "proposed",
-        "date": null,
-        "comment": ""
+        "status": "approved",
+        "date": "2026-11-12",
+        "comment": "zatwierdzone zbiorczo przez właściciela"
       }
     },
     {
@@ -417,9 +417,9 @@
       "rest_sec": 75,
       "seconds_per_set": 50,
       "review": {
-        "status": "proposed",
-        "date": null,
-        "comment": ""
+        "status": "approved",
+        "date": "2026-11-12",
+        "comment": "zatwierdzone zbiorczo przez właściciela"
       }
     },
     {
@@ -442,9 +442,9 @@
       "rest_sec": 150,
       "seconds_per_set": 45,
       "review": {
-        "status": "proposed",
-        "date": null,
-        "comment": ""
+        "status": "approved",
+        "date": "2026-11-12",
+        "comment": "zatwierdzone zbiorczo przez właściciela"
       }
     },
     {
@@ -467,9 +467,9 @@
       "rest_sec": 150,
       "seconds_per_set": 45,
       "review": {
-        "status": "proposed",
-        "date": null,
-        "comment": ""
+        "status": "approved",
+        "date": "2026-11-12",
+        "comment": "zatwierdzone zbiorczo przez właściciela"
       }
     },
     {
@@ -491,9 +491,9 @@
       "rest_sec": 90,
       "seconds_per_set": 45,
       "review": {
-        "status": "proposed",
-        "date": null,
-        "comment": ""
+        "status": "approved",
+        "date": "2026-11-12",
+        "comment": "zatwierdzone zbiorczo przez właściciela"
       }
     },
     {
@@ -515,9 +515,9 @@
       "rest_sec": 90,
       "seconds_per_set": 45,
       "review": {
-        "status": "proposed",
-        "date": null,
-        "comment": ""
+        "status": "approved",
+        "date": "2026-11-12",
+        "comment": "zatwierdzone zbiorczo przez właściciela"
       }
     },
     {
@@ -539,9 +539,9 @@
       "rest_sec": 90,
       "seconds_per_set": 45,
       "review": {
-        "status": "proposed",
-        "date": null,
-        "comment": ""
+        "status": "approved",
+        "date": "2026-11-12",
+        "comment": "zatwierdzone zbiorczo przez właściciela"
       }
     },
     {
@@ -564,9 +564,9 @@
       "rest_sec": 90,
       "seconds_per_set": 45,
       "review": {
-        "status": "proposed",
-        "date": null,
-        "comment": ""
+        "status": "approved",
+        "date": "2026-11-12",
+        "comment": "zatwierdzone zbiorczo przez właściciela"
       }
     },
     {
@@ -588,9 +588,9 @@
       "rest_sec": 90,
       "seconds_per_set": 45,
       "review": {
-        "status": "proposed",
-        "date": null,
-        "comment": ""
+        "status": "approved",
+        "date": "2026-11-12",
+        "comment": "zatwierdzone zbiorczo przez właściciela"
       }
     },
     {
@@ -612,9 +612,9 @@
       "rest_sec": 90,
       "seconds_per_set": 45,
       "review": {
-        "status": "proposed",
-        "date": null,
-        "comment": ""
+        "status": "approved",
+        "date": "2026-11-12",
+        "comment": "zatwierdzone zbiorczo przez właściciela"
       }
     },
     {
@@ -637,9 +637,9 @@
       "rest_sec": 120,
       "seconds_per_set": 45,
       "review": {
-        "status": "proposed",
-        "date": null,
-        "comment": ""
+        "status": "approved",
+        "date": "2026-11-12",
+        "comment": "zatwierdzone zbiorczo przez właściciela"
       }
     },
     {
@@ -662,9 +662,9 @@
       "rest_sec": 120,
       "seconds_per_set": 45,
       "review": {
-        "status": "proposed",
-        "date": null,
-        "comment": ""
+        "status": "approved",
+        "date": "2026-11-12",
+        "comment": "zatwierdzone zbiorczo przez właściciela"
       }
     },
     {
@@ -687,9 +687,9 @@
       "rest_sec": 150,
       "seconds_per_set": 45,
       "review": {
-        "status": "proposed",
-        "date": null,
-        "comment": ""
+        "status": "approved",
+        "date": "2026-11-12",
+        "comment": "zatwierdzone zbiorczo przez właściciela"
       }
     },
     {
@@ -712,9 +712,9 @@
       "rest_sec": 150,
       "seconds_per_set": 45,
       "review": {
-        "status": "proposed",
-        "date": null,
-        "comment": ""
+        "status": "approved",
+        "date": "2026-11-12",
+        "comment": "zatwierdzone zbiorczo przez właściciela"
       }
     },
     {
@@ -737,9 +737,9 @@
       "rest_sec": 120,
       "seconds_per_set": 45,
       "review": {
-        "status": "proposed",
-        "date": null,
-        "comment": ""
+        "status": "approved",
+        "date": "2026-11-12",
+        "comment": "zatwierdzone zbiorczo przez właściciela"
       }
     },
     {
@@ -763,9 +763,9 @@
       "rest_sec": 120,
       "seconds_per_set": 45,
       "review": {
-        "status": "proposed",
-        "date": null,
-        "comment": ""
+        "status": "approved",
+        "date": "2026-11-12",
+        "comment": "zatwierdzone zbiorczo przez właściciela"
       }
     },
     {
@@ -789,9 +789,9 @@
       "rest_sec": 120,
       "seconds_per_set": 45,
       "review": {
-        "status": "proposed",
-        "date": null,
-        "comment": ""
+        "status": "approved",
+        "date": "2026-11-12",
+        "comment": "zatwierdzone zbiorczo przez właściciela"
       }
     },
     {
@@ -815,9 +815,9 @@
       "rest_sec": 120,
       "seconds_per_set": 45,
       "review": {
-        "status": "proposed",
-        "date": null,
-        "comment": ""
+        "status": "approved",
+        "date": "2026-11-12",
+        "comment": "zatwierdzone zbiorczo przez właściciela"
       }
     },
     {
@@ -840,9 +840,9 @@
       "rest_sec": 90,
       "seconds_per_set": 90,
       "review": {
-        "status": "proposed",
-        "date": null,
-        "comment": ""
+        "status": "approved",
+        "date": "2026-11-12",
+        "comment": "zatwierdzone zbiorczo przez właściciela"
       }
     },
     {
@@ -866,9 +866,9 @@
       "rest_sec": 120,
       "seconds_per_set": 45,
       "review": {
-        "status": "proposed",
-        "date": null,
-        "comment": ""
+        "status": "approved",
+        "date": "2026-11-12",
+        "comment": "zatwierdzone zbiorczo przez właściciela"
       }
     },
     {
@@ -892,9 +892,9 @@
       "rest_sec": 150,
       "seconds_per_set": 45,
       "review": {
-        "status": "proposed",
-        "date": null,
-        "comment": ""
+        "status": "approved",
+        "date": "2026-11-12",
+        "comment": "zatwierdzone zbiorczo przez właściciela"
       }
     },
     {
@@ -916,9 +916,9 @@
       "rest_sec": 75,
       "seconds_per_set": 45,
       "review": {
-        "status": "proposed",
-        "date": null,
-        "comment": ""
+        "status": "approved",
+        "date": "2026-11-12",
+        "comment": "zatwierdzone zbiorczo przez właściciela"
       }
     },
     {
@@ -940,9 +940,9 @@
       "rest_sec": 75,
       "seconds_per_set": 50,
       "review": {
-        "status": "proposed",
-        "date": null,
-        "comment": ""
+        "status": "approved",
+        "date": "2026-11-12",
+        "comment": "zatwierdzone zbiorczo przez właściciela"
       }
     },
     {
@@ -964,9 +964,9 @@
       "rest_sec": 75,
       "seconds_per_set": 50,
       "review": {
-        "status": "proposed",
-        "date": null,
-        "comment": ""
+        "status": "approved",
+        "date": "2026-11-12",
+        "comment": "zatwierdzone zbiorczo przez właściciela"
       }
     },
     {
@@ -988,9 +988,9 @@
       "rest_sec": 75,
       "seconds_per_set": 45,
       "review": {
-        "status": "proposed",
-        "date": null,
-        "comment": ""
+        "status": "approved",
+        "date": "2026-11-12",
+        "comment": "zatwierdzone zbiorczo przez właściciela"
       }
     },
     {
@@ -1012,9 +1012,9 @@
       "rest_sec": 75,
       "seconds_per_set": 45,
       "review": {
-        "status": "proposed",
-        "date": null,
-        "comment": ""
+        "status": "approved",
+        "date": "2026-11-12",
+        "comment": "zatwierdzone zbiorczo przez właściciela"
       }
     },
     {
@@ -1036,9 +1036,9 @@
       "rest_sec": 90,
       "seconds_per_set": 45,
       "review": {
-        "status": "proposed",
-        "date": null,
-        "comment": ""
+        "status": "approved",
+        "date": "2026-11-12",
+        "comment": "zatwierdzone zbiorczo przez właściciela"
       }
     },
     {
@@ -1060,9 +1060,9 @@
       "rest_sec": 90,
       "seconds_per_set": 45,
       "review": {
-        "status": "proposed",
-        "date": null,
-        "comment": ""
+        "status": "approved",
+        "date": "2026-11-12",
+        "comment": "zatwierdzone zbiorczo przez właściciela"
       }
     },
     {
@@ -1084,9 +1084,9 @@
       "rest_sec": 90,
       "seconds_per_set": 45,
       "review": {
-        "status": "proposed",
-        "date": null,
-        "comment": ""
+        "status": "approved",
+        "date": "2026-11-12",
+        "comment": "zatwierdzone zbiorczo przez właściciela"
       }
     },
     {
@@ -1108,9 +1108,9 @@
       "rest_sec": 90,
       "seconds_per_set": 45,
       "review": {
-        "status": "proposed",
-        "date": null,
-        "comment": ""
+        "status": "approved",
+        "date": "2026-11-12",
+        "comment": "zatwierdzone zbiorczo przez właściciela"
       }
     },
     {
@@ -1132,9 +1132,9 @@
       "rest_sec": 90,
       "seconds_per_set": 45,
       "review": {
-        "status": "proposed",
-        "date": null,
-        "comment": ""
+        "status": "approved",
+        "date": "2026-11-12",
+        "comment": "zatwierdzone zbiorczo przez właściciela"
       }
     },
     {
@@ -1156,9 +1156,9 @@
       "rest_sec": 90,
       "seconds_per_set": 45,
       "review": {
-        "status": "proposed",
-        "date": null,
-        "comment": ""
+        "status": "approved",
+        "date": "2026-11-12",
+        "comment": "zatwierdzone zbiorczo przez właściciela"
       }
     },
     {
@@ -1180,9 +1180,9 @@
       "rest_sec": 90,
       "seconds_per_set": 45,
       "review": {
-        "status": "proposed",
-        "date": null,
-        "comment": ""
+        "status": "approved",
+        "date": "2026-11-12",
+        "comment": "zatwierdzone zbiorczo przez właściciela"
       }
     },
     {
@@ -1206,9 +1206,9 @@
       "rest_sec": 180,
       "seconds_per_set": 50,
       "review": {
-        "status": "proposed",
-        "date": null,
-        "comment": ""
+        "status": "approved",
+        "date": "2026-11-12",
+        "comment": "zatwierdzone zbiorczo przez właściciela"
       }
     },
     {
@@ -1231,9 +1231,9 @@
       "rest_sec": 150,
       "seconds_per_set": 50,
       "review": {
-        "status": "proposed",
-        "date": null,
-        "comment": ""
+        "status": "approved",
+        "date": "2026-11-12",
+        "comment": "zatwierdzone zbiorczo przez właściciela"
       }
     },
     {
@@ -1256,9 +1256,9 @@
       "rest_sec": 150,
       "seconds_per_set": 50,
       "review": {
-        "status": "proposed",
-        "date": null,
-        "comment": ""
+        "status": "approved",
+        "date": "2026-11-12",
+        "comment": "zatwierdzone zbiorczo przez właściciela"
       }
     },
     {
@@ -1281,9 +1281,9 @@
       "rest_sec": 150,
       "seconds_per_set": 100,
       "review": {
-        "status": "proposed",
-        "date": null,
-        "comment": ""
+        "status": "approved",
+        "date": "2026-11-12",
+        "comment": "zatwierdzone zbiorczo przez właściciela"
       }
     },
     {
@@ -1306,9 +1306,9 @@
       "rest_sec": 120,
       "seconds_per_set": 100,
       "review": {
-        "status": "proposed",
-        "date": null,
-        "comment": ""
+        "status": "approved",
+        "date": "2026-11-12",
+        "comment": "zatwierdzone zbiorczo przez właściciela"
       }
     },
     {
@@ -1330,9 +1330,9 @@
       "rest_sec": 90,
       "seconds_per_set": 45,
       "review": {
-        "status": "proposed",
-        "date": null,
-        "comment": ""
+        "status": "approved",
+        "date": "2026-11-12",
+        "comment": "zatwierdzone zbiorczo przez właściciela"
       }
     },
     {
@@ -1354,9 +1354,9 @@
       "rest_sec": 90,
       "seconds_per_set": 45,
       "review": {
-        "status": "proposed",
-        "date": null,
-        "comment": ""
+        "status": "approved",
+        "date": "2026-11-12",
+        "comment": "zatwierdzone zbiorczo przez właściciela"
       }
     },
     {
@@ -1378,9 +1378,9 @@
       "rest_sec": 90,
       "seconds_per_set": 45,
       "review": {
-        "status": "proposed",
-        "date": null,
-        "comment": ""
+        "status": "approved",
+        "date": "2026-11-12",
+        "comment": "zatwierdzone zbiorczo przez właściciela"
       }
     },
     {
@@ -1404,9 +1404,9 @@
       "rest_sec": 150,
       "seconds_per_set": 50,
       "review": {
-        "status": "proposed",
-        "date": null,
-        "comment": ""
+        "status": "approved",
+        "date": "2026-11-12",
+        "comment": "zatwierdzone zbiorczo przez właściciela"
       }
     },
     {
@@ -1431,9 +1431,9 @@
       "rest_sec": 180,
       "seconds_per_set": 40,
       "review": {
-        "status": "proposed",
-        "date": null,
-        "comment": ""
+        "status": "approved",
+        "date": "2026-11-12",
+        "comment": "zatwierdzone zbiorczo przez właściciela"
       }
     },
     {
@@ -1456,9 +1456,9 @@
       "rest_sec": 90,
       "seconds_per_set": 45,
       "review": {
-        "status": "proposed",
-        "date": null,
-        "comment": ""
+        "status": "approved",
+        "date": "2026-11-12",
+        "comment": "zatwierdzone zbiorczo przez właściciela"
       }
     },
     {
@@ -1480,9 +1480,9 @@
       "rest_sec": 120,
       "seconds_per_set": 45,
       "review": {
-        "status": "proposed",
-        "date": null,
-        "comment": ""
+        "status": "approved",
+        "date": "2026-11-12",
+        "comment": "zatwierdzone zbiorczo przez właściciela"
       }
     },
     {
@@ -1504,9 +1504,9 @@
       "rest_sec": 120,
       "seconds_per_set": 45,
       "review": {
-        "status": "proposed",
-        "date": null,
-        "comment": ""
+        "status": "approved",
+        "date": "2026-11-12",
+        "comment": "zatwierdzone zbiorczo przez właściciela"
       }
     },
     {
@@ -1528,9 +1528,9 @@
       "rest_sec": 75,
       "seconds_per_set": 45,
       "review": {
-        "status": "proposed",
-        "date": null,
-        "comment": ""
+        "status": "approved",
+        "date": "2026-11-12",
+        "comment": "zatwierdzone zbiorczo przez właściciela"
       }
     },
     {
@@ -1552,9 +1552,9 @@
       "rest_sec": 75,
       "seconds_per_set": 45,
       "review": {
-        "status": "proposed",
-        "date": null,
-        "comment": ""
+        "status": "approved",
+        "date": "2026-11-12",
+        "comment": "zatwierdzone zbiorczo przez właściciela"
       }
     },
     {
@@ -1576,9 +1576,9 @@
       "rest_sec": 90,
       "seconds_per_set": 45,
       "review": {
-        "status": "proposed",
-        "date": null,
-        "comment": ""
+        "status": "approved",
+        "date": "2026-11-12",
+        "comment": "zatwierdzone zbiorczo przez właściciela"
       }
     },
     {
@@ -1600,9 +1600,9 @@
       "rest_sec": 75,
       "seconds_per_set": 45,
       "review": {
-        "status": "proposed",
-        "date": null,
-        "comment": ""
+        "status": "approved",
+        "date": "2026-11-12",
+        "comment": "zatwierdzone zbiorczo przez właściciela"
       }
     },
     {
@@ -1624,9 +1624,9 @@
       "rest_sec": 75,
       "seconds_per_set": 45,
       "review": {
-        "status": "proposed",
-        "date": null,
-        "comment": ""
+        "status": "approved",
+        "date": "2026-11-12",
+        "comment": "zatwierdzone zbiorczo przez właściciela"
       }
     },
     {
@@ -1648,9 +1648,9 @@
       "rest_sec": 60,
       "seconds_per_set": 45,
       "review": {
-        "status": "proposed",
-        "date": null,
-        "comment": ""
+        "status": "approved",
+        "date": "2026-11-12",
+        "comment": "zatwierdzone zbiorczo przez właściciela"
       }
     },
     {
@@ -1672,9 +1672,9 @@
       "rest_sec": 60,
       "seconds_per_set": 45,
       "review": {
-        "status": "proposed",
-        "date": null,
-        "comment": ""
+        "status": "approved",
+        "date": "2026-11-12",
+        "comment": "zatwierdzone zbiorczo przez właściciela"
       }
     },
     {
@@ -1696,9 +1696,9 @@
       "rest_sec": 75,
       "seconds_per_set": 45,
       "review": {
-        "status": "proposed",
-        "date": null,
-        "comment": ""
+        "status": "approved",
+        "date": "2026-11-12",
+        "comment": "zatwierdzone zbiorczo przez właściciela"
       }
     },
     {
@@ -1720,9 +1720,9 @@
       "rest_sec": 60,
       "seconds_per_set": 45,
       "review": {
-        "status": "proposed",
-        "date": null,
-        "comment": ""
+        "status": "approved",
+        "date": "2026-11-12",
+        "comment": "zatwierdzone zbiorczo przez właściciela"
       }
     }
   ]
