@@ -1,0 +1,199 @@
+{
+  "name": "HARDSET Knowledge Pack",
+  "version": "1.0",
+  "created": "2026-11-12",
+  "includes_personal_user_training_data": false,
+  "source_type": "approved rule reconstruction/normalization + original support tooling",
+  "files": [
+    {
+      "path": "CHANGELOG.md",
+      "bytes": 857,
+      "sha256": "162f112a4cba4732447a64f810fb565229c01d87f2b3751380945064645db23a"
+    },
+    {
+      "path": "CLAUDE.md",
+      "bytes": 5586,
+      "sha256": "4ca030969e9006a7a701569501fde9bcf8bd8a04e23012b47d326da5634c42a3"
+    },
+    {
+      "path": "HARDSET_MASTER.md",
+      "bytes": 97496,
+      "sha256": "13e0ed090bdd7aabc37ec84cba93662612b7a10197e51b7253e5136cba088b0c"
+    },
+    {
+      "path": "PROVENANCE.md",
+      "bytes": 2720,
+      "sha256": "2b978c00d41c7bbb9ab4cd3b12d879a31409c5bc1e52f6f9595a0784ebe68da2"
+    },
+    {
+      "path": "README.md",
+      "bytes": 2211,
+      "sha256": "167558c9239a544087c0e236c21c4d5eb3f9de311f442b1b4f0222db523b62bf"
+    },
+    {
+      "path": "START_HERE.md",
+      "bytes": 3609,
+      "sha256": "d0455f86ed2c313c0e325bb0522c776b7de45c784ebc9f2f056a253761912903"
+    },
+    {
+      "path": "appendices/A_Volume_Reference_Guide.md",
+      "bytes": 2254,
+      "sha256": "be24165199948faabfc4ff30ba58eae9ba0a3b05b15d76fbd0c54874750475aa"
+    },
+    {
+      "path": "appendices/B_Glossary_and_Fixed_Core.md",
+      "bytes": 3578,
+      "sha256": "c8ddb2f8e01e1e192344800bd5ffce8b670ebc3e537eff3eab786f9e0e2b4215"
+    },
+    {
+      "path": "appendices/C_Exercise_Mapping_and_Substitutions.md",
+      "bytes": 2846,
+      "sha256": "425e852b92adde9d44fb7e88ffeffe0655116e82eec04911a814eb5d75982df7"
+    },
+    {
+      "path": "appendices/D_Progression_and_Review_Playbook.md",
+      "bytes": 2072,
+      "sha256": "d79b45f33097f7439b43d25f1bcd7ab3b10b2596fbab76be4a1fcee58db2b1c0"
+    },
+    {
+      "path": "appendices/E_Program_Blank_Template.md",
+      "bytes": 1811,
+      "sha256": "8894f0db984c880517456245e4de412929834d413ec7633716d61c088cb7e11d"
+    },
+    {
+      "path": "chapters/01_Effort_and_Failure.md",
+      "bytes": 4767,
+      "sha256": "998f88b932d2651ad3d8be931914c7f01e9ac17165fb26a4595cca3792744d39"
+    },
+    {
+      "path": "chapters/02_Pattern_Based_Architecture.md",
+      "bytes": 5386,
+      "sha256": "bba6c5b498bde68f5c08e75fc9b21130bf873b6534d683dbbf89c965f4580569"
+    },
+    {
+      "path": "chapters/03_Set_Architecture.md",
+      "bytes": 3895,
+      "sha256": "ef81c20b40b969ace3d0bab1136b264be7f3565284dd10da5f05a1226ba8cd5e"
+    },
+    {
+      "path": "chapters/04_Exercise_Selection_and_Safety.md",
+      "bytes": 4833,
+      "sha256": "2825ee0e4237264a591f4403f3587a3aac486c5f19854326de547589bcae01ac"
+    },
+    {
+      "path": "chapters/05_Progression_and_Autoregulation.md",
+      "bytes": 4553,
+      "sha256": "8bd9e12c4df23a41e8fa592ad4b3c6122fdf3a85eb8b0ccfffe87f831e919c1b"
+    },
+    {
+      "path": "chapters/06_Weekly_Programming_and_Recovery.md",
+      "bytes": 6148,
+      "sha256": "f1b605821345861187decbed1be9505078f2087bac37ba27d30c555008f5045f"
+    },
+    {
+      "path": "chapters/07_Outcome_Tracking_and_Evaluation.md",
+      "bytes": 5756,
+      "sha256": "fce2ed44cc09941c4d786b3a5c20a9d9578fd054c5e127fb23d7640afa9bddc3"
+    },
+    {
+      "path": "chapters/08_Long_Term_Planning_and_Specialization.md",
+      "bytes": 4868,
+      "sha256": "0bf353aef1f7d3ff5c1e649da26b2f30d293717316e7078c093ba518103481af"
+    },
+    {
+      "path": "chapters/09_Program_Construction_and_Validation.md",
+      "bytes": 5822,
+      "sha256": "ddfbdf80ade47cdd9f96380e5febf76359a9341037f4bba22407be4a739fca16"
+    },
+    {
+      "path": "claude/CLAUDE_CHAT_START_PROMPT.md",
+      "bytes": 2053,
+      "sha256": "114b27b2ed4a5c90c3e9816224048943a4a9d4e046bf5222327c3c72b8f8ef17"
+    },
+    {
+      "path": "examples/generic_conditional.json",
+      "bytes": 3291,
+      "sha256": "231dc31e884ec8b2c4cf39a550f6c4590c3ed70202f04a55fd71264ed993298b"
+    },
+    {
+      "path": "examples/generic_fail.json",
+      "bytes": 3118,
+      "sha256": "82ad3192a21d0f8241d2ecd28d2cafb205567cb9d4aba1323d69eb3ce432158d"
+    },
+    {
+      "path": "examples/generic_pass.json",
+      "bytes": 3117,
+      "sha256": "2a403caf5cdf8530be47fa8b42474636e5a25cfc645dde2bcc6bacda0f5c7227"
+    },
+    {
+      "path": "research/EVIDENCE_MATRIX.md",
+      "bytes": 5825,
+      "sha256": "355f477620dcb01d11208fb00b884cab705e0511d0c235d6b5b4636492da45be"
+    },
+    {
+      "path": "research/REFERENCES.md",
+      "bytes": 15194,
+      "sha256": "26115e2dde5b7e9d23d29ed8aed3fb9985687976da5f42bf45c150bedbe176ff"
+    },
+    {
+      "path": "research/RESEARCH_AUDIT.md",
+      "bytes": 3466,
+      "sha256": "01c4ae40670c86ad68b06cb12054ae58b217bccd1d2121723948e7b664892ca0"
+    },
+    {
+      "path": "research/evidence_matrix.csv",
+      "bytes": 4582,
+      "sha256": "281fd9a795f2e0088dddc52fc4ede4634963ba79b27f76e23ddda4f132aa527d"
+    },
+    {
+      "path": "research/references.json",
+      "bytes": 15818,
+      "sha256": "32c715508bb1769e6abbcde3591f8d89279485697dd40cc1baecef466949d4ed"
+    },
+    {
+      "path": "scripts/build_manifest.py",
+      "bytes": 881,
+      "sha256": "41abe0bd5cb02363b196055aa6a0d0642a16efc5dd4851acb88b64c15dfafda4"
+    },
+    {
+      "path": "scripts/build_master.py",
+      "bytes": 2374,
+      "sha256": "40a6e10218455a38992e4ad82e88da6def8e6b4da2297ed4ebd5c7470e8f29a3"
+    },
+    {
+      "path": "validation/README.md",
+      "bytes": 3466,
+      "sha256": "871abce71a6c43f827f0c4bef2be4487bf0c220b4ae0f2b5387b016cdb931a97"
+    },
+    {
+      "path": "validation/RULE_CATALOG.md",
+      "bytes": 2588,
+      "sha256": "ddd7bbb2863a1d9a5b9cf37a76ddfc85ba86cbad076f2073274f21a0c700843d"
+    },
+    {
+      "path": "validation/SCHEMA.md",
+      "bytes": 3777,
+      "sha256": "875220f97c6082177524c7801c006c7df12c09efa04171390830645171d2a1c4"
+    },
+    {
+      "path": "validation/TEST_CASES.md",
+      "bytes": 1970,
+      "sha256": "cb9c07ade9a9cd4a44a568abbd6964065b6f25be5f169f9b0b12b06fcce898b0"
+    },
+    {
+      "path": "validation/tests/test_integrity.py",
+      "bytes": 2131,
+      "sha256": "e0571852ed7651a6dc39043c0e282ec45aeba19183171f2bd1d1b00c0a547d3f"
+    },
+    {
+      "path": "validation/tests/test_validator.py",
+      "bytes": 4864,
+      "sha256": "e05ec158debbf75c8f2a79ca82d5a91339cd85f547514a21b877023a274c5e16"
+    },
+    {
+      "path": "validation/validator.py",
+      "bytes": 12802,
+      "sha256": "3f580690509080fd9d82aece6d6b1f13c2c39a6052b5e440cd12a1252a3f384b"
+    }
+  ]
+}

@@ -1,0 +1,144 @@
+{
+  "goals": [
+    "General resistance-training development"
+  ],
+  "human_review": {
+    "goal_fit": true,
+    "ps_mechanics": true,
+    "exercise_safety": true,
+    "recovery": true
+  },
+  "constraints": {
+    "session_time_limit_min": 60,
+    "time_includes_warmup": false,
+    "transition_min_per_exercise": 1.0,
+    "margin_min_per_session": 4
+  },
+  "areas": {
+    "Chest": {
+      "priority": "Standard",
+      "intent": "Development"
+    },
+    "Lateral Delts": {
+      "priority": "Optional",
+      "intent": "Development"
+    },
+    "Elbow Extensors": {
+      "priority": "Optional",
+      "intent": "Development"
+    },
+    "Back": {
+      "priority": "Priority",
+      "intent": "Development"
+    },
+    "Rear Delts": {
+      "priority": "Optional",
+      "intent": "Development"
+    },
+    "Elbow Flexors": {
+      "priority": "Optional",
+      "intent": "Development"
+    },
+    "Quadriceps": {
+      "priority": "Optional",
+      "intent": "Development"
+    },
+    "Hamstrings": {
+      "priority": "Optional",
+      "intent": "Development"
+    },
+    "Glutes": {
+      "priority": "Optional",
+      "intent": "Development"
+    },
+    "Hip Adductors": {
+      "priority": "Optional",
+      "intent": "Development"
+    },
+    "Calves": {
+      "priority": "Optional",
+      "intent": "Development"
+    },
+    "Trunk Musculature": {
+      "priority": "Optional",
+      "intent": "Development"
+    }
+  },
+  "functional_overrides": {},
+  "sessions": [
+    {
+      "name": "A",
+      "exercises": [
+        {
+          "name": "Press A",
+          "variant": "Press A machine",
+          "sets": 2,
+          "rir_targets": [
+            1,
+            0
+          ],
+          "safe_exit": false,
+          "stimulus": {
+            "Chest": "P"
+          },
+          "progression_rule": "Lead-Set progression",
+          "rest_sec": 150,
+          "seconds_per_set": 45
+        },
+        {
+          "name": "Pull A",
+          "variant": "Pull A machine",
+          "sets": 2,
+          "rir_targets": [
+            1,
+            0
+          ],
+          "safe_exit": true,
+          "stimulus": {
+            "Back": "P"
+          },
+          "progression_rule": "Lead-Set progression",
+          "rest_sec": 150,
+          "seconds_per_set": 45
+        }
+      ]
+    },
+    {
+      "name": "B",
+      "exercises": [
+        {
+          "name": "Press B",
+          "variant": "Press B machine",
+          "sets": 2,
+          "rir_targets": [
+            1,
+            0
+          ],
+          "safe_exit": true,
+          "stimulus": {
+            "Chest": "P"
+          },
+          "progression_rule": "Lead-Set progression",
+          "rest_sec": 150,
+          "seconds_per_set": 45
+        },
+        {
+          "name": "Pull B",
+          "variant": "Pull B machine",
+          "sets": 2,
+          "rir_targets": [
+            1,
+            0
+          ],
+          "safe_exit": true,
+          "stimulus": {
+            "Back": "P"
+          },
+          "progression_rule": "Lead-Set progression",
+          "rest_sec": 150,
+          "seconds_per_set": 45
+        }
+      ]
+    }
+  ]
+}
