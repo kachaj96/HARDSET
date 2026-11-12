@@ -200,24 +200,38 @@
 
   /* ---- Builder-level checks (not part of the Python validator) ---- */
   // Library status and safe-exit conditions are builder concerns (tools/builder/SPEC.md §5).
+  // Level INFO never changes the status.
   function builderChecks(plan, library) {
     const byId = new Map((library && library.exercises ? library.exercises : []).map((e) => [e.id, e]));
     const out = [];
+    const profile = isDict(plan.profile) ? plan.profile : {};
+    let anyNearFailure = false;
     for (const s of (Array.isArray(plan.sessions) ? plan.sessions : [])) {
       for (const ex of (s && Array.isArray(s.exercises) ? s.exercises : [])) {
         const scope = `${s.name} / ${ex.name}`;
+        const rir = Array.isArray(ex.rir_targets) ? ex.rir_targets.filter((x) => typeof x === 'number') : [];
+        if (rir.some((x) => x < 1)) anyNearFailure = true;
         const lib = ex.library_id ? byId.get(ex.library_id) : null;
-        if (!lib) out.push(finding('CONDITIONAL', 'LIBRARY_UNVERIFIED', 'Exercise outside the approved library; P/S assigned manually and not reviewed.', scope));
-        else if (!lib.review || lib.review.status !== 'approved') out.push(finding('CONDITIONAL', 'LIBRARY_NOT_APPROVED', `Library entry ${lib.id} is not approved.`, scope));
-        if (lib && lib.safe_exit === 'conditional' && Array.isArray(ex.rir_targets) && ex.rir_targets.some((x) => x < 1) && ex.safe_exit_confirmed !== true)
-          out.push(finding('FAIL', 'SAFE_EXIT_CONDITION', `0–<1 RIR needs the safe-stop condition confirmed: ${lib.safe_exit_condition}`, scope));
+        if (!lib) { out.push(finding('CONDITIONAL', 'LIBRARY_UNVERIFIED', 'Exercise outside the approved library; P/S assigned manually and not reviewed.', scope)); continue; }
+        if (!lib.review || lib.review.status !== 'approved') out.push(finding('CONDITIONAL', 'LIBRARY_NOT_APPROVED', `Library entry ${lib.id} is not approved.`, scope));
+        if (rir.some((x) => x < lib.rir_floor_default))
+          out.push(finding('CONDITIONAL', 'RIR_BELOW_FLOOR', `RIR below the library default minimum ${lib.rir_floor_default} for ${lib.id}.`, scope));
       }
     }
+    if (profile.safety_answered !== true) {
+      out.push(finding(anyNearFailure ? 'FAIL' : 'CONDITIONAL', 'SAFETY_GATE_OPEN',
+        anyNearFailure ? 'Safety questions unanswered; near-failure (RIR < 1) work cannot be released.' : 'Safety questions unanswered.'));
+    }
+    const pr = Object.values(isDict(plan.areas) ? plan.areas : {}).concat(Object.values(isDict(plan.functional_overrides) ? plan.functional_overrides : {}))
+      .filter((a) => isDict(a) && a.priority === 'Priority').length;
+    if (pr >= 5) out.push(finding('INFO', 'PRIORITY_DILUTED', `${pr} areas marked Priority; priority loses meaning when most areas have it.`));
+    if (isDict(plan.focus_block) && plan.focus_block.enabled === true && plan.focus_block.accepted !== true)
+      out.push(finding('CONDITIONAL', 'FOCUS_BLOCK_PENDING', 'Focus Block is a departure from Continuous Progression and needs explicit acceptance.'));
     return out;
   }
   function combinedStatus(result, extra) {
     let sev = result.status;
-    for (const it of extra) if (PRIORITY_ORDER[it.level] > PRIORITY_ORDER[sev]) sev = it.level;
+    for (const it of extra) if (it.level in PRIORITY_ORDER && PRIORITY_ORDER[it.level] > PRIORITY_ORDER[sev]) sev = it.level;
     return sev;
   }
 
