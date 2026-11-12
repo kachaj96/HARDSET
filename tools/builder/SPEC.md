@@ -1,12 +1,12 @@
-# HARDSET Builder — specyfikacja v0.1 (do akceptacji)
+# HARDSET Builder — specyfikacja v0.2 (do akceptacji)
 
-**Status:** projekt, etap 1 z 4. Kod powstaje dopiero po akceptacji tego dokumentu.
+**Status:** projekt v0.2, etap 1 z 4. Kod powstaje dopiero po akceptacji tego dokumentu.
 **Zakres:** narzędzie osobiste, po polsku, cele: hipertrofia i siła.
 **Źródło reguł:** rozdziały 01–09 tego repozytorium. Specyfikacja niczego w nich nie zmienia.
 
 ## 1. Cel
 
-Prowadzony kreator, w którym układasz plan HARDSET samodzielnie, a narzędzie pilnuje reguł i na bieżąco pokazuje, co jest spełnione, co warunkowe, a co blokuje plan. Po zatwierdzeniu plan przechodzi do dziennika z progresją Lead-Set i pomiarami.
+Prowadzony kreator, w którym układasz plan HARDSET samodzielnie, a narzędzie pilnuje reguł i na bieżąco pokazuje, co jest spełnione, co warunkowe, a co blokuje plan. Wynikiem jest gotowy, zwalidowany plan. **Narzędzie nie zawiera dziennika treningowego ani pomiarów.**
 
 Narzędzie **nie** układa planu za Ciebie. Decyzje wymagające osądu (`validation/RULE_CATALOG.md`, kolumna „Necessary manual judgment”) zostają Twoje. Narzędzie je nazywa, ale ich nie zgaduje.
 
@@ -16,10 +16,10 @@ Narzędzie **nie** układa planu za Ciebie. Decyzje wymagające osądu (`validat
 |---|---|---|
 | Reguły (źródło) | `chapters/`, `appendices/`, `research/` | bez zmian |
 | Biblioteka ćwiczeń | `library/exercises.json` | zamknięta lista ćwiczeń z przeglądniętymi tagami P/S |
-| Silnik reguł | `tools/builder/engine.js` | deterministyczny port `validation/validator.py` + logika Lead-Set i faz |
+| Silnik reguł | `tools/builder/engine.js` | deterministyczny port `validation/validator.py` |
 | Testy zgodności | `validation/tests/parity_cases/*.json` + test w Pythonie i w Node | te same przypadki muszą dać ten sam status, ledger i czas w obu silnikach |
-| Interfejs | artifact (HTML) budowany z plików repozytorium | kreator + dziennik |
-| Twoje dane | baza artifactu | plany, wpisy, pomiary; **nie trafiają do repozytorium** |
+| Interfejs | artifact (HTML) budowany z plików repozytorium | kreator planu |
+| Twoje dane | baza artifactu | zapisane plany; **nie trafiają do repozytorium** |
 
 Brak AI w pętli decyzji. Wyjaśnienia w interfejsie to stałe teksty pomocy z odwołaniem do rozdziału.
 
@@ -27,7 +27,7 @@ Brak AI w pętli decyzji. Wyjaśnienia w interfejsie to stałe teksty pomocy z o
 
 | Krok | Co robisz | Co robi narzędzie | Źródło |
 |---|---|---|---|
-| 1. Profil | cele, doświadczenie, ostatnia tolerowana objętość, dni, czas sesji i czy obejmuje rozgrzewkę, sprzęt, bezpieczeństwo, inne aktywności, pomiary | brak odpowiedzi w polach bezpieczeństwa blokuje planowanie 0 RIR i oznacza bramkę jako nierozstrzygniętą | Ch09 §9.1, §9.2 |
+| 1. Profil | cele, doświadczenie, ostatnia tolerowana objętość, dni, czas sesji i czy obejmuje rozgrzewkę, sprzęt, bezpieczeństwo, inne aktywności | brak odpowiedzi w polach bezpieczeństwa blokuje planowanie 0 RIR i oznacza bramkę jako nierozstrzygniętą | Ch09 §9.1, §9.2 |
 | 2. Priorytety | Priority / Standard / Optional i Development / Maintenance dla 12 obszarów; Functional Notes; Functional Overrides | brak domyślnych priorytetów; przy ≥5 obszarach Priority pokazuje ostrzeżenie, że priorytet traci znaczenie | Ch02 §6–7, Ch08 §8.3 |
 | 3. Dawka wyjściowa | docelowe P sets i ekspozycje na obszar | pokazuje etykietę z Appendix A wyłącznie informacyjnie; nie wylicza dawki | Ch06 §6.4, App. A |
 | 4. Sesje | liczba sesji, nazwy, odstępy | podpowiada konfiguracje z tabeli Ch06 §6.6 jako punkt wyjścia | Ch06 §6.6 |
@@ -35,7 +35,7 @@ Brak AI w pętli decyzji. Wyjaśnienia w interfejsie to stałe teksty pomocy z o
 | 6. Walidacja na żywo | - | ledger P/S, ekspozycje, czas sesji, lista findings z odwołaniem do rozdziału, status | Ch02 §8, Ch09 |
 | 7. Focus Block (opcjonalnie) | cel siłowy, fazy, zakresy i RIR na fazę, test | oznacza jako odstępstwo od Continuous Progression wymagające akceptacji | Ch08 §8.1, §8.4 |
 | 8. Akceptacja | 4 potwierdzenia przeglądu: dopasowanie do celu, mechanika P/S, bezpieczeństwo ćwiczeń, regeneracja | bez nich maksymalny status to CONDITIONAL | Ch09 §9.7 |
-| 9. Dziennik | wpisy serii, pomiary | podpowiedzi progresji (jak obecny dziennik), harmonogram pomiarów i przeglądów, statusy wyników | Ch05, Ch07 |
+| 9. Plan gotowy | - | czytelny widok planu (dni, ćwiczenia, serie, zakresy, RIR, przerwy, reguła progresji Lead-Set, uwagi bezpieczeństwa, ledger, status) + eksport JSON zgodny z `validation/SCHEMA.md` | Ch09 §9.8 |
 
 ## 4. Automatyczne czy Twoja decyzja
 
@@ -49,8 +49,7 @@ Brak AI w pętli decyzji. Wyjaśnienia w interfejsie to stałe teksty pomocy z o
 | 0 RIR tylko przy bezpiecznym stopie | sprawdza flagę | fizycznie weryfikujesz stop na sprzęcie |
 | Czas sesji | szacuje (model jak w walidatorze) | sprawdzasz w realnych sesjach |
 | Dawka wyjściowa | pokazuje etykietę informacyjną | decydujesz (Baseline + Response) |
-| Progresja Lead-Set | podpowiada po wpisach | oceniasz porównywalność wykonania |
-| Ocena wyników (Ch07) | przypomina terminy, zbiera pomiary | nadajesz status: Not Assessed / Inconclusive / Supported Progress / Concern |
+| Reguła progresji | wymaga jej przy każdym ćwiczeniu, domyślnie Lead-Set (Ch05) | stosujesz w treningu |
 
 ## 5. Biblioteka ćwiczeń
 
@@ -77,20 +76,19 @@ Brak AI w pętli decyzji. Wyjaśnienia w interfejsie to stałe teksty pomocy z o
 ## 6. Silnik reguł
 
 - `evaluate(plan)`: ten sam kontrakt wejścia i wyjścia co `validation/validator.py` (`validation/SCHEMA.md`).
-- `leadSetDecision(prev, rx)`: logika z obecnego dziennika, łącznie z regułą kalibracji („ciężar wyraźnie za lekki”).
 - Fazy Focus Block jako dane planu, nie zakodowane w silniku.
 - **Zgodność:** każdy przypadek z `validation/tests/` jest zapisany jako plik JSON i wykonywany przez oba silniki. Różnica w statusie, ledgerze lub czasie to błąd testu.
 
 ## 7. Dane i prywatność
 
-- Plany, wpisy i pomiary tylko w bazie artifactu (prywatny).
+- Zapisane plany tylko w bazie artifactu (prywatny).
 - Repozytorium nie zawiera żadnych danych osobowych ani planów osobistych.
-- Eksport CSV / JSON z interfejsu.
-- Twój obecny dziennik zostaje bez zmian. Przeniesienie wpisów do nowego narzędzia nastąpi dopiero po Twojej akceptacji.
+- Eksport planu do JSON z interfejsu.
+- Obecny dziennik treningowy jest osobnym artifactem i kreator go nie zmienia.
 
 ## 8. Poza zakresem v1
 
-Ebook; automatyczny dobór ćwiczeń; wyliczanie dawki; AI w decyzjach; wielu użytkowników; rehabilitacja i populacje kliniczne; pomiar zdjęć poza zapisem daty i warunków.
+Ebook; dziennik treningowy, pomiary i podpowiedzi progresji; automatyczny dobór ćwiczeń; wyliczanie dawki; AI w decyzjach; wielu użytkowników; rehabilitacja i populacje kliniczne; pomiar zdjęć poza zapisem daty i warunków.
 
 ## 9. Kryteria akceptacji v1
 
@@ -99,8 +97,7 @@ Ebook; automatyczny dobór ćwiczeń; wyliczanie dawki; AI w decyzjach; wielu u�
 3. Plan z celowo wprowadzonym błędem (np. 0 RIR bez bezpiecznego stopu, S+S dla Standard, przekroczony czas) daje ten sam FAIL co walidator.
 4. Strona działa na telefonie bez przewijania w poziomie.
 
-## 10. Pytania otwarte
+## 10. Ustalenia
 
-1. Czy kreator ma obsługiwać kilka planów naraz (np. Twój i testowy), czy jeden aktywny plan z historią wersji?
-2. Czy pomiary (masa, obwody, daty zdjęć) mają być w tym samym dzienniku co serie?
-3. Czy po zatwierdzeniu narzędzia przenieść do niego obecny dziennik, czy prowadzić oba do końca 11-tygodniowego bloku?
+- Zakres v1: wyłącznie kreator planu (decyzja z 2026-11-12).
+- Kreator przechowuje listę zapisanych planów; każdy można otworzyć, zmienić, zduplikować i wyeksportować.
