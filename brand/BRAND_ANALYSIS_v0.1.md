@@ -1,7 +1,7 @@
 # Marka: analiza etapu 2 (v0.1, do decyzji)
 
 **Data:** 2026-11-13  
-**Status:** propozycja. Nic nie zostało zatwierdzone ani opublikowane.  
+**Status:** zamknięta. Właściciel wybrał architekturę C z nazwą HARDSET (bez „Kreska”) i kierunek 1, zob. `DECISIONS.md`. Nic nie zostało opublikowane.  
 **Makiety:** `brand/explorations/index.html` (wersja do oglądania: prywatny artifact właściciela).
 
 > Ten dokument to przegląd informacji dostępnych publicznie w internecie. **Nie jest opinią prawną.** Przed wprowadzeniem nazwy do sklepów z aplikacjami albo rejestracją znaku potrzebna jest formalna weryfikacja (EUIPO, UPRP, USPTO, klasy nicejskie 9, 16, 41, 42), najlepiej z rzecznikiem patentowym.

@@ -1,0 +1,91 @@
+/* HARDSET publication template v1.0: A5 PDF (print and screen). Uses tokens.css. */
+@import url('tokens.css');
+
+@page {
+  size: 148mm 210mm;
+  background: #F2EFE8; /* = --hs-paper; var() is not resolved in @page */
+  margin: 16mm 16mm 18mm 18mm;
+  @bottom-right { content: counter(page); font: 500 7.5pt var(--hs-font-data); color: var(--hs-muted); }
+}
+@page :left {
+  margin: 16mm 18mm 18mm 16mm;
+  @bottom-left { content: counter(page); font: 500 7.5pt var(--hs-font-data); color: var(--hs-muted); }
+  @bottom-right { content: none; }
+}
+@page cover { margin: 0; @bottom-right { content: none; } @bottom-left { content: none; } }
+@page plain { @bottom-right { content: none; } @bottom-left { content: none; } }
+
+html { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+body { margin: 0; background: var(--hs-paper); color: var(--hs-ink); font: 400 10pt/14.5pt var(--hs-font-text); font-variant-numeric: lining-nums; }
+
+/* ---------- structure ---------- */
+.page-break { break-before: page; }
+.keep { break-inside: avoid; }
+.cover { page: cover; break-after: page; width: 148mm; height: 210mm; position: relative; overflow: hidden; }
+.plain { page: plain; }
+.runhead { font: 600 6.8pt var(--hs-font-display); letter-spacing: .14em; text-transform: uppercase; color: var(--hs-muted);
+  display: flex; justify-content: space-between; border-bottom: .5pt solid var(--hs-rule); padding-bottom: 1.5mm; margin-bottom: 6mm; }
+
+/* ---------- type ---------- */
+h1, h2, h3, h4 { font-family: var(--hs-font-display); color: var(--hs-ink); margin: 0; break-after: avoid; text-wrap: balance; }
+.chapter-open { break-before: page; padding-top: 10mm; margin-bottom: 6mm; }
+.chapter-open .no { font: 700 44pt/1 var(--hs-font-display); color: var(--hs-oxide); }
+.chapter-open h1 { font: 700 22pt/1.05 var(--hs-font-display); margin-top: 3mm; }
+.chapter-open .principle { font: italic 400 11pt/1.4 var(--hs-font-text); margin-top: 5mm; max-width: 95mm; }
+h2 { font: 700 14pt/1.15 var(--hs-font-display); margin: 6mm 0 2.5mm; }
+h3 { font: 600 10.5pt/1.25 var(--hs-font-display); letter-spacing: .02em; margin: 5mm 0 1.5mm; }
+p { margin: 0 0 2.6mm; orphans: 3; widows: 3; text-align: left; }
+p.lead { font-size: 11pt; line-height: 15.5pt; }
+.small { font-size: 8.5pt; line-height: 12pt; }
+.muted { color: var(--hs-muted); }
+.mono, .num { font-family: var(--hs-font-data); }
+cite.ref { font: 500 7.5pt var(--hs-font-data); font-style: normal; color: var(--hs-slate); white-space: nowrap; }
+strong { font-weight: 600; }
+
+/* ---------- evidence classes ---------- */
+.ev { display: inline-block; font: 500 6.6pt/1 var(--hs-font-data); letter-spacing: .04em; text-transform: uppercase; padding: .55mm 1.3mm; margin: 0 .8mm 0 0; border: .6pt solid currentColor; vertical-align: .25mm; white-space: nowrap; }
+.ev.study { color: var(--hs-moss); }
+.ev.decision { color: var(--hs-ink); }
+.ev.heuristic { color: var(--hs-slate); }
+.ev.exception { color: var(--hs-oxide); }
+.ev.hypothesis { color: var(--hs-slate); border-style: dashed; }
+.ev.open { color: var(--hs-paper); background: var(--hs-oxide); border-color: var(--hs-oxide); }
+
+/* ---------- blocks ---------- */
+.aside { border-left: 2pt solid var(--hs-oxide); padding: .5mm 0 .5mm 3mm; margin: 3mm 0 4mm; font: 400 8.5pt/12pt var(--hs-font-display); color: #3d4342; break-inside: avoid; }
+.aside.evidence { border-left-color: var(--hs-moss); }
+.aside.open { border-left-color: var(--hs-oxide); background: var(--hs-tint); padding: 2mm 3mm; }
+.aside b { font-weight: 600; letter-spacing: .03em; }
+.defs { margin: 2mm 0 4mm; padding: 0; list-style: none; }
+.defs li { display: grid; grid-template-columns: 22mm 1fr; gap: 3mm; padding: 1.4mm 0; border-bottom: .5pt solid var(--hs-rule); break-inside: avoid; }
+.defs li b { font: 600 9pt var(--hs-font-display); }
+
+/* ---------- tables ---------- */
+table.data { border-collapse: collapse; width: 100%; margin: 3mm 0 4mm; font: 400 8pt/1.35 var(--hs-font-data); break-inside: avoid; }
+table.data caption { caption-side: top; text-align: left; font: 600 7.5pt var(--hs-font-display); letter-spacing: .1em; text-transform: uppercase; color: var(--hs-muted); padding-bottom: 1.5mm; }
+table.data th { font: 600 7pt var(--hs-font-display); letter-spacing: .08em; text-transform: uppercase; text-align: left; border-bottom: 1pt solid var(--hs-ink); padding: 1.2mm 1.5mm; vertical-align: bottom; }
+table.data td { border-bottom: .5pt solid var(--hs-rule); padding: 1.2mm 1.5mm; vertical-align: top; }
+table.data td.r, table.data th.r { text-align: right; }
+.nw, table.data td.nw, table.data th.nw { white-space: nowrap; }
+table.data tr.hl td { background: var(--hs-tint); }
+table.data .rpe { color: var(--hs-oxide); }
+table.data tr.hl .rpe { color: var(--hs-oxide-text); }
+table.data.text td { font-family: var(--hs-font-text); font-size: 8.5pt; }
+.tablenote { break-before: avoid; font: 400 7.5pt/1.35 var(--hs-font-display); color: var(--hs-muted); margin: -2mm 0 4mm; }
+
+/* ---------- TOC ---------- */
+ol.toc { list-style: none; margin: 4mm 0; padding: 0; }
+ol.toc li { display: grid; grid-template-columns: 9mm 1fr; padding: 1.8mm 0; border-bottom: .5pt solid var(--hs-rule); font: 400 10.5pt var(--hs-font-display); }
+ol.toc li span { font-family: var(--hs-font-data); font-size: 8.5pt; color: var(--hs-oxide); padding-top: .6mm; }
+ol.toc li.part { border-bottom: 0; padding-top: 4mm; font: 600 7.5pt var(--hs-font-display); letter-spacing: .12em; text-transform: uppercase; color: var(--hs-muted); grid-template-columns: 1fr; }
+
+/* ---------- bibliography ---------- */
+ol.bib { list-style: none; margin: 3mm 0; padding: 0; font-size: 7.7pt; line-height: 10.6pt; }
+ol.bib li { display: grid; grid-template-columns: 9mm 1fr; padding: 1.1mm 0; border-bottom: .5pt solid var(--hs-rule); break-inside: avoid; }
+ol.bib li > span { font: 500 7.5pt var(--hs-font-data); color: var(--hs-slate); padding-top: .4mm; }
+ol.bib .doi { font: 400 7pt var(--hs-font-data); color: var(--hs-muted); white-space: nowrap; }
+
+/* ---------- colophon ---------- */
+.colophon { font: 400 8pt/12pt var(--hs-font-display); color: #3d4342; }
+.colophon p { margin-bottom: 3mm; }
+.colophon .title { font: 700 13pt var(--hs-font-display); color: var(--hs-ink); }

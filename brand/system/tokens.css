@@ -1,0 +1,51 @@
+/* Generated from tokens.json by build_brand.py. Do not edit by hand. */
+@import url('fonts/fonts.css');
+:root{
+  --hs-ink:#1F2524;
+  --hs-paper:#F2EFE8;
+  --hs-oxide:#A64B32;
+  --hs-slate:#355D6D;
+  --hs-moss:#56634A;
+  --hs-rule:#C9C3B6;
+  --hs-tint:#E7E2D8;
+  --hs-muted:#5E6461;
+  --hs-ink-raised:#2A3130;
+  --hs-paper-muted:#B9B4A9;
+  --hs-oxide-on-ink:#D9805F;
+  --hs-slate-on-ink:#8FB5C4;
+  --hs-oxide-text:#963F29;
+  --hs-font-display:'IBM Plex Sans Condensed', 'Arial Narrow', sans-serif;
+  --hs-font-text:'Source Serif 4', Georgia, 'Times New Roman', serif;
+  --hs-font-data:'IBM Plex Mono', 'Courier New', monospace;
+  --hs-size-caption:12px;
+  --hs-size-small:14px;
+  --hs-size-text:16px;
+  --hs-size-lead:18px;
+  --hs-size-h4:18px;
+  --hs-size-h3:20px;
+  --hs-size-h2:26px;
+  --hs-size-h1:34px;
+  --hs-size-display:56px;
+  --hs-space-1:4px;
+  --hs-space-2:8px;
+  --hs-space-3:12px;
+  --hs-space-4:16px;
+  --hs-space-5:24px;
+  --hs-space-6:32px;
+  --hs-space-7:48px;
+  --hs-space-8:64px;
+  --hs-radius-none:0;
+  --hs-radius-field:4px;
+  --hs-radius-device:22px;
+  --hs-bg:var(--hs-paper);
+  --hs-fg:var(--hs-ink);
+  --hs-fg-muted:var(--hs-muted);
+  --hs-surface:var(--hs-tint);
+  --hs-line:var(--hs-rule);
+  --hs-accent:var(--hs-oxide);
+  --hs-data:var(--hs-slate);
+  --hs-evidence:var(--hs-moss);
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--hs-bg:var(--hs-ink);--hs-fg:var(--hs-paper);--hs-fg-muted:var(--hs-paper-muted);--hs-surface:var(--hs-ink-raised);--hs-line:#3A4240;--hs-accent:var(--hs-oxide-on-ink);--hs-data:var(--hs-slate-on-ink);--hs-evidence:#A9B59B;color-scheme:dark;}}
+:root[data-theme="dark"]{--hs-bg:var(--hs-ink);--hs-fg:var(--hs-paper);--hs-fg-muted:var(--hs-paper-muted);--hs-surface:var(--hs-ink-raised);--hs-line:#3A4240;--hs-accent:var(--hs-oxide-on-ink);--hs-data:var(--hs-slate-on-ink);--hs-evidence:#A9B59B;color-scheme:dark;}
+@media print{:root{--hs-size-caption:7.5pt;--hs-size-small:8.5pt;--hs-size-text:10pt;--hs-size-lead:11.5pt;--hs-size-h4:12pt;--hs-size-h3:14pt;--hs-size-h2:18pt;--hs-size-h1:26pt;--hs-size-display:44pt;}}
