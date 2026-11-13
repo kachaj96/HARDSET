@@ -1,0 +1,165 @@
+{
+  "status": "FAIL",
+  "summary": {
+    "sessions": 3,
+    "total_hard_sets": 35
+  },
+  "ledger": {
+    "Chest": {
+      "priority": "Priority",
+      "intent": "Development",
+      "P_sets": 9,
+      "S_sets": 0,
+      "S_uncertain_sets": 0,
+      "exposures": {
+        "Pn": "P",
+        "Sr": "P",
+        "Pt": "P"
+      },
+      "functional_gap": false
+    },
+    "Back": {
+      "priority": "Priority",
+      "intent": "Development",
+      "P_sets": 6,
+      "S_sets": 0,
+      "S_uncertain_sets": 2,
+      "exposures": {
+        "Pn": "P",
+        "Sr": "P",
+        "Pt": "P"
+      },
+      "functional_gap": false
+    },
+    "Lateral Delts": {
+      "priority": "Priority",
+      "intent": "Development",
+      "P_sets": 4,
+      "S_sets": 0,
+      "S_uncertain_sets": 0,
+      "exposures": {
+        "Pn": "P",
+        "Sr": "P"
+      },
+      "functional_gap": false
+    },
+    "Elbow Extensors": {
+      "priority": "Priority",
+      "intent": "Development",
+      "P_sets": 4,
+      "S_sets": 7,
+      "S_uncertain_sets": 0,
+      "exposures": {
+        "Pn": "S",
+        "Sr": "P",
+        "Pt": "P"
+      },
+      "functional_gap": false
+    },
+    "Elbow Flexors": {
+      "priority": "Priority",
+      "intent": "Development",
+      "P_sets": 4,
+      "S_sets": 6,
+      "S_uncertain_sets": 0,
+      "exposures": {
+        "Pn": "P",
+        "Sr": "S",
+        "Pt": "P"
+      },
+      "functional_gap": false
+    },
+    "Rear Delts": {
+      "priority": "Standard",
+      "intent": "Development",
+      "P_sets": 0,
+      "S_sets": 0,
+      "S_uncertain_sets": 4,
+      "exposures": {},
+      "functional_gap": false
+    },
+    "Quadriceps": {
+      "priority": "Standard",
+      "intent": "Maintenance",
+      "P_sets": 4,
+      "S_sets": 0,
+      "S_uncertain_sets": 0,
+      "exposures": {
+        "Pn": "P",
+        "Pt": "P"
+      },
+      "functional_gap": false
+    },
+    "Hamstrings": {
+      "priority": "Standard",
+      "intent": "Maintenance",
+      "P_sets": 4,
+      "S_sets": 0,
+      "S_uncertain_sets": 0,
+      "exposures": {
+        "Sr": "P",
+        "Pt": "P"
+      },
+      "functional_gap": false
+    },
+    "Glutes": {
+      "priority": "Standard",
+      "intent": "Maintenance",
+      "P_sets": 0,
+      "S_sets": 4,
+      "S_uncertain_sets": 2,
+      "exposures": {
+        "Sr": "S",
+        "Pt": "S"
+      },
+      "functional_gap": false
+    },
+    "Calves": {
+      "priority": "Optional",
+      "intent": "Maintenance",
+      "P_sets": 0,
+      "S_sets": 0,
+      "S_uncertain_sets": 0,
+      "exposures": {},
+      "functional_gap": false
+    },
+    "Hip Adductors": {
+      "priority": "Optional",
+      "intent": "Maintenance",
+      "P_sets": 0,
+      "S_sets": 0,
+      "S_uncertain_sets": 0,
+      "exposures": {},
+      "functional_gap": false
+    },
+    "Trunk Musculature": {
+      "priority": "Optional",
+      "intent": "Maintenance",
+      "P_sets": 0,
+      "S_sets": 0,
+      "S_uncertain_sets": 0,
+      "exposures": {},
+      "functional_gap": false
+    }
+  },
+  "session_time_estimates_min": {
+    "Pn": 42.0,
+    "Sr": 44.58,
+    "Pt": 45.67
+  },
+  "findings": [
+    {
+      "level": "FAIL",
+      "code": "TOO_FEW_EXPOSURES",
+      "scope": "Rear Delts",
+      "message": "Rear Delts: 0 credible exposures; default is two."
+    },
+    {
+      "level": "FAIL",
+      "code": "SECONDARY_ONLY",
+      "scope": "Glutes",
+      "message": "Glutes: S+S lacks a Primary exposure."
+    }
+  ],
+  "disclaimer": "Structural checks only; no medical clearance, P/S biomechanics inference, or prediction of hypertrophy."
+}

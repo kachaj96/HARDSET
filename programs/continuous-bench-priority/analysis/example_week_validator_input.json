@@ -1,0 +1,389 @@
+{
+  "goals": [
+    "Competition bench 1RM",
+    "Upper-body hypertrophy",
+    "Leg maintenance"
+  ],
+  "human_review": {
+    "goal_fit": true,
+    "ps_mechanics": true,
+    "exercise_safety": true,
+    "recovery": true
+  },
+  "constraints": {
+    "session_time_limit_min": 60,
+    "time_includes_warmup": true,
+    "warmup_min": 9,
+    "transition_min_per_exercise": 1.5,
+    "margin_min_per_session": 5
+  },
+  "areas": {
+    "Chest": {
+      "priority": "Priority",
+      "intent": "Development"
+    },
+    "Back": {
+      "priority": "Priority",
+      "intent": "Development"
+    },
+    "Lateral Delts": {
+      "priority": "Priority",
+      "intent": "Development"
+    },
+    "Elbow Extensors": {
+      "priority": "Priority",
+      "intent": "Development"
+    },
+    "Elbow Flexors": {
+      "priority": "Priority",
+      "intent": "Development"
+    },
+    "Rear Delts": {
+      "priority": "Standard",
+      "intent": "Development"
+    },
+    "Quadriceps": {
+      "priority": "Standard",
+      "intent": "Maintenance"
+    },
+    "Hamstrings": {
+      "priority": "Standard",
+      "intent": "Maintenance"
+    },
+    "Glutes": {
+      "priority": "Standard",
+      "intent": "Maintenance"
+    },
+    "Calves": {
+      "priority": "Optional",
+      "intent": "Maintenance"
+    },
+    "Hip Adductors": {
+      "priority": "Optional",
+      "intent": "Maintenance"
+    },
+    "Trunk Musculature": {
+      "priority": "Optional",
+      "intent": "Maintenance"
+    }
+  },
+  "functional_overrides": {},
+  "sessions": [
+    {
+      "name": "Pn",
+      "exercises": [
+        {
+          "name": "Competition Bench single @7",
+          "variant": "x",
+          "sets": 1,
+          "rir_targets": [
+            3
+          ],
+          "safe_exit": true,
+          "rest_sec": 0,
+          "seconds_per_set": 15,
+          "progression_rule": "Lead-Set (Ch05) for accessories; bench: wave + PB rule",
+          "stimulus": {
+            "Chest": "P",
+            "Elbow Extensors": "S"
+          },
+          "set_reason": "Strength skill/intensity exposure (powerbuilding exception)"
+        },
+        {
+          "name": "Competition Bench back-off @7",
+          "variant": "x",
+          "sets": 2,
+          "rir_targets": [
+            3,
+            3
+          ],
+          "safe_exit": true,
+          "rest_sec": 240,
+          "seconds_per_set": 35,
+          "progression_rule": "Lead-Set (Ch05) for accessories; bench: wave + PB rule",
+          "stimulus": {
+            "Chest": "P",
+            "Elbow Extensors": "S"
+          }
+        },
+        {
+          "name": "Chest-Supported Machine Row",
+          "variant": "x",
+          "sets": 2,
+          "rir_targets": [
+            1,
+            0.5
+          ],
+          "safe_exit": true,
+          "rest_sec": 120,
+          "seconds_per_set": 45,
+          "progression_rule": "Lead-Set (Ch05) for accessories; bench: wave + PB rule",
+          "stimulus": {
+            "Back": "P",
+            "Elbow Flexors": "S",
+            "Rear Delts": "S?"
+          }
+        },
+        {
+          "name": "Hack Squat",
+          "variant": "x",
+          "sets": 2,
+          "rir_targets": [
+            1.5,
+            1.5
+          ],
+          "safe_exit": true,
+          "rest_sec": 150,
+          "seconds_per_set": 50,
+          "progression_rule": "Lead-Set (Ch05) for accessories; bench: wave + PB rule",
+          "stimulus": {
+            "Quadriceps": "P",
+            "Glutes": "S?"
+          }
+        },
+        {
+          "name": "Cable Lateral Raise",
+          "variant": "x",
+          "sets": 2,
+          "rir_targets": [
+            1,
+            0.5
+          ],
+          "safe_exit": true,
+          "rest_sec": 75,
+          "seconds_per_set": 50,
+          "progression_rule": "Lead-Set (Ch05) for accessories; bench: wave + PB rule",
+          "stimulus": {
+            "Lateral Delts": "P"
+          }
+        },
+        {
+          "name": "Cable Curl",
+          "variant": "x",
+          "sets": 2,
+          "rir_targets": [
+            1,
+            0.5
+          ],
+          "safe_exit": true,
+          "rest_sec": 90,
+          "seconds_per_set": 45,
+          "progression_rule": "Lead-Set (Ch05) for accessories; bench: wave + PB rule",
+          "stimulus": {
+            "Elbow Flexors": "P"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Sr",
+      "exercises": [
+        {
+          "name": "Paused Bench 2s",
+          "variant": "x",
+          "sets": 2,
+          "rir_targets": [
+            3.5,
+            3
+          ],
+          "safe_exit": true,
+          "rest_sec": 210,
+          "seconds_per_set": 40,
+          "progression_rule": "Lead-Set (Ch05) for accessories; bench: wave + PB rule",
+          "stimulus": {
+            "Chest": "P",
+            "Elbow Extensors": "S"
+          }
+        },
+        {
+          "name": "Romanian Deadlift",
+          "variant": "x",
+          "sets": 2,
+          "rir_targets": [
+            1.5,
+            1.5
+          ],
+          "safe_exit": true,
+          "rest_sec": 150,
+          "seconds_per_set": 50,
+          "progression_rule": "Lead-Set (Ch05) for accessories; bench: wave + PB rule",
+          "stimulus": {
+            "Hamstrings": "P",
+            "Glutes": "S",
+            "Back": "S?"
+          }
+        },
+        {
+          "name": "Lat Pulldown",
+          "variant": "x",
+          "sets": 2,
+          "rir_targets": [
+            1,
+            0.5
+          ],
+          "safe_exit": true,
+          "rest_sec": 120,
+          "seconds_per_set": 45,
+          "progression_rule": "Lead-Set (Ch05) for accessories; bench: wave + PB rule",
+          "stimulus": {
+            "Back": "P",
+            "Elbow Flexors": "S"
+          }
+        },
+        {
+          "name": "Pec Deck",
+          "variant": "x",
+          "sets": 2,
+          "rir_targets": [
+            1,
+            0.5
+          ],
+          "safe_exit": true,
+          "rest_sec": 90,
+          "seconds_per_set": 50,
+          "progression_rule": "Lead-Set (Ch05) for accessories; bench: wave + PB rule",
+          "stimulus": {
+            "Chest": "P"
+          }
+        },
+        {
+          "name": "Cable Triceps Pushdown",
+          "variant": "x",
+          "sets": 2,
+          "rir_targets": [
+            1,
+            0.5
+          ],
+          "safe_exit": true,
+          "rest_sec": 90,
+          "seconds_per_set": 45,
+          "progression_rule": "Lead-Set (Ch05) for accessories; bench: wave + PB rule",
+          "stimulus": {
+            "Elbow Extensors": "P"
+          }
+        },
+        {
+          "name": "Cable Lateral Raise",
+          "variant": "x",
+          "sets": 2,
+          "rir_targets": [
+            1,
+            0.5
+          ],
+          "safe_exit": true,
+          "rest_sec": 75,
+          "seconds_per_set": 50,
+          "progression_rule": "Lead-Set (Ch05) for accessories; bench: wave + PB rule",
+          "stimulus": {
+            "Lateral Delts": "P"
+          }
+        }
+      ]
+    },
+    {
+      "name": "Pt",
+      "exercises": [
+        {
+          "name": "Competition Bench volume @7",
+          "variant": "x",
+          "sets": 2,
+          "rir_targets": [
+            3,
+            3
+          ],
+          "safe_exit": true,
+          "rest_sec": 210,
+          "seconds_per_set": 40,
+          "progression_rule": "Lead-Set (Ch05) for accessories; bench: wave + PB rule",
+          "stimulus": {
+            "Chest": "P",
+            "Elbow Extensors": "S"
+          }
+        },
+        {
+          "name": "Reverse Lunge 2x8/leg",
+          "variant": "x",
+          "sets": 2,
+          "rir_targets": [
+            1.5,
+            1.5
+          ],
+          "safe_exit": true,
+          "rest_sec": 120,
+          "seconds_per_set": 100,
+          "progression_rule": "Lead-Set (Ch05) for accessories; bench: wave + PB rule",
+          "stimulus": {
+            "Quadriceps": "P",
+            "Glutes": "S"
+          }
+        },
+        {
+          "name": "Chest-Supported T-Bar Row",
+          "variant": "x",
+          "sets": 2,
+          "rir_targets": [
+            1,
+            0.5
+          ],
+          "safe_exit": true,
+          "rest_sec": 120,
+          "seconds_per_set": 45,
+          "progression_rule": "Lead-Set (Ch05) for accessories; bench: wave + PB rule",
+          "stimulus": {
+            "Back": "P",
+            "Elbow Flexors": "S",
+            "Rear Delts": "S?"
+          }
+        },
+        {
+          "name": "Seated Leg Curl",
+          "variant": "x",
+          "sets": 2,
+          "rir_targets": [
+            1,
+            0.5
+          ],
+          "safe_exit": true,
+          "rest_sec": 90,
+          "seconds_per_set": 45,
+          "progression_rule": "Lead-Set (Ch05) for accessories; bench: wave + PB rule",
+          "stimulus": {
+            "Hamstrings": "P"
+          }
+        },
+        {
+          "name": "Machine Preacher Curl",
+          "variant": "x",
+          "sets": 2,
+          "rir_targets": [
+            1,
+            0.5
+          ],
+          "safe_exit": true,
+          "rest_sec": 90,
+          "seconds_per_set": 45,
+          "progression_rule": "Lead-Set (Ch05) for accessories; bench: wave + PB rule",
+          "stimulus": {
+            "Elbow Flexors": "P"
+          }
+        },
+        {
+          "name": "Overhead Cable Triceps Extension",
+          "variant": "x",
+          "sets": 2,
+          "rir_targets": [
+            1,
+            0.5
+          ],
+          "safe_exit": true,
+          "rest_sec": 90,
+          "seconds_per_set": 45,
+          "progression_rule": "Lead-Set (Ch05) for accessories; bench: wave + PB rule",
+          "stimulus": {
+            "Elbow Extensors": "P"
+          }
+        }
+      ]
+    }
+  ]
+}
