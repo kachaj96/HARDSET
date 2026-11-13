@@ -7,7 +7,10 @@ Decyzje właściciela z 2026-11-13. Pakiet `handoff/` zostaje bez zmian. Ten pli
 | D-3 | Dodać regułę w górę dla serii wielopowtórzeniowych | sekcja 1 |
 | D-4 | Próg zmiany bazy w powtórzeniach, nie w procentach | sekcja 2 |
 | D-5 | „PB” zmienia nazwę na **baza fali** (angielskie: Wave Base, skrót WB) | sekcja 3 |
-| D-6, D-7, D-1, D-2 | otwarte | `../../brand/DECISIONS.md` |
+| D-1 | Serie wyciskania zawodniczego liczone osobno jako serie siłowe, poza ledgerem Hard Sets | sekcja 4 |
+| D-2 | (a): tylne aktony barków i pośladki mają w tym programie status Optional | sekcja 4 |
+| D-6 | Lżejszy tydzień 4 wyciskania to nazwany wyjątek; reszta ćwiczeń bez luzowania | sekcja 4 |
+| D-7 | Korekty techniczne: wycofane źródło i przykład B-2 | sekcja 5 |
 
 ## 1. D-3: korekta w górę (klasa: Hipoteza programu)
 
@@ -40,3 +43,18 @@ Krok +2,5 kg nadal jest przykładowy (N-7): to 2,1% przy bazie 120 kg i 1,25% pr
 ## 3. D-5: nazwa
 
 „PB” w trójboju znaczy rekord życiowy. Program mówi **baza fali**. Zapis osobnych liczb: 1RM (zaliczony wynik zawodniczy), e1RM (szacunek z serii kontrolnej), baza fali (liczba do procentów).
+
+## 4. D-1, D-2, D-6: status w ledgerze i granice programu
+
+Program jest ułożony dla osoby, która trenuje **trzy razy w tygodniu po najwyżej 60 minut** (z rozgrzewką) i ma **priorytet w wyciskaniu leżąc**. Tego założenia nie wolno pominąć w żadnym planie opartym na tym programie.
+
+- **D-1.** Serie wyciskania zawodniczego przy RPE 6–8 (zapas 2–4 powtórzeń) nie są liczone jako Hard Sets klatki w ledgerze hipertrofii. Są serią siłową i wchodzą do osobnego wiersza ledgera. Ekspozycje Chest dla hipertrofii wynikają z pozostałych serii zgodnych ze standardem Hard Set. Walidator liczy dziś wszystkie serie ćwiczeń, więc przed użyciem na planie z wyciskaniem zawodniczym trzeba oznaczyć te serie jako siłowe w danych wejściowych albo sprawdzić ledger ręcznie.
+- **D-2 (a).** Rear Delts i Glutes mają status **Optional** z intencją Maintenance: bez wymaganego minimum ekspozycji. To skutek limitu 60 minut przy priorytecie wyciskania, a nie ocena ich ważności. Kto chce je rozwinąć, dodaje po jednym ćwiczeniu kosztem czasu albo zmienia program. Walidator dla przykładowego tygodnia z tymi statusami: PASS (`analysis/example_week_validator_output_d2a.json`). To jest wynik strukturalny, nie ocena biomechaniczna ani medyczna.
+- **D-6.** Lżejszy tydzień wyciskania (T4) jest zaplanowany z kalendarza i odstępuje od zasady HARDSET „deload z potrzeby” (wyjątek W-4). Wyjątek dotyczy wyłącznie wyciskania. Pozostałe ćwiczenia działają według zwykłych zasad HARDSET bez luzowania: dwie serie, RIR 1 i 0–1 przy bezpiecznym zakończeniu, progresja serii prowadzącej, regeneracja z potrzeby.
+
+## 5. D-7: korekty techniczne
+
+- Usunięte źródło: Hughes, Peiffer, Scott (2020), wycofane (B-3). Nie występuje w książce.
+- Przykład B-2: back-off w poniedziałek T3 przy bazie 120 kg to 97,5–102,5 kg, nie „około 100–102,5”.
+- Singiel T3 przy bazie 120 kg: 110–112,5 kg.
+Pakiet `handoff/` zostaje bez zmian. Poprawki są w książce i w tym pliku.
