@@ -7,7 +7,7 @@ Decyzje właściciela z 2026-11-13. Pakiet `handoff/` zostaje bez zmian. Ten pli
 | D-3 | Dodać regułę w górę dla serii wielopowtórzeniowych | sekcja 1 |
 | D-4 | Próg zmiany bazy w powtórzeniach, nie w procentach | sekcja 2 |
 | D-5 | „PB” zmienia nazwę na **baza fali** (angielskie: Wave Base, skrót WB) | sekcja 3 |
-| D-1 | Serie wyciskania zawodniczego liczone osobno jako serie siłowe, poza ledgerem Hard Sets | sekcja 4 |
+| D-1 | (b): serie wyciskania zawodniczego liczą się do Chest P (decyzja z 2026-11-13 zastępuje wcześniejsze „osobno”) | sekcja 4 |
 | D-2 | (a): tylne aktony barków i pośladki mają w tym programie status Optional | sekcja 4 |
 | D-6 | Lżejszy tydzień 4 wyciskania to nazwany wyjątek; reszta ćwiczeń bez luzowania | sekcja 4 |
 | D-7 | Korekty techniczne: wycofane źródło i przykład B-2 | sekcja 5 |
@@ -48,7 +48,7 @@ Krok +2,5 kg nadal jest przykładowy (N-7): to 2,1% przy bazie 120 kg i 1,25% pr
 
 Program jest ułożony dla osoby, która trenuje **trzy razy w tygodniu po najwyżej 60 minut** (z rozgrzewką) i ma **priorytet w wyciskaniu leżąc**. Tego założenia nie wolno pominąć w żadnym planie opartym na tym programie.
 
-- **D-1.** Serie wyciskania zawodniczego przy RPE 6–8 (zapas 2–4 powtórzeń) nie są liczone jako Hard Sets klatki w ledgerze hipertrofii. Są serią siłową i wchodzą do osobnego wiersza ledgera. Ekspozycje Chest dla hipertrofii wynikają z pozostałych serii zgodnych ze standardem Hard Set. Walidator liczy dziś wszystkie serie ćwiczeń, więc przed użyciem na planie z wyciskaniem zawodniczym trzeba oznaczyć te serie jako siłowe w danych wejściowych albo sprawdzić ledger ręcznie.
+- **D-1 (b).** Serie wyciskania zawodniczego przy RPE 6–8 (zapas 2–4 powtórzeń) liczą się do Chest jako serie P, także w ledgerze hipertrofii. To nazwany **wyjątek siłowy** od standardu Hard Set (pierwsza seria około 1 RIR), a nie wynik badań i nie zasada HARDSET v1.0: książka nie może twierdzić, że takie serie dają ten sam bodziec hipertroficzny co serie przy 0–1 RIR. Walidator liczy wszystkie serie, więc wynik dla Chest (9 serii P, trzy ekspozycje) jest zgodny z tą decyzją, ale ocenę merytoryczną zostawia człowiekowi. Skutek praktyczny: Chest spełnia regułę Priority (P+P) dzięki wyciskaniu, a Pec Deck jest dodatkiem.
 - **D-2 (a).** Rear Delts i Glutes mają status **Optional** z intencją Maintenance: bez wymaganego minimum ekspozycji. To skutek limitu 60 minut przy priorytecie wyciskania, a nie ocena ich ważności. Kto chce je rozwinąć, dodaje po jednym ćwiczeniu kosztem czasu albo zmienia program. Walidator dla przykładowego tygodnia z tymi statusami: PASS (`analysis/example_week_validator_output_d2a.json`). To jest wynik strukturalny, nie ocena biomechaniczna ani medyczna.
 - **D-6.** Lżejszy tydzień wyciskania (T4) jest zaplanowany z kalendarza i odstępuje od zasady HARDSET „deload z potrzeby” (wyjątek W-4). Wyjątek dotyczy wyłącznie wyciskania. Pozostałe ćwiczenia działają według zwykłych zasad HARDSET bez luzowania: dwie serie, RIR 1 i 0–1 przy bezpiecznym zakończeniu, progresja serii prowadzącej, regeneracja z potrzeby.
 

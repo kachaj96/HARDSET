@@ -40,15 +40,16 @@ Bezpłatna dystrybucja zmniejsza to ryzyko, ale go nie usuwa.
 | D-3 | Reguła w górę dla serii zbyt lekkich: 2,5% na punkt RPE, limit 5%. | `programs/continuous-bench-priority/SPEC_AMENDMENTS_v1.2.md`, `rules_v1_2.py`, testy |
 | D-4 | Próg zmiany bazy w powtórzeniach (zaakceptowane). | jw. |
 | D-5 | Nowa nazwa zamiast „PB”: baza fali (Wave Base, WB). | próbka Bench Priority |
-| D-1 | Serie wyciskania zawodniczego liczone osobno (serie siłowe), poza Hard Sets klatki. | `SPEC_AMENDMENTS_v1.2.md` sekcja 4 |
+| D-1 | (b): serie wyciskania zawodniczego liczą się do Chest P także dla hipertrofii; wyjątek siłowy, nie standard Hard Set (zastępuje wcześniejsze „osobno”). | `SPEC_AMENDMENTS_v1.2.md` sekcja 4 |
 | D-2 | (a) Rear Delts i Glutes: Optional. Plan musi wskazywać: 60 min, 3 dni, priorytet wyciskania. Walidator: PASS strukturalny. | sekcja 4, `analysis/*_d2a.json` |
 | D-6 | Lżejszy tydzień 4: wyjątek tylko dla wyciskania, reszta bez luzowania. | sekcja 4 |
 | D-7 | Korekty techniczne (wycofane źródło, przykład B-2). | sekcja 5 |
 | T-3 | Wzorzec stylu: modułowy raport z wykresami (jasny i ciemny), z załączonych przykładów. Makieta do oceny. | `brand/explorations-v3/` |
+| T-4 | Typografia i logo dopasowane do przykładów właściciela: Archivo (nagłówki, tekst), IBM Plex Mono (liczby); logo z konturów Archivo Expanded ExtraBold; własne okładki (skala RIR, wykres fali). Akcent: zgaszona zieleń. Makieta do oceny. | `brand/explorations-v4/` |
 | T-1 | Tekst w e-bookach justowany, z dzieleniem wyrazów. | `book.css`, `publications/build.py` (pyphen) |
 | T-2 | Nowa kolorystyka (czerń, dwa kolory + akcent, industrial) i nowe logo: wybór spośród min. 3 makiet. | `brand/explorations-v2/` |
 
 ## Otwarte (do decyzji właściciela)
 
 - Wybór stylu i logo (T-2). Po wyborze Brand System zostanie przebudowany, a kontrasty przeliczone.
-- Format (poziomy raport czy pionowy A5) i wybór palety po obejrzeniu makiety v3.
+- Format (rekomendacja: pion, B5 176×250), odcień zieleni (Szałwia, Oliwka, Eukaliptus) i akceptacja logo v4.
