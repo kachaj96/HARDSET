@@ -1,0 +1,57 @@
+<style>@page ch09 { @top-left { content: "09 · BUDOWA I WALIDACJA PROGRAMU"; } }</style>
+<div style="page:ch09">
+<section class="chap" id="ch09">
+  <div class="no">Rozdział 09</div>
+  <h1>Budowa<br>i walidacja programu</h1>
+  <p class="principle">Buduj z celem. Waliduj przed wykonaniem. Koryguj na podstawie dowodów.</p>
+</section>
+<section>
+  <h2>Sześć etapów kreatora</h2>
+  <ol class="steps">
+    <li>{{icon:check}}<div><b>01 · Profil</b><p>Cele główne i poboczne, doświadczenie, historia treningowa, dostępne dni i czas, sprzęt, preferencje ćwiczeń, istotne ograniczenia, inne aktywności i istotne limity bezpieczeństwa. Nie zakładasz żadnego profilu na podstawie wcześniejszych planów.</p></div></li>
+    <li>{{icon:check}}<div><b>02 · Priorytety i intencja</b><p>Dla wszystkich 12 obszarów Fixed Core przypisujesz Priority, Standard albo Optional oraz Development lub Maintenance. Dodajesz tylko uzasadnione Functional Overrides.</p></div></li>
+    <li>{{icon:check}}<div><b>03 · Bodziec tygodniowy</b><p>Ustalasz bazę serii P, istotną pracę S i docelowe ekspozycje dla każdego obszaru metodą <b>Baseline + Response</b>, a nie automatyczną liczbą serii wynikającą z priorytetu.</p></div></li>
+    <li>{{icon:check}}<div><b>04 · Ćwiczenia i split</b><p>Wybierasz ćwiczenia według kryteriów z rozdziału 04 i układasz wymagany bodziec w wykonalnych sesjach testami Coverage, Capacity, Quality, Recovery.</p></div></li>
+    <li>{{icon:check}}<div><b>05 · Preskrypcja</b><p>Przypisujesz ćwiczenie, liczbę serii, zakres powtórzeń, RIR, odpoczynek, wskazówki dotyczące zakresu ruchu i wykonania oraz jasną regułę progresji z rozdziału 05. Standardem są dwa Hard Sety, chyba że 1 lub 3 uzasadnia Purpose / Value / Recovery.</p></div></li>
+    <li>{{icon:check}}<div><b>06 · Walidacja i dostarczenie</b><p>Przechodzisz wszystkie bramki, naprawiasz problemy, zapisujesz przyjęte kompromisy i publikujesz operacyjny plan.</p></div></li>
+  </ol>
+  <p>Kreator jest <b>iteracyjny</b>, a nie tylko liniowy. Gdy nie przechodzi wykonalność czasowa, wracasz do wcześniejszych kroków, zamiast po cichu odrzucać cel.</p>
+
+  <h2>Bramka bezpieczeństwa</h2>
+  <p>Przed wydaniem sprawdzasz przydatność ćwiczeń, ustawienie sprzętu, bezpieczne zakończenie Hard Setów, możliwość spełnienia przepisanego RIR i nierozstrzygnięte ryzyka. Jeśli punkt upadku jest niebezpieczny, stosujesz zachowawczy RIR albo inne ćwiczenie. <b>Poważnego problemu bezpieczeństwa nie można zaakceptować jako warunkowego kompromisu</b>. Zmieniasz program albo wymagasz oceny wykwalifikowanej osoby.</p>
+  <div class="note open"><b>Granica walidatora.</b> Walidator nie może klinicznie poświadczyć bezpieczeństwa, indywidualnej techniki ani regeneracji. Jego wynik oznacza „nie zidentyfikowano blokujących problemów na podstawie zadeklarowanych danych”, a nie „bezpieczne medycznie”. Brak krytycznej informacji może uniemożliwić PASS.</div>
+
+  <h2>Bramki pokrycia i ekspozycji</h2>
+  <p>Dla wszystkich 12 obszarów Fixed Core i aktywnych Overrides raportujesz: Priority i Training Intent; fizyczne serie P i osobno pracę S; wiarygodne sesje z P albo S, najwyżej jedna ekspozycja na obszar w sesji; Functional Notes i luki; wyjątki i uzasadnienia.</p>
+  <p>Priority: najlepiej P+P, P+S pod warunkiem wiarygodnego S i braku ważnej luki. Standard: P+P albo wiarygodne P+S. S+S nie wystarcza automatycznie. Optional nie ma obowiązkowego minimum. <b>S? się nie liczy.</b> Nie wnioskujesz P ani S z nazwy maszyny i nie wymyślasz ułamkowego odpowiednika (rozdział 02).</p>
+
+  <h2>Bramka dawki tygodniowej i architektury serii</h2>
+  <p>Sprawdzasz, czy startowa objętość pasuje do historii i celu, uwzględnia wiarygodną pracę pomocniczą, jest prawdopodobna czasowo i regeneracyjnie oraz pozwala na późniejszy monitoring. To nie gwarantuje „optymalnego” bodźca biologicznego.</p>
+  <p>Kontrolujesz domyślne dwie serie, uzasadnione wyjątki jednej i trzech serii, właściwy RIR dla konkretnego ćwiczenia i kontekstu bezpieczeństwa, stabilne szablony powtórzeń i wystarczający odpoczynek. Nie ma obowiązkowego limitu więcej niż trzech serii, ale planista musi uzasadnić nietypowe odchylenia i obciążenie.</p>
+
+  <h2>Bramka czasu i regeneracji</h2>
+  <p>Najpierw wyjaśniasz, czy podany limit czasu <b>zawiera</b>, czy <b>wyklucza</b> rozgrzewkę. Szacujesz czas pracy z serii, tempa powtórzeń, odpoczynku, przejść, dostępności sprzętu i zapasu. Nie twierdzisz precyzji co do minuty bez pomiaru. Szanujesz zewnętrzny sport, pracę i życie oraz lokalne zmęczenie, a nie uniwersalne stałe godziny odpoczynku mięśni.</p>
+  <p>Wykonalny plan szanuje <b>rzeczywistą</b> dostępność. Jeśli jej nie szanuje, naprawiasz go albo zgłaszasz konflikt. Nie ukrywasz przekroczenia.</p>
+
+  <h2>Bramka progresji i dowodów</h2>
+  <p>Każde przepisane ćwiczenie potrzebuje reguły progresji zgodnej z progresją serii prowadzącej. Domyślny minimalny dziennik: wariant, ciężar, powtórzenia, RIR, wykonanie i istotne notatki o regeneracji. Pomiar zależny od celu jest opcjonalny. Nigdy nie twierdzisz zweryfikowanej hipertrofii na podstawie samego dziennika.</p>
+
+  <h2>Statusy walidatora</h2>
+  <table class="dt text">
+    <thead><tr><th>Status</th><th>Znaczenie</th></tr></thead>
+    <tbody>
+      <tr><td>PASS</td><td>Wszystkie obowiązkowe kontrole konstrukcji są wsparte dostępnymi deklaracjami i nie zidentyfikowano blokad. Nie gwarantuje przyszłego sukcesu ani bezpieczeństwa medycznego.</td></tr>
+      <tr><td>CONDITIONAL</td><td>Bezpieczny i wykonalny projekt z <b>jawnym, uzasadnionym i zaakceptowanym przez użytkownika</b> odstępstwem od preferencji albo niezablokowującym ograniczeniem dowodów do rozwiązania. Conditional nigdy nie może po cichu znaczyć „niebezpieczne, ale dozwolone”.</td></tr>
+      <tr><td>FAIL</td><td>Zidentyfikowana blokada: niebezpieczne przepisane działanie, niewykonalny czas lub pojemność albo sprzeczność z uzgodnionym niepodlegającym negocjacji ograniczeniem bez rozwiązania.</td></tr>
+    </tbody>
+  </table>
+  <p>Automatyczny walidator może też oznaczać <b>NEEDS_REVIEW</b> jako <i>wewnętrzny</i> status pojedynczej kontroli przy braku danych. Wynik ogólny mapuje go na CONDITIONAL albo FAIL w zależności od wagi. Ocena człowieka jest wymagana przy biomechanice P i S oraz indywidualnym bezpieczeństwie.</p>
+
+  <h2>Wymagany wynik</h2>
+  <p>Wydany program zawiera: anonimowe lub aktualne podsumowanie profilu; mapę celów, priorytetów i intencji; tygodniowy harmonogram; listę ćwiczeń (serie, powtórzenia, RIR, odpoczynek, wskazówki dotyczące zakresu ruchu); instrukcje progresji; ledger P i S oraz audyt ekspozycji; uwagi o bezpieczeństwie; szacowany czas; harmonogram śledzenia i przeglądów; jawne wyjątki; ogólny status walidatora.</p>
+
+  <h2>Walidacja po starcie</h2>
+  <p>Po wykonaniu sprawdzasz rzeczywisty czas sesji, mechanikę ćwiczeń i dostęp do sprzętu, tolerancję oraz wyniki związane z celem. Do progresji używasz rozdziału 05, do organizacji tygodnia rozdziału 06, do interpretacji wyników rozdziału 07, a do długoterminowych przejść rozdziału 08. Jeden zły trening nie wymaga przebudowy planu.</p>
+  <div class="quote">Plan nie jest gotowy, gdy każde ćwiczenie jest na liście. Jest gotowy, gdy jasne są jego cel, wykonanie, ograniczenia i ocena.</div>
+</section>
+</div>

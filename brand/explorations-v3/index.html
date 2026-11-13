@@ -1,0 +1,294 @@
+<title>HARDSET Raport</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans+Condensed:wght@500;600;700&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&display=swap">
+<style>
+:root{--page:#E7E6E3;--ink:#18191A;--soft:#55585B;--rule:#C4C3BF;--sans:'IBM Plex Sans Condensed','Arial Narrow',sans-serif;--serif:'Source Serif 4',Georgia,serif;--mono:'IBM Plex Mono','Courier New',monospace;--acc:#FF5B1F;--acct:#BF3708}
+*{box-sizing:border-box}
+body{margin:0;background:var(--page);color:var(--ink);font:400 16px/1.5 var(--serif);padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:32px 64px}
+.wrap{max-width:1160px;margin:0 auto}
+h1{font:700 40px/1.05 var(--sans);margin:0 0 12px;text-wrap:balance}
+.intro{max-width:64ch;margin:0 0 20px}
+.feat{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:0;margin:0 0 28px;border-top:2px solid var(--ink)}
+.feat div{padding:14px 16px 14px 0}.feat b{font:600 12px/1 var(--mono);letter-spacing:.08em;text-transform:uppercase;display:block;margin-bottom:6px}.feat p{margin:0;font-size:15px;color:var(--soft)}
+.ctl{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:0 0 28px;font:500 12px var(--mono);letter-spacing:.06em;text-transform:uppercase}
+.ctl button{font:500 12px/1 var(--mono);letter-spacing:.06em;text-transform:uppercase;border:1px solid var(--ink);background:transparent;color:var(--ink);padding:9px 12px;cursor:pointer;display:inline-flex;gap:8px;align-items:center}
+.ctl button[aria-pressed=true]{background:var(--ink);color:var(--page)}
+.ctl button:focus-visible{outline:2px solid var(--ink);outline-offset:2px}
+.ctl i{width:12px;height:12px;display:inline-block;border:1px solid var(--ink)}
+h2.sec{font:600 12px/1 var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--soft);margin:36px 0 10px}
+.pair{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.pair.stack{grid-template-columns:1fr}
+.pwrap{position:relative;min-width:0}
+.pwrap > b{position:absolute;left:0;top:-18px;font:500 11px/1 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--soft)}
+.zoom{font:500 12px/1 var(--mono);letter-spacing:.06em;text-transform:uppercase;border:1px solid var(--ink);background:transparent;color:var(--ink);padding:6px 10px;cursor:pointer;margin:0 0 22px}
+.zoom:focus-visible{outline:2px solid var(--ink);outline-offset:2px}
+.row{margin:0 0 30px}
+.rowhead{display:flex;justify-content:space-between;align-items:center;gap:12px;margin:24px 0 8px}
+.rowhead h3{margin:0;font:700 20px var(--sans)}
+/* the page itself */
+.pgx{container-type:inline-size;aspect-ratio:297/210;position:relative;overflow:hidden;box-shadow:0 0 0 1px rgba(0,0,0,.16);background:var(--bg);color:var(--fg)}
+.light{--bg:#F3F4F4;--fg:#101214;--panel:#101214;--panelfg:#ECEEEF;--mid:#B9C0C4;--line:#CBD0D3;--muted:#5F686D;--tint:#E3E6E8;--a:var(--acc);--at:var(--acct)}
+.dark{--bg:#101214;--fg:#ECEEEF;--panel:#1D2124;--panelfg:#ECEEEF;--mid:#4B5359;--line:#30363A;--muted:#9AA3A8;--tint:#1A1E21;--a:var(--acc);--at:var(--acc)}
+.pgx .in{position:absolute;inset:0;padding:4.28cqw 5.04cqw 4.54cqw;font:400 1.36cqw/1.5 var(--serif);display:flex;flex-direction:column}
+.ph{display:flex;justify-content:space-between;font:600 1.01cqw/1 var(--sans);letter-spacing:.16em;text-transform:uppercase;color:var(--muted);border-bottom:0.13cqw solid var(--line);padding-bottom:1.13cqw;margin-bottom:2.27cqw}
+.pf{position:absolute;left:5.04cqw;right:5.04cqw;bottom:2.02cqw;display:flex;justify-content:space-between;font:500 1.01cqw var(--mono);color:var(--muted)}
+.grid{display:grid;gap:3.02cqw;flex:1;min-height:0;margin-bottom:2.77cqw}
+.g-main{grid-template-columns:2.2fr 1fr}
+.g-main:has(> div + div + aside){grid-template-columns:1.25fr 1fr .85fr}
+.g-toc{grid-template-columns:2fr 1fr}
+h2{font:700 3.65cqw/1.05 var(--sans);margin:0 0 1.26cqw;letter-spacing:-.005em}
+h2.big{font-size:6.30cqw;margin-bottom:2.52cqw}
+h3{font:600 1.51cqw/1.2 var(--sans);letter-spacing:.06em;text-transform:uppercase;margin:0 0 1.26cqw}
+h4{font:600 1.20cqw/1.2 var(--sans);letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin:1.76cqw 0 0.76cqw}
+p{margin:0 0 1.01cqw}.lead{font-size:1.57cqw;line-height:1.45}.small{font-size:1.16cqw;line-height:1.4;color:var(--muted)}
+cite{font:500 1.07cqw var(--mono);font-style:normal;color:var(--at)}
+.side{background:var(--panel);color:var(--panelfg);padding:2.27cqw 2.02cqw;margin:-0.00cqw 0 0;display:flex;flex-direction:column;gap:0.76cqw;min-width:0}
+.side h3{border-bottom:0.13cqw solid var(--mid);padding-bottom:1.01cqw;margin-bottom:0.76cqw}
+.side .small{color:var(--panelfg);opacity:.78}
+.side .tg.study,.side .tg.decision,.side .tg.heuristic{color:var(--panelfg)}
+.side .tg.exception,.side cite{color:var(--acc)}
+.side .tg.hypothesis{color:var(--panelfg)}
+.note{border:0.13cqw solid var(--mid);padding:1.01cqw 1.26cqw;font:400 1.13cqw/1.4 var(--sans);margin-top:auto}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:1.76cqw;margin:1.26cqw 0 0.76cqw}
+.stat{border-top:0.32cqw solid var(--fg);padding-top:0.88cqw}
+.stat .n{font:700 4.54cqw/1 var(--sans)}.stat small{font:500 1.39cqw var(--mono);margin-left:0.50cqw;color:var(--at)}
+.stat p{font:400 1.20cqw/1.35 var(--sans);color:var(--muted);margin:0.50cqw 0 0}
+.dt{border-collapse:collapse;width:100%;font:400 1.23cqw/1.3 var(--mono);margin-top:1.26cqw}
+.dt caption{caption-side:top;text-align:left;font:600 1.07cqw var(--sans);letter-spacing:.1em;text-transform:uppercase;color:var(--muted);padding-bottom:0.76cqw}
+.dt th{font:600 1.01cqw var(--sans);letter-spacing:.08em;text-transform:uppercase;text-align:left;background:var(--fg);color:var(--bg);padding:0.76cqw 1.01cqw}
+.dt td{padding:0.69cqw 1.01cqw;border-bottom:0.13cqw solid var(--line)}
+.dt .r,.dt th.r{text-align:right}.dt .ac{color:var(--at)}
+.dt tr.hl td{background:var(--tint)}
+.dt.mx td{text-align:center}.dt.mx td:first-child{text-align:left}.dt.mx td:nth-child(2){text-align:left;color:var(--muted)}
+.dt.mx em{font:italic 400 1.07cqw var(--serif);color:var(--muted)}
+.m{font-style:normal;font-weight:600;display:inline-block;min-width:2.02cqw;padding:0.13cqw 0.38cqw;background:var(--fg);color:var(--bg)}
+.m.s{background:var(--a);color:#101214}.m0{font-style:normal;color:var(--mid)}
+.tags{display:flex;flex-wrap:wrap;gap:0.76cqw;align-items:center;margin:0.50cqw 0}
+.tg{display:inline-block;font:500 0.98cqw/1 var(--mono);letter-spacing:.04em;text-transform:uppercase;padding:0.44cqw 0.76cqw;border:0.15cqw solid currentColor;white-space:nowrap}
+.tg.study{color:var(--muted)}.tg.decision{color:var(--fg)}.tg.heuristic{color:var(--muted);border-style:dotted}.tg.exception{color:var(--at)}.tg.hypothesis{border-style:dashed;color:var(--fg)}
+.chk{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:1.13cqw}
+.chk li{display:grid;grid-template-columns:2.27cqw 1fr;gap:1.01cqw;font:400 1.26cqw/1.4 var(--sans)}
+.ic{width:2.27cqw;height:2.27cqw;color:var(--acc)}
+.chart{width:100%;height:auto;display:block;color:var(--fg)}
+.chart .ax{stroke:var(--fg);stroke-width:.8}.chart .tick line{stroke:var(--fg);stroke-width:.8}
+.chart text{font:500 6.6px var(--mono);fill:var(--fg)}.chart .lb{fill:var(--muted)}.chart .vl{font-size:6.8px}
+.chart .fl{fill:var(--fg)}.chart .fl.hi{fill:var(--a)}
+.chart .b1{fill:var(--a)}.chart .b2{fill:var(--mid)}
+.chart .ln{fill:none;stroke:var(--fg);stroke-width:1.4}.chart .ln~circle{fill:var(--fg)}.chart circle.hi{fill:var(--a)}
+.donut{max-width:18.90cqw}.chart circle.dn0{fill:none;stroke:var(--mid);stroke-width:12}.chart circle.dn1{fill:none;stroke:var(--a);stroke-width:12}.chart .dv{font:700 14px var(--sans)}
+.tl{list-style:none;margin:1.01cqw 0 0;padding:0;display:grid;grid-template-columns:repeat(4,1fr);gap:0;border-top:0.32cqw solid var(--fg)}
+.tl li{padding:0.88cqw 1.26cqw 0 0;position:relative}.tl li::before{content:"";position:absolute;left:0;top:-0.95cqw;width:1.51cqw;height:1.51cqw;background:var(--fg)}
+.tl li.hi::before{background:var(--a)}
+.tl b{font:700 1.89cqw var(--sans);display:block;margin-top:0.63cqw}.tl span{font:400 1.20cqw/1.35 var(--sans);color:var(--muted)}
+.pair2{display:grid;grid-template-columns:1fr 1fr;gap:1.26cqw}.pair2 div{border-top:0.19cqw solid var(--acc);padding-top:0.76cqw}.pair2 b{font:600 1.26cqw var(--sans);text-transform:uppercase;letter-spacing:.06em}.pair2 p{font:400 1.20cqw/1.4 var(--sans);margin:0.38cqw 0 0}
+.quote{font:italic 400 1.89cqw/1.3 var(--serif);border-left:0.44cqw solid var(--acc);padding-left:1.51cqw;margin-top:auto}
+.steps{list-style:none;margin:1.26cqw 0 0;padding:0;display:flex;flex-direction:column;gap:1.26cqw}
+.steps li{display:grid;grid-template-columns:3.28cqw 1fr;gap:1.26cqw;border-top:0.13cqw solid var(--line);padding-top:1.01cqw}.steps .ic{width:3.02cqw;height:3.02cqw}
+.steps b{font:600 1.39cqw var(--sans);text-transform:uppercase;letter-spacing:.06em}.steps p{font:400 1.26cqw/1.4 var(--sans);margin:0.25cqw 0 0}
+.formula{font:500 1.32cqw var(--mono);background:var(--tint);padding:1.13cqw 1.39cqw;margin:1.26cqw 0 1.01cqw}
+.col2{display:flex;flex-direction:column;gap:0.50cqw;min-width:0}
+.toc{list-style:none;margin:0;padding:0}.toc li{display:grid;grid-template-columns:4.03cqw 1fr 3.78cqw 3.02cqw;align-items:baseline;gap:0.76cqw;padding:0.95cqw 0;border-bottom:0.13cqw solid var(--line);font:500 1.70cqw var(--sans)}
+.toc b{font:500 1.39cqw var(--mono);color:var(--at)}.toc i{border-bottom:0.13cqw dotted var(--mid);height:0.13cqw}.toc em{font:500 1.39cqw var(--mono);font-style:normal;text-align:right;color:var(--muted)}
+.cover .in{padding:4.54cqw 5.54cqw}
+.cv-brand{display:flex;gap:1.26cqw;align-items:center;font:600 1.39cqw var(--sans);letter-spacing:.18em}.cv-brand .mark{width:3.28cqw;height:3.28cqw}
+.cv-main{margin-top:13.86cqw;width:52%}.cv-main .logo{width:100%;height:auto;display:block}
+.cv-sub{font:italic 400 3.28cqw/1.1 var(--serif);margin-top:3.02cqw}.cv-p{font:400 1.51cqw/1.5 var(--sans);color:var(--muted);margin-top:1.76cqw;max-width:47.88cqw}
+.net{position:absolute;right:4.28cqw;bottom:4.28cqw;width:57.96cqw;height:auto}
+.net .nl line{stroke:var(--mid);stroke-width:.4}.net .nd circle{fill:var(--a)}.net .nd text{font:500 3.6px var(--mono);fill:var(--muted)}
+.cv-foot{position:absolute;left:5.54cqw;bottom:4.28cqw;font:500 1.26cqw/1.6 var(--mono);color:var(--muted);display:flex;flex-direction:column}
+@media (max-width:760px){.pair{grid-template-columns:1fr}h1{font-size:32px}}
+</style>
+<div class="wrap" lang="pl">
+<h1>Styl modułowego raportu</h1>
+<p class="intro">Z twoich przykładów wyciągnąłem zasady składu i zastosowałem je do prawdziwej treści HARDSET i Bench Priority. Poniżej wersja jasna i ciemna każdej strony, z danymi z programu i z walidatora. Format poziomy (A4 w poziomie), do czytania na ekranie i do druku.</p>
+<div class="feat">
+<div><b>Siatka modułów</b><p>Strona to 2–3 kolumny: treść, wykres lub tabela, ciemny panel wniosków po prawej.</p></div>
+<div><b>Liczba najpierw</b><p>Kluczowe liczby (2 serie, ~1 RIR, 35 serii) jako duże wskaźniki z jednozdaniowym opisem.</p></div>
+<div><b>Wykres obok tekstu</b><p>Słupki, linia, wskaźnik kołowy, oś czasu. Zawsze z prawdziwymi danymi i podpisem.</p></div>
+<div><b>Tabela z czarnym nagłówkiem</b><p>Liczby w kroju Mono, wyróżniony wiersz, bez ozdobnych kratek.</p></div>
+<div><b>Panel „Co z tego wynika”</b><p>Trzy punkty z ikoną, klasa twierdzenia i źródło w jednym miejscu.</p></div>
+<div><b>Okładka z wielkim tytułem</b><p>Logo jako grafika, siatka 12 obszarów Fixed Core zamiast ogólnej dekoracji.</p></div>
+</div>
+<div class="ctl" role="group" aria-label="Kolor akcentu"><span>Akcent:</span><button type="button" data-acc="#FF5B1F" data-acct="#BF3708" aria-pressed="true"><i style="background:#FF5B1F"></i>Pomarańcza</button><button type="button" data-acc="#F2C200" data-acct="#15171A" aria-pressed="false"><i style="background:#F2C200"></i>Żółć</button><button type="button" data-acc="#D9783C" data-acct="#A24E1D" aria-pressed="false"><i style="background:#D9783C"></i>Miedź</button><button type="button" data-acc="#EE3B34" data-acct="#C21F1A" aria-pressed="false"><i style="background:#EE3B34"></i>Czerwień</button></div>
+<div class="row"><div class="rowhead"><h3>Okładka</h3><button class="zoom" type="button">Powiększ</button></div>
+<div class="pair"><div class="pwrap"><b>Jasna</b><div class="light"><div class="pgx cover"><div class="in">
+  <div class="cv-brand"><svg class="mark" viewBox="0 0 100 100" role="img" aria-label="HARDSET"><rect width="100" height="100" fill="var(--fg)"/><g transform="translate(23.36 14) scale(0.72)"><path d="M0 0 L22 0 L22 100 L0 100 Z" fill="var(--bg)"/><path d="M52 0 L74 0 L74 100 L52 100 Z" fill="var(--bg)"/><path d="M22 30 L52 30 L52 44 L22 44 Z" fill="var(--acc)"/><path d="M22 56 L52 56 L52 70 L22 70 Z" fill="var(--acc)"/></g></svg><span>HARDSET</span></div>
+  <div class="cv-main"><svg class="logo" viewBox="0 0 574 136" role="img" aria-label="HARDSET"><path d="M0 0 L22 0 L22 39 L52 39 L52 0 L74 0 L74 100 L52 100 L52 61 L22 61 L22 100 L0 100 Z" fill="var(--fg)" fill-rule="evenodd"/><path d="M86 100 L86 18 L104 0 L148 0 L166 18 L166 100 L144 100 L144 74 L108 74 L108 100 Z M144 52 L144 32 L134 22 L118 22 L108 32 L108 52 Z" fill="var(--fg)" fill-rule="evenodd"/><path d="M178 0 L232 0 L250 18 L250 54 L240 64 L200 64 L200 100 L178 100 Z M200 42 L228 42 L228 30 L220 22 L200 22 Z" fill="var(--fg)" fill-rule="evenodd"/><path d="M204 60 L228 60 L250 100 L225 100 Z" fill="var(--fg)" fill-rule="evenodd"/><path d="M262 0 L316 0 L334 18 L334 82 L316 100 L262 100 Z M284 78 L304 78 L312 70 L312 30 L304 22 L284 22 Z" fill="var(--fg)" fill-rule="evenodd"/><path d="M364 0 L416 0 L416 22 L368 22 L368 39 L416 39 L416 82 L398 100 L346 100 L346 78 L394 78 L394 61 L346 61 L346 18 Z" fill="var(--acc)" fill-rule="evenodd"/><path d="M428 0 L488 0 L488 22 L450 22 L450 39 L480 39 L480 61 L450 61 L450 78 L488 78 L488 100 L428 100 Z" fill="var(--acc)" fill-rule="evenodd"/><path d="M500 0 L574 0 L574 22 L548 22 L548 100 L526 100 L526 22 L500 22 Z" fill="var(--acc)" fill-rule="evenodd"/><rect x="0" y="114" width="574" height="8" fill="var(--acc)"/><rect x="0" y="128" width="332.92" height="8" fill="var(--acc)"/></svg><div class="cv-sub">Controlled Brutality</div>
+  <p class="cv-p">Metoda treningu hipertroficznego, wersja 1.0. Dwanaście obszarów kontrolnych, jasne reguły, oznaczone źródła.</p></div>
+  <svg class="net" viewBox="0 0 220 96" aria-label="Dwanaście obszarów Fixed Core jako siatka"><g class="nl"><line x1="20" y1="14" x2="90" y2="14"/><line x1="20" y1="14" x2="28" y2="40"/><line x1="20" y1="14" x2="98" y2="40"/><line x1="90" y1="14" x2="160" y2="14"/><line x1="90" y1="14" x2="98" y2="40"/><line x1="90" y1="14" x2="168" y2="40"/><line x1="160" y1="14" x2="168" y2="40"/><line x1="28" y1="40" x2="98" y2="40"/><line x1="28" y1="40" x2="20" y2="66"/><line x1="28" y1="40" x2="90" y2="66"/><line x1="98" y1="40" x2="168" y2="40"/><line x1="98" y1="40" x2="90" y2="66"/><line x1="98" y1="40" x2="160" y2="66"/><line x1="168" y1="40" x2="160" y2="66"/><line x1="20" y1="66" x2="90" y2="66"/><line x1="20" y1="66" x2="28" y2="92"/><line x1="20" y1="66" x2="98" y2="92"/><line x1="90" y1="66" x2="160" y2="66"/><line x1="90" y1="66" x2="98" y2="92"/><line x1="90" y1="66" x2="168" y2="92"/><line x1="160" y1="66" x2="168" y2="92"/><line x1="28" y1="92" x2="98" y2="92"/><line x1="98" y1="92" x2="168" y2="92"/></g><g class="nd"><circle cx="20" cy="14" r="1.6"/><text x="23" y="11">Chest</text><circle cx="90" cy="14" r="1.6"/><text x="93" y="11">Lateral Delts</text><circle cx="160" cy="14" r="1.6"/><text x="163" y="11">Elbow Ext.</text><circle cx="28" cy="40" r="1.6"/><text x="31" y="37">Back</text><circle cx="98" cy="40" r="1.6"/><text x="101" y="37">Rear Delts</text><circle cx="168" cy="40" r="1.6"/><text x="171" y="37">Elbow Flex.</text><circle cx="20" cy="66" r="1.6"/><text x="23" y="63">Quads</text><circle cx="90" cy="66" r="1.6"/><text x="93" y="63">Hamstrings</text><circle cx="160" cy="66" r="1.6"/><text x="163" y="63">Glutes</text><circle cx="28" cy="92" r="1.6"/><text x="31" y="89">Hip Add.</text><circle cx="98" cy="92" r="1.6"/><text x="101" y="89">Calves</text><circle cx="168" cy="92" r="1.6"/><text x="171" y="89">Trunk</text></g></svg>
+  <div class="cv-foot"><span>Adrian Drożdżyński</span><span>Wydanie 1 · 2026</span></div>
+</div></div></div></div><div class="pwrap"><b>Ciemna</b><div class="dark"><div class="pgx cover"><div class="in">
+  <div class="cv-brand"><svg class="mark" viewBox="0 0 100 100" role="img" aria-label="HARDSET"><rect width="100" height="100" fill="var(--fg)"/><g transform="translate(23.36 14) scale(0.72)"><path d="M0 0 L22 0 L22 100 L0 100 Z" fill="var(--bg)"/><path d="M52 0 L74 0 L74 100 L52 100 Z" fill="var(--bg)"/><path d="M22 30 L52 30 L52 44 L22 44 Z" fill="var(--acc)"/><path d="M22 56 L52 56 L52 70 L22 70 Z" fill="var(--acc)"/></g></svg><span>HARDSET</span></div>
+  <div class="cv-main"><svg class="logo" viewBox="0 0 574 136" role="img" aria-label="HARDSET"><path d="M0 0 L22 0 L22 39 L52 39 L52 0 L74 0 L74 100 L52 100 L52 61 L22 61 L22 100 L0 100 Z" fill="var(--fg)" fill-rule="evenodd"/><path d="M86 100 L86 18 L104 0 L148 0 L166 18 L166 100 L144 100 L144 74 L108 74 L108 100 Z M144 52 L144 32 L134 22 L118 22 L108 32 L108 52 Z" fill="var(--fg)" fill-rule="evenodd"/><path d="M178 0 L232 0 L250 18 L250 54 L240 64 L200 64 L200 100 L178 100 Z M200 42 L228 42 L228 30 L220 22 L200 22 Z" fill="var(--fg)" fill-rule="evenodd"/><path d="M204 60 L228 60 L250 100 L225 100 Z" fill="var(--fg)" fill-rule="evenodd"/><path d="M262 0 L316 0 L334 18 L334 82 L316 100 L262 100 Z M284 78 L304 78 L312 70 L312 30 L304 22 L284 22 Z" fill="var(--fg)" fill-rule="evenodd"/><path d="M364 0 L416 0 L416 22 L368 22 L368 39 L416 39 L416 82 L398 100 L346 100 L346 78 L394 78 L394 61 L346 61 L346 18 Z" fill="var(--acc)" fill-rule="evenodd"/><path d="M428 0 L488 0 L488 22 L450 22 L450 39 L480 39 L480 61 L450 61 L450 78 L488 78 L488 100 L428 100 Z" fill="var(--acc)" fill-rule="evenodd"/><path d="M500 0 L574 0 L574 22 L548 22 L548 100 L526 100 L526 22 L500 22 Z" fill="var(--acc)" fill-rule="evenodd"/><rect x="0" y="114" width="574" height="8" fill="var(--acc)"/><rect x="0" y="128" width="332.92" height="8" fill="var(--acc)"/></svg><div class="cv-sub">Controlled Brutality</div>
+  <p class="cv-p">Metoda treningu hipertroficznego, wersja 1.0. Dwanaście obszarów kontrolnych, jasne reguły, oznaczone źródła.</p></div>
+  <svg class="net" viewBox="0 0 220 96" aria-label="Dwanaście obszarów Fixed Core jako siatka"><g class="nl"><line x1="20" y1="14" x2="90" y2="14"/><line x1="20" y1="14" x2="28" y2="40"/><line x1="20" y1="14" x2="98" y2="40"/><line x1="90" y1="14" x2="160" y2="14"/><line x1="90" y1="14" x2="98" y2="40"/><line x1="90" y1="14" x2="168" y2="40"/><line x1="160" y1="14" x2="168" y2="40"/><line x1="28" y1="40" x2="98" y2="40"/><line x1="28" y1="40" x2="20" y2="66"/><line x1="28" y1="40" x2="90" y2="66"/><line x1="98" y1="40" x2="168" y2="40"/><line x1="98" y1="40" x2="90" y2="66"/><line x1="98" y1="40" x2="160" y2="66"/><line x1="168" y1="40" x2="160" y2="66"/><line x1="20" y1="66" x2="90" y2="66"/><line x1="20" y1="66" x2="28" y2="92"/><line x1="20" y1="66" x2="98" y2="92"/><line x1="90" y1="66" x2="160" y2="66"/><line x1="90" y1="66" x2="98" y2="92"/><line x1="90" y1="66" x2="168" y2="92"/><line x1="160" y1="66" x2="168" y2="92"/><line x1="28" y1="92" x2="98" y2="92"/><line x1="98" y1="92" x2="168" y2="92"/></g><g class="nd"><circle cx="20" cy="14" r="1.6"/><text x="23" y="11">Chest</text><circle cx="90" cy="14" r="1.6"/><text x="93" y="11">Lateral Delts</text><circle cx="160" cy="14" r="1.6"/><text x="163" y="11">Elbow Ext.</text><circle cx="28" cy="40" r="1.6"/><text x="31" y="37">Back</text><circle cx="98" cy="40" r="1.6"/><text x="101" y="37">Rear Delts</text><circle cx="168" cy="40" r="1.6"/><text x="171" y="37">Elbow Flex.</text><circle cx="20" cy="66" r="1.6"/><text x="23" y="63">Quads</text><circle cx="90" cy="66" r="1.6"/><text x="93" y="63">Hamstrings</text><circle cx="160" cy="66" r="1.6"/><text x="163" y="63">Glutes</text><circle cx="28" cy="92" r="1.6"/><text x="31" y="89">Hip Add.</text><circle cx="98" cy="92" r="1.6"/><text x="101" y="89">Calves</text><circle cx="168" cy="92" r="1.6"/><text x="171" y="89">Trunk</text></g></svg>
+  <div class="cv-foot"><span>Adrian Drożdżyński</span><span>Wydanie 1 · 2026</span></div>
+</div></div></div></div></div></div><div class="row"><div class="rowhead"><h3>Spis treści i legenda</h3><button class="zoom" type="button">Powiększ</button></div>
+<div class="pair"><div class="pwrap"><b>Jasna</b><div class="light"><div class="pgx"><div class="in">
+  <div class="ph"><span>Spis treści</span><span>HARDSET</span></div>
+  <div class="grid g-toc">
+    <div><h2 class="big">Spis treści</h2><ol class="toc"><li><b>01</b><span>Wysiłek, Hard Set i upadek mięśniowy</span><i></i><em>5</em></li><li><b>02</b><span>Architektura oparta na wzorcach ruchu</span><i></i><em>11</em></li><li><b>03</b><span>Architektura serii</span><i></i><em>17</em></li><li><b>04</b><span>Dobór ćwiczeń i bezpieczeństwo</span><i></i><em>23</em></li><li><b>05</b><span>Progresja i autoregulacja</span><i></i><em>29</em></li><li><b>06</b><span>Tydzień treningowy i regeneracja</span><i></i><em>35</em></li><li><b>07</b><span>Śledzenie i ocena wyników</span><i></i><em>41</em></li><li><b>08</b><span>Planowanie długoterminowe i specjalizacja</span><i></i><em>47</em></li><li><b>09</b><span>Budowa i walidacja programu</span><i></i><em>53</em></li></ol></div>
+    <aside class="side"><h3>Jak czytać</h3>
+      <p>Każde twierdzenie ma oznaczenie. Badanie to opublikowana praca ze źródłem R##. Decyzja HARDSET to konwencja metody. Heurystyka to liczba, którą możesz zmienić.</p>
+      <div class="tags"><span class="tg study">Badanie</span><span class="tg decision">Decyzja HARDSET</span><span class="tg heuristic">Heurystyka</span><span class="tg exception">Wyjątek siłowy</span><span class="tg hypothesis">Hipoteza programu</span></div>
+      <div class="note">Status PASS walidatora oznacza zgodność z regułami, nie gwarancję efektu.</div></aside>
+  </div><div class="pf"><span>HARDSET</span><span>3</span></div></div></div></div></div><div class="pwrap"><b>Ciemna</b><div class="dark"><div class="pgx"><div class="in">
+  <div class="ph"><span>Spis treści</span><span>HARDSET</span></div>
+  <div class="grid g-toc">
+    <div><h2 class="big">Spis treści</h2><ol class="toc"><li><b>01</b><span>Wysiłek, Hard Set i upadek mięśniowy</span><i></i><em>5</em></li><li><b>02</b><span>Architektura oparta na wzorcach ruchu</span><i></i><em>11</em></li><li><b>03</b><span>Architektura serii</span><i></i><em>17</em></li><li><b>04</b><span>Dobór ćwiczeń i bezpieczeństwo</span><i></i><em>23</em></li><li><b>05</b><span>Progresja i autoregulacja</span><i></i><em>29</em></li><li><b>06</b><span>Tydzień treningowy i regeneracja</span><i></i><em>35</em></li><li><b>07</b><span>Śledzenie i ocena wyników</span><i></i><em>41</em></li><li><b>08</b><span>Planowanie długoterminowe i specjalizacja</span><i></i><em>47</em></li><li><b>09</b><span>Budowa i walidacja programu</span><i></i><em>53</em></li></ol></div>
+    <aside class="side"><h3>Jak czytać</h3>
+      <p>Każde twierdzenie ma oznaczenie. Badanie to opublikowana praca ze źródłem R##. Decyzja HARDSET to konwencja metody. Heurystyka to liczba, którą możesz zmienić.</p>
+      <div class="tags"><span class="tg study">Badanie</span><span class="tg decision">Decyzja HARDSET</span><span class="tg heuristic">Heurystyka</span><span class="tg exception">Wyjątek siłowy</span><span class="tg hypothesis">Hipoteza programu</span></div>
+      <div class="note">Status PASS walidatora oznacza zgodność z regułami, nie gwarancję efektu.</div></aside>
+  </div><div class="pf"><span>HARDSET</span><span>3</span></div></div></div></div></div></div></div><div class="row"><div class="rowhead"><h3>Rozdział z panelem wniosków</h3><button class="zoom" type="button">Powiększ</button></div>
+<div class="pair"><div class="pwrap"><b>Jasna</b><div class="light"><div class="pgx"><div class="in">
+  <div class="ph"><span>01 · Wysiłek, Hard Set i upadek mięśniowy</span><span>HARDSET</span></div>
+  <div class="grid g-main">
+    <div>
+      <h2>Wysiłek: RIR i Hard Set</h2>
+      <p class="lead">Hard Set to prawdziwa seria robocza: powtarzalna technika, wysiłek odpowiedni do ćwiczenia i jasny cel. Rozgrzewka się nie liczy.</p>
+      <div class="stats"><div class="stat"><div class="n">2<small>serie</small></div><p>na ćwiczenie, domyślnie</p></div><div class="stat"><div class="n">~1<small>RIR</small></div><p>seria prowadząca (Lead Set)</p></div><div class="stat"><div class="n">0–1<small>RIR</small></div><p>seria pomocnicza, gdy stop jest bezpieczny</p></div></div>
+      <h4>Gdzie leży cel wysiłku</h4>
+      <svg class="chart" viewBox="0 0 300 74" role="img" aria-label="Skala RIR od 4 do 0 z zakresami serii prowadzącej i pomocniczej">
+      <line class="ax" x1="10" x2="290" y1="40" y2="40"/>
+      <g class="tick"><line x1="10" x2="10" y1="36" y2="44"/><text x="10" y="58" text-anchor="middle">4</text><line x1="80" x2="80" y1="36" y2="44"/><text x="80" y="58" text-anchor="middle">3</text><line x1="150" x2="150" y1="36" y2="44"/><text x="150" y="58" text-anchor="middle">2</text><line x1="220" x2="220" y1="36" y2="44"/><text x="220" y="58" text-anchor="middle">1</text><line x1="290" x2="290" y1="36" y2="44"/><text x="290" y="58" text-anchor="middle">0</text></g>
+      <rect class="b2" x="220" y="22" width="70" height="14"/><text class="lb" x="290" y="17" text-anchor="end">seria pomocnicza 0–1</text>
+      <rect class="b1" x="214" y="18" width="12" height="22"/><text class="lb" x="208" y="17" text-anchor="end">prowadząca ~1</text>
+      <text class="lb" x="10" y="72">RIR: poprawne powtórzenia w zapasie</text></svg>
+      <table class="dt"><caption>Domyślna architektura wysiłku</caption><thead><tr><th>Seria</th><th>Cel</th><th>Rola</th></tr></thead>
+      <tbody><tr><td>Hard Set 1</td><td class="ac">~1 RIR</td><td>Lead Set: główny sygnał progresji</td></tr><tr><td>Hard Set 2</td><td class="ac">0–1 RIR</td><td>Supporting Set, bez zbędnych nieudanych prób</td></tr></tbody></table>
+    </div>
+    <aside class="side"><h3>Co z tego wynika</h3>
+      <ul class="chk"><li><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="square" aria-hidden="true"><path d="M4 12l5 5 11-11"/></svg><span>Liczy się seria zgodna ze standardem ruchu, a nie sam fakt zmęczenia.</span></li>
+      <li><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="square" aria-hidden="true"><path d="M4 12l5 5 11-11"/></svg><span>0 RIR tylko wtedy, gdy możesz bezpiecznie zakończyć serię.</span></li>
+      <li><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="square" aria-hidden="true"><path d="M4 12l5 5 11-11"/></svg><span>Bardzo ciężkie ruchy ze swobodną sztangą: 1–2 RIR w obu seriach.</span></li></ul>
+      <div class="tags"><span class="tg study">Badanie</span> <cite>R04, R19, R20</cite></div>
+      <p class="small">RIR jest szacunkiem. W badaniu Mansfielda uczestnicy częściej zaniżali faktyczny zapas powtórzeń.</p>
+      <div class="tags"><span class="tg decision">Decyzja HARDSET</span></div><p class="small">Dwie serie i wokół 1 RIR to konwencja metody, nie wynik badania.</p></aside>
+  </div><div class="pf"><span>HARDSET</span><span>6</span></div></div></div></div></div><div class="pwrap"><b>Ciemna</b><div class="dark"><div class="pgx"><div class="in">
+  <div class="ph"><span>01 · Wysiłek, Hard Set i upadek mięśniowy</span><span>HARDSET</span></div>
+  <div class="grid g-main">
+    <div>
+      <h2>Wysiłek: RIR i Hard Set</h2>
+      <p class="lead">Hard Set to prawdziwa seria robocza: powtarzalna technika, wysiłek odpowiedni do ćwiczenia i jasny cel. Rozgrzewka się nie liczy.</p>
+      <div class="stats"><div class="stat"><div class="n">2<small>serie</small></div><p>na ćwiczenie, domyślnie</p></div><div class="stat"><div class="n">~1<small>RIR</small></div><p>seria prowadząca (Lead Set)</p></div><div class="stat"><div class="n">0–1<small>RIR</small></div><p>seria pomocnicza, gdy stop jest bezpieczny</p></div></div>
+      <h4>Gdzie leży cel wysiłku</h4>
+      <svg class="chart" viewBox="0 0 300 74" role="img" aria-label="Skala RIR od 4 do 0 z zakresami serii prowadzącej i pomocniczej">
+      <line class="ax" x1="10" x2="290" y1="40" y2="40"/>
+      <g class="tick"><line x1="10" x2="10" y1="36" y2="44"/><text x="10" y="58" text-anchor="middle">4</text><line x1="80" x2="80" y1="36" y2="44"/><text x="80" y="58" text-anchor="middle">3</text><line x1="150" x2="150" y1="36" y2="44"/><text x="150" y="58" text-anchor="middle">2</text><line x1="220" x2="220" y1="36" y2="44"/><text x="220" y="58" text-anchor="middle">1</text><line x1="290" x2="290" y1="36" y2="44"/><text x="290" y="58" text-anchor="middle">0</text></g>
+      <rect class="b2" x="220" y="22" width="70" height="14"/><text class="lb" x="290" y="17" text-anchor="end">seria pomocnicza 0–1</text>
+      <rect class="b1" x="214" y="18" width="12" height="22"/><text class="lb" x="208" y="17" text-anchor="end">prowadząca ~1</text>
+      <text class="lb" x="10" y="72">RIR: poprawne powtórzenia w zapasie</text></svg>
+      <table class="dt"><caption>Domyślna architektura wysiłku</caption><thead><tr><th>Seria</th><th>Cel</th><th>Rola</th></tr></thead>
+      <tbody><tr><td>Hard Set 1</td><td class="ac">~1 RIR</td><td>Lead Set: główny sygnał progresji</td></tr><tr><td>Hard Set 2</td><td class="ac">0–1 RIR</td><td>Supporting Set, bez zbędnych nieudanych prób</td></tr></tbody></table>
+    </div>
+    <aside class="side"><h3>Co z tego wynika</h3>
+      <ul class="chk"><li><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="square" aria-hidden="true"><path d="M4 12l5 5 11-11"/></svg><span>Liczy się seria zgodna ze standardem ruchu, a nie sam fakt zmęczenia.</span></li>
+      <li><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="square" aria-hidden="true"><path d="M4 12l5 5 11-11"/></svg><span>0 RIR tylko wtedy, gdy możesz bezpiecznie zakończyć serię.</span></li>
+      <li><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="square" aria-hidden="true"><path d="M4 12l5 5 11-11"/></svg><span>Bardzo ciężkie ruchy ze swobodną sztangą: 1–2 RIR w obu seriach.</span></li></ul>
+      <div class="tags"><span class="tg study">Badanie</span> <cite>R04, R19, R20</cite></div>
+      <p class="small">RIR jest szacunkiem. W badaniu Mansfielda uczestnicy częściej zaniżali faktyczny zapas powtórzeń.</p>
+      <div class="tags"><span class="tg decision">Decyzja HARDSET</span></div><p class="small">Dwie serie i wokół 1 RIR to konwencja metody, nie wynik badania.</p></aside>
+  </div><div class="pf"><span>HARDSET</span><span>6</span></div></div></div></div></div></div></div><div class="row"><div class="rowhead"><h3>Fala: oś czasu, wykres, tabela</h3><button class="zoom" type="button">Powiększ</button></div>
+<div class="pair"><div class="pwrap"><b>Jasna</b><div class="light"><div class="pgx"><div class="in">
+  <div class="ph"><span>03 · Fala czterotygodniowa</span><span>BENCH PRIORITY</span></div>
+  <div class="grid g-main">
+    <div>
+      <h2>Fala czterotygodniowa</h2>
+      <ol class="tl"><li class=""><b>T1</b><span>więcej powtórzeń</span></li><li class=""><b>T2</b><span>rośnie ciężar</span></li><li class="hi"><b>T3</b><span>najcięższa ekspozycja i seria kontrolna</span></li><li class=""><b>T4</b><span>lżejszy tydzień</span></li></ol>
+      <h4>Singiel w poniedziałek, % bazy fali</h4><svg class="chart" viewBox="0 0 280 96" role="img" aria-label="Singiel poniedziałkowy w procentach bazy fali, T1 do T4"><line class="ax" x1="14" x2="270" y1="80" y2="80"/><rect class="fl " x="22" y="44.8" width="40" height="35.2" opacity=".35"/><rect class="fl " x="22" y="36" width="40" height="8.8"/><text x="42" y="32" text-anchor="middle" class="vl">88–90%</text><text x="42" y="92" text-anchor="middle" class="lb">T1</text><rect class="fl " x="84" y="36" width="40" height="44" opacity=".35"/><rect class="fl " x="84" y="31.6" width="40" height="4.4"/><text x="104" y="27.6" text-anchor="middle" class="vl">90–91%</text><text x="104" y="92" text-anchor="middle" class="lb">T2</text><rect class="fl hi" x="146" y="31.6" width="40" height="48.4" opacity=".35"/><rect class="fl hi" x="146" y="22.8" width="40" height="8.8"/><text x="166" y="18.8" text-anchor="middle" class="vl">91–93%</text><text x="166" y="92" text-anchor="middle" class="lb">T3</text><rect class="fl " x="208" y="58" width="40" height="22" opacity=".35"/><rect class="fl " x="208" y="44.8" width="40" height="13.2"/><text x="228" y="40.8" text-anchor="middle" class="vl">85–88%</text><text x="228" y="92" text-anchor="middle" class="lb">T4</text></svg>
+      <table class="dt"><caption>Poniedziałek · przykład dla bazy 120 kg</caption><thead><tr><th>Tydz.</th><th>Singiel</th><th class="r">% bazy</th><th class="r">kg</th><th>Back-off</th><th class="r">kg</th></tr></thead><tbody><tr><td>T1</td><td class="ac">1×1 @7</td><td class="r">88–90</td><td class="r">105–107,5</td><td>2×5 @7</td><td class="r">90–92,5</td></tr><tr><td>T2</td><td class="ac">1×1 @7,5</td><td class="r">90–91</td><td class="r">107,5–110</td><td>2×4 @7–8</td><td class="r">92,5–97,5</td></tr><tr class=hl><td>T3</td><td class="ac">1×1 @8</td><td class="r">91–93</td><td class="r">110–112,5</td><td>2×3 @7–8</td><td class="r">97,5–102,5</td></tr><tr><td>T4</td><td class="ac">1×1 @6–7</td><td class="r">85–88</td><td class="r">102,5–105</td><td>2×4 @6–7</td><td class="r">87,5–92,5</td></tr></tbody></table>
+    </div>
+    <aside class="side"><h3>Gdy RPE nie zgadza się z tabelą</h3>
+      <div class="pair2"><div><b>Za ciężko</b><p>RPE wyższe o stopień lub więcej: zdejmij 2,5–5%.</p></div><div><b>Za lekko</b><p>Pełny punkt poniżej celu: następna seria o około 2,5% więcej. Dwa punkty: około 5%, to limit.</p></div></div>
+      <div class="tags"><span class="tg hypothesis">Hipoteza programu</span></div>
+      <p class="small">Nie dotyczy singla, serii kontrolnej ani tygodnia 4. Technika w normie, prędkość sztangi nie spada.</p>
+      <div class="quote">Procent wyznacza punkt startowy. RPE wyznacza granicę.</div></aside>
+  </div><div class="pf"><span>HARDSET</span><span>13</span></div></div></div></div></div><div class="pwrap"><b>Ciemna</b><div class="dark"><div class="pgx"><div class="in">
+  <div class="ph"><span>03 · Fala czterotygodniowa</span><span>BENCH PRIORITY</span></div>
+  <div class="grid g-main">
+    <div>
+      <h2>Fala czterotygodniowa</h2>
+      <ol class="tl"><li class=""><b>T1</b><span>więcej powtórzeń</span></li><li class=""><b>T2</b><span>rośnie ciężar</span></li><li class="hi"><b>T3</b><span>najcięższa ekspozycja i seria kontrolna</span></li><li class=""><b>T4</b><span>lżejszy tydzień</span></li></ol>
+      <h4>Singiel w poniedziałek, % bazy fali</h4><svg class="chart" viewBox="0 0 280 96" role="img" aria-label="Singiel poniedziałkowy w procentach bazy fali, T1 do T4"><line class="ax" x1="14" x2="270" y1="80" y2="80"/><rect class="fl " x="22" y="44.8" width="40" height="35.2" opacity=".35"/><rect class="fl " x="22" y="36" width="40" height="8.8"/><text x="42" y="32" text-anchor="middle" class="vl">88–90%</text><text x="42" y="92" text-anchor="middle" class="lb">T1</text><rect class="fl " x="84" y="36" width="40" height="44" opacity=".35"/><rect class="fl " x="84" y="31.6" width="40" height="4.4"/><text x="104" y="27.6" text-anchor="middle" class="vl">90–91%</text><text x="104" y="92" text-anchor="middle" class="lb">T2</text><rect class="fl hi" x="146" y="31.6" width="40" height="48.4" opacity=".35"/><rect class="fl hi" x="146" y="22.8" width="40" height="8.8"/><text x="166" y="18.8" text-anchor="middle" class="vl">91–93%</text><text x="166" y="92" text-anchor="middle" class="lb">T3</text><rect class="fl " x="208" y="58" width="40" height="22" opacity=".35"/><rect class="fl " x="208" y="44.8" width="40" height="13.2"/><text x="228" y="40.8" text-anchor="middle" class="vl">85–88%</text><text x="228" y="92" text-anchor="middle" class="lb">T4</text></svg>
+      <table class="dt"><caption>Poniedziałek · przykład dla bazy 120 kg</caption><thead><tr><th>Tydz.</th><th>Singiel</th><th class="r">% bazy</th><th class="r">kg</th><th>Back-off</th><th class="r">kg</th></tr></thead><tbody><tr><td>T1</td><td class="ac">1×1 @7</td><td class="r">88–90</td><td class="r">105–107,5</td><td>2×5 @7</td><td class="r">90–92,5</td></tr><tr><td>T2</td><td class="ac">1×1 @7,5</td><td class="r">90–91</td><td class="r">107,5–110</td><td>2×4 @7–8</td><td class="r">92,5–97,5</td></tr><tr class=hl><td>T3</td><td class="ac">1×1 @8</td><td class="r">91–93</td><td class="r">110–112,5</td><td>2×3 @7–8</td><td class="r">97,5–102,5</td></tr><tr><td>T4</td><td class="ac">1×1 @6–7</td><td class="r">85–88</td><td class="r">102,5–105</td><td>2×4 @6–7</td><td class="r">87,5–92,5</td></tr></tbody></table>
+    </div>
+    <aside class="side"><h3>Gdy RPE nie zgadza się z tabelą</h3>
+      <div class="pair2"><div><b>Za ciężko</b><p>RPE wyższe o stopień lub więcej: zdejmij 2,5–5%.</p></div><div><b>Za lekko</b><p>Pełny punkt poniżej celu: następna seria o około 2,5% więcej. Dwa punkty: około 5%, to limit.</p></div></div>
+      <div class="tags"><span class="tg hypothesis">Hipoteza programu</span></div>
+      <p class="small">Nie dotyczy singla, serii kontrolnej ani tygodnia 4. Technika w normie, prędkość sztangi nie spada.</p>
+      <div class="quote">Procent wyznacza punkt startowy. RPE wyznacza granicę.</div></aside>
+  </div><div class="pf"><span>HARDSET</span><span>13</span></div></div></div></div></div></div></div><div class="row"><div class="rowhead"><h3>Seria kontrolna: kroki, wykres, reguły</h3><button class="zoom" type="button">Powiększ</button></div>
+<div class="pair"><div class="pwrap"><b>Jasna</b><div class="light"><div class="pgx"><div class="in">
+  <div class="ph"><span>04 · AMRAP, e1RM i baza fali</span><span>BENCH PRIORITY</span></div>
+  <div class="grid g-main">
+    <div>
+      <h2>Seria kontrolna w tygodniu 3</h2>
+      <p class="lead">W piątek pierwsza seria robocza to AMRAP przy około 82,5% bazy fali, z jednym powtórzeniem w zapasie (@9). Zastępuje cięższą serię objętościową.</p>
+      <ul class="steps"><li><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="square" aria-hidden="true"><path d="M4 12l5 5 11-11"/></svg><div><b>Technika</b><p>Ten sam chwyt i ustawienie co w zawodach, pauza na każdym powtórzeniu.</p></div></li><li><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="square" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><div><b>Przygotowanie</b><p>Zwykła rozgrzewka, 4–5 minut odpoczynku, żadnego ciężkiego singla tego dnia.</p></div></li><li><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="square" aria-hidden="true"><rect x="4" y="4" width="16" height="16"/><path d="M8 12h8"/></svg><div><b>Koniec serii</b><p>Przy 1 powtórzeniu w zapasie albo wcześniej, gdy siada technika.</p></div></li><li><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="square" aria-hidden="true"><path d="M12 4v14M6 12l6 6 6-6"/></svg><div><b>Po serii</b><p>Jedna łatwa seria 1×4 i koniec wyciskania.</p></div></li></ul>
+    </div>
+    <div>
+      <h4>e1RM dla 100 kg przy @9</h4><svg class="chart" viewBox="0 0 260 120" role="img" aria-label="e1RM dla 100 kg przy 1 RIR w zależności od liczby powtórzeń"><line class="ax" x1="14" x2="250" y1="104" y2="104"/><polyline class="ln" points="30,81.3 100,60.8 170,40.3 240,19.3"/><circle class="" cx="30" cy="81.3" r="3"/><text x="30" y="73.3" text-anchor="middle" class="vl">116.7</text><text x="30" y="114" text-anchor="middle" class="lb">4</text><circle class="hi" cx="100" cy="60.8" r="3"/><text x="100" y="52.8" text-anchor="middle" class="vl">120.0</text><text x="100" y="114" text-anchor="middle" class="lb">5</text><circle class="" cx="170" cy="40.3" r="3"/><text x="170" y="32.3" text-anchor="middle" class="vl">123.3</text><text x="170" y="114" text-anchor="middle" class="lb">6</text><circle class="" cx="240" cy="19.3" r="3"/><text x="240" y="11.3" text-anchor="middle" class="vl">126.7</text><text x="240" y="114" text-anchor="middle" class="lb">7</text></svg>
+      <div class="formula">e1RM = ciężar × (1 + (powtórzenia + RIR) / 30)</div>
+      <div class="tags"><span class="tg heuristic">Heurystyka</span></div><p class="small">Wzór Epleya służy do sterowania treningiem. Jedno powtórzenie to tu około 3,3 kg szacunku.</p>
+      <div class="tags"><span class="tg study">Badanie</span> <cite>Refalo 2024</cite></div><p class="small">24 osoby, 75% 1RM: błąd przewidywania zapasu około 0,65 powtórzenia.</p>
+    </div>
+    <aside class="side"><h3>Kiedy baza rośnie o 2,5 kg</h3>
+      <ul class="chk"><li><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="square" aria-hidden="true"><path d="M4 12l5 5 11-11"/></svg><span>Seria kontrolna: co najmniej jedno powtórzenie więcej niż w poprzedniej fali, przy tym samym ciężarze i RIR.</span></li>
+      <li><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="square" aria-hidden="true"><path d="M4 12l5 5 11-11"/></svg><span>Singiel z poniedziałku T3 w planowanym RPE, bez obniżania ciężaru.</span></li>
+      <li><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="square" aria-hidden="true"><path d="M4 12l5 5 11-11"/></svg><span>Zmiana tylko na wejściu do nowej fali. T4 robisz na starej bazie.</span></li></ul>
+      <div class="tags"><span class="tg hypothesis">Hipoteza programu</span></div></aside>
+  </div><div class="pf"><span>HARDSET</span><span>15</span></div></div></div></div></div><div class="pwrap"><b>Ciemna</b><div class="dark"><div class="pgx"><div class="in">
+  <div class="ph"><span>04 · AMRAP, e1RM i baza fali</span><span>BENCH PRIORITY</span></div>
+  <div class="grid g-main">
+    <div>
+      <h2>Seria kontrolna w tygodniu 3</h2>
+      <p class="lead">W piątek pierwsza seria robocza to AMRAP przy około 82,5% bazy fali, z jednym powtórzeniem w zapasie (@9). Zastępuje cięższą serię objętościową.</p>
+      <ul class="steps"><li><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="square" aria-hidden="true"><path d="M4 12l5 5 11-11"/></svg><div><b>Technika</b><p>Ten sam chwyt i ustawienie co w zawodach, pauza na każdym powtórzeniu.</p></div></li><li><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="square" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><div><b>Przygotowanie</b><p>Zwykła rozgrzewka, 4–5 minut odpoczynku, żadnego ciężkiego singla tego dnia.</p></div></li><li><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="square" aria-hidden="true"><rect x="4" y="4" width="16" height="16"/><path d="M8 12h8"/></svg><div><b>Koniec serii</b><p>Przy 1 powtórzeniu w zapasie albo wcześniej, gdy siada technika.</p></div></li><li><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="square" aria-hidden="true"><path d="M12 4v14M6 12l6 6 6-6"/></svg><div><b>Po serii</b><p>Jedna łatwa seria 1×4 i koniec wyciskania.</p></div></li></ul>
+    </div>
+    <div>
+      <h4>e1RM dla 100 kg przy @9</h4><svg class="chart" viewBox="0 0 260 120" role="img" aria-label="e1RM dla 100 kg przy 1 RIR w zależności od liczby powtórzeń"><line class="ax" x1="14" x2="250" y1="104" y2="104"/><polyline class="ln" points="30,81.3 100,60.8 170,40.3 240,19.3"/><circle class="" cx="30" cy="81.3" r="3"/><text x="30" y="73.3" text-anchor="middle" class="vl">116.7</text><text x="30" y="114" text-anchor="middle" class="lb">4</text><circle class="hi" cx="100" cy="60.8" r="3"/><text x="100" y="52.8" text-anchor="middle" class="vl">120.0</text><text x="100" y="114" text-anchor="middle" class="lb">5</text><circle class="" cx="170" cy="40.3" r="3"/><text x="170" y="32.3" text-anchor="middle" class="vl">123.3</text><text x="170" y="114" text-anchor="middle" class="lb">6</text><circle class="" cx="240" cy="19.3" r="3"/><text x="240" y="11.3" text-anchor="middle" class="vl">126.7</text><text x="240" y="114" text-anchor="middle" class="lb">7</text></svg>
+      <div class="formula">e1RM = ciężar × (1 + (powtórzenia + RIR) / 30)</div>
+      <div class="tags"><span class="tg heuristic">Heurystyka</span></div><p class="small">Wzór Epleya służy do sterowania treningiem. Jedno powtórzenie to tu około 3,3 kg szacunku.</p>
+      <div class="tags"><span class="tg study">Badanie</span> <cite>Refalo 2024</cite></div><p class="small">24 osoby, 75% 1RM: błąd przewidywania zapasu około 0,65 powtórzenia.</p>
+    </div>
+    <aside class="side"><h3>Kiedy baza rośnie o 2,5 kg</h3>
+      <ul class="chk"><li><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="square" aria-hidden="true"><path d="M4 12l5 5 11-11"/></svg><span>Seria kontrolna: co najmniej jedno powtórzenie więcej niż w poprzedniej fali, przy tym samym ciężarze i RIR.</span></li>
+      <li><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="square" aria-hidden="true"><path d="M4 12l5 5 11-11"/></svg><span>Singiel z poniedziałku T3 w planowanym RPE, bez obniżania ciężaru.</span></li>
+      <li><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="square" aria-hidden="true"><path d="M4 12l5 5 11-11"/></svg><span>Zmiana tylko na wejściu do nowej fali. T4 robisz na starej bazie.</span></li></ul>
+      <div class="tags"><span class="tg hypothesis">Hipoteza programu</span></div></aside>
+  </div><div class="pf"><span>HARDSET</span><span>15</span></div></div></div></div></div></div></div><div class="row"><div class="rowhead"><h3>Tydzień: macierz ekspozycji i wykresy</h3><button class="zoom" type="button">Powiększ</button></div>
+<div class="pair"><div class="pwrap"><b>Jasna</b><div class="light"><div class="pgx"><div class="in">
+  <div class="ph"><span>05 · Tydzień w liczbach</span><span>BENCH PRIORITY</span></div>
+  <div class="grid g-main">
+    <div>
+      <h2>Gotowy tydzień: 3 × 60 minut</h2>
+      <div class="stats"><div class="stat"><div class="n">35<small>serii</small></div><p>w tygodniu: 11 + 12 + 12</p></div><div class="stat"><div class="n">3×60<small>min</small></div><p>z rozgrzewką, do sprawdzenia na siłowni</p></div><div class="stat"><div class="n">7<small>serii</small></div><p>wyciskania zawodniczego</p></div></div>
+      <table class="dt mx"><caption>Ekspozycje w tygodniu (P = główna, S = pomocnicza)</caption><thead><tr><th>Obszar</th><th>Priorytet</th><th>Pn</th><th>Śr</th><th>Pt</th></tr></thead><tbody><tr><td>Chest <em>siła, osobno</em></td><td>Siła</td><td><i class="m s">●</i></td><td><i class="m s">●</i></td><td><i class="m s">●</i></td></tr><tr><td>Chest <em>hipertrofia</em></td><td>Priority</td><td><i class=m0>·</i></td><td><i class=m>P</i></td><td><i class=m0>·</i></td></tr><tr><td>Back <em></em></td><td>Priority</td><td><i class=m>P</i></td><td><i class=m>P</i></td><td><i class=m>P</i></td></tr><tr><td>Lateral Delts <em></em></td><td>Priority</td><td><i class=m>P</i></td><td><i class=m>P</i></td><td><i class=m0>·</i></td></tr><tr><td>Elbow Extensors <em></em></td><td>Priority</td><td><i class=m>S</i></td><td><i class=m>P</i></td><td><i class=m>P</i></td></tr><tr><td>Elbow Flexors <em></em></td><td>Priority</td><td><i class=m>P</i></td><td><i class=m>S</i></td><td><i class=m>P</i></td></tr><tr><td>Rear Delts <em></em></td><td>Optional</td><td><i class=m0>·</i></td><td><i class=m0>·</i></td><td><i class=m0>·</i></td></tr><tr><td>Quadriceps <em></em></td><td>Standard</td><td><i class=m>P</i></td><td><i class=m0>·</i></td><td><i class=m>P</i></td></tr><tr><td>Hamstrings <em></em></td><td>Standard</td><td><i class=m0>·</i></td><td><i class=m>P</i></td><td><i class=m>P</i></td></tr><tr><td>Glutes <em></em></td><td>Optional</td><td><i class=m0>·</i></td><td><i class=m>S</i></td><td><i class=m>S</i></td></tr></tbody></table>
+    </div>
+    <div class="col2"><h4>Serie na trening</h4><svg class="chart" viewBox="0 0 180 112" role="img" aria-label="Serie w poniedziałek, środę, piątek: 11, 12, 12"><line class="ax" x1="4" x2="176" y1="90" y2="90"/><rect class="hi fl" x="12" y="35" width="40" height="55"/><text x="32" y="31" text-anchor="middle" class="vl">11</text><text x="32" y="106" text-anchor="middle" class="lb">Pn</text><rect class=" fl" x="68" y="30" width="40" height="60"/><text x="88" y="26" text-anchor="middle" class="vl">12</text><text x="88" y="106" text-anchor="middle" class="lb">Sr</text><rect class=" fl" x="124" y="30" width="40" height="60"/><text x="144" y="26" text-anchor="middle" class="vl">12</text><text x="144" y="106" text-anchor="middle" class="lb">Pt</text></svg><svg class="chart donut" viewBox="0 0 120 120" role="img" aria-label="7 z 35 serii tygodnia to wyciskanie"><circle class="dn0" cx="60" cy="60" r="38"/><circle class="dn1" cx="60" cy="60" r="38" stroke-dasharray="47.8 238.8" transform="rotate(-90 60 60)"/><text x="60" y="58" text-anchor="middle" class="dv">7/35</text><text x="60" y="74" text-anchor="middle" class="lb">wyciskanie</text></svg></div>
+    <aside class="side"><h3>Dla kogo ten tydzień</h3>
+      <ul class="chk"><li><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="square" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span>Trzy treningi po najwyżej 60 minut.</span></li><li><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="square" aria-hidden="true"><path d="M4 20V10M10 20V4M16 20v-8M22 20H2"/></svg><span>Priorytet: wyciskanie leżąc.</span></li>
+      <li><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="square" aria-hidden="true"><path d="M4 12l5 5 11-11"/></svg><span>Rear Delts i Glutes mają status Optional. To skutek limitu czasu, a nie ocena ich ważności.</span></li></ul>
+      <div class="tags"><span class="tg exception">Wyjątek siłowy</span></div><p class="small">Serie wyciskania zawodniczego są liczone osobno. Lżejszy tydzień 4 dotyczy tylko wyciskania.</p>
+      <div class="note">Walidator: PASS strukturalny. To nie jest ocena biomechaniczna ani medyczna.</div></aside>
+  </div><div class="pf"><span>HARDSET</span><span>21</span></div></div></div></div></div><div class="pwrap"><b>Ciemna</b><div class="dark"><div class="pgx"><div class="in">
+  <div class="ph"><span>05 · Tydzień w liczbach</span><span>BENCH PRIORITY</span></div>
+  <div class="grid g-main">
+    <div>
+      <h2>Gotowy tydzień: 3 × 60 minut</h2>
+      <div class="stats"><div class="stat"><div class="n">35<small>serii</small></div><p>w tygodniu: 11 + 12 + 12</p></div><div class="stat"><div class="n">3×60<small>min</small></div><p>z rozgrzewką, do sprawdzenia na siłowni</p></div><div class="stat"><div class="n">7<small>serii</small></div><p>wyciskania zawodniczego</p></div></div>
+      <table class="dt mx"><caption>Ekspozycje w tygodniu (P = główna, S = pomocnicza)</caption><thead><tr><th>Obszar</th><th>Priorytet</th><th>Pn</th><th>Śr</th><th>Pt</th></tr></thead><tbody><tr><td>Chest <em>siła, osobno</em></td><td>Siła</td><td><i class="m s">●</i></td><td><i class="m s">●</i></td><td><i class="m s">●</i></td></tr><tr><td>Chest <em>hipertrofia</em></td><td>Priority</td><td><i class=m0>·</i></td><td><i class=m>P</i></td><td><i class=m0>·</i></td></tr><tr><td>Back <em></em></td><td>Priority</td><td><i class=m>P</i></td><td><i class=m>P</i></td><td><i class=m>P</i></td></tr><tr><td>Lateral Delts <em></em></td><td>Priority</td><td><i class=m>P</i></td><td><i class=m>P</i></td><td><i class=m0>·</i></td></tr><tr><td>Elbow Extensors <em></em></td><td>Priority</td><td><i class=m>S</i></td><td><i class=m>P</i></td><td><i class=m>P</i></td></tr><tr><td>Elbow Flexors <em></em></td><td>Priority</td><td><i class=m>P</i></td><td><i class=m>S</i></td><td><i class=m>P</i></td></tr><tr><td>Rear Delts <em></em></td><td>Optional</td><td><i class=m0>·</i></td><td><i class=m0>·</i></td><td><i class=m0>·</i></td></tr><tr><td>Quadriceps <em></em></td><td>Standard</td><td><i class=m>P</i></td><td><i class=m0>·</i></td><td><i class=m>P</i></td></tr><tr><td>Hamstrings <em></em></td><td>Standard</td><td><i class=m0>·</i></td><td><i class=m>P</i></td><td><i class=m>P</i></td></tr><tr><td>Glutes <em></em></td><td>Optional</td><td><i class=m0>·</i></td><td><i class=m>S</i></td><td><i class=m>S</i></td></tr></tbody></table>
+    </div>
+    <div class="col2"><h4>Serie na trening</h4><svg class="chart" viewBox="0 0 180 112" role="img" aria-label="Serie w poniedziałek, środę, piątek: 11, 12, 12"><line class="ax" x1="4" x2="176" y1="90" y2="90"/><rect class="hi fl" x="12" y="35" width="40" height="55"/><text x="32" y="31" text-anchor="middle" class="vl">11</text><text x="32" y="106" text-anchor="middle" class="lb">Pn</text><rect class=" fl" x="68" y="30" width="40" height="60"/><text x="88" y="26" text-anchor="middle" class="vl">12</text><text x="88" y="106" text-anchor="middle" class="lb">Sr</text><rect class=" fl" x="124" y="30" width="40" height="60"/><text x="144" y="26" text-anchor="middle" class="vl">12</text><text x="144" y="106" text-anchor="middle" class="lb">Pt</text></svg><svg class="chart donut" viewBox="0 0 120 120" role="img" aria-label="7 z 35 serii tygodnia to wyciskanie"><circle class="dn0" cx="60" cy="60" r="38"/><circle class="dn1" cx="60" cy="60" r="38" stroke-dasharray="47.8 238.8" transform="rotate(-90 60 60)"/><text x="60" y="58" text-anchor="middle" class="dv">7/35</text><text x="60" y="74" text-anchor="middle" class="lb">wyciskanie</text></svg></div>
+    <aside class="side"><h3>Dla kogo ten tydzień</h3>
+      <ul class="chk"><li><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="square" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span>Trzy treningi po najwyżej 60 minut.</span></li><li><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="square" aria-hidden="true"><path d="M4 20V10M10 20V4M16 20v-8M22 20H2"/></svg><span>Priorytet: wyciskanie leżąc.</span></li>
+      <li><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="square" aria-hidden="true"><path d="M4 12l5 5 11-11"/></svg><span>Rear Delts i Glutes mają status Optional. To skutek limitu czasu, a nie ocena ich ważności.</span></li></ul>
+      <div class="tags"><span class="tg exception">Wyjątek siłowy</span></div><p class="small">Serie wyciskania zawodniczego są liczone osobno. Lżejszy tydzień 4 dotyczy tylko wyciskania.</p>
+      <div class="note">Walidator: PASS strukturalny. To nie jest ocena biomechaniczna ani medyczna.</div></aside>
+  </div><div class="pf"><span>HARDSET</span><span>21</span></div></div></div></div></div></div></div>
+</div>
+<script>
+document.querySelectorAll('.zoom').forEach(function(b){b.addEventListener('click',function(){var p=b.closest('.row').querySelector('.pair');var s=p.classList.toggle('stack');b.textContent=s?'Zmniejsz':'Powiększ';});});
+document.querySelectorAll('.ctl [data-acc]').forEach(function(b){b.addEventListener('click',function(){document.documentElement.style.setProperty('--acc',b.dataset.acc);document.documentElement.style.setProperty('--acct',b.dataset.acct);document.querySelectorAll('.ctl [data-acc]').forEach(function(x){x.setAttribute('aria-pressed',x===b?'true':'false')});});});
+</script>

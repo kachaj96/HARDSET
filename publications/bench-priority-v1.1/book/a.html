@@ -1,0 +1,59 @@
+<style>@page apx { @top-left { content: "ANEKSY A–C"; } }</style>
+<div style="page:apx">
+<section class="chap" id="apx">
+  <div class="no">Aneksy</div>
+  <h1>Aneksy A–C</h1>
+  <p class="principle">Dziennik, relacja z metodą i lista zmian względem pakietu wejściowego.</p>
+</section>
+<section>
+  <h2>Aneks A. Dziennik programu</h2>
+  <p>Minimalne pola dla serii wyciskania i serii kontrolnej. Dla akcesoriów obowiązuje zwykły dziennik HARDSET (rozdział 07 metody): ćwiczenie i wariant, ciężar, powtórzenia, RIR, wykonanie i istotne notatki o regeneracji.</p>
+  <table class="dt text">
+    <thead><tr><th>Pole</th><th>Zapis</th></tr></thead>
+    <tbody>
+      <tr><td>Data, fala, tydzień, dzień</td><td>Np. 2026-12-04, fala 2, T3, piątek.</td></tr>
+      <tr><td>Ćwiczenie i seria</td><td>Competition bench, seria kontrolna (AMRAP).</td></tr>
+      <tr><td>Ciężar i powtórzenia</td><td>Ciężar w kg, liczba poprawnych powtórzeń.</td></tr>
+      <tr><td>RPE i RIR</td><td>Szacowane przez ciebie (@9, czyli 1 RIR).</td></tr>
+      <tr><td>Pauza i technika</td><td>W normie albo uwaga, co się zmieniło.</td></tr>
+      <tr><td>Nagranie</td><td>Tak lub nie.</td></tr>
+      <tr><td>Baza fali w chwili serii</td><td>Liczba, od której liczono procenty.</td></tr>
+      <tr><td>e1RM</td><td>Tylko dla serii kontrolnej, razem z użytym ciężarem i RIR.</td></tr>
+      <tr><td>Zmęczenie i warunki</td><td>Sen, bieganie, choroba, zmiana sprzętu.</td></tr>
+    </tbody>
+  </table>
+  <p>Osobno śledzisz trend aktualnej bazy fali i prawdziwe rekordy (PR). Nie wykresujesz oszacowanego e1RM jako „wyniku 1RM”.</p>
+
+  <h2>Aneks B. Odstępstwa od metody HARDSET v1.0</h2>
+  <p>Program korzysta z rozdziału 08 metody (periodyzacja dopuszczalna dla siły w konkretnym boju) tylko w wyciskaniu. Wszystkie pozostałe ćwiczenia działają według zwykłych zasad HARDSET, bez luzowania.</p>
+  <table class="dt text">
+    <thead><tr><th>Zasada metody</th><th>W programie</th><th>Klasa</th></tr></thead>
+    <tbody>
+      <tr><td>Lead Set około 1 RIR, Supporting Set 0–1 RIR</td><td>Wyciskanie przy RPE 6–8 (zapas 2–4 powtórzeń), seria kontrolna @9</td><td><span class="tg exception">Wyjątek siłowy</span></td></tr>
+      <tr><td>Standard Hard Set</td><td>Serie wyciskania zawodniczego liczą się do Chest P</td><td><span class="tg exception">Wyjątek siłowy</span></td></tr>
+      <tr><td>Progresja serii prowadzącej</td><td>Fala procentowa i baza fali zamiast zwiększania ciężaru po osiągnięciu górnej granicy</td><td><span class="tg exception">Wyjątek siłowy</span></td></tr>
+      <tr><td>Deload z potrzeby, bez kalendarza</td><td>Lżejszy T4 wyciskania z kalendarza. Pozostałe ćwiczenia bez kalendarza</td><td><span class="tg exception">Wyjątek siłowy</span></td></tr>
+      <tr><td>Dwie ekspozycje Priority i Standard</td><td>Trzy ekspozycje wyciskania. Rear Delts i Glutes: status Optional</td><td><span class="tg decision">Decyzja HARDSET</span></td></tr>
+      <tr><td>Domyślna dwukrokowa progresja akcesoriów</td><td>Bez zmian</td><td>Zasada HARDSET</td></tr>
+      <tr><td>Długość fali, zakresy procentowe, seria kontrolna 82,5%, krok bazy 2,5 kg, korekta w górę 2,5% na punkt RPE (limit 5%), 35 serii, 3 × 60 minut</td><td>Ustawienia programu do sprawdzenia w praktyce</td><td><span class="tg hypothesis">Hipoteza programu</span></td></tr>
+    </tbody>
+  </table>
+
+  <h2>Aneks C. Zmiany względem pakietu wejściowego</h2>
+  <p>Pakiet wejściowy (wersja 1.1) zachowano bez zmian w repozytorium. Ta książka (wersja 1.2) wprowadza zatwierdzone przez właściciela poprawki i decyzje. Pełny opis jest w dokumentach audytu i zmian programu.</p>
+  <table class="dt text">
+    <thead><tr><th>Zmiana</th><th>Uzasadnienie</th></tr></thead>
+    <tbody>
+      <tr><td>Rear Delts i Glutes: Optional</td><td>W przykładowym tygodniu Rear Delts nie miały żadnej ekspozycji, a Glutes dwie S, czyli S+S. Przy limicie 60 minut status Optional jest jawną decyzją. Walidator po zmianie: PASS (strukturalny).</td></tr>
+      <tr><td>Serie wyciskania liczą się do Chest P</td><td>Decyzja właściciela. Nazwany wyjątek siłowy, a nie wynik badań.</td></tr>
+      <tr><td>Back-off w poniedziałek T3 przy bazie 120 kg: 97,5–102,5 kg</td><td>Pakiet podawał około 100–102,5 kg, co nie zgadza się z 82–85% bazy.</td></tr>
+      <tr><td>Usunięcie wycofanej pracy z listy źródeł</td><td>Hughes, Peiffer i Scott (2020) są wycofani przez wydawcę.</td></tr>
+      <tr><td>Reguła korekty w górę dla serii zbyt lekkich</td><td>Pakiet miał tylko regułę w dół. Serie wielopowtórzeniowe wychodzą zwykle lżej niż docelowe RPE.</td></tr>
+      <tr><td>Próg zmiany bazy w powtórzeniach</td><td>Zamiast niejasnego „około 2–3%”: jedno powtórzenie więcej niż w poprzedniej fali przy tym samym ciężarze i RIR, z potwierdzeniem singla.</td></tr>
+      <tr><td>Nazwa „baza fali” zamiast „PB”</td><td>W trójboju „PB” oznacza rekord życiowy.</td></tr>
+      <tr><td>Lżejszy T4 jako nazwany wyjątek</td><td>Lżejszy tydzień z kalendarza odstępuje od zasady „deload z potrzeby” i dotyczy tylko wyciskania.</td></tr>
+      <tr><td>Taper: około 40–45%, a nie 40–50%</td><td>Tyle podaje źródło (Winwood 2026) i opisuje samodzielnie zgłaszane praktyki sportowców.</td></tr>
+    </tbody>
+  </table>
+</section>
+</div>

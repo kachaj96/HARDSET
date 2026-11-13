@@ -1,0 +1,241 @@
+{
+  "id": "continuous-bench-priority",
+  "version": "1.1",
+  "status": "handoff-draft-pending-audit",
+  "cycle_weeks": 4,
+  "sessions_per_week": 3,
+  "minutes_max_per_session": 60,
+  "wave": [
+    {
+      "week": 1,
+      "mon_single": {
+        "sets": 1,
+        "reps": 1,
+        "rpe": [
+          7,
+          7
+        ],
+        "pct": [
+          88,
+          90
+        ]
+      },
+      "mon_backoff": {
+        "sets": 2,
+        "reps": 5,
+        "rpe": [
+          7,
+          7
+        ],
+        "pct": [
+          75,
+          78
+        ]
+      },
+      "wed_paused": {
+        "sets": 2,
+        "reps": 5,
+        "rpe": [
+          6,
+          7
+        ],
+        "pct": [
+          70,
+          74
+        ]
+      },
+      "fri": {
+        "kind": "volume",
+        "sets": 2,
+        "reps": 6,
+        "rpe": [
+          7,
+          7
+        ],
+        "pct": [
+          73,
+          76
+        ]
+      }
+    },
+    {
+      "week": 2,
+      "mon_single": {
+        "sets": 1,
+        "reps": 1,
+        "rpe": [
+          7.5,
+          7.5
+        ],
+        "pct": [
+          90,
+          91
+        ]
+      },
+      "mon_backoff": {
+        "sets": 2,
+        "reps": 4,
+        "rpe": [
+          7,
+          8
+        ],
+        "pct": [
+          78,
+          81
+        ]
+      },
+      "wed_paused": {
+        "sets": 2,
+        "reps": 4,
+        "rpe": [
+          6.5,
+          7.5
+        ],
+        "pct": [
+          73,
+          77
+        ]
+      },
+      "fri": {
+        "kind": "volume",
+        "sets": 2,
+        "reps": 5,
+        "rpe": [
+          7,
+          8
+        ],
+        "pct": [
+          76,
+          80
+        ]
+      }
+    },
+    {
+      "week": 3,
+      "mon_single": {
+        "sets": 1,
+        "reps": 1,
+        "rpe": [
+          8,
+          8
+        ],
+        "pct": [
+          91,
+          93
+        ]
+      },
+      "mon_backoff": {
+        "sets": 2,
+        "reps": 3,
+        "rpe": [
+          7,
+          8
+        ],
+        "pct": [
+          82,
+          85
+        ]
+      },
+      "wed_paused": {
+        "sets": 2,
+        "reps": 3,
+        "rpe": [
+          7,
+          7.5
+        ],
+        "pct": [
+          77,
+          80
+        ]
+      },
+      "fri": {
+        "kind": "benchmark",
+        "first": {
+          "sets": 1,
+          "reps": "AMRAP, target ~4–7",
+          "rpe": [
+            9,
+            9
+          ],
+          "pct": [
+            82.5,
+            82.5
+          ]
+        },
+        "second": {
+          "sets": 1,
+          "reps": 4,
+          "rpe": [
+            6,
+            7
+          ],
+          "pct": [
+            72.5,
+            75
+          ]
+        }
+      }
+    },
+    {
+      "week": 4,
+      "mon_single": {
+        "sets": 1,
+        "reps": 1,
+        "rpe": [
+          6,
+          7
+        ],
+        "pct": [
+          85,
+          88
+        ]
+      },
+      "mon_backoff": {
+        "sets": 2,
+        "reps": 4,
+        "rpe": [
+          6,
+          7
+        ],
+        "pct": [
+          73,
+          77
+        ]
+      },
+      "wed_paused": {
+        "sets": 2,
+        "reps": 4,
+        "rpe": [
+          6,
+          6
+        ],
+        "pct": [
+          68,
+          73
+        ]
+      },
+      "fri": {
+        "kind": "volume",
+        "sets": 2,
+        "reps": 5,
+        "rpe": [
+          6,
+          7
+        ],
+        "pct": [
+          70,
+          75
+        ]
+      }
+    }
+  ],
+  "example_sets_per_day": {
+    "monday": 11,
+    "wednesday": 12,
+    "friday": 12
+  },
+  "e1rm_formula": "load_kg * (1 + (reps + estimated_rir)/30)",
+  "amrap_note": "T3 Friday, @9 RPE (approx 1 RIR), technique gate; programming baseline update only between waves",
+  "precision_warning": "approximate percentage and subjective RPE; not a validated direct measurement",
+  "brand_status": "HARDSET vs Repsmith vs other name — owner decision pending"
+}

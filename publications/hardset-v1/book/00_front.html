@@ -1,0 +1,104 @@
+<style>
+@page how { @top-left { content: "JAK CZYTAĆ TĘ KSIĄŻKĘ"; } }
+@page toc { @top-left { content: "SPIS TREŚCI"; } }
+@page one { @top-left { content: "ZASADY NA JEDNEJ STRONIE"; } }
+</style>
+
+<!-- Okładka -->
+<section class="cover">
+  <div class="cv-top"><span>Adrian Drożdżyński</span><span>Wydanie 1 · 2026</span></div>
+  <div class="cv-title">{{logo}}</div>
+  <div class="cv-sub">Controlled Brutality</div>
+  <p class="cv-p">Metoda treningu hipertroficznego. Dwie serie, dwanaście obszarów kontrolnych, jasne reguły, oznaczone źródła.</p>
+  {{ruler}}
+  <div class="cv-foot"><span>Wersja 1.0</span>{{mark}}</div>
+</section>
+
+<!-- Kolofon -->
+<section class="plain colophon">
+  <p class="title">HARDSET. Controlled Brutality</p>
+  <p>Metoda treningu hipertroficznego, wersja 1.0<br>Adrian Drożdżyński</p>
+  <p>Wydanie pierwsze, 2026. Publikacja bezpłatna. Język polski.</p>
+  <p>Książka jest przeznaczona dla zdrowych dorosłych, którzy trenują samodzielnie. Nie zastępuje porady lekarza ani fizjoterapeuty. Ból, nowe objawy neurologiczne albo uraz o niejasnej przyczynie wymagają oceny specjalisty, a nie zmiany liczby powtórzeń w zapasie.</p>
+  <p>Źródła sprawdzono w listopadzie 2026 roku: tytuły i DOI w PubMed, PMC lub u wydawców (12 listopada), dane bibliograficzne w Crossref (13 listopada), status wycofania publikacji w metadanych i w dokumentacji badawczej. Praca wycofana przez wydawcę nie jest cytowana jako dowód. Zbiór źródeł nie jest wyczerpującym przeglądem literatury.</p>
+  <p>Rozdziały 01–05 są redakcyjnym opracowaniem zatwierdzonych zasad, a nie dosłownym zapisem pierwotnych tekstów. Rozdziały 06–09 zredagowano ujednolicająco z ostatecznego zatwierdzonego tekstu. Zasady pozostały bez zmian na poziomie decyzji.</p>
+  <p>Przykładowe tabele i plany w tej książce są syntetyczne. Nie opisują żadnej konkretnej osoby.</p>
+  <p>© 2026 Adrian Drożdżyński. Wszelkie prawa zastrzeżone. Książka jest udostępniana bezpłatnie do użytku osobistego. Zmienianie, rozpowszechnianie zmienionych wersji i użycie komercyjne wymagają zgody autora.</p>
+  <p class="muted">Skład: Archivo i IBM Plex Mono (SIL Open Font License 1.1). Źródło tekstu, szablon i skrypty składu: repozytorium HARDSET.</p>
+</section>
+
+<!-- Spis treści -->
+<div style="page:toc">
+<section class="page-break">
+  <h1>Spis treści</h1>
+  <ol class="toc">
+    <li><span>–</span>Jak czytać tę książkę<em>{{pg:how}}</em></li>
+    <li><span>–</span>Zasady na jednej stronie<em>{{pg:one}}</em></li>
+    <li class="part">Zasady</li>
+    <li><span>01</span>Wysiłek, Hard Set i upadek mięśniowy<em>{{pg:ch01}}</em></li>
+    <li><span>02</span>Architektura oparta na wzorcach ruchu<em>{{pg:ch02}}</em></li>
+    <li><span>03</span>Architektura serii<em>{{pg:ch03}}</em></li>
+    <li><span>04</span>Dobór ćwiczeń i bezpieczeństwo<em>{{pg:ch04}}</em></li>
+    <li><span>05</span>Progresja i autoregulacja<em>{{pg:ch05}}</em></li>
+    <li class="part">Program w czasie</li>
+    <li><span>06</span>Tydzień treningowy i regeneracja<em>{{pg:ch06}}</em></li>
+    <li><span>07</span>Śledzenie i ocena wyników<em>{{pg:ch07}}</em></li>
+    <li><span>08</span>Planowanie długoterminowe i specjalizacja<em>{{pg:ch08}}</em></li>
+    <li><span>09</span>Budowa i walidacja programu<em>{{pg:ch09}}</em></li>
+    <li class="part">Uzupełnienia</li>
+    <li><span>A–E</span>Aneksy: objętość, słownik, zamiany ćwiczeń, przeglądy, szablon planu<em>{{pg:apx}}</em></li>
+    <li><span>–</span>Matryca dowodów i audyt źródeł<em>{{pg:mtx}}</em></li>
+    <li><span>–</span>Bibliografia<em>{{pg:bib}}</em></li>
+  </ol>
+</section>
+</div>
+
+<!-- Jak czytać -->
+<div style="page:how">
+<section class="page-break" id="how">
+  <h1>Jak czytać tę książkę</h1>
+  <p class="lead" style="margin-top:5mm">W tej książce są trzy rodzaje twierdzeń. Każdy ma własne oznaczenie, bo ich mieszanie to najczęstszy błąd w publikacjach o treningu: decyzja autora podana tonem wyniku badania.</p>
+  <h3>Badanie</h3>
+  <p><span class="tg study">Badanie</span> Twierdzenie oparte na opublikowanych pracach. Przy nim stoi numer źródła, na przykład <cite class="ref">[R04]</cite>, oraz ograniczenia: kogo badano, jak długo i co naprawdę zmierzono. Jedno badanie popiera tylko to, co w nim sprawdzono.</p>
+  <h3>Decyzja HARDSET</h3>
+  <p><span class="tg decision">Decyzja HARDSET</span> Konwencja przyjęta w tej metodzie: dwie serie na ćwiczenie, dwie ekspozycje w tygodniu, dwanaście obszarów kontrolnych, progresja serii prowadzącej. Decyzje są spójne z badaniami, ale żadne badanie ich nie udowodniło.</p>
+  <h3>Heurystyka</h3>
+  <p><span class="tg heuristic">Heurystyka</span> Praktyczna liczba albo rytm: zakresy powtórzeń, długość przerw, okna przeglądów. Możesz je zmienić i nadal trenujesz zgodnie z metodą.</p>
+  <div class="panel">
+    <h3>Czego tu nie znajdziesz</h3>
+    <ul class="chk">
+      <li>{{icon:check}}<span>Tezy, że do budowy mięśni trzeba dochodzić do upadku.</span></li>
+      <li>{{icon:check}}<span>Tezy, że seria pomocnicza jest warta połowę serii głównej.</span></li>
+      <li>{{icon:check}}<span>Tezy, że rosnące ciężary w dzienniku dowodzą przyrostu masy mięśniowej.</span></li>
+    </ul>
+    <p class="small" style="margin-top:3mm">Te twierdzenia nie mają oparcia w dostępnych dowodach i nie występują tu jako zalecenia. Pełna lista jest w matrycy dowodów.</p>
+  </div>
+  <div class="note">Status PASS walidatora programu oznacza, że plan spełnia reguły metody przy danych, które wpisałeś. Nie oznacza, że jest bezpieczny medycznie ani że przyniesie zamierzony efekt.</div>
+  <p>Terminy metody zostają po angielsku (Hard Set, Lead Set, Fixed Core, Priority), bo tak występują w narzędziach i w literaturze. Przy pierwszym użyciu każdy ma polskie objaśnienie, a pełny słownik jest w aneksie B.</p>
+</section>
+</div>
+
+<!-- Zasady na jednej stronie -->
+<div style="page:one">
+<section class="page-break" id="one">
+  <h1>Zasady na jednej stronie</h1>
+  <p class="lead" style="margin-top:5mm">Dwanaście reguł, które trzymają całą metodę. Szczegóły i uzasadnienia są w rozdziałach.</p>
+  <table class="dt text">
+    <thead><tr><th>#</th><th>Reguła</th><th>Rozdz.</th></tr></thead>
+    <tbody>
+      <tr><td>1</td><td>Hard Set to seria robocza ze standardem techniki, zakresu ruchu i bezpiecznego zakończenia. Rozgrzewka się nie liczy.</td><td>01</td></tr>
+      <tr><td>2</td><td>Dwie serie na ćwiczenie to domyślna reguła, a nie obowiązkowa dawka tygodniowa ani udowodnione optimum.</td><td>03</td></tr>
+      <tr><td>3</td><td>Seria prowadząca około 1 RIR, pomocnicza 0–1 RIR, ale tylko przy bezpiecznym zakończeniu. Ruchy obarczone ryzykiem: 1–2 RIR.</td><td>01, 04</td></tr>
+      <tr><td>4</td><td>P, S, S? i „–” to różne rzeczy. Nie ma przelicznika S = 0,5 P. S? nie liczy się wcale.</td><td>02</td></tr>
+      <tr><td>5</td><td>Obszar ma najwyżej jedną ekspozycję na sesję. Priority: P+P (P+S, gdy S jest wiarygodne). Standard: P+P albo P+S. S+S nie wystarcza. Optional: bez minimum.</td><td>02</td></tr>
+      <tr><td>6</td><td>Fixed Core ma 12 obszarów. Priorytetów nie zmieniasz po cichu, żeby rozwiązać problem czasu.</td><td>02, 06</td></tr>
+      <tr><td>7</td><td>Maszyna wygrywa przy porównywalnych warunkach z powodu bezpieczeństwa i powtarzalności, a nie dlatego, że buduje więcej mięśni.</td><td>04</td></tr>
+      <tr><td>8</td><td>Seria prowadząca na górnej granicy zakresu i pomocnicza na dolnej, przy porównywalnym wykonaniu, to kandydat do zwiększenia ciężaru. Obie serie nie muszą osiągnąć górnej granicy.</td><td>05</td></tr>
+      <tr><td>9</td><td>Split wynika z celów i tygodniowego bodźca, a nie odwrotnie. Dawkę wyznacza Baseline + Response.</td><td>06</td></tr>
+      <tr><td>10</td><td>Nie ma obowiązkowych mezocykli ani kalendarza deloadów. Deload robisz z potrzeby.</td><td>05, 08</td></tr>
+      <tr><td>11</td><td>Dziennik nie dowodzi hipertrofii. Wynik oceniasz w czterech stanach: Not Assessed, Inconclusive, Supported Progress, Concern.</td><td>07</td></tr>
+      <tr><td>12</td><td>PASS walidatora oznacza zgodność strukturalną. Nie jest gwarancją efektu ani bezpieczeństwa medycznego.</td><td>09</td></tr>
+    </tbody>
+  </table>
+</section>
+</div>

@@ -1,0 +1,70 @@
+/* Generated from tokens.json by build_brand.py. Do not edit by hand. */
+@import url('fonts/fonts.css');
+:root{
+  --hs-ink:#101214;
+  --hs-paper:#F3F4F4;
+  --hs-steel:#B9C0C4;
+  --hs-line:#CBD0D3;
+  --hs-tint:#E3E6E8;
+  --hs-muted:#5F686D;
+  --hs-accent:#54877A;
+  --hs-accent-text:#436C62;
+  --hs-accent-on-panel:#5C9485;
+  --hs-panel:#1D2124;
+  --hs-panel-line:#4B5359;
+  --hs-ink-line:#30363A;
+  --hs-ink-muted:#9AA3A8;
+  --hs-ink-tint:#1A1E21;
+  --hs-font-display:'Archivo', 'Arial', sans-serif;
+  --hs-font-text:'Archivo', 'Arial', sans-serif;
+  --hs-font-data:'IBM Plex Mono', 'Courier New', monospace;
+  --hs-size-caption:12px;
+  --hs-size-small:14px;
+  --hs-size-text:16px;
+  --hs-size-lead:18px;
+  --hs-size-label:12px;
+  --hs-size-h3:14px;
+  --hs-size-h2:28px;
+  --hs-size-h1:40px;
+  --hs-size-display:64px;
+  --hs-radius-none:0;
+  --hs-radius-field:4px;
+  /* roles: light edition */
+  --hs-bg:var(--hs-paper);
+  --hs-fg:var(--hs-ink);
+  --hs-panel:var(--hs-ink);
+  --hs-panel-fg:var(--hs-paper);
+  --hs-mid:var(--hs-steel);
+  --hs-line:var(--hs-line);
+  --hs-muted:var(--hs-muted);
+  --hs-tint:var(--hs-tint);
+  --hs-a:var(--hs-accent);
+  --hs-at:var(--hs-accent-text);
+  --hs-ap:var(--hs-accent-on-panel);
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --hs-bg:var(--hs-ink);
+  --hs-fg:var(--hs-paper);
+  --hs-panel:var(--hs-panel);
+  --hs-panel-fg:var(--hs-paper);
+  --hs-mid:var(--hs-panel-line);
+  --hs-line:var(--hs-ink-line);
+  --hs-muted:var(--hs-ink-muted);
+  --hs-tint:var(--hs-ink-tint);
+  --hs-a:var(--hs-accent);
+  --hs-at:var(--hs-accent-on-panel);
+  --hs-ap:var(--hs-accent-on-panel);
+  color-scheme:dark;}}
+:root[data-theme="dark"],.hs-dark{
+  --hs-bg:var(--hs-ink);
+  --hs-fg:var(--hs-paper);
+  --hs-panel:var(--hs-panel);
+  --hs-panel-fg:var(--hs-paper);
+  --hs-mid:var(--hs-panel-line);
+  --hs-line:var(--hs-ink-line);
+  --hs-muted:var(--hs-ink-muted);
+  --hs-tint:var(--hs-ink-tint);
+  --hs-a:var(--hs-accent);
+  --hs-at:var(--hs-accent-on-panel);
+  --hs-ap:var(--hs-accent-on-panel);
+  color-scheme:dark;}

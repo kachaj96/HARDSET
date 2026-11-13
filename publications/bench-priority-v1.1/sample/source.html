@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<title>HARDSET Powerbuilding. Continuous Bench Priority · próbka</title>
+<link rel="stylesheet" href="../../../brand/system/book.css">
+<style>
+@page src { @top-left { content: "SKĄD POCHODZĄ ZASADY"; } }
+@page wave { @top-left { content: "03 · FALA CZTEROTYGODNIOWA"; } }
+@page amrap { @top-left { content: "04 · AMRAP, E1RM I BAZA FALI"; } }
+@page week { @top-left { content: "05 · GOTOWY TYDZIEŃ"; } }
+@page bib { @top-left { content: "BIBLIOGRAFIA · FRAGMENT"; } }
+</style>
+</head>
+<body>
+
+<!-- 1. Okładka -->
+<section class="cover">
+  <div class="cv-top"><span>Adrian Drożdżyński</span><span>Wersja 1.2</span></div>
+  <div class="cv-lock">{{lockup}}</div>
+  <div class="cv-title2">Continuous<br>Bench<br>Priority</div>
+  <p class="cv-p">Trzy treningi w tygodniu po 60 minut. Czterotygodniowa fala, seria kontrolna, jasne reguły zmiany bazy.</p>
+  {{wavecover}}
+  <div class="cv-foot"><span>Program oparty na metodzie HARDSET v1.0</span>{{mark}}</div>
+</section>
+
+<!-- 2. Strona redakcyjna i spis treści -->
+<section class="plain colophon">
+  <p class="title">HARDSET Powerbuilding. Continuous Bench Priority</p>
+  <p>Wersja 1.2 (szkic próbki) · Adrian Drożdżyński · 2026</p>
+  <p>To program specjalistyczny oparty na metodzie HARDSET v1.0, opisanej w książce <i>HARDSET. Controlled Brutality</i>. Nie zastępuje jej i niczego w niej nie zmienia. Odstępstwa od zasad metody są nazwane w tekście.</p>
+  <p>Wyciskanie leżąc w stylu zawodniczym wykonuje się w racku z ustawionymi zabezpieczeniami albo z asekuracją. Przed startem w zawodach sprawdź aktualny regulamin swojej federacji: komendy, pauzę i wymogi techniczne.</p>
+  <p><b>Dla kogo.</b> Program jest ułożony dla osoby, która trenuje trzy razy w tygodniu po najwyżej 60 minut i stawia wyciskanie leżąc na pierwszym miejscu. Przy tym limicie tylne aktony barków i pośladki mają status Optional, czyli bez wymaganego minimum. To skutek limitu czasu, a nie ocena ich ważności. Serie wyciskania zawodniczego przy RPE 6–8 liczą się do Chest P. To wyjątek od standardu Hard Set, a nie wynik badań. Wszystkie pozostałe ćwiczenia działają według zwykłych zasad HARDSET.</p>
+  <p>Limit 60 minut na trening to założenie programu, które nie zostało jeszcze sprawdzone na prawdziwej siłowni. Zmierz dwie lub trzy pierwsze sesje.</p>
+  <p>© 2026 Adrian Drożdżyński. Wszelkie prawa zastrzeżone. Książka jest udostępniana bezpłatnie do użytku osobistego. Zmienianie, rozpowszechnianie zmienionych wersji i użycie komercyjne wymagają zgody autora. Źródła sprawdzono 13 listopada 2026 roku. Skład: Archivo i IBM Plex Mono (SIL Open Font License 1.1).</p>
+  <h3 style="margin-top:7mm">Spis treści</h3>
+  <ol class="toc">
+    <li><span>01</span>Cel i granice programu</li>
+    <li><span>02</span>Sześć wzorców ruchu i ćwiczenia izolowane</li>
+    <li><span>03</span>Fala czterotygodniowa</li>
+    <li><span>04</span>AMRAP, e1RM i baza fali</li>
+    <li><span>05</span>Gotowy tydzień: 3 × 60 minut</li>
+    <li><span>06</span>Opcjonalnie: test 1RM i przygotowanie do zawodów</li>
+    <li><span>07</span>Ograniczenia, bezpieczeństwo i kiedy program nie działa</li>
+    <li><span>–</span>Bibliografia</li>
+  </ol>
+</section>
+
+<!-- 3. Skąd pochodzą zasady -->
+<div style="page:src">
+<section class="page-break">
+  <h1>Skąd pochodzą zasady tego programu</h1>
+  <p class="lead" style="margin-top:5mm">Program łączy dwa cele: wzrost maksymalnego wyniku w wyciskaniu leżąc i ciągły bodziec do rozbudowy górnej części ciała. Te cele mają różne reguły, więc każda decyzja w tej książce należy do jednej z trzech grup.</p>
+  <table class="dt text">
+    <thead><tr><th>Grupa</th><th>Co do niej należy</th></tr></thead>
+    <tbody>
+      <tr><td>Zasada HARDSET</td><td>Ćwiczenia uzupełniające: domyślnie dwie serie, pierwsza około 1 RIR, druga 0–1 RIR przy bezpiecznym stopie, progresja serii prowadzącej. Dwanaście obszarów jako narzędzie kontroli planu. Zakaz 0 RIR bez bezpiecznego stopu.</td></tr>
+      <tr><td><span class="tg exception">Wyjątek siłowy</span></td><td>Wyciskanie zawodnicze przy RPE 6–8, czyli z zapasem 2–4 powtórzeń. Pojedyncze powtórzenie (singiel) w poniedziałek. Trzy ekspozycje wyciskania w tygodniu. Serie wyciskania liczą się do Chest P. Fala procentowa zamiast progresji serii prowadzącej. Lżejszy tydzień wyciskania co cztery tygodnie, z kalendarza, a nie z potrzeby.</td></tr>
+      <tr><td><span class="tg hypothesis">Hipoteza programu</span></td><td>Długość fali, konkretne zakresy procentowe, seria AMRAP przy 82,5% bazy jako punkt kontrolny, krok bazy o 2,5 kg, reguła korekty w górę, 35 serii w trzech treningach po 60 minut. To ustawienia do sprawdzenia w praktyce, a nie wyniki badań.</td></tr>
+    </tbody>
+  </table>
+  <p>Wyjątki mają jedno uzasadnienie. Rozdział 08 metody HARDSET dopuszcza periodyzację, gdy celem jest siła maksymalna w konkretnym boju. Program korzysta z niej tylko w wyciskaniu, reszta treningu działa według zwykłych zasad.</p>
+  <div class="panel">
+    <h3>Co z tego wynika</h3>
+    <p><span class="tg study">Badanie</span> Programy z większymi obciążeniami, powyżej 80% ciężaru maksymalnego, dawały największe przyrosty siły, a przyrost masy był porównywalny w szerokim zakresie obciążeń <cite class="ref">[Currier 2023; R17]</cite>.</p>
+    <p>To uzasadnia ciężkie wyciskanie. Nie uzasadnia konkretnej fali z tej książki.</p>
+  </div>
+</section>
+</div>
+
+<!-- 4-5. Rozdział 03 -->
+<div style="page:wave">
+<section class="chap">
+  <div class="no">Rozdział 03</div>
+  <h1>Fala czterotygodniowa</h1>
+  <p class="principle">Procent wyznacza punkt startowy. RPE wyznacza granicę.</p>
+</section>
+<section>
+  <p>Wyciskanie prowadzi powtarzalna fala czterotygodniowa. Potem fala zaczyna się od nowa, z zaktualizowaną bazą fali.</p>
+  <ol class="tl">
+    <li><b>T1</b><span>więcej powtórzeń</span></li>
+    <li><b>T2</b><span>rośnie ciężar</span></li>
+    <li class="hi"><b>T3</b><span>najcięższa ekspozycja i seria kontrolna</span></li>
+    <li><b>T4</b><span>lżejszy tydzień</span></li>
+  </ol>
+  <p>Procenty liczysz od bazy fali. To ostrożna liczba do planowania, a nie rekord życiowy i nie ostatni wynik z kalkulatora. Wynik mnożysz przez procent i zaokrąglasz do 2,5 kg. Gdy nie masz pewności, wybierasz niższą wartość z przedziału.</p>
+  <div class="note"><b>Nazwa.</b> W trójboju skrót „PB” oznacza rekord życiowy (<i>personal best</i>), więc tu mówimy: baza fali (angielskie <i>Wave Base</i>, WB).</div>
+  <h4>Singiel w poniedziałek, % bazy fali</h4>
+  {{chart:wave}}
+  <table class="dt">
+    <caption>Poniedziałek · przykład dla bazy 120 kg</caption>
+    <thead><tr><th>Tydz.</th><th>Singiel</th><th class="r">% bazy</th><th class="r">kg</th><th>Back-off</th><th class="r">% bazy</th><th class="r">kg</th></tr></thead>
+    <tbody>
+      <tr><td>T1</td><td class="ac">1×1 @7</td><td class="r">88–90</td><td class="r">105–107,5</td><td class="ac">2×5 @7</td><td class="r">75–78</td><td class="r">90–92,5</td></tr>
+      <tr><td>T2</td><td class="ac">1×1 @7,5</td><td class="r">90–91</td><td class="r">107,5–110</td><td class="ac">2×4 @7–8</td><td class="r">78–81</td><td class="r">92,5–97,5</td></tr>
+      <tr class="hl"><td>T3</td><td class="ac">1×1 @8</td><td class="r">91–93</td><td class="r">110–112,5</td><td class="ac">2×3 @7–8</td><td class="r">82–85</td><td class="r">97,5–102,5</td></tr>
+      <tr><td>T4</td><td class="ac">1×1 @6–7</td><td class="r">85–88</td><td class="r">102,5–105</td><td class="ac">2×4 @6–7</td><td class="r">73–77</td><td class="r">87,5–92,5</td></tr>
+    </tbody>
+  </table>
+  <p class="tablenote">@7 oznacza RPE 7, czyli około 3 powtórzeń w zapasie; @8 to około 2, @9 około 1.</p>
+  <p class="tablenote">Tabele środy (wyciskanie z pauzą) i piątku (objętość, w T3 seria kontrolna AMRAP) są w wydaniu pełnym.</p>
+  <h2>Gdy RPE nie zgadza się z tabelą</h2>
+  <div class="with-side">
+    <div>
+      <p>U jednej osoby 2×5 przy 78% wypadnie lżej niż @7, u innej wyraźnie ciężej. <span class="tg study">Badanie</span> Liczba powtórzeń możliwych przy tym samym procencie ciężaru maksymalnego różni się między ludźmi, a w wyciskaniu leżąc przeciętnie jest niższa niż na przykład na suwnicy <cite class="ref">[Nuzzo 2024]</cite>. Dlatego decyduje rzeczywista trudność i jakość techniki.</p>
+      <p><b>Za ciężko.</b> RPE wyższe o stopień lub więcej: zdejmujesz 2,5–5% i zapisujesz to jako korektę, a nie porażkę.</p>
+      <p><span class="tg hypothesis">Hipoteza programu</span> Baza fali jest ostrożna, więc serie wielopowtórzeniowe wypadają zwykle lżej niż docelowe RPE. Przeliczenie wzorem Epleya pokazuje, że nawet przy bazie równej prawdziwemu 1RM bywają za lekkie o pół punktu do około 2 punktów RPE. Singiel jest skalibrowany dobrze.</p>
+    </div>
+    <aside class="panel">
+      <h3>Za lekko: korekta w górę</h3>
+      <ul class="chk">
+        <li>{{icon:check}}<span>Różnica od dolnej granicy celu mniejsza niż pełny punkt RPE: bez zmian.</span></li>
+        <li>{{icon:check}}<span>Jeden punkt: następna seria o około 2,5% cięższa. Dwa i więcej: o około 5%, to limit. Zaokrąglenie do 2,5 kg.</span></li>
+        <li>{{icon:check}}<span>Tylko przy dobrej technice i stałej prędkości sztangi. Nie dla singla, serii kontrolnej i tygodnia 4.</span></li>
+      </ul>
+      <p class="small" style="margin-top:2.4mm">Korekta nie zmienia bazy fali. Ta sama korekta w dwóch kolejnych treningach tego samego typu: następny zaczynasz od ciężaru po korekcie.</p>
+    </aside>
+  </div>
+  <div class="note"><b>Skąd 2,5%.</b> Wzór Epleya daje 2,6–2,9% ciężaru na jeden punkt RPE dla 3–6 powtórzeń przy RPE 6–8. Wzięto dolną granicę, bo błąd szacowania RIR (około 0,65 powtórzenia, <cite class="ref">[Refalo 2024]</cite>) jest tego samego rzędu co jeden punkt. Limit 5% to decyzja ostrożnościowa, nie wynik badania.</div>
+</section>
+</div>
+
+<!-- 6-7. Rozdział 04 -->
+<div style="page:amrap">
+<section class="chap">
+  <div class="no">Rozdział 04</div>
+  <h1>AMRAP, e1RM i baza fali</h1>
+  <p class="principle">Baza zmienia się tylko między falami.</p>
+</section>
+<section>
+  <p>W piątek trzeciego tygodnia pierwsza seria robocza to AMRAP przy około 82,5% bazy fali: tyle poprawnych powtórzeń, ile się da, ale z jednym powtórzeniem w zapasie (@9). Seria zastępuje cięższą serię objętościową i nie jest dodatkowym testem ciężaru maksymalnego. Ciężar dobierasz tak, żeby wyszło mniej więcej 4–7 powtórzeń. Jeśli wychodzi więcej albo mniej, zmieniasz ciężar serii kontrolnej w następnej fali.</p>
+  <ul class="steps">
+    <li>{{icon:check}}<div><b>Technika</b><p>Ten sam chwyt i ustawienie co w zawodach, pauza na każdym powtórzeniu, bez odbicia.</p></div></li>
+    <li>{{icon:clock}}<div><b>Przygotowanie</b><p>Ta sama rozgrzewka co zwykle, 4–5 minut odpoczynku przed serią, żadnego ciężkiego singla tego dnia.</p></div></li>
+    <li>{{icon:stop}}<div><b>Koniec serii</b><p>Przy jednym poprawnym powtórzeniu w zapasie albo wcześniej, gdy siada technika lub kontrola. Bez celowej nieudanej próby.</p></div></li>
+    <li>{{icon:down}}<div><b>Po serii</b><p>Jedna łatwa seria 1×4 i koniec wyciskania. Dobry wynik nie jest powodem do dokładania objętości.</p></div></li>
+  </ul>
+  <h4>e1RM dla 100 kg przy @9 (1 RIR)</h4>
+  {{chart:e1rm}}
+  <div class="formula">e1RM = ciężar × (1 + (powtórzenia + RIR) / 30)</div>
+  <p><span class="tg heuristic">Heurystyka</span> To wzór Epleya z doliczonym zapasem powtórzeń. Służy do sterowania treningiem, a nie do ogłaszania rekordu. Jedno powtórzenie więcej to tutaj około 3,3 kg szacunku, a sam RIR też jest szacunkiem. <span class="tg study">Badanie</span> W badaniu 24 osób trenujących, wyciskających przy 75% ciężaru maksymalnego, przewidywania 1 i 3 powtórzeń w zapasie myliły się średnio o około 0,65 powtórzenia <cite class="ref">[Refalo 2024]</cite>. To tego samego rzędu co różnica jednego powtórzenia w serii kontrolnej, więc zmiana bazy wymaga potwierdzenia z innego treningu.</p>
+
+  <h2>Kiedy zmienić bazę fali</h2>
+  <p>Notujesz trzy osobne liczby i ich nie mieszasz: 1RM (najlepszy zaliczony wynik w wyciskaniu zawodniczym, jeśli go znasz), e1RM (szacunek z serii kontrolnej, z zapisanym ciężarem i RIR) oraz bazę fali (ostrożną liczbę, od której liczysz procenty w następnej fali). Bazę zmieniasz tylko na wejściu do nowej fali. Tydzień 4 robisz jeszcze na starej.</p>
+  <div class="with-side">
+  <div>
+  <table class="dt text">
+    <caption>Reguły decyzji</caption>
+    <thead><tr><th>Sytuacja</th><th>Decyzja</th></tr></thead>
+    <tbody>
+      <tr><td>Oba warunki z ramki obok spełnione</td><td>Baza +2,5 kg</td></tr>
+      <tr><td>Zmiana niewielka</td><td>Baza bez zmian, obserwujesz kolejną falę</td></tr>
+      <tr><td>Seria kontrolna słabsza, singiel stabilny</td><td>Baza bez zmian, sprawdzasz zmęczenie i warunki</td></tr>
+      <tr><td>Seria kontrolna i singiel systematycznie słabsze</td><td>Najpierw regeneracja, akcesoria, jedzenie i technika, dopiero potem baza</td></tr>
+      <tr><td>Dane sprzeczne albo seria nieporównywalna</td><td>Baza bez zmian, zapis „nierozstrzygnięte”</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <aside class="panel">
+    <h3>Baza rośnie o 2,5 kg, gdy</h3>
+    <ul class="chk">
+      <li>{{icon:check}}<span>seria kontrolna dała co najmniej jedno powtórzenie więcej niż w poprzedniej fali, przy tym samym ciężarze i RIR,</span></li>
+      <li>{{icon:check}}<span>singiel z poniedziałku T3 był w planowanym RPE, bez obniżania ciężaru.</span></li>
+    </ul>
+    <div class="tags"><span class="tg hypothesis">Hipoteza programu</span></div>
+    <p class="small">Gdy ciężar serii kontrolnej się zmienił, porównujesz e1RM: różnica musi wynosić co najmniej ciężar podzielony przez 30, przy 100 kg około 3,3 kg. W pierwszej fali nie ma odniesienia, więc baza zostaje.</p>
+  </aside>
+  </div>
+  <h3>Przykład dwóch fal</h3>
+  <p>Fala A, baza 120 kg: seria kontrolna 100 × 5 przy @9, e1RM 120 kg. Baza zostaje bez zmian. Fala B, baza 120 kg: seria kontrolna 100 × 6 przy @9, e1RM 123,3 kg. Jeśli poniedziałkowy singiel potwierdza wzrost, następna fala startuje z bazą fali 122,5 kg. Jeśli nie, baza zostaje i obserwujesz kolejną falę. <span class="tg hypothesis">Hipoteza programu</span> Krok 2,5 kg to około 2% przy bazie 120 kg, ale tylko 1,25% przy 200 kg, więc przy wyższym poziomie siły trzeba go dopasować.</p>
+</section>
+</div>
+
+<!-- 8-9. Rozdział 05 -->
+<div style="page:week">
+<section class="chap">
+  <div class="no">Rozdział 05</div>
+  <h1>Gotowy tydzień: 3 × 60 minut</h1>
+  <p class="principle">Trzy treningi, siedem serii wyciskania, reszta według zwykłych zasad.</p>
+</section>
+<section>
+  <div class="stats">
+    <div class="stat"><div class="n">35<small>serii</small></div><p>w tygodniu: 11 + 12 + 12</p></div>
+    <div class="stat"><div class="n">3×60<small>min</small></div><p>budżet programu, do sprawdzenia na siłowni</p></div>
+    <div class="stat"><div class="n">7<small>serii</small></div><p>wyciskania zawodniczego</p></div>
+  </div>
+  <p>Model walidatora (serie, przerwy, 1,5 minuty na zmianę stanowiska, 5 minut zapasu i 9 minut rozgrzewki) szacuje poniedziałek na 42 minuty, środę na 45 i piątek na 46. Model nie uwzględnia ładowania sztangi ani czekania na sprzęt, więc budżet 60 minut zostaje założeniem do sprawdzenia.</p>
+  <div class="with-side">
+  <div>
+  <table class="dt mx">
+    <caption>Ekspozycje w tygodniu (P = główna, S = pomocnicza)</caption>
+    <thead><tr><th>Obszar</th><th>Priorytet</th><th>Pn</th><th>Śr</th><th>Pt</th></tr></thead>
+    <tbody>{{chart:ledger}}</tbody>
+  </table>
+  </div>
+  <aside class="panel">
+    <h3>Dla kogo ten tydzień</h3>
+    <ul class="chk">
+      <li>{{icon:clock}}<span>Trzy treningi po najwyżej 60 minut.</span></li>
+      <li>{{icon:bar}}<span>Priorytet: wyciskanie leżąc.</span></li>
+      <li>{{icon:check}}<span>Rear Delts i Glutes mają status Optional. To skutek limitu czasu, a nie ocena ich ważności.</span></li>
+    </ul>
+    <div class="tags"><span class="tg exception">Wyjątek siłowy</span></div>
+    <p class="small">Serie wyciskania zawodniczego (RPE 6–8) liczą się do Chest P. To wyjątek od standardu Hard Set, nie wynik badań. Lżejszy tydzień 4 dotyczy tylko wyciskania.</p>
+  </aside>
+  </div>
+  <p>Chest ma trzy ekspozycje P dzięki wyciskaniu w każdym treningu. Back, Lateral Delts, Elbow Extensors i Elbow Flexors mają co najmniej dwie ekspozycje. Rear Delts nie ma żadnej, a Glutes ma dwie ekspozycje S, czyli S+S, które domyślnie nie wystarczają. Przy statusie Optional to jest zgodne z zasadami metody.</p>
+  <div class="charts2">
+    <div><h4>Serie na trening</h4>{{chart:days}}</div>
+    <div>{{chart:donut}}</div>
+  </div>
+  <div class="note">Walidator HARDSET dla tego tygodnia: PASS. To wynik strukturalny, nie ocena biomechaniczna ani medyczna.</div>
+</section>
+</div>
+
+<!-- 10. Bibliografia -->
+<div style="page:bib">
+<section class="page-break">
+  <h2>Bibliografia (fragment)</h2>
+  <p class="small muted">Pozycje R## pochodzą z bibliografii metody HARDSET v1.0. Pozostałe są specyficzne dla tego programu. Status sprawdzono 13 listopada 2026 roku.</p>
+  <ol class="bib">
+    <li><span>–</span><div>Currier B. S., McLeod J. C., Banfield L. i in. (2023). Resistance training prescription for muscle strength and hypertrophy in healthy adults: A systematic review and Bayesian network meta-analysis. <i>British Journal of Sports Medicine</i>, 57(18), 1211–1220. <span class="doi">doi.org/10.1136/bjsports-2023-106807</span></div></li>
+    <li><span>–</span><div>Nuzzo J. L., Pinto M. D., Nosaka K. i in. (2024). Maximal number of repetitions at percentages of the one repetition maximum: A meta-regression and moderator analysis of sex, age, training status, and exercise. <i>Sports Medicine</i>, 54(2), 303–321. <span class="doi">doi.org/10.1007/s40279-023-01937-7</span></div></li>
+    <li><span>–</span><div>Refalo M. C., Remmert J. F., Pelland J. C. i in. (2024). Accuracy of intraset repetitions-in-reserve predictions during the bench press exercise in resistance-trained male and female subjects. <i>Journal of Strength and Conditioning Research</i>, 38(3), e78–e85. <span class="doi">doi.org/10.1519/JSC.0000000000004653</span></div></li>
+    <li><span>R17</span><div>Schoenfeld B. J., Grgic J., Ogborn D. i in. (2017). Strength and hypertrophy adaptations between low- vs. high-load resistance training: A systematic review and meta-analysis. <i>Journal of Strength and Conditioning Research</i>, 31(12), 3508–3523. <span class="doi">doi.org/10.1519/JSC.0000000000002200</span></div></li>
+  </ol>
+  <p class="small muted">Nie cytujemy pracy Hughes, Peiffer i Scott o szacowaniu RIR (2020): wydawca ją wycofał.</p>
+</section>
+</div>
+</body>
+</html>
