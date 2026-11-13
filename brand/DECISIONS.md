@@ -32,7 +32,18 @@ Bezpłatna dystrybucja zmniejsza to ryzyko, ale go nie usuwa.
 |---|---|---|
 | S-1 | Dodany token `oxide-text` #963F29, tylko dla małego tekstu na tle `tint`. | Oxide na tint ma kontrast 4,43:1, poniżej progu WCAG AA 4,5:1. Nowy odcień ma 5,35:1. Kolor marki się nie zmienia. |
 
+## 2026-11-13 · Etap 3: odpowiedzi właściciela na próbki
+
+| # | Decyzja | Wdrożenie |
+|---|---|---|
+| L-1 | Licencja: wszelkie prawa zastrzeżone, bezpłatne udostępnianie (opcja 2). | kolofony próbek; treść zapisu do potwierdzenia, to nie jest porada prawna |
+| D-3 | Reguła w górę dla serii zbyt lekkich: 2,5% na punkt RPE, limit 5%. | `programs/continuous-bench-priority/SPEC_AMENDMENTS_v1.2.md`, `rules_v1_2.py`, testy |
+| D-4 | Próg zmiany bazy w powtórzeniach (zaakceptowane). | jw. |
+| D-5 | Nowa nazwa zamiast „PB”: baza fali (Wave Base, WB). | próbka Bench Priority |
+| T-1 | Tekst w e-bookach justowany, z dzieleniem wyrazów. | `book.css`, `publications/build.py` (pyphen) |
+| T-2 | Nowa kolorystyka (czerń, dwa kolory + akcent, industrial) i nowe logo: wybór spośród min. 3 makiet. | `brand/explorations-v2/` |
+
 ## Otwarte (do decyzji właściciela)
 
-- Licencja i warunki udostępniania książek (np. CC BY-NC-ND 4.0 albo „wszelkie prawa zastrzeżone, bezpłatne udostępnianie”).
-- Decyzje treningowe D-1 do D-7, w tym nowa nazwa dla skrótu PB (D-5), z `programs/continuous-bench-priority/AUDIT_v1.1.md`.
+- Wybór stylu i logo (T-2). Po wyborze Brand System zostanie przebudowany, a kontrasty przeliczone.
+- Decyzje treningowe D-1, D-2, D-6, D-7 z `programs/continuous-bench-priority/AUDIT_v1.1.md`.

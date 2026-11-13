@@ -58,7 +58,8 @@ Twierdzeń oznaczonych w `research/EVIDENCE_MATRIX.md` jako NOT_SUPPORTED nie po
 `publications/build.py` robi automatycznie:
 - twardą spację po jednoliterowych wyrazach a, i, o, u, w, z;
 - twardą spację między liczbą a jednostką (kg, %, min, s, RIR, RPE, powtórzeń, serii);
-- blokadę łamania wewnątrz zakresów liczbowych (0–1, 2,5–5).
+- blokadę łamania wewnątrz zakresów liczbowych (0–1, 2,5–5);
+- miękkie dzielniki w wyrazach polskich (pyphen, `pl_PL`), wymagane przy justowaniu. Wymaga `pip install pyphen`.
 
 Ręcznie pilnujemy:
 - przecinka dziesiętnego w tekście polskim (82,5%, 2,5 kg) i kropki w angielskim;

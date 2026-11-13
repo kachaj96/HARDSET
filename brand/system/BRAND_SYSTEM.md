@@ -91,7 +91,7 @@ Wszystkie trzy rodziny są na licencji SIL Open Font License 1.1 (pliki `fonts/O
 Skala (pt, druk A5): 7,5 podpis · 8,5 mały · 10 tekst · 11,5 lead · 12 h4 · 14 h3 · 18 h2 · 26 h1 · 44 display. Ekran używa skali px z `tokens.json`.
 
 Zasady:
-- Tekst wyrównany do lewej, bez justowania. Przy szpalcie A5 justowanie bez dzielenia wyrazów robi dziury.
+- Tekst ciągły jest justowany (decyzja T-1), ostatnia linia akapitu do lewej. Chromium nie ma polskiego słownika dzielenia, więc `publications/build.py` wstawia miękkie dzielniki słownikiem pyphen (pl_PL): wyrazy od 7 liter, minimum 3 znaki z każdej strony, bez nagłówków, tabel danych, odnośników, bibliografii i terminów angielskich. Kolofon, podpisy i okładki są wyrównane do lewej. Przy każdym składzie czytamy strony pod kątem szerokich spacji i złych podziałów.
 - Wersaliki tylko w krótkich etykietach, zawsze z rozstrzałem 0,08 do 0,14 em.
 - Kursywa tylko dla tytułów czasopism, terminów obcych i zdania-zasady pod tytułem rozdziału.
 - Liczby w tabelach zawsze w kroju Mono, wyrównane do prawej.

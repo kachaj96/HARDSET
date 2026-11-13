@@ -35,6 +35,9 @@ h1, h2, h3, h4 { font-family: var(--hs-font-display); color: var(--hs-ink); marg
 h2 { font: 700 14pt/1.15 var(--hs-font-display); margin: 6mm 0 2.5mm; }
 h3 { font: 600 10.5pt/1.25 var(--hs-font-display); letter-spacing: .02em; margin: 5mm 0 1.5mm; }
 p { margin: 0 0 2.6mm; orphans: 3; widows: 3; text-align: left; }
+/* body text is justified; hyphenation points are soft hyphens inserted by build.py (Chromium has no pl dictionary) */
+section > p:not(.lead):not(.small):not(.tablenote):not(.principle) { text-align: justify; text-align-last: left; hyphens: manual; text-justify: inter-word; }
+section.colophon > p { text-align: left; hyphens: none; }
 p.lead { font-size: 11pt; line-height: 15.5pt; }
 .small { font-size: 8.5pt; line-height: 12pt; }
 .muted { color: var(--hs-muted); }
