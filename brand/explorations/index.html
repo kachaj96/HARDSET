@@ -1,0 +1,522 @@
+<title>HARDSET Kierunki Marki</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Condensed:wght@400;600;700&family=IBM+Plex+Mono:wght@400;500&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&family=Barlow:wght@400;500;600&family=Barlow+Condensed:wght@600;700&family=Archivo:wght@400;600&family=Archivo+Narrow:wght@600;700&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: presentation board. Page chrome is neutral and themeable; each direction's mockups use their own fixed palettes (they ARE the artefacts under review). */
+:root{
+  --bg:#ecebe7; --surface:#ffffff; --fg:#181a1a; --muted:#5d625f; --line:#d3d1cb; --accent:#2b4e5c;
+  --ui:"IBM Plex Sans Condensed","Arial Narrow",sans-serif; --ui-body:"Source Serif 4",Georgia,serif;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--bg:#141615;--surface:#1d201f;--fg:#ebeae6;--muted:#a3a7a4;--line:#353a38;--accent:#8fb5c4;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#141615;--surface:#1d201f;--fg:#ebeae6;--muted:#a3a7a4;--line:#353a38;--accent:#8fb5c4;color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--fg);font:16px/1.55 var(--ui-body)}
+.wrap{max-width:1180px;margin:0 auto;padding-block:28px 80px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+h1,h2,h3{font-family:var(--ui);margin:0;text-wrap:balance}
+h1{font-size:2rem;letter-spacing:-.01em}
+h2{font-size:1.55rem}
+h3{font-size:1.05rem;letter-spacing:.02em;text-transform:uppercase}
+p{margin:0;max-width:68ch}
+.lede{color:var(--muted);margin-top:8px}
+nav.dirs{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);display:flex;gap:6px;flex-wrap:wrap;padding:10px 0;margin:18px 0 8px;border-bottom:1px solid var(--line)}
+nav.dirs a{font:600 .9rem var(--ui);color:var(--fg);text-decoration:none;border:1px solid var(--line);border-radius:6px;padding:6px 12px;background:var(--surface)}
+nav.dirs a:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+section.dir{padding-top:36px;display:grid;gap:18px}
+.spec{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px}
+.spec .box{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:12px 14px;font-size:.92rem;min-width:0}
+.spec .box b{font-family:var(--ui);letter-spacing:.03em;text-transform:uppercase;font-size:.78rem;color:var(--muted);display:block;margin-bottom:4px}
+.swatches{display:flex;flex-wrap:wrap;gap:6px;margin-top:4px}
+.sw{display:flex;align-items:center;gap:6px;font:500 .78rem "IBM Plex Mono",monospace}
+.sw i{width:18px;height:18px;border-radius:3px;border:1px solid rgba(0,0,0,.15);display:inline-block}
+.board{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:18px;align-items:start}
+.cell{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:14px;min-width:0;display:grid;gap:10px}
+.cell .cap{font:600 .78rem var(--ui);letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.c4{grid-column:span 4}.c3{grid-column:span 3}.c6{grid-column:span 6}.c8{grid-column:span 8}.c12{grid-column:span 12}.c5{grid-column:span 5}.c7{grid-column:span 7}
+@media (max-width:900px){.c3,.c4,.c5,.c6,.c7,.c8{grid-column:span 6}}
+@media (max-width:620px){.c3,.c4,.c5,.c6,.c7,.c8,.c12{grid-column:span 12}}
+.note{font-size:.88rem;color:var(--muted)}
+.scroll{overflow-x:auto}
+
+/* ---------- shared mock primitives ---------- */
+.cover{aspect-ratio:2/3;width:100%;max-width:300px;margin:0 auto;position:relative;overflow:hidden;box-shadow:0 1px 0 rgba(0,0,0,.08),0 8px 24px rgba(0,0,0,.12)}
+.spread{display:grid;grid-template-columns:1fr 1fr;width:100%;max-width:700px;min-width:560px;margin:0 auto;box-shadow:0 8px 24px rgba(0,0,0,.12)}
+.page{aspect-ratio:1/1.414;padding:7% 8%;position:relative;overflow:hidden;font-size:9.5px;line-height:1.5}
+.phone{width:248px;margin:0 auto;border-radius:30px;padding:10px;background:#0b0b0b}
+.screen{border-radius:22px;overflow:hidden;height:500px;display:flex;flex-direction:column}
+table.mt{border-collapse:collapse;width:100%}
+table.mt th,table.mt td{text-align:left;padding:6px 8px;white-space:nowrap}
+.num{text-align:right!important;font-variant-numeric:tabular-nums}
+
+/* ---------- D1 Industrial editorial ---------- */
+.d1{--ink:#1F2524;--paper:#F2EFE8;--oxide:#A64B32;--slate:#355D6D;--moss:#56634A;--rule:#c9c3b6}
+.d1 .hd{font-family:"IBM Plex Sans Condensed",sans-serif}
+.d1 .sf{font-family:"Source Serif 4",Georgia,serif}
+.d1 .mo{font-family:"IBM Plex Mono",monospace}
+.d1-word{font:700 44px/1 "IBM Plex Sans Condensed",sans-serif;letter-spacing:.08em;color:var(--ink)}
+.d1-word span{color:var(--oxide)}
+.d1-stamp{display:inline-grid;place-items:center;width:64px;height:64px;border:3px solid var(--ink);font:700 22px/1 "IBM Plex Sans Condensed";letter-spacing:.02em;color:var(--ink);position:relative}
+.d1-stamp::after{content:"";position:absolute;left:50%;top:8px;bottom:8px;width:2px;background:var(--oxide)}
+.d1-stamp b{display:flex;gap:16px}
+.d1 .logo-sheet{background:var(--paper);padding:18px;display:grid;gap:16px}
+.d1 .logo-row{display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+.d1 .inv{background:var(--ink);padding:14px;display:flex;gap:14px;align-items:center}
+.d1 .inv .d1-word{color:var(--paper)} .d1 .inv .d1-stamp{border-color:var(--paper);color:var(--paper)}
+.d1-cover-a{background:var(--paper);color:var(--ink);padding:9% 9% 8%;display:flex;flex-direction:column}
+.d1-cover-a .by{font:600 11px "IBM Plex Sans Condensed";letter-spacing:.12em;text-transform:uppercase}
+.d1-cover-a .t{font:700 54px/0.9 "IBM Plex Sans Condensed";letter-spacing:.02em;margin-top:16%}
+.d1-cover-a .st{font:italic 400 20px/1.2 "Source Serif 4";margin-top:6px}
+.d1-cover-a .rule{height:3px;background:var(--oxide);margin:14px 0}
+.d1-cover-a .core{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--ink);border-left:1px solid var(--ink);margin-top:10px}
+.d1-cover-a .core span{border-right:1px solid var(--ink);border-bottom:1px solid var(--ink);font:500 7px/1.2 "IBM Plex Mono";padding:3px 4px 6px}
+.d1-cover-a .ft{margin-top:auto;padding-top:8px;display:flex;justify-content:space-between;font:500 8px "IBM Plex Mono"}
+.d1-cover-b{background:var(--slate);color:var(--paper);padding:9%}
+.d1-cover-b .sup{font:600 11px "IBM Plex Sans Condensed";letter-spacing:.14em;text-transform:uppercase;opacity:.85}
+.d1-cover-b .t{font:700 36px/0.95 "IBM Plex Sans Condensed";margin-top:10px}
+.d1-cover-b .v{font:500 10px "IBM Plex Mono";margin-top:8px}
+.d1-cover-b svg{position:absolute;left:9%;right:9%;bottom:15%;width:82%}
+.d1-cover-b .by{position:absolute;left:9%;bottom:6%;font:600 10px "IBM Plex Sans Condensed";letter-spacing:.1em;text-transform:uppercase}
+.d1 .page{background:var(--paper);color:var(--ink);font-family:"Source Serif 4"}
+.d1 .page .rh{font:600 7px "IBM Plex Sans Condensed";letter-spacing:.14em;text-transform:uppercase;border-bottom:1px solid var(--rule);padding-bottom:4px;margin-bottom:10px;display:flex;justify-content:space-between}
+.d1 .page h4{font:700 15px/1.1 "IBM Plex Sans Condensed";margin:6px 0 8px}
+.d1 .page p{margin:0 0 7px}
+.d1 .tag{display:inline-block;font:500 7px "IBM Plex Mono";letter-spacing:.04em;border:1px solid var(--moss);color:var(--moss);padding:1px 5px;margin-bottom:6px}
+.d1 .margin{font:400 8px/1.4 "IBM Plex Sans Condensed";color:#5e6461;border-left:2px solid var(--oxide);padding-left:6px;margin-top:8px;max-width:70%}
+.d1 .page table{font:400 8px "IBM Plex Mono";border-collapse:collapse;width:100%;margin:6px 0}
+.d1 .page th{font:600 7.5px "IBM Plex Sans Condensed";letter-spacing:.06em;text-transform:uppercase;border-bottom:1px solid var(--ink);text-align:left;padding:3px}
+.d1 .page td{border-bottom:1px solid var(--rule);padding:3px}
+.d1 .folio{position:absolute;bottom:4%;font:500 7px "IBM Plex Mono"}
+.d1-table{background:var(--paper);color:var(--ink);font:400 13px "IBM Plex Mono"}
+.d1-table th{font:600 11px "IBM Plex Sans Condensed";letter-spacing:.08em;text-transform:uppercase;border-bottom:2px solid var(--ink)}
+.d1-table td{border-bottom:1px solid var(--rule)}
+.d1-table tr.t3 td{background:#e7dfd2}
+.d1-table .rpe{color:var(--oxide)}
+.d1 .screen{background:var(--paper);color:var(--ink);font-family:"IBM Plex Sans Condensed"}
+
+/* ---------- D2 Repsmith continuity ---------- */
+.d2{--bg2:#130F18;--sur2:#1D1724;--fld2:#281F33;--txt2:#F3ECF1;--mut2:#A396AC;--acc2:#FF9F70;--lp:#F7F3F5;--ink2:#2A1F33;--acc2d:#B4532A}
+.d2-word{font:700 46px/1 "Barlow Condensed",sans-serif;letter-spacing:.03em;color:var(--txt2)}
+.d2 .logo-sheet{background:var(--bg2);padding:18px;display:grid;gap:16px}
+.d2 .logo-row{display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+.d2 .lt{background:var(--lp);padding:14px;display:flex;gap:14px;align-items:center}
+.d2 .lt .d2-word{color:var(--ink2)}
+.d2-cover-a{background:var(--bg2);color:var(--txt2);padding:10%}
+.d2-cover-a .by{font:600 12px "Barlow";letter-spacing:.06em;color:var(--mut2)}
+.d2-cover-a svg{width:62%;margin-top:18%}
+.d2-cover-a .t{font:700 52px/0.9 "Barlow Condensed";margin-top:12%}
+.d2-cover-a .st{font:600 18px "Barlow Condensed";color:var(--acc2);letter-spacing:.04em;text-transform:uppercase;margin-top:4px}
+.d2-cover-a .ft{position:absolute;left:10%;bottom:6%;font:500 10px "Barlow";color:var(--mut2)}
+.d2-cover-b{background:var(--acc2);color:var(--bg2);padding:10%}
+.d2-cover-b .sup{font:700 13px "Barlow Condensed";letter-spacing:.12em;text-transform:uppercase}
+.d2-cover-b .t{font:700 40px/0.92 "Barlow Condensed";margin-top:8px}
+.d2-cover-b .v{font:600 11px "Barlow";margin-top:6px}
+.d2-cover-b .tallies{position:absolute;left:10%;right:10%;bottom:16%;display:flex;justify-content:space-between;align-items:flex-end}
+.d2-cover-b .tallies div{display:grid;gap:4px;justify-items:center;font:700 10px "Barlow Condensed"}
+.d2-cover-b .by{position:absolute;left:10%;bottom:6%;font:600 11px "Barlow"}
+.d2 .page{background:var(--lp);color:var(--ink2);font-family:"Barlow"}
+.d2 .page .rh{font:600 7.5px "Barlow Condensed";letter-spacing:.12em;text-transform:uppercase;color:#7b6c86;margin-bottom:10px}
+.d2 .page h4{font:700 17px/1 "Barlow Condensed";margin:4px 0 8px}
+.d2 .page p{margin:0 0 7px;font-size:9.5px}
+.d2 .tag{display:inline-block;font:600 7.5px "Barlow Condensed";letter-spacing:.08em;text-transform:uppercase;background:var(--ink2);color:var(--lp);padding:2px 6px;border-radius:3px;margin-bottom:6px}
+.d2 .callout{background:#efe6eb;border-left:3px solid var(--acc2d);padding:6px 8px;margin:6px 0;font-size:8.5px}
+.d2 .page table{font:500 8px "Barlow";border-collapse:collapse;width:100%;margin:6px 0}
+.d2 .page th{font:700 7.5px "Barlow Condensed";letter-spacing:.08em;text-transform:uppercase;text-align:left;padding:3px;border-bottom:2px solid var(--ink2)}
+.d2 .page td{padding:3px;border-bottom:1px solid #ddd0d8}
+.d2 .folio{position:absolute;bottom:4%;font:600 7.5px "Barlow Condensed";color:#7b6c86}
+.d2-table{background:var(--bg2);color:var(--txt2);font:500 13px "Barlow"}
+.d2-table th{font:700 11px "Barlow Condensed";letter-spacing:.08em;text-transform:uppercase;color:var(--mut2);border-bottom:1px solid #3a2f45}
+.d2-table td{border-bottom:1px solid #2e2539}
+.d2-table tr.t3 td{background:#281F33}
+.d2-table .rpe{color:var(--acc2)}
+.d2 .screen{background:var(--bg2);color:var(--txt2);font-family:"Barlow"}
+
+/* ---------- D3 Platform / scoresheet ---------- */
+.d3{--k:#111;--w:#fff;--g:#1E7A3C;--y:#F2C230;--yd:#8A6A00;--b:#1D4FB8;--r:#C0262D;--grid:#cfcfcf}
+.d3-word{font:700 44px/1 "Archivo Narrow",sans-serif;letter-spacing:.02em;color:var(--k)}
+.d3 .logo-sheet{background:var(--w);padding:18px;display:grid;gap:16px;border:1px solid var(--grid)}
+.d3 .logo-row{display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+.d3 .inv{background:var(--k);padding:14px;display:flex;gap:14px;align-items:center}
+.d3 .inv .d3-word{color:var(--w)}
+.d3-cover-a{background:var(--w);color:var(--k);padding:0;border:1px solid var(--grid)}
+.d3-cover-a .grid{position:absolute;inset:0;display:grid;grid-template-rows:auto 1fr auto auto}
+.d3-cover-a .top{display:grid;grid-template-columns:1fr auto;border-bottom:2px solid var(--k);font:600 9px "Archivo";text-transform:uppercase;letter-spacing:.08em}
+.d3-cover-a .top div{padding:8px 10px}
+.d3-cover-a .top div+div{border-left:2px solid var(--k)}
+.d3-cover-a .mid{padding:12% 10px 0}
+.d3-cover-a .t{font:700 58px/0.88 "Archivo Narrow"}
+.d3-cover-a .st{font:600 16px "Archivo";margin-top:8px}
+.d3-cover-a .sets{display:grid;grid-template-columns:repeat(3,1fr);border-top:2px solid var(--k)}
+.d3-cover-a .sets div{border-right:2px solid var(--k);padding:6px 8px 14px;font:500 8px "JetBrains Mono"}
+.d3-cover-a .sets div:last-child{border-right:0}
+.d3-cover-a .sets b{display:block;font:700 14px "Archivo Narrow"}
+.d3-cover-a .by{border-top:2px solid var(--k);padding:8px 10px;font:600 10px "Archivo";letter-spacing:.06em;text-transform:uppercase}
+.d3-cover-b{background:var(--k);color:var(--w);padding:9%}
+.d3-cover-b .sup{font:600 11px "Archivo";letter-spacing:.14em;text-transform:uppercase}
+.d3-cover-b .t{font:700 38px/0.92 "Archivo Narrow";margin-top:10px}
+.d3-cover-b .v{font:500 10px "JetBrains Mono";margin-top:8px;color:#bbb}
+.d3-cover-b .bars{position:absolute;left:9%;right:9%;bottom:14%;height:38%;display:grid;grid-template-columns:repeat(4,1fr);gap:8px;align-items:end}
+.d3-cover-b .bars div{display:flex;flex-direction:column;justify-content:flex-end;font:500 8px "JetBrains Mono";color:var(--k);padding:4px}
+.d3-cover-b .by{position:absolute;left:9%;bottom:5%;font:600 10px "Archivo";letter-spacing:.08em;text-transform:uppercase}
+.d3 .page{background:var(--w);color:var(--k);font-family:"Archivo";border:1px solid var(--grid)}
+.d3 .page .rh{display:grid;grid-template-columns:1fr auto;border:1.5px solid var(--k);font:600 7px "Archivo";letter-spacing:.1em;text-transform:uppercase;margin-bottom:10px}
+.d3 .page .rh span{padding:3px 5px}.d3 .page .rh span+span{border-left:1.5px solid var(--k)}
+.d3 .page h4{font:700 16px/1 "Archivo Narrow";margin:4px 0 8px}
+.d3 .page p{margin:0 0 7px;font-size:9px}
+.d3 .tag{display:inline-flex;gap:4px;align-items:center;font:600 7px "Archivo";letter-spacing:.08em;text-transform:uppercase;border:1.5px solid var(--k);padding:1px 5px;margin-bottom:6px}
+.d3 .tag i{width:6px;height:6px;background:var(--b);display:inline-block}
+.d3 .page table{font:400 8px "JetBrains Mono";border-collapse:collapse;width:100%;margin:6px 0;border:1.5px solid var(--k)}
+.d3 .page th{font:600 7px "Archivo";letter-spacing:.08em;text-transform:uppercase;border:1px solid var(--k);padding:3px;text-align:left;background:#f1f1f1}
+.d3 .page td{border:1px solid var(--grid);padding:3px}
+.d3 .folio{position:absolute;bottom:4%;font:500 7px "JetBrains Mono"}
+.d3-table{background:var(--w);color:var(--k);font:400 13px "JetBrains Mono";border:2px solid var(--k)}
+.d3-table th{font:600 11px "Archivo";letter-spacing:.06em;text-transform:uppercase;border:1px solid var(--k);background:#f1f1f1}
+.d3-table td{border:1px solid var(--grid)}
+.d3-table .zone{display:inline-block;width:10px;height:10px;margin-right:6px;vertical-align:-1px}
+.d3 .screen{background:#f6f6f6;color:var(--k);font-family:"Archivo"}
+
+/* phone screen internals (shared structure, colors per direction) */
+.sc-top{padding:16px 14px 8px;display:grid;gap:2px}
+.sc-top small{font-size:10px;letter-spacing:.08em;text-transform:uppercase;opacity:.7}
+.sc-top strong{font-size:19px;line-height:1.1}
+.sc-pill{display:flex;gap:6px;flex-wrap:wrap;padding:0 14px 10px;font-size:10px}
+.sc-pill span{padding:2px 7px;border-radius:999px}
+.sc-ex{margin:0 10px;padding:10px;border-radius:10px;display:grid;gap:6px}
+.sc-ex h5{margin:0;font-size:14px}
+.sc-row{display:grid;grid-template-columns:44px 1fr 1fr 40px;gap:6px;align-items:center;font-size:12px}
+.sc-row .k{font-size:9px;letter-spacing:.06em;text-transform:uppercase;opacity:.7}
+.sc-in{padding:6px 6px;border-radius:6px;text-align:center;font-variant-numeric:tabular-nums}
+.sc-hint{font-size:10.5px;line-height:1.35;padding:8px 10px;border-radius:8px;margin:8px 10px 0}
+.sc-foot{margin-top:auto;padding:12px}
+.sc-btn{display:block;text-align:center;padding:11px;border-radius:10px;font-weight:600;font-size:13px}
+
+/* comparison */
+table.cmp{border-collapse:collapse;width:100%;font-size:.92rem;background:var(--surface)}
+table.cmp th,table.cmp td{border:1px solid var(--line);padding:8px 10px;text-align:left;vertical-align:top}
+table.cmp th{font-family:var(--ui);font-size:.85rem;letter-spacing:.04em;text-transform:uppercase}
+</style>
+
+<div class="wrap">
+  <h1>HARDSET: kierunki identyfikacji</h1>
+  <p class="lede">Etap 2, materiał do decyzji. Trzy kierunki pokazane na tych samych sześciu zadaniach: znak, okładka HARDSET, okładka Bench Priority, rozkładówka, tabela progresji i ekran dziennika. Treść pochodzi z repozytorium: tekst o progresji serii prowadzącej to parafraza rozdziału 05, tabela to fala z pakietu Bench Priority dla przykładowej bazy 120 kg. Nazwy na makietach są robocze.</p>
+
+  <nav class="dirs" aria-label="Kierunki">
+    <a href="#d1">1 · Industrial editorial</a>
+    <a href="#d2">2 · Ciągłość z Repsmith</a>
+    <a href="#d3">3 · Protokół startowy</a>
+    <a href="#cmp">Porównanie</a>
+  </nav>
+
+  <!-- ===================== D1 ===================== -->
+  <section class="dir d1" id="d1">
+    <h2>1 · Industrial editorial</h2>
+    <p>Publikacja techniczna drukowana na papierze: dużo światła, wąskie nagłówki, szeryfowy tekst ciągły, dane w kroju maszynowym. Kolor ma funkcję. Tlenek oznacza rzeczy do zrobienia i ostrzeżenia, łupek dane i program, mech klasy dowodów. Kierunek z pakietu, sprawdzony pod kontrast i polskie znaki.</p>
+    <div class="spec">
+      <div class="box"><b>Typografia</b>IBM Plex Sans Condensed (nagłówki), Source Serif 4 (tekst), IBM Plex Mono (dane). Wszystkie na licencji SIL OFL 1.1, z pełnym zestawem polskich znaków.</div>
+      <div class="box"><b>Kolor</b><div class="swatches"><span class="sw"><i style="background:#1F2524"></i>Ink</span><span class="sw"><i style="background:#F2EFE8"></i>Paper</span><span class="sw"><i style="background:#A64B32"></i>Oxide</span><span class="sw"><i style="background:#355D6D"></i>Slate</span><span class="sw"><i style="background:#56634A"></i>Moss</span></div><div class="note" style="margin-top:6px">Kontrast na Paper: Ink 13,6, Oxide 5,0, Slate 6,2, Moss 5,6 (WCAG AA).</div></div>
+      <div class="box"><b>Znak</b>Logotyp typograficzny i stempel „H|S”: dwie litery rozdzielone kreską jak dwie serie Hard Set. Działa w jednym kolorze i w 16 px.</div>
+    </div>
+    <div class="board">
+      <div class="cell c6"><span class="cap">Logotyp i znak</span>
+        <div class="logo-sheet">
+          <div class="logo-row"><span class="d1-stamp"><b><span>H</span><span>S</span></b></span><span class="d1-word">HARD<span>SET</span></span></div>
+          <div class="logo-row"><span class="d1-word" style="font-size:24px">HARD<span>SET</span></span><span class="hd" style="font:600 13px 'IBM Plex Sans Condensed';letter-spacing:.12em;color:#5e6461">POWERBUILDING</span></div>
+          <div class="inv"><span class="d1-stamp"><b><span>H</span><span>S</span></b></span><span class="d1-word" style="font-size:30px">HARDSET</span></div>
+          <div class="logo-row note" style="color:#5e6461">Z aplikacją: <span class="hd" style="font:700 15px 'IBM Plex Sans Condensed';letter-spacing:.06em;color:#1F2524">REPSMITH</span> albo <span class="hd" style="font:700 15px 'IBM Plex Sans Condensed';letter-spacing:.06em;color:#1F2524">KRESKA</span> <span class="mo">· metoda HARDSET</span></div>
+        </div>
+      </div>
+      <div class="cell c3"><span class="cap">Okładka · HARDSET</span>
+        <div class="cover d1-cover-a">
+          <div class="by">Adrian Drożdżyński</div>
+          <div class="t">HARD<br>SET</div>
+          <div class="st">Controlled Brutality</div>
+          <div class="rule"></div>
+          <div class="core">
+            <span>Chest</span><span>Lateral Delts</span><span>Elbow Ext.</span><span>Back</span><span>Rear Delts</span><span>Elbow Flex.</span><span>Quadriceps</span><span>Hamstrings</span><span>Glutes</span><span>Hip Add.</span><span>Calves</span><span>Trunk</span>
+          </div>
+          <div class="ft"><span>Metoda hipertroficzna</span><span>v1.0</span></div>
+        </div>
+      </div>
+      <div class="cell c3"><span class="cap">Okładka · Bench Priority</span>
+        <div class="cover d1-cover-b">
+          <div class="sup">HARDSET Powerbuilding</div>
+          <div class="t">Continuous<br>Bench<br>Priority</div>
+          <div class="v">v1.1 · 3 × 60 min · fala 4 tyg.</div>
+          <svg viewBox="0 0 200 110" aria-label="Pojedyncza seria poniedziałkowa, procent bazy: T1 89, T2 90,5, T3 92, T4 86,5">
+            <line x1="20" y1="95" x2="196" y2="95" stroke="#F2EFE8" stroke-width="1"/>
+            <g fill="#F2EFE8">
+              <rect x="30" y="35" width="28" height="60"/><rect x="74" y="30" width="28" height="65"/><rect x="118" y="20" width="28" height="75" fill="#A64B32"/><rect x="162" y="48" width="28" height="47" opacity=".55"/>
+            </g>
+            <g font-family="IBM Plex Mono" font-size="7" fill="#F2EFE8">
+              <text x="34" y="105">T1</text><text x="78" y="105">T2</text><text x="122" y="105">T3</text><text x="166" y="105">T4</text>
+              <text x="30" y="31">89%</text><text x="72" y="26">90,5%</text><text x="120" y="16">92%</text><text x="160" y="44">86,5%</text>
+            </g>
+          </svg>
+          <div class="by">Adrian Drożdżyński</div>
+        </div>
+      </div>
+      <div class="cell c12"><span class="cap">Rozkładówka · HARDSET, rozdział 05</span>
+        <div class="scroll"><div class="spread">
+          <div class="page">
+            <div class="rh"><span>05 · Progresja i autoregulacja</span><span>HARDSET</span></div>
+            <h4>Progresja serii prowadzącej</h4>
+            <span class="tag">DECYZJA HARDSET · E17</span>
+            <p>Ciężar rośnie wtedy, gdy pierwsza seria robocza dojdzie do górnej granicy zakresu przy zaplanowanym zapasie, a druga utrzyma co najmniej dolną granicę. Obie serie nie muszą trafić w górny pułap.</p>
+            <p>Druga seria pełni rolę kontroli. Jeśli pierwsza wyszła dobrze tylko dlatego, że dzień był wyjątkowo udany, druga zwykle to pokaże. Wtedy ciężar zostaje i porównujesz kolejną sesję.</p>
+            <p>Krok obciążenia ma być najmniejszy dostępny na danym sprzęcie. Nowa maszyna oznacza nowy punkt odniesienia, a kilogramów z dwóch różnych maszyn nie porównuje się wprost.</p>
+            <div class="margin">To reguła projektowa metody, nie wynik badania. Szacunek RIR jest z natury niepewny (R19, R20).</div>
+            <span class="folio">84</span>
+          </div>
+          <div class="page">
+            <div class="rh"><span>Przykład</span><span>Zakres 6–10 · plan 1 / 0–1 RIR</span></div>
+            <table><tr><th>Lead</th><th>Supporting</th><th>Wykonanie</th><th>Decyzja</th></tr>
+              <tr><td>10 @1</td><td>7</td><td>porównywalne</td><td>+ najmniejszy krok</td></tr>
+              <tr><td>10 @1</td><td>5</td><td>porównywalne</td><td>ciężar bez zmian</td></tr>
+              <tr><td>10 @0</td><td>8</td><td>skrócony zakres</td><td>seria nie liczy się</td></tr>
+              <tr><td>9 @1</td><td>8</td><td>porównywalne</td><td>ciężar bez zmian</td></tr>
+            </table>
+            <p>Trzeci wiersz jest najczęstszym błędem. Dziesięć powtórzeń przy skróconym ruchu nie jest tym samym wynikiem co dziesięć pełnych, więc nie uruchamia progresji.</p>
+            <p>Jedna słaba sesja niczego nie zmienia. Jeśli trzy lub cztery porównywalne ekspozycje nie przynoszą postępu, sprawdzasz regenerację, przerwy i wykonanie, zanim cokolwiek dołożysz.</p>
+            <span class="folio" style="right:8%">85</span>
+          </div>
+        </div></div>
+      </div>
+      <div class="cell c7"><span class="cap">Tabela progresji · poniedziałek, baza 120 kg</span>
+        <div class="scroll"><table class="mt d1-table">
+          <thead><tr><th>Tydz.</th><th>Single</th><th class="num">% bazy</th><th class="num">kg</th><th>Back-off</th><th class="num">kg</th></tr></thead>
+          <tbody>
+            <tr><td>T1</td><td>1×1 <span class="rpe">@7</span></td><td class="num">88–90</td><td class="num">105–107,5</td><td>2×5 <span class="rpe">@7</span></td><td class="num">90–92,5</td></tr>
+            <tr><td>T2</td><td>1×1 <span class="rpe">@7,5</span></td><td class="num">90–91</td><td class="num">107,5–110</td><td>2×4 <span class="rpe">@7–8</span></td><td class="num">92,5–97,5</td></tr>
+            <tr class="t3"><td>T3</td><td>1×1 <span class="rpe">@8</span></td><td class="num">91–93</td><td class="num">110–112,5</td><td>2×3 <span class="rpe">@7–8</span></td><td class="num">97,5–102,5</td></tr>
+            <tr><td>T4</td><td>1×1 <span class="rpe">@6–7</span></td><td class="num">85–88</td><td class="num">102,5–105</td><td>2×4 <span class="rpe">@6–7</span></td><td class="num">87,5–92,5</td></tr>
+          </tbody></table></div>
+        <p class="note">Procent jest punktem startowym, RPE limitem. Zaokrąglenie do 2,5 kg.</p>
+      </div>
+      <div class="cell c5"><span class="cap">Ekran dziennika</span>
+        <div class="phone"><div class="screen">
+          <div class="sc-top"><small>Fala 3 · T3 · poniedziałek</small><strong>Competition Bench</strong></div>
+          <div class="sc-pill"><span style="border:1px solid #1F2524">baza 120 kg</span><span style="background:#A64B32;color:#F2EFE8">single @8</span></div>
+          <div class="sc-ex" style="border:1px solid #c9c3b6">
+            <div class="sc-row k"><span class="k">seria</span><span class="k">kg</span><span class="k">powt.</span><span class="k">RPE</span></div>
+            <div class="sc-row"><span>Single</span><span class="sc-in" style="background:#e7e2d8">110</span><span class="sc-in" style="background:#e7e2d8">1</span><span>8</span></div>
+            <div class="sc-row"><span>B-off 1</span><span class="sc-in" style="background:#e7e2d8">100</span><span class="sc-in" style="background:#e7e2d8">3</span><span>7,5</span></div>
+            <div class="sc-row"><span>B-off 2</span><span class="sc-in" style="border:1px dashed #1F2524">100</span><span class="sc-in" style="border:1px dashed #1F2524">–</span><span>–</span></div>
+          </div>
+          <div class="sc-hint" style="background:#e7e2d8;font-family:'Source Serif 4'">Single w celu. Back-off 2: ten sam ciężar. Jeśli RPE przekroczy 8, zdejmij 2,5–5%.</div>
+          <div class="sc-foot"><span class="sc-btn" style="background:#1F2524;color:#F2EFE8">Zapisz serię</span></div>
+        </div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== D2 ===================== -->
+  <section class="dir d2" id="d2">
+    <h2>2 · Ciągłość z Repsmith</h2>
+    <p>Książki dziedziczą istniejącą identyfikację aplikacji: ciemny fiolet, morelowy akcent, Barlow i znak zliczania, czyli cztery kreski i skreślenie. To najkrótsza droga do jednej rodziny produktów, bo ikona i kolory już istnieją w działającej aplikacji. Wnętrza książek są jasne, żeby długi tekst czytało się wygodnie.</p>
+    <div class="spec">
+      <div class="box"><b>Typografia</b>Barlow Condensed (nagłówki), Barlow (tekst). SIL OFL 1.1, pliki już leżą lokalnie w repozytorium aplikacji. Do książek warto dodać krój szeryfowy dla długiego tekstu.</div>
+      <div class="box"><b>Kolor</b><div class="swatches"><span class="sw"><i style="background:#130F18"></i>Bg</span><span class="sw"><i style="background:#F3ECF1"></i>Text</span><span class="sw"><i style="background:#FF9F70"></i>Accent</span><span class="sw"><i style="background:#F7F3F5"></i>Paper</span><span class="sw"><i style="background:#B4532A"></i>Accent (druk)</span></div><div class="note" style="margin-top:6px">Kontrast: tekst na tle 16,3, akcent na tle 9,4, akcent druku na papierze 4,5.</div></div>
+      <div class="box"><b>Znak</b>Kreska zliczania z ikony Repsmith. Pięć kresek to pięć powtórzeń, a skreślenie zamyka grupę. Motyw bierze się z codziennej praktyki zapisywania serii, a nie z dekoracji.</div>
+    </div>
+    <div class="board">
+      <div class="cell c6"><span class="cap">Logotyp i znak</span>
+        <div class="logo-sheet">
+          <div class="logo-row">
+            <svg width="64" height="64" viewBox="0 0 64 64" aria-label="Znak zliczania"><rect width="64" height="64" rx="14" fill="#130F18" stroke="#3a2f45"/><g transform="translate(7 7) scale(.78)"><rect x="10" y="10" width="7" height="44" rx="3.5" fill="#F3ECF1"/><rect x="22" y="10" width="7" height="44" rx="3.5" fill="#F3ECF1"/><rect x="34" y="10" width="7" height="44" rx="3.5" fill="#F3ECF1"/><rect x="46" y="10" width="7" height="44" rx="3.5" fill="#F3ECF1"/><path d="M5 46 L59 18" stroke="#FF9F70" stroke-width="7" stroke-linecap="round"/></g></svg>
+            <span class="d2-word">HARDSET</span>
+          </div>
+          <div class="logo-row"><span class="d2-word" style="font-size:26px">REPSMITH</span><span style="font:600 13px 'Barlow';color:#A396AC">metoda HARDSET</span></div>
+          <div class="lt">
+            <svg width="44" height="44" viewBox="0 0 64 64" aria-hidden="true"><g transform="translate(7 7) scale(.78)"><rect x="10" y="10" width="7" height="44" rx="3.5" fill="#2A1F33"/><rect x="22" y="10" width="7" height="44" rx="3.5" fill="#2A1F33"/><rect x="34" y="10" width="7" height="44" rx="3.5" fill="#2A1F33"/><rect x="46" y="10" width="7" height="44" rx="3.5" fill="#2A1F33"/><path d="M5 46 L59 18" stroke="#B4532A" stroke-width="7" stroke-linecap="round"/></g></svg>
+            <span class="d2-word" style="font-size:30px">HARDSET</span>
+          </div>
+        </div>
+      </div>
+      <div class="cell c3"><span class="cap">Okładka · HARDSET</span>
+        <div class="cover d2-cover-a">
+          <div class="by">Adrian Drożdżyński</div>
+          <svg viewBox="0 0 64 64" aria-hidden="true"><g><rect x="10" y="10" width="7" height="44" rx="3.5" fill="#F3ECF1"/><rect x="22" y="10" width="7" height="44" rx="3.5" fill="#F3ECF1"/><rect x="34" y="10" width="7" height="44" rx="3.5" fill="#F3ECF1"/><rect x="46" y="10" width="7" height="44" rx="3.5" fill="#F3ECF1"/><path d="M5 46 L59 18" stroke="#FF9F70" stroke-width="7" stroke-linecap="round"/></g></svg>
+          <div class="t">HARDSET</div>
+          <div class="st">Controlled Brutality</div>
+          <div class="ft">Metoda hipertroficzna · v1.0</div>
+        </div>
+      </div>
+      <div class="cell c3"><span class="cap">Okładka · Bench Priority</span>
+        <div class="cover d2-cover-b">
+          <div class="sup">HARDSET Powerbuilding</div>
+          <div class="t">Continuous Bench Priority</div>
+          <div class="v">v1.1 · 3 treningi · fala 4 tygodni</div>
+          <div class="tallies" aria-label="Cztery tygodnie fali jako grupy kresek">
+            <div><svg width="30" height="40" viewBox="0 0 30 40"><g fill="#130F18"><rect x="2" y="8" width="4" height="32" rx="2"/><rect x="9" y="8" width="4" height="32" rx="2"/></g></svg>T1</div>
+            <div><svg width="30" height="40" viewBox="0 0 30 40"><g fill="#130F18"><rect x="2" y="4" width="4" height="36" rx="2"/><rect x="9" y="4" width="4" height="36" rx="2"/><rect x="16" y="4" width="4" height="36" rx="2"/></g></svg>T2</div>
+            <div><svg width="30" height="40" viewBox="0 0 30 40"><g fill="#130F18"><rect x="2" y="0" width="4" height="40" rx="2"/><rect x="9" y="0" width="4" height="40" rx="2"/><rect x="16" y="0" width="4" height="40" rx="2"/><rect x="23" y="0" width="4" height="40" rx="2"/></g><path d="M0 34 L30 6" stroke="#F7F3F5" stroke-width="4" stroke-linecap="round"/></svg>T3</div>
+            <div><svg width="30" height="40" viewBox="0 0 30 40"><g fill="#130F18" opacity=".55"><rect x="2" y="14" width="4" height="26" rx="2"/></g></svg>T4</div>
+          </div>
+          <div class="by">Adrian Drożdżyński</div>
+        </div>
+      </div>
+      <div class="cell c12"><span class="cap">Rozkładówka · HARDSET, rozdział 05</span>
+        <div class="scroll"><div class="spread">
+          <div class="page">
+            <div class="rh">05 · Progresja i autoregulacja</div>
+            <h4>Progresja serii prowadzącej</h4>
+            <span class="tag">Decyzja HARDSET</span>
+            <p>Ciężar rośnie wtedy, gdy pierwsza seria robocza dojdzie do górnej granicy zakresu przy zaplanowanym zapasie, a druga utrzyma co najmniej dolną granicę. Obie serie nie muszą trafić w górny pułap.</p>
+            <p>Druga seria pełni rolę kontroli. Jeśli pierwsza wyszła dobrze tylko dlatego, że dzień był wyjątkowo udany, druga zwykle to pokaże. Wtedy ciężar zostaje i porównujesz kolejną sesję.</p>
+            <div class="callout">To reguła projektowa metody, nie wynik badania. Szacunek RIR jest z natury niepewny (R19, R20).</div>
+            <p>Krok obciążenia ma być najmniejszy dostępny na danym sprzęcie. Nowa maszyna oznacza nowy punkt odniesienia.</p>
+            <span class="folio">84</span>
+          </div>
+          <div class="page">
+            <div class="rh">Przykład · zakres 6–10 · plan 1 / 0–1 RIR</div>
+            <table><tr><th>Lead</th><th>Supporting</th><th>Wykonanie</th><th>Decyzja</th></tr>
+              <tr><td>10 @1</td><td>7</td><td>porównywalne</td><td>+ najmniejszy krok</td></tr>
+              <tr><td>10 @1</td><td>5</td><td>porównywalne</td><td>ciężar bez zmian</td></tr>
+              <tr><td>10 @0</td><td>8</td><td>skrócony zakres</td><td>seria nie liczy się</td></tr>
+              <tr><td>9 @1</td><td>8</td><td>porównywalne</td><td>ciężar bez zmian</td></tr>
+            </table>
+            <p>Trzeci wiersz jest najczęstszym błędem. Dziesięć powtórzeń przy skróconym ruchu nie jest tym samym wynikiem co dziesięć pełnych, więc nie uruchamia progresji.</p>
+            <p>Jedna słaba sesja niczego nie zmienia. Jeśli trzy lub cztery porównywalne ekspozycje nie przynoszą postępu, sprawdzasz regenerację, przerwy i wykonanie.</p>
+            <span class="folio" style="right:8%">85</span>
+          </div>
+        </div></div>
+      </div>
+      <div class="cell c7"><span class="cap">Tabela progresji · poniedziałek, baza 120 kg</span>
+        <div class="scroll"><table class="mt d2-table">
+          <thead><tr><th>Tydz.</th><th>Single</th><th class="num">% bazy</th><th class="num">kg</th><th>Back-off</th><th class="num">kg</th></tr></thead>
+          <tbody>
+            <tr><td>T1</td><td>1×1 <span class="rpe">@7</span></td><td class="num">88–90</td><td class="num">105–107,5</td><td>2×5 <span class="rpe">@7</span></td><td class="num">90–92,5</td></tr>
+            <tr><td>T2</td><td>1×1 <span class="rpe">@7,5</span></td><td class="num">90–91</td><td class="num">107,5–110</td><td>2×4 <span class="rpe">@7–8</span></td><td class="num">92,5–97,5</td></tr>
+            <tr class="t3"><td>T3</td><td>1×1 <span class="rpe">@8</span></td><td class="num">91–93</td><td class="num">110–112,5</td><td>2×3 <span class="rpe">@7–8</span></td><td class="num">97,5–102,5</td></tr>
+            <tr><td>T4</td><td>1×1 <span class="rpe">@6–7</span></td><td class="num">85–88</td><td class="num">102,5–105</td><td>2×4 <span class="rpe">@6–7</span></td><td class="num">87,5–92,5</td></tr>
+          </tbody></table></div>
+        <p class="note">Ta sama tabela w aplikacji i w książce: jedna stylistyka danych dla obu produktów.</p>
+      </div>
+      <div class="cell c5"><span class="cap">Ekran dziennika</span>
+        <div class="phone"><div class="screen">
+          <div class="sc-top"><small style="color:#A396AC">Fala 3 · T3 · poniedziałek</small><strong style="font-family:'Barlow Condensed';font-size:22px">Competition Bench</strong></div>
+          <div class="sc-pill"><span style="background:#281F33">baza 120 kg</span><span style="background:#FF9F70;color:#130F18">single @8</span></div>
+          <div class="sc-ex" style="background:#1D1724">
+            <div class="sc-row"><span class="k">seria</span><span class="k">kg</span><span class="k">powt.</span><span class="k">RPE</span></div>
+            <div class="sc-row"><span>Single</span><span class="sc-in" style="background:#281F33">110</span><span class="sc-in" style="background:#281F33">1</span><span>8</span></div>
+            <div class="sc-row"><span>B-off 1</span><span class="sc-in" style="background:#281F33">100</span><span class="sc-in" style="background:#281F33">3</span><span>7,5</span></div>
+            <div class="sc-row"><span>B-off 2</span><span class="sc-in" style="border:1px solid #7D6F89">100</span><span class="sc-in" style="border:1px solid #7D6F89">–</span><span>–</span></div>
+          </div>
+          <div class="sc-hint" style="background:#281F33">Single w celu. Back-off 2: ten sam ciężar. Jeśli RPE przekroczy 8, zdejmij 2,5–5%.</div>
+          <div class="sc-foot"><span class="sc-btn" style="background:#FF9F70;color:#130F18">Zapisz serię</span></div>
+        </div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== D3 ===================== -->
+  <section class="dir d3" id="d3">
+    <h2>3 · Protokół startowy</h2>
+    <p>Język dokumentów zawodów i arkuszy pomiarowych: ramki, pola, numeracja, dane czarno na białym. Jedyny kolor to kod talerzy (zielony 10, żółty 15, niebieski 20, czerwony 25 kg), użyty funkcjonalnie jako skala intensywności fali. Książka hipertroficzna zostaje czarno-biała, a kolor pojawia się tam, gdzie liczy się ciężar.</p>
+    <div class="spec">
+      <div class="box"><b>Typografia</b>Archivo Narrow (nagłówki), Archivo (tekst), JetBrains Mono (dane). Wszystkie SIL OFL 1.1, z polskimi znakami.</div>
+      <div class="box"><b>Kolor</b><div class="swatches"><span class="sw"><i style="background:#111"></i>Black</span><span class="sw"><i style="background:#fff"></i>White</span><span class="sw"><i style="background:#1E7A3C"></i>10</span><span class="sw"><i style="background:#F2C230"></i>15</span><span class="sw"><i style="background:#1D4FB8"></i>20</span><span class="sw"><i style="background:#C0262D"></i>25</span></div><div class="note" style="margin-top:6px">Kontrast na bieli: zielony 5,4, niebieski 7,3, czerwony 5,9. Żółty tylko jako tło dla czarnego tekstu (11,3).</div></div>
+      <div class="box"><b>Znak</b>Cztery słupki fali T1–T4 o rzeczywistych proporcjach z programu. W HARDSET czarne, w Bench Priority w kodzie talerzy.</div>
+    </div>
+    <div class="board">
+      <div class="cell c6"><span class="cap">Logotyp i znak</span>
+        <div class="logo-sheet">
+          <div class="logo-row">
+            <svg width="64" height="64" viewBox="0 0 64 64" aria-label="Znak fali"><rect x="1" y="1" width="62" height="62" fill="#fff" stroke="#111" stroke-width="2"/><g fill="#111"><rect x="10" y="26" width="9" height="28"/><rect x="22" y="20" width="9" height="34"/><rect x="34" y="12" width="9" height="42"/><rect x="46" y="32" width="9" height="22"/></g></svg>
+            <span class="d3-word">HARDSET</span>
+          </div>
+          <div class="logo-row">
+            <svg width="48" height="48" viewBox="0 0 64 64" aria-hidden="true"><rect x="1" y="1" width="62" height="62" fill="#fff" stroke="#111" stroke-width="2"/><rect x="10" y="26" width="9" height="28" fill="#1E7A3C"/><rect x="22" y="20" width="9" height="34" fill="#F2C230"/><rect x="34" y="12" width="9" height="42" fill="#1D4FB8"/><rect x="46" y="32" width="9" height="22" fill="#C0262D"/></svg>
+            <span class="d3-word" style="font-size:26px">HARDSET <span style="font:600 14px 'Archivo';letter-spacing:.1em">POWERBUILDING</span></span>
+          </div>
+          <div class="inv"><svg width="44" height="44" viewBox="0 0 64 64" aria-hidden="true"><g fill="#fff"><rect x="10" y="26" width="9" height="28"/><rect x="22" y="20" width="9" height="34"/><rect x="34" y="12" width="9" height="42"/><rect x="46" y="32" width="9" height="22"/></g></svg><span class="d3-word" style="font-size:30px">HARDSET</span></div>
+        </div>
+      </div>
+      <div class="cell c3"><span class="cap">Okładka · HARDSET</span>
+        <div class="cover d3-cover-a"><div class="grid">
+          <div class="top"><div>Metoda hipertroficzna</div><div>v1.0</div></div>
+          <div class="mid"><div class="t">HARD<br>SET</div><div class="st">Controlled Brutality</div></div>
+          <div class="sets"><div><b>2</b>serie / ćw.</div><div><b>~1</b>RIR lead</div><div><b>12</b>obszarów</div></div>
+          <div class="by">Adrian Drożdżyński</div>
+        </div></div>
+      </div>
+      <div class="cell c3"><span class="cap">Okładka · Bench Priority</span>
+        <div class="cover d3-cover-b">
+          <div class="sup">HARDSET Powerbuilding</div>
+          <div class="t">Continuous Bench Priority</div>
+          <div class="v">v1.1 · fala 4 tyg. · 3 × 60 min</div>
+          <div class="bars" aria-label="Single poniedziałek, procent bazy">
+            <div style="height:66%;background:#1E7A3C;color:#fff">T1<br>89%</div>
+            <div style="height:76%;background:#F2C230">T2<br>90,5%</div>
+            <div style="height:100%;background:#1D4FB8;color:#fff">T3<br>92%</div>
+            <div style="height:45%;background:#C0262D;color:#fff">T4<br>86,5%</div>
+          </div>
+          <div class="by">Adrian Drożdżyński</div>
+        </div>
+      </div>
+      <div class="cell c12"><span class="cap">Rozkładówka · HARDSET, rozdział 05</span>
+        <div class="scroll"><div class="spread">
+          <div class="page">
+            <div class="rh"><span>05 · Progresja i autoregulacja</span><span>s. 84</span></div>
+            <h4>Progresja serii prowadzącej</h4>
+            <span class="tag"><i></i>Decyzja HARDSET · E17</span>
+            <p>Ciężar rośnie wtedy, gdy pierwsza seria robocza dojdzie do górnej granicy zakresu przy zaplanowanym zapasie, a druga utrzyma co najmniej dolną granicę. Obie serie nie muszą trafić w górny pułap.</p>
+            <p>Druga seria pełni rolę kontroli. Jeśli pierwsza wyszła dobrze tylko dlatego, że dzień był wyjątkowo udany, druga zwykle to pokaże. Wtedy ciężar zostaje i porównujesz kolejną sesję.</p>
+            <p>Krok obciążenia ma być najmniejszy dostępny na danym sprzęcie. Nowa maszyna oznacza nowy punkt odniesienia, a kilogramów z dwóch różnych maszyn nie porównuje się wprost.</p>
+            <p style="font-size:8px;border-top:1.5px solid #111;padding-top:4px">Reguła projektowa metody, nie wynik badania. Szacunek RIR jest niepewny (R19, R20).</p>
+          </div>
+          <div class="page">
+            <div class="rh"><span>Przykład · zakres 6–10 · plan 1 / 0–1 RIR</span><span>s. 85</span></div>
+            <table><tr><th>Lead</th><th>Supporting</th><th>Wykonanie</th><th>Decyzja</th></tr>
+              <tr><td>10 @1</td><td>7</td><td>porównywalne</td><td>+ najmniejszy krok</td></tr>
+              <tr><td>10 @1</td><td>5</td><td>porównywalne</td><td>ciężar bez zmian</td></tr>
+              <tr><td>10 @0</td><td>8</td><td>skrócony zakres</td><td>seria nie liczy się</td></tr>
+              <tr><td>9 @1</td><td>8</td><td>porównywalne</td><td>ciężar bez zmian</td></tr>
+            </table>
+            <p>Trzeci wiersz jest najczęstszym błędem. Dziesięć powtórzeń przy skróconym ruchu nie jest tym samym wynikiem co dziesięć pełnych, więc nie uruchamia progresji.</p>
+            <p>Jedna słaba sesja niczego nie zmienia. Jeśli trzy lub cztery porównywalne ekspozycje nie przynoszą postępu, sprawdzasz regenerację, przerwy i wykonanie.</p>
+          </div>
+        </div></div>
+      </div>
+      <div class="cell c7"><span class="cap">Tabela progresji · poniedziałek, baza 120 kg</span>
+        <div class="scroll"><table class="mt d3-table">
+          <thead><tr><th>Tydz.</th><th>Single</th><th class="num">% bazy</th><th class="num">kg</th><th>Back-off</th><th class="num">kg</th></tr></thead>
+          <tbody>
+            <tr><td><span class="zone" style="background:#1E7A3C"></span>T1</td><td>1×1 @7</td><td class="num">88–90</td><td class="num">105–107,5</td><td>2×5 @7</td><td class="num">90–92,5</td></tr>
+            <tr><td><span class="zone" style="background:#F2C230;outline:1px solid #8A6A00"></span>T2</td><td>1×1 @7,5</td><td class="num">90–91</td><td class="num">107,5–110</td><td>2×4 @7–8</td><td class="num">92,5–97,5</td></tr>
+            <tr><td><span class="zone" style="background:#1D4FB8"></span>T3</td><td>1×1 @8</td><td class="num">91–93</td><td class="num">110–112,5</td><td>2×3 @7–8</td><td class="num">97,5–102,5</td></tr>
+            <tr><td><span class="zone" style="background:#C0262D"></span>T4</td><td>1×1 @6–7</td><td class="num">85–88</td><td class="num">102,5–105</td><td>2×4 @6–7</td><td class="num">87,5–92,5</td></tr>
+          </tbody></table></div>
+        <p class="note">Kolor tygodnia działa jak etykieta, a nie skala „lepsze-gorsze”. Czerwony T4 oznacza najlżejszy tydzień, co trzeba wyjaśnić w legendzie.</p>
+      </div>
+      <div class="cell c5"><span class="cap">Ekran dziennika</span>
+        <div class="phone"><div class="screen">
+          <div class="sc-top" style="border-bottom:2px solid #111"><small>Fala 3 · T3 · poniedziałek</small><strong style="font-family:'Archivo Narrow';font-size:21px">Competition Bench</strong></div>
+          <div class="sc-pill" style="padding-top:8px"><span style="border:1.5px solid #111;border-radius:0">baza 120 kg</span><span style="background:#1D4FB8;color:#fff;border-radius:0">T3 · single @8</span></div>
+          <div class="sc-ex" style="border:2px solid #111;border-radius:0;background:#fff">
+            <div class="sc-row"><span class="k">seria</span><span class="k">kg</span><span class="k">powt.</span><span class="k">RPE</span></div>
+            <div class="sc-row"><span>Single</span><span class="sc-in" style="border:1px solid #111;border-radius:0;font-family:'JetBrains Mono'">110</span><span class="sc-in" style="border:1px solid #111;border-radius:0;font-family:'JetBrains Mono'">1</span><span>8</span></div>
+            <div class="sc-row"><span>B-off 1</span><span class="sc-in" style="border:1px solid #111;border-radius:0;font-family:'JetBrains Mono'">100</span><span class="sc-in" style="border:1px solid #111;border-radius:0;font-family:'JetBrains Mono'">3</span><span>7,5</span></div>
+            <div class="sc-row"><span>B-off 2</span><span class="sc-in" style="border:1px dashed #111;border-radius:0;font-family:'JetBrains Mono'">100</span><span class="sc-in" style="border:1px dashed #111;border-radius:0">–</span><span>–</span></div>
+          </div>
+          <div class="sc-hint" style="border:1.5px solid #111;border-radius:0;background:#fff">Single w celu. Back-off 2: ten sam ciężar. Jeśli RPE przekroczy 8, zdejmij 2,5–5%.</div>
+          <div class="sc-foot"><span class="sc-btn" style="background:#111;color:#fff;border-radius:0">Zapisz serię</span></div>
+        </div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== Comparison ===================== -->
+  <section class="dir" id="cmp">
+    <h2>Porównanie</h2>
+    <div class="scroll"><table class="cmp">
+      <tr><th></th><th>1 · Industrial editorial</th><th>2 · Ciągłość z Repsmith</th><th>3 · Protokół startowy</th></tr>
+      <tr><td>Najmocniejsza strona</td><td>Długi tekst i druk. Klasy dowodów mają czytelne miejsce na stronie.</td><td>Gotowa rodzina produktów: aplikacja już tak wygląda.</td><td>Najbardziej rozpoznawalny dla programów siłowych. Kolor niesie informację.</td></tr>
+      <tr><td>Ryzyko</td><td>Może wyglądać chłodno w aplikacji. Wymaga wersji ciemnej.</td><td>Związany z nazwą Repsmith, która ma kolizje (dwie inne aplikacje treningowe).</td><td>Kod talerzy kojarzy się ze sportem zawodniczym. Do książki hipertroficznej pasuje słabiej.</td></tr>
+      <tr><td>Okładki</td><td>Spokojne, książkowe</td><td>Ciemne, ekranowe</td><td>Graficzne, wyraziste</td></tr>
+      <tr><td>Rozbudowa marki</td><td>Seria wydawnicza: kolejny program to kolejny kolor z palety (Slate, Moss, Oxide)</td><td>Każdy produkt dziedziczy ikonę zliczania</td><td>Kolejne programy jako kolejne „arkusze” z własnym kodem koloru</td></tr>
+      <tr><td>Krój</td><td>Plex Condensed / Source Serif 4 / Plex Mono</td><td>Barlow Condensed / Barlow</td><td>Archivo Narrow / Archivo / JetBrains Mono</td></tr>
+    </table></div>
+    <p class="note">Wszystkie kroje: SIL Open Font License 1.1, dozwolone osadzanie w PDF i EPUB oraz dystrybucja razem z publikacją. Wszystkie pary kolor/tło użyte do tekstu spełniają WCAG AA.</p>
+  </section>
+</div>
