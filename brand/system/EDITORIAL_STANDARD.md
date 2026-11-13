@@ -37,7 +37,7 @@ Każde twierdzenie normatywne ma klasę. Oznaczenie stoi przy pierwszym wystąpi
 | Badanie | Twierdzenie wynika z opublikowanych prac. | Numer źródła, kogo badano, ograniczenia. Nie rozszerzamy wniosku poza to, co zmierzono. |
 | Decyzja HARDSET | Konwencja metody (np. Two-Set Default, Fixed Core 12). | Nie przypisujemy jej dowodu, którego nie ma. |
 | Heurystyka | Liczba lub rytm do zmiany w granicach metody. | Mówimy wprost, że można ją zmienić. |
-| Wyjątek siłowy | Tylko książka programu: odstępstwo od zasady HARDSET wynikające z celu siłowego. | Nazwana zasada, od której to odstępstwo, i podstawa (Rozdział 08). |
+| Wyjątek siłowy | Tylko książka programu: odstępstwo od zasady HARDSET wynikające z celu siłowego (np. wyciskanie przy RPE 6–8 liczone do Chest P). | Nazwana zasada, od której to odstępstwo, i podstawa (Rozdział 08). Bez twierdzenia, że bodziec jest taki sam jak w standardzie. |
 | Hipoteza programu | Tylko książka programu: ustawienie do sprawdzenia w praktyce. | Bez sugerowania, że jest sprawdzone. |
 | Do decyzji | Tylko w próbkach i wersjach roboczych. | W wydaniu publicznym nie może wystąpić. |
 
@@ -59,7 +59,7 @@ Twierdzeń oznaczonych w `research/EVIDENCE_MATRIX.md` jako NOT_SUPPORTED nie po
 - twardą spację po jednoliterowych wyrazach a, i, o, u, w, z;
 - twardą spację między liczbą a jednostką (kg, %, min, s, RIR, RPE, powtórzeń, serii);
 - blokadę łamania wewnątrz zakresów liczbowych (0–1, 2,5–5);
-- miękkie dzielniki w wyrazach polskich (pyphen, `pl_PL`), wymagane przy justowaniu. Wymaga `pip install pyphen`.
+- miękkie dzielniki w wyrazach polskich (pyphen, `pl_PL`), wymagane przy justowaniu. Wymaga `pip install pyphen`. Pomijane: nagłówki, tabele, panele, odnośniki, bibliografia, terminy angielskie.
 
 Ręcznie pilnujemy:
 - przecinka dziesiętnego w tekście polskim (82,5%, 2,5 kg) i kropki w angielskim;

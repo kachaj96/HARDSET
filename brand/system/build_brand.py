@@ -1,159 +1,203 @@
 #!/usr/bin/env python3
-"""Build HARDSET brand assets from tokens.json and the bundled fonts.
+"""Generate brand/system/tokens.css, fonts.css, logo/*.svg and the contrast report from tokens.json.
 
-Outputs (in brand/system/):
-  tokens.css           CSS custom properties for print, screen light (paper) and dark (ink)
-  logo/*.svg           wordmark, stamp mark and lockups with text converted to outlines
-
-Requires fontTools + brotli only for the logo step (dev dependency):
-  pip install fonttools brotli
-Run: python brand/system/build_brand.py [--check]
+Run:   python3 brand/system/build_brand.py          (writes files)
+       python3 brand/system/build_brand.py --check  (fails if generated files are stale or a contrast rule breaks)
+Needs fontTools (pip install fonttools): logo letters are outlined from the Archivo Expanded ExtraBold file.
 """
 import json
 import sys
 from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
-TOK = json.loads((HERE / 'tokens.json').read_text(encoding='utf-8'))
-C = {k: v['value'] for k, v in TOK['color'].items()}
+T = json.loads((HERE / 'tokens.json').read_text(encoding='utf-8'))
+C = {k: v['value'] for k, v in T['color'].items()}
 
 
+# ------------------------------------------------------------------ contrast
+def lum(h):
+    h = h.lstrip('#')
+    r = [int(h[i:i + 2], 16) / 255 for i in (0, 2, 4)]
+    r = [x / 12.92 if x <= 0.03928 else ((x + 0.055) / 1.055) ** 2.4 for x in r]
+    return 0.2126 * r[0] + 0.7152 * r[1] + 0.0722 * r[2]
+
+
+def contrast(a, b):
+    la, lb = lum(a), lum(b)
+    return (max(la, lb) + 0.05) / (min(la, lb) + 0.05)
+
+
+# pair, minimum ratio, use
+RULES = [
+    ('ink', 'paper', 4.5, 'text on paper'), ('muted', 'paper', 4.5, 'secondary text on paper'),
+    ('accent-text', 'paper', 4.5, 'accent text on paper'), ('accent-text', 'tint', 4.5, 'accent text on tint'),
+    ('paper', 'ink', 4.5, 'text on ink'), ('ink-muted', 'ink', 4.5, 'secondary text on ink'),
+    ('ink-muted', 'panel', 4.5, 'secondary text on panel'), ('paper', 'panel', 4.5, 'text on panel'),
+    ('accent-on-panel', 'panel', 4.5, 'accent text on panel'), ('accent-on-panel', 'ink', 4.5, 'accent text on ink'),
+    ('accent', 'ink', 4.5, 'accent fill and large text on ink'), ('accent', 'paper', 3.0, 'accent fill on paper (graphics only)'),
+    ('ink', 'accent', 4.5, 'ink on accent fill'),
+]
+
+
+def contrast_report():
+    rows = []
+    for a, b, need, use in RULES:
+        r = contrast(C[a], C[b])
+        rows.append((a, b, r, need, use, r >= need))
+    return rows
+
+
+# ------------------------------------------------------------------ css
 def build_css():
-    lines = ['/* Generated from tokens.json by build_brand.py. Do not edit by hand. */',
-             "@import url('fonts/fonts.css');", ':root{']
+    lines = ['/* Generated from tokens.json by build_brand.py. Do not edit by hand. */', "@import url('fonts/fonts.css');", ':root{']
     for k, v in C.items():
         lines.append(f'  --hs-{k}:{v};')
-    for k, v in TOK['font'].items():
-        lines.append(f'  --hs-font-{k}:{v["value"]};')
-    for k, v in TOK['type-scale-px'].items():
-        if not k.startswith('$'):
+    for k, v in T['font'].items():
+        lines.append(f"  --hs-font-{k}:{v['value']};")
+    for k, v in T['type-scale-px'].items():
+        if k != '$description':
             lines.append(f'  --hs-size-{k}:{v}px;')
-    for k, v in TOK['space'].items():
-        lines.append(f'  --hs-space-{k}:{v};')
-    for k, v in TOK['radius'].items():
+    for k, v in T['radius'].items():
         lines.append(f'  --hs-radius-{k}:{v};')
-    # semantic roles, light (paper) theme
-    lines += ['  --hs-bg:var(--hs-paper);', '  --hs-fg:var(--hs-ink);', '  --hs-fg-muted:var(--hs-muted);',
-              '  --hs-surface:var(--hs-tint);', '  --hs-line:var(--hs-rule);', '  --hs-accent:var(--hs-oxide);',
-              '  --hs-data:var(--hs-slate);', '  --hs-evidence:var(--hs-moss);', '}']
-    dark = ['--hs-bg:var(--hs-ink);', '--hs-fg:var(--hs-paper);', '--hs-fg-muted:var(--hs-paper-muted);',
-            '--hs-surface:var(--hs-ink-raised);', '--hs-line:#3A4240;', '--hs-accent:var(--hs-oxide-on-ink);',
-            '--hs-data:var(--hs-slate-on-ink);', '--hs-evidence:#A9B59B;', 'color-scheme:dark;']
-    lines.append('@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){' + ''.join(dark) + '}}')
-    lines.append(':root[data-theme="dark"]{' + ''.join(dark) + '}')
-    print_scale = TOK['type-scale-pt']
-    lines.append('@media print{:root{' + ''.join(
-        f'--hs-size-{k}:{v}pt;' for k, v in print_scale.items() if not k.startswith('$')) + '}}')
+    # semantic roles, light edition
+    light = dict(bg='paper', fg='ink', panel='ink', **{'panel-fg': 'paper'}, mid='steel', line='line', muted='muted', tint='tint', a='accent', at='accent-text', ap='accent-on-panel')
+    dark = dict(bg='ink', fg='paper', panel='panel', **{'panel-fg': 'paper'}, mid='panel-line', line='ink-line', muted='ink-muted', tint='ink-tint', a='accent', at='accent-on-panel', ap='accent-on-panel')
+    lines += ['  /* roles: light edition */'] + [f'  --hs-{r}:var(--hs-{v});' for r, v in light.items()] + ['}']
+    block = ''.join(f'  --hs-{r}:var(--hs-{v});\n' for r, v in dark.items())
+    lines.append(f'@media (prefers-color-scheme: dark){{:root:not([data-theme="light"]){{\n{block}  color-scheme:dark;}}}}')
+    lines.append(f':root[data-theme="dark"],.hs-dark{{\n{block}  color-scheme:dark;}}')
     return '\n'.join(lines) + '\n'
 
 
-# ---------------- logos ----------------
+def build_fonts_css():
+    out = ['/* HARDSET fonts: Archivo (variable, width 62-125%, weight 100-900) and IBM Plex Mono. SIL OFL 1.1, see OFL-*.txt. latin + latin-ext. */']
+    ranges = {
+        'latin-ext': 'U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF',
+        'latin': 'U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD',
+    }
+    for sub in ('latin-ext', 'latin'):
+        out.append(f"@font-face{{font-family:'Archivo';font-style:normal;font-weight:100 900;font-stretch:62% 125%;font-display:swap;src:url('Archivo-var-{sub}.woff2') format('woff2');unicode-range:{ranges[sub]};}}")
+    for w in (400, 500):
+        for sub in ('latin-ext', 'latin'):
+            out.append(f"@font-face{{font-family:'IBM Plex Mono';font-style:normal;font-weight:{w};font-display:swap;src:url('IBMPlexMono-{w}-{sub}.woff2') format('woff2');unicode-range:{ranges[sub]};}}")
+    return '\n'.join(out) + '\n'
+
+
+# ------------------------------------------------------------------ logo
 def glyph_paths(text, font_file, size, tracking_em=0.0, x0=0.0, baseline=0.0):
-    from fontTools.ttLib import TTFont
     from fontTools.pens.svgPathPen import SVGPathPen
     from fontTools.pens.transformPen import TransformPen
+    from fontTools.ttLib import TTFont
     font = TTFont(str(font_file))
-    gs = font.getGlyphSet()
-    cmap = font.getBestCmap()
-    upem = font['head'].unitsPerEm
-    scale = size / upem
-    x = x0
-    out = []
+    gs, cmap = font.getGlyphSet(), font.getBestCmap()
+    scale = size / font['head'].unitsPerEm
+    x, out = x0, []
     for ch in text:
         name = cmap[ord(ch)]
         pen = SVGPathPen(gs)
-        tpen = TransformPen(pen, (scale, 0, 0, -scale, x, baseline))
-        gs[name].draw(tpen)
+        gs[name].draw(TransformPen(pen, (scale, 0, 0, -scale, x, baseline)))
         out.append((ch, pen.getCommands()))
         x += gs[name].width * scale + tracking_em * size
-    width = x - x0 - tracking_em * size
-    return out, width
+    return out, x - x0 - tracking_em * size
 
 
-def wordmark_svg(colors, size=48, pad=0):
-    f = HERE / 'fonts' / 'IBMPlexSansCondensed-700-latin.woff2'
-    parts, w = glyph_paths('HARDSET', f, size, 0.08, pad, size * 0.72 + pad)
-    cap = size * 0.72
-    paths = ''.join(f'<path fill="{colors[i]}" d="{d}"/>' for i, (_, d) in enumerate(parts))
-    return (f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {w + 2 * pad:.1f} {cap + 2 * pad:.1f}" '
-            f'role="img" aria-label="HARDSET">{paths}</svg>\n')
+def _font():
+    return HERE / T['logo']['font-file']
 
 
-def mark_svg(frame, letters, bar, bg=None, size=64):
-    f = HERE / 'fonts' / 'IBMPlexSansCondensed-700-latin.woff2'
-    s = size
-    fs = s * 0.36
-    cap = fs * 0.72
-    base = s / 2 + cap / 2
-    h, wh = glyph_paths('H', f, fs, 0, 0, base)
-    sh, ws = glyph_paths('S', f, fs, 0, 0, base)
-    gap = s * 0.11
-    hx = s / 2 - gap - wh
-    sx = s / 2 + gap
-    h, _ = glyph_paths('H', f, fs, 0, hx, base)
-    sh, _ = glyph_paths('S', f, fs, 0, sx, base)
-    bw = s * 0.047
-    stroke = s * 0.047
-    rect_bg = f'<rect width="{s}" height="{s}" fill="{bg}"/>' if bg else ''
-    return (f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {s} {s}" role="img" aria-label="HARDSET">'
-            f'{rect_bg}<rect x="{stroke / 2:.2f}" y="{stroke / 2:.2f}" width="{s - stroke:.2f}" height="{s - stroke:.2f}" '
-            f'fill="none" stroke="{frame}" stroke-width="{stroke:.2f}"/>'
-            f'<rect x="{s / 2 - bw / 2:.2f}" y="{s * 0.13:.2f}" width="{bw:.2f}" height="{s * 0.74:.2f}" fill="{bar}"/>'
-            f'<path fill="{letters}" d="{h[0][1]}"/><path fill="{letters}" d="{sh[0][1]}"/></svg>\n')
+def _cap(size=100):
+    from fontTools.ttLib import TTFont
+    f = TTFont(str(_font()))
+    return f['OS/2'].sCapHeight * size / f['head'].unitsPerEm
 
 
-def lockup_svg(word_colors, sub_color, sub='POWERBUILDING', size=48):
-    fb = HERE / 'fonts' / 'IBMPlexSansCondensed-700-latin.woff2'
-    fs = HERE / 'fonts' / 'IBMPlexSansCondensed-600-latin.woff2'
-    cap = size * 0.72
-    parts, w = glyph_paths('HARDSET', fb, size, 0.08, 0, cap)
-    sub_size = size * 0.34
-    gap = size * 0.4
-    sparts, sw = glyph_paths(sub, fs, sub_size, 0.14, w + gap, cap)
-    paths = ''.join(f'<path fill="{word_colors[i]}" d="{d}"/>' for i, (_, d) in enumerate(parts))
-    paths += ''.join(f'<path fill="{sub_color}" d="{d}"/>' for _, d in sparts)
-    return (f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {w + gap + sw:.1f} {cap:.1f}" role="img" '
-            f'aria-label="HARDSET {sub.title()}">{paths}</svg>\n')
+def wordmark(fg, acc, bars=True, text='HARDSET', size=100, tracking=None):
+    tracking = T['logo']['tracking-em'] if tracking is None else tracking
+    cap = _cap(size)
+    paths, w = glyph_paths(text, _font(), size, tracking, 0, cap)
+    inner = ''.join(f'<path d="{d}" fill="{fg}"/>' for _, d in paths)
+    h = cap
+    if bars:
+        bh = cap * 0.11
+        y1 = cap + cap * 0.2
+        inner += f'<rect x="0" y="{y1:.2f}" width="{w:.2f}" height="{bh:.2f}" fill="{acc}"/>'
+        inner += f'<rect x="0" y="{y1 + bh * 1.9:.2f}" width="{w * 0.58:.2f}" height="{bh:.2f}" fill="{acc}"/>'
+        h = y1 + bh * 2.9
+    return inner, w, h
+
+
+def mark(bg, fg, acc, size=100):
+    cap = _cap(100)
+    paths, w = glyph_paths('H', _font(), 100, 0, 0, cap)
+    s = 0.46 * size / cap
+    ox, oy = (size - w * s) / 2, size * 0.2
+    inner = f'<rect width="{size}" height="{size}" fill="{bg}"/>'
+    inner += f'<g transform="translate({ox:.2f} {oy:.2f}) scale({s:.4f})"><path d="{paths[0][1]}" fill="{fg}"/></g>'
+    bw = size * 0.52
+    bx, by, bh = (size - bw) / 2, size * 0.2 + cap * s + size * 0.1, size * 0.05
+    inner += f'<rect x="{bx:.2f}" y="{by:.2f}" width="{bw:.2f}" height="{bh:.2f}" fill="{acc}"/>'
+    inner += f'<rect x="{bx:.2f}" y="{by + bh * 1.8:.2f}" width="{bw * 0.58:.2f}" height="{bh:.2f}" fill="{acc}"/>'
+    return inner, size, size
+
+
+def lockup(fg, label_fg, size=100):
+    """HARDSET (no bars) with POWERBUILDING underneath, same tracking family, smaller."""
+    inner, w, h = wordmark(fg, fg, bars=False, size=size)
+    cap = _cap(size)
+    lab, lw = glyph_paths('POWERBUILDING', _font(), size * 0.3, 0.3, 0, 0)
+    sc = lw
+    y = h + cap * 0.45 + size * 0.3 * 0.7
+    inner += ''.join(f'<path d="{d}" fill="{label_fg}" transform="translate(0 {y:.2f})"/>' for _, d in lab)
+    return inner, max(w, lw), y + size * 0.04
+
+
+def svg(parts, pad=0, bg=None, label='HARDSET'):
+    inner, w, h = parts
+    vb = f'{-pad:g} {-pad:g} {w + 2 * pad:g} {h + 2 * pad:g}'
+    rect = f'<rect x="{-pad:g}" y="{-pad:g}" width="{w + 2 * pad:g}" height="{h + 2 * pad:g}" fill="{bg}"/>' if bg else ''
+    return f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="{vb}" role="img" aria-label="{label}">{rect}{inner}</svg>\n'
 
 
 def build_logos():
-    ink, paper, oxide = C['ink'], C['paper'], C['oxide']
-    two = lambda a, b: [a] * 4 + [b] * 3
+    ink, paper, at, acc, ap = C['ink'], C['paper'], C['accent-text'], C['accent'], C['accent-on-panel']
     return {
-        'hardset-wordmark.svg': wordmark_svg(two(ink, oxide)),
-        'hardset-wordmark-on-ink.svg': wordmark_svg(two(paper, C['oxide-on-ink'])),
-        'hardset-wordmark-mono-ink.svg': wordmark_svg([ink] * 7),
-        'hardset-wordmark-mono-paper.svg': wordmark_svg([paper] * 7),
-        'hardset-mark.svg': mark_svg(ink, ink, oxide),
-        'hardset-mark-on-ink.svg': mark_svg(paper, paper, C['oxide-on-ink'], bg=ink),
-        'hardset-mark-mono-ink.svg': mark_svg(ink, ink, ink),
-        'hardset-powerbuilding-lockup.svg': lockup_svg(two(ink, oxide), C['slate']),
-        'hardset-powerbuilding-lockup-on-slate.svg': lockup_svg([paper] * 7, paper),
+        'hardset-wordmark.svg': svg(wordmark(ink, at)),
+        'hardset-wordmark-on-dark.svg': svg(wordmark(paper, acc)),
+        'hardset-wordmark-mono-ink.svg': svg(wordmark(ink, ink)),
+        'hardset-wordmark-mono-paper.svg': svg(wordmark(paper, paper)),
+        'hardset-mark.svg': svg(mark(ink, paper, ap)),
+        'hardset-mark-on-dark.svg': svg(mark(paper, ink, at)),
+        'hardset-mark-mono-ink.svg': svg(mark(ink, paper, paper)),
+        'hardset-powerbuilding-lockup.svg': svg(lockup(ink, at), label='HARDSET Powerbuilding'),
+        'hardset-powerbuilding-lockup-on-dark.svg': svg(lockup(paper, paper), label='HARDSET Powerbuilding'),
     }
+
+
+def outputs():
+    files = {HERE / 'tokens.css': build_css(), HERE / 'fonts' / 'fonts.css': build_fonts_css()}
+    for name, s in build_logos().items():
+        files[HERE / 'logo' / name] = s
+    return files
 
 
 def main():
     check = '--check' in sys.argv
-    outputs = {HERE / 'tokens.css': build_css()}
-    try:
-        for name, svg in build_logos().items():
-            outputs[HERE / 'logo' / name] = svg
-    except ImportError:
-        print('fontTools not installed: logos skipped (pip install fonttools brotli)')
+    bad = [r for r in contrast_report() if not r[5]]
+    for a, b, r, need, use, ok in contrast_report():
+        print(f'{"OK  " if ok else "FAIL"} {a:16s} on {b:7s} {r:5.2f}:1 (need {need}) {use}')
     stale = []
-    for path, content in outputs.items():
+    (HERE / 'logo').mkdir(exist_ok=True)
+    for path, text in outputs().items():
         if check:
-            if not path.exists() or path.read_text(encoding='utf-8') != content:
+            if not path.exists() or path.read_text(encoding='utf-8') != text:
                 stale.append(path.name)
         else:
-            path.parent.mkdir(parents=True, exist_ok=True)
-            path.write_text(content, encoding='utf-8')
+            path.write_text(text, encoding='utf-8')
     if check:
-        if stale:
-            print('stale:', ', '.join(stale)); sys.exit(1)
-        print('brand assets up to date')
-    else:
-        print('wrote', len(outputs), 'files')
+        print('brand assets up to date' if not stale and not bad else f'PROBLEM: stale={stale} contrast_fail={[(b[0], b[1]) for b in bad]}')
+        sys.exit(1 if stale or bad else 0)
+    print(f'wrote {len(outputs())} files')
+    sys.exit(1 if bad else 0)
 
 
 if __name__ == '__main__':

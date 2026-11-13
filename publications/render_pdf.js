@@ -12,7 +12,7 @@ const { chromium } = require('playwright');
   await page.goto('file://' + path.resolve(input), { waitUntil: 'load' });
   await page.evaluate(() => document.fonts.ready);
   const missing = await page.evaluate(() => {
-    const need = ['700 16px "IBM Plex Sans Condensed"', '400 16px "Source Serif 4"', '400 16px "IBM Plex Mono"'];
+    const need = ['800 16px Archivo', '400 16px Archivo', '400 16px "IBM Plex Mono"'];
     return need.filter((f) => !document.fonts.check(f));
   });
   if (missing.length) { console.error('Fonts not loaded:', missing.join(', ')); process.exit(1); }
