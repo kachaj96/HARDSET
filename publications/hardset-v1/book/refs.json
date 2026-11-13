@@ -1,0 +1,1184 @@
+{
+ "R01": {
+  "head": "Currier et al. (2026)",
+  "doi": "10.1249/MSS.0000000000003897",
+  "title": "ACSM Position Stand. Resistance Training Prescription for Muscle Function, Hypertrophy, and Physical Performance in Healthy Adults: An Overview of Reviews",
+  "cr": {
+   "authors": [
+    [
+     "CURRIER",
+     "BRAD S."
+    ],
+    [
+     "D’SOUZA",
+     "ALYSHA C."
+    ],
+    [
+     "SINGH",
+     "MARIA A. FIATARONE"
+    ],
+    [
+     "LOWISZ",
+     "CAROLINE V."
+    ],
+    [
+     "RAWSON",
+     "ERIC S."
+    ],
+    [
+     "SCHOENFELD",
+     "BRAD J."
+    ],
+    [
+     "SMITH-RYAN",
+     "ABBIE E."
+    ],
+    [
+     "STEEN",
+     "JEREMY P."
+    ],
+    [
+     "THOMAS",
+     "GWENDOLYN A."
+    ],
+    [
+     "TRIPLETT",
+     "N. TRAVIS"
+    ],
+    [
+     "WASHINGTON",
+     "TYRONE A."
+    ],
+    [
+     "WERNER",
+     "TIMOTHY J."
+    ],
+    [
+     "PHILLIPS",
+     "STUART M."
+    ]
+   ],
+   "journal": "Medicine &amp; Science in Sports &amp; Exercise",
+   "year": 2026,
+   "volume": "58",
+   "issue": "4",
+   "page": "851-872",
+   "ctitle": "American College of Sports Medicine Position Stand. Resistance Training Prescription for Muscle Function, Hypertrophy, and Physical Performance in Healthy Adults: An Overview of Reviews",
+   "rel": [],
+   "upd": []
+  }
+ },
+ "R02": {
+  "head": "Pelland et al. (2026)",
+  "doi": "10.1007/s40279-025-02344-w",
+  "title": "The Resistance Training Dose Response: Meta-Regressions Exploring the Effects of Weekly Volume and Frequency on Muscle Hypertrophy and Strength Gains",
+  "cr": {
+   "authors": [
+    [
+     "Pelland",
+     "Joshua C."
+    ],
+    [
+     "Remmert",
+     "Jacob F."
+    ],
+    [
+     "Robinson",
+     "Zac P."
+    ],
+    [
+     "Hinson",
+     "Seth R."
+    ],
+    [
+     "Zourdos",
+     "Michael C."
+    ]
+   ],
+   "journal": "Sports Medicine",
+   "year": 2025,
+   "volume": "56",
+   "issue": "2",
+   "page": "481-505",
+   "ctitle": "The Resistance Training Dose Response: Meta-Regressions Exploring the Effects of Weekly Volume and Frequency on Muscle Hypertrophy and Strength Gains",
+   "rel": [],
+   "upd": []
+  }
+ },
+ "R03": {
+  "head": "Grgic et al. (2022)",
+  "doi": "10.1016/j.jshs.2021.01.007",
+  "title": "Effects of resistance training performed to repetition failure or non-failure on muscular strength and hypertrophy: A systematic review and meta-analysis",
+  "cr": {
+   "authors": [
+    [
+     "Grgic",
+     "Jozo"
+    ],
+    [
+     "Schoenfeld",
+     "Brad J."
+    ],
+    [
+     "Orazem",
+     "John"
+    ],
+    [
+     "Sabol",
+     "Filip"
+    ]
+   ],
+   "journal": "Journal of Sport and Health Science",
+   "year": 2022,
+   "volume": "11",
+   "issue": "2",
+   "page": "202-211",
+   "ctitle": "Effects of resistance training performed to repetition failure or non-failure on muscular strength and hypertrophy: A systematic review and meta-analysis",
+   "rel": [],
+   "upd": []
+  }
+ },
+ "R04": {
+  "head": "Robinson et al. (2024)",
+  "doi": "10.1007/s40279-024-02069-2",
+  "title": "Exploring the Dose-Response Relationship Between Estimated Resistance Training Proximity to Failure, Strength Gain, and Muscle Hypertrophy: A Series of Meta-Regressions",
+  "cr": {
+   "authors": [
+    [
+     "Robinson",
+     "Zac P."
+    ],
+    [
+     "Pelland",
+     "Joshua C."
+    ],
+    [
+     "Remmert",
+     "Jacob F."
+    ],
+    [
+     "Refalo",
+     "Martin C."
+    ],
+    [
+     "Jukic",
+     "Ivan"
+    ],
+    [
+     "Steele",
+     "James"
+    ],
+    [
+     "Zourdos",
+     "Michael C."
+    ]
+   ],
+   "journal": "Sports Medicine",
+   "year": 2024,
+   "volume": "54",
+   "issue": "9",
+   "page": "2209-2231",
+   "ctitle": "Exploring the Dose–Response Relationship Between Estimated Resistance Training Proximity to Failure, Strength Gain, and Muscle Hypertrophy: A Series of Meta-Regressions",
+   "rel": [
+    "has-preprint"
+   ],
+   "upd": []
+  }
+ },
+ "R05": {
+  "head": "Refalo et al. (2023)",
+  "doi": "10.1007/s40279-022-01784-y",
+  "title": "Influence of Resistance Training Proximity-to-Failure on Skeletal Muscle Hypertrophy: A Systematic Review with Meta-analysis",
+  "cr": {
+   "authors": [
+    [
+     "Refalo",
+     "Martin C."
+    ],
+    [
+     "Helms",
+     "Eric R."
+    ],
+    [
+     "Trexler",
+     "Eric. T."
+    ],
+    [
+     "Hamilton",
+     "D. Lee"
+    ],
+    [
+     "Fyfe",
+     "Jackson J."
+    ]
+   ],
+   "journal": "Sports Medicine",
+   "year": 2022,
+   "volume": "53",
+   "issue": "3",
+   "page": "649-665",
+   "ctitle": "Influence of Resistance Training Proximity-to-Failure on Skeletal Muscle Hypertrophy: A Systematic Review with Meta-analysis",
+   "rel": [],
+   "upd": []
+  }
+ },
+ "R06": {
+  "head": "Vieira et al. (2021)",
+  "doi": "10.1519/JSC.0000000000003936",
+  "title": "Effects of Resistance Training Performed to Failure or Not to Failure on Muscle Strength, Hypertrophy, and Power Output: A Systematic Review With Meta-Analysis",
+  "cr": {
+   "authors": [
+    [
+     "Vieira",
+     "Alexandra F."
+    ],
+    [
+     "Umpierre",
+     "Daniel"
+    ],
+    [
+     "Teodoro",
+     "Juliana L."
+    ],
+    [
+     "Lisboa",
+     "Salime C."
+    ],
+    [
+     "Baroni",
+     "Bruno M."
+    ],
+    [
+     "Izquierdo",
+     "Mikel"
+    ],
+    [
+     "Cadore",
+     "Eduardo L."
+    ]
+   ],
+   "journal": "Journal of Strength &amp; Conditioning Research",
+   "year": 2021,
+   "volume": "35",
+   "issue": "4",
+   "page": "1165-1175",
+   "ctitle": "Effects of Resistance Training Performed to Failure or Not to Failure on Muscle Strength, Hypertrophy, and Power Output: A Systematic Review With Meta-Analysis",
+   "rel": [],
+   "upd": []
+  }
+ },
+ "R07": {
+  "head": "Schoenfeld, Ogborn & Krieger (2017)",
+  "doi": "10.1080/02640414.2016.1210197",
+  "title": "Dose-response relationship between weekly resistance training volume and increases in muscle mass: A systematic review and meta-analysis",
+  "cr": {
+   "authors": [
+    [
+     "Schoenfeld",
+     "Brad J."
+    ],
+    [
+     "Ogborn",
+     "Dan"
+    ],
+    [
+     "Krieger",
+     "James W."
+    ]
+   ],
+   "journal": "Journal of Sports Sciences",
+   "year": 2016,
+   "volume": "35",
+   "issue": "11",
+   "page": "1073-1082",
+   "ctitle": "Dose-response relationship between weekly resistance training volume and increases in muscle mass: A systematic review and meta-analysis",
+   "rel": [],
+   "upd": []
+  }
+ },
+ "R08": {
+  "head": "Schoenfeld et al. (2019)",
+  "doi": "10.1249/MSS.0000000000001764",
+  "title": "Resistance Training Volume Enhances Muscle Hypertrophy but Not Strength in Trained Men",
+  "cr": {
+   "authors": [
+    [
+     "SCHOENFELD",
+     "BRAD J."
+    ],
+    [
+     "CONTRERAS",
+     "BRET"
+    ],
+    [
+     "KRIEGER",
+     "JAMES"
+    ],
+    [
+     "GRGIC",
+     "JOZO"
+    ],
+    [
+     "DELCASTILLO",
+     "KENNETH"
+    ],
+    [
+     "BELLIARD",
+     "RAMON"
+    ],
+    [
+     "ALTO",
+     "ANDREW"
+    ]
+   ],
+   "journal": "Medicine &amp; Science in Sports &amp; Exercise",
+   "year": 2019,
+   "volume": "51",
+   "issue": "1",
+   "page": "94-103",
+   "ctitle": "Resistance Training Volume Enhances Muscle Hypertrophy but Not Strength in Trained Men",
+   "rel": [],
+   "upd": []
+  }
+ },
+ "R09": {
+  "head": "Carvalho et al. (2022)",
+  "doi": "10.1139/apnm-2021-0515",
+  "title": "Muscle hypertrophy and strength gains after resistance training with different volume-matched loads: a systematic review and meta-analysis",
+  "cr": {
+   "authors": [
+    [
+     "Carvalho",
+     "Leonardo"
+    ],
+    [
+     "Junior",
+     "Roberto Moriggi"
+    ],
+    [
+     "Barreira",
+     "Júlia"
+    ],
+    [
+     "Schoenfeld",
+     "Brad J."
+    ],
+    [
+     "Orazem",
+     "John"
+    ],
+    [
+     "Barroso",
+     "Renato"
+    ]
+   ],
+   "journal": "Applied Physiology, Nutrition, and Metabolism",
+   "year": 2022,
+   "volume": "47",
+   "issue": "4",
+   "page": "357-368",
+   "ctitle": "Muscle hypertrophy and strength gains after resistance training with different volume-matched loads: a systematic review and meta-analysis",
+   "rel": [],
+   "upd": []
+  }
+ },
+ "R10": {
+  "head": "Schoenfeld, Grgic & Krieger (2019)",
+  "doi": "10.1080/02640414.2018.1555906",
+  "title": "How many times per week should a muscle be trained to maximize muscle hypertrophy? A systematic review and meta-analysis of studies examining the effects of resistance training frequency",
+  "cr": {
+   "authors": [
+    [
+     "Schoenfeld",
+     "Brad Jon"
+    ],
+    [
+     "Grgic",
+     "Jozo"
+    ],
+    [
+     "Krieger",
+     "James"
+    ]
+   ],
+   "journal": "Journal of Sports Sciences",
+   "year": 2018,
+   "volume": "37",
+   "issue": "11",
+   "page": "1286-1295",
+   "ctitle": "How many times per week should a muscle be trained to maximize muscle hypertrophy? A systematic review and meta-analysis of studies examining the effects of resistance training frequency",
+   "rel": [],
+   "upd": []
+  }
+ },
+ "R11": {
+  "head": "Ramos-Campo et al. (2024)",
+  "doi": "10.1519/JSC.0000000000004774",
+  "title": "Efficacy of Split Versus Full-Body Resistance Training on Strength and Muscle Growth: A Systematic Review With Meta-Analysis",
+  "cr": {
+   "authors": [
+    [
+     "Ramos-Campo",
+     "Domingo J."
+    ],
+    [
+     "Benito-Peinado",
+     "Pedro J."
+    ],
+    [
+     "Andreu-Caravaca",
+     "Luis"
+    ],
+    [
+     "Rojo-Tirado",
+     "Miguel A."
+    ],
+    [
+     "Rubio-Arias",
+     "Jacobo Á."
+    ]
+   ],
+   "journal": "Journal of Strength &amp; Conditioning Research",
+   "year": 2024,
+   "volume": "38",
+   "issue": "7",
+   "page": "1330-1340",
+   "ctitle": "Efficacy of Split Versus Full-Body Resistance Training on Strength and Muscle Growth: A Systematic Review With Meta-Analysis",
+   "rel": [],
+   "upd": []
+  }
+ },
+ "R12": {
+  "head": "Haugen et al. (2023)",
+  "doi": "10.1186/s13102-023-00713-4",
+  "title": "Effect of free-weight vs. machine-based strength training on maximal strength, hypertrophy and jump performance – a systematic review and meta-analysis",
+  "cr": {
+   "authors": [
+    [
+     "Haugen",
+     "Markus E."
+    ],
+    [
+     "Vårvik",
+     "Fredrik T."
+    ],
+    [
+     "Larsen",
+     "Stian"
+    ],
+    [
+     "Haugen",
+     "Arvid S."
+    ],
+    [
+     "van den Tillaar",
+     "Roland"
+    ],
+    [
+     "Bjørnsen",
+     "Thomas"
+    ]
+   ],
+   "journal": "BMC Sports Science, Medicine and Rehabilitation",
+   "year": 2023,
+   "volume": "15",
+   "issue": "1",
+   "page": null,
+   "ctitle": "Effect of free-weight vs. machine-based strength training on maximal strength, hypertrophy and jump performance – a systematic review and meta-analysis",
+   "rel": [],
+   "upd": []
+  }
+ },
+ "R13": {
+  "head": "Moesgaard et al. (2022)",
+  "doi": "10.1007/s40279-021-01636-1",
+  "title": "Effects of Periodization on Strength and Muscle Hypertrophy in Volume-Equated Resistance Training Programs: A Systematic Review and Meta-analysis",
+  "cr": {
+   "authors": [
+    [
+     "Moesgaard",
+     "Lukas"
+    ],
+    [
+     "Beck",
+     "Mikkel Malling"
+    ],
+    [
+     "Christiansen",
+     "Lasse"
+    ],
+    [
+     "Aagaard",
+     "Per"
+    ],
+    [
+     "Lundbye-Jensen",
+     "Jesper"
+    ]
+   ],
+   "journal": "Sports Medicine",
+   "year": 2022,
+   "volume": "52",
+   "issue": "7",
+   "page": "1647-1666",
+   "ctitle": "Effects of Periodization on Strength and Muscle Hypertrophy in Volume-Equated Resistance Training Programs: A Systematic Review and Meta-analysis",
+   "rel": [],
+   "upd": []
+  }
+ },
+ "R14": {
+  "head": "Bickel, Cross & Bamman (2011)",
+  "doi": "10.1249/MSS.0b013e318207c15d",
+  "title": "Exercise dosing to retain resistance training adaptations in young and older adults",
+  "cr": {
+   "authors": [
+    [
+     "BICKEL",
+     "C. SCOTT"
+    ],
+    [
+     "CROSS",
+     "JAMES M."
+    ],
+    [
+     "BAMMAN",
+     "MARCAS M."
+    ]
+   ],
+   "journal": "Medicine &amp; Science in Sports &amp; Exercise",
+   "year": 2011,
+   "volume": "43",
+   "issue": "7",
+   "page": "1177-1187",
+   "ctitle": "Exercise Dosing to Retain Resistance Training Adaptations in Young and Older Adults",
+   "rel": [],
+   "upd": []
+  }
+ },
+ "R15": {
+  "head": "Schumann et al. (2022)",
+  "doi": "10.1007/s40279-021-01587-7",
+  "title": "Compatibility of Concurrent Aerobic and Strength Training for Skeletal Muscle Size and Function: An Updated Systematic Review and Meta-Analysis",
+  "cr": {
+   "authors": [
+    [
+     "Schumann",
+     "Moritz"
+    ],
+    [
+     "Feuerbacher",
+     "Joshua F."
+    ],
+    [
+     "Sünkeler",
+     "Marvin"
+    ],
+    [
+     "Freitag",
+     "Nils"
+    ],
+    [
+     "Rønnestad",
+     "Bent R."
+    ],
+    [
+     "Doma",
+     "Kenji"
+    ],
+    [
+     "Lundberg",
+     "Tommy R."
+    ]
+   ],
+   "journal": "Sports Medicine",
+   "year": 2021,
+   "volume": "52",
+   "issue": "3",
+   "page": "601-612",
+   "ctitle": "Compatibility of Concurrent Aerobic and Strength Training for Skeletal Muscle Size and Function: An Updated Systematic Review and Meta-Analysis",
+   "rel": [
+    "has-preprint"
+   ],
+   "upd": []
+  }
+ },
+ "R16": {
+  "head": "Singer et al. (2024)",
+  "doi": "10.3389/fspor.2024.1429789",
+  "title": "Give it a rest: a systematic review with Bayesian meta-analysis on the effect of inter-set rest interval duration on muscle hypertrophy",
+  "cr": {
+   "authors": [
+    [
+     "Singer",
+     "Alec"
+    ],
+    [
+     "Wolf",
+     "Milo"
+    ],
+    [
+     "Generoso",
+     "Leonardo"
+    ],
+    [
+     "Arias",
+     "Elizabeth"
+    ],
+    [
+     "Delcastillo",
+     "Kenneth"
+    ],
+    [
+     "Echevarria",
+     "Edwin"
+    ],
+    [
+     "Martinez",
+     "Amaris"
+    ],
+    [
+     "Androulakis Korakakis",
+     "Patroklos"
+    ],
+    [
+     "Refalo",
+     "Martin C."
+    ],
+    [
+     "Swinton",
+     "Paul A."
+    ],
+    [
+     "Schoenfeld",
+     "Brad J."
+    ]
+   ],
+   "journal": "Frontiers in Sports and Active Living",
+   "year": 2024,
+   "volume": "6",
+   "issue": null,
+   "page": null,
+   "ctitle": "Give it a rest: a systematic review with Bayesian meta-analysis on the effect of inter-set rest interval duration on muscle hypertrophy",
+   "rel": [],
+   "upd": []
+  }
+ },
+ "R17": {
+  "head": "Schoenfeld et al. (2017)",
+  "doi": "10.1519/JSC.0000000000002200",
+  "title": "Strength and Hypertrophy Adaptations Between Low- vs. High-Load Resistance Training: A Systematic Review and Meta-analysis",
+  "cr": {
+   "authors": [
+    [
+     "Schoenfeld",
+     "Brad J."
+    ],
+    [
+     "Grgic",
+     "Jozo"
+    ],
+    [
+     "Ogborn",
+     "Dan"
+    ],
+    [
+     "Krieger",
+     "James W."
+    ]
+   ],
+   "journal": "Journal of Strength and Conditioning Research",
+   "year": 2017,
+   "volume": "31",
+   "issue": "12",
+   "page": "3508-3523",
+   "ctitle": "Strength and Hypertrophy Adaptations Between Low- vs. High-Load Resistance Training: A Systematic Review and Meta-analysis",
+   "rel": [],
+   "upd": []
+  }
+ },
+ "R18": {
+  "head": "Varovic et al. (2025)",
+  "doi": "10.1055/a-2615-4935",
+  "title": "Does Muscle Length Influence Regional Hypertrophy? A Systematic Review and Meta-Analysis",
+  "cr": {
+   "authors": [
+    [
+     "Varovic",
+     "Dorian"
+    ],
+    [
+     "Wolf",
+     "Milo"
+    ],
+    [
+     "Schoenfeld",
+     "Brad J"
+    ],
+    [
+     "Steele",
+     "James"
+    ],
+    [
+     "Grgic",
+     "Jozo"
+    ],
+    [
+     "Mikulic",
+     "Pavle"
+    ]
+   ],
+   "journal": "International Journal of Sports Medicine",
+   "year": 2025,
+   "volume": "46",
+   "issue": "14",
+   "page": "1027-1036",
+   "ctitle": "Does Muscle Length Influence Regional Hypertrophy? A Systematic\n                    Review and Meta-Analysis",
+   "rel": [],
+   "upd": []
+  }
+ },
+ "R19": {
+  "head": "Lovegrove et al. (2022)",
+  "doi": "10.1519/JSC.0000000000003952",
+  "title": "Repetitions in Reserve Is a Reliable Tool for Prescribing Resistance Training Load",
+  "cr": {
+   "authors": [
+    [
+     "Lovegrove",
+     "Simon"
+    ],
+    [
+     "Hughes",
+     "Liam J."
+    ],
+    [
+     "Mansfield",
+     "Sean K."
+    ],
+    [
+     "Read",
+     "Paul J."
+    ],
+    [
+     "Price",
+     "Phil"
+    ],
+    [
+     "Patterson",
+     "Stephen D."
+    ]
+   ],
+   "journal": "Journal of Strength &amp; Conditioning Research",
+   "year": 2021,
+   "volume": "36",
+   "issue": "10",
+   "page": "2696-2700",
+   "ctitle": "Repetitions in Reserve Is a Reliable Tool for Prescribing Resistance Training Load",
+   "rel": [],
+   "upd": []
+  }
+ },
+ "R20": {
+  "head": "Mansfield et al. (2020)",
+  "doi": "10.1519/JSC.0000000000003779",
+  "title": "Estimating Repetitions in Reserve for Resistance Exercise: An Analysis of Factors Which Impact on Prediction Accuracy",
+  "cr": {
+   "authors": [
+    [
+     "Mansfield",
+     "Sean K."
+    ],
+    [
+     "Peiffer",
+     "Jeremiah J."
+    ],
+    [
+     "Hughes",
+     "Liam J."
+    ],
+    [
+     "Scott",
+     "Brendan R."
+    ]
+   ],
+   "journal": "Journal of Strength and Conditioning Research",
+   "year": 2020,
+   "volume": "Publish Ahead of Print",
+   "issue": null,
+   "page": null,
+   "ctitle": "Estimating Repetitions in Reserve for Resistance Exercise",
+   "rel": [],
+   "upd": []
+  }
+ },
+ "R21": {
+  "head": "Marques et al. (2025)",
+  "doi": "10.1249/MSS.0000000000003819",
+  "title": "Muscle Growth Is Very Strongly Correlated with Strength Gains after Lower Body Resistance Training: New Insight from Within-Participant Associations",
+  "cr": {
+   "authors": [
+    [
+     "MARQUES",
+     "ELISA A."
+    ],
+    [
+     "BALSHAW",
+     "TOM G."
+    ],
+    [
+     "FUNNELL",
+     "MARK P."
+    ],
+    [
+     "MCDERMOTT",
+     "EMMET J."
+    ],
+    [
+     "MAEO",
+     "SUMIAKI"
+    ],
+    [
+     "JAMES",
+     "LEWIS J."
+    ],
+    [
+     "FOLLAND",
+     "JONATHAN P."
+    ]
+   ],
+   "journal": "Medicine &amp; Science in Sports &amp; Exercise",
+   "year": 2025,
+   "volume": "57",
+   "issue": "12",
+   "page": "2838-2845",
+   "ctitle": "Muscle Growth Is Very Strongly Correlated with Strength Gains after Lower Body Resistance Training: New Insight from Within-Participant Associations",
+   "rel": [],
+   "upd": []
+  }
+ },
+ "R22": {
+  "head": "Balshaw et al. (2026)",
+  "doi": "10.1249/MSS.0000000000004078",
+  "title": "Ultrasound Muscle Thickness Is a Poor Index of Criterion Magnetic Resonance Imaging Measures of Resistance Training-Induced Muscle Growth",
+  "cr": {
+   "authors": [
+    [
+     "BALSHAW",
+     "THOMAS G."
+    ],
+    [
+     "FUNNELL",
+     "MARK P."
+    ],
+    [
+     "MCDERMOTT",
+     "EMMET J."
+    ],
+    [
+     "MADEN-WILKINSON",
+     "THOMAS M."
+    ],
+    [
+     "JAMES",
+     "LEWIS J."
+    ],
+    [
+     "FOLLAND",
+     "JONATHAN P."
+    ]
+   ],
+   "journal": "Medicine &amp; Science in Sports &amp; Exercise",
+   "year": 2026,
+   "volume": "58",
+   "issue": "11",
+   "page": "2466-2476",
+   "ctitle": "Ultrasound Muscle Thickness Is a Poor Index of Criterion Magnetic Resonance Imaging Measures of Resistance Training-Induced Muscle Growth",
+   "rel": [],
+   "upd": []
+  }
+ },
+ "R23": {
+  "head": "Damas et al. (2016)",
+  "doi": "10.1007/s00421-015-3243-4",
+  "title": "Early resistance training-induced increases in muscle cross-sectional area are concomitant with edema-induced muscle swelling",
+  "cr": {
+   "authors": [
+    [
+     "Damas",
+     "Felipe"
+    ],
+    [
+     "Phillips",
+     "Stuart M."
+    ],
+    [
+     "Lixandrão",
+     "Manoel E."
+    ],
+    [
+     "Vechin",
+     "Felipe C."
+    ],
+    [
+     "Libardi",
+     "Cleiton A."
+    ],
+    [
+     "Roschel",
+     "Hamilton"
+    ],
+    [
+     "Tricoli",
+     "Valmor"
+    ],
+    [
+     "Ugrinowitsch",
+     "Carlos"
+    ]
+   ],
+   "journal": "European Journal of Applied Physiology",
+   "year": 2015,
+   "volume": "116",
+   "issue": "1",
+   "page": "49-56",
+   "ctitle": "Early resistance training-induced increases in muscle cross-sectional area are concomitant with edema-induced muscle swelling",
+   "rel": [],
+   "upd": []
+  }
+ },
+ "R24": {
+  "head": "Balsalobre-Fernández et al. (2016)",
+  "doi": "10.1519/JSC.0000000000001316",
+  "title": "Effects of Strength Training on Running Economy in Highly Trained Runners: A Systematic Review With Meta-Analysis of Controlled Trials",
+  "cr": {
+   "authors": [
+    [
+     "Balsalobre-Fernández",
+     "Carlos"
+    ],
+    [
+     "Santos-Concejero",
+     "Jordan"
+    ],
+    [
+     "Grivas",
+     "Gerasimos V."
+    ]
+   ],
+   "journal": "Journal of Strength and Conditioning Research",
+   "year": 2016,
+   "volume": "30",
+   "issue": "8",
+   "page": "2361-2368",
+   "ctitle": "Effects of Strength Training on Running Economy in Highly Trained Runners: A Systematic Review With Meta-Analysis of Controlled Trials",
+   "rel": [],
+   "upd": []
+  }
+ },
+ "R25": {
+  "head": "Llanos-Lagos et al. (2024)",
+  "doi": "10.1007/s40279-023-01978-y",
+  "title": "Effect of Strength Training Programs in Middle- and Long-Distance Runners' Economy at Different Running Speeds: A Systematic Review with Meta-analysis",
+  "cr": {
+   "authors": [
+    [
+     "Llanos-Lagos",
+     "Cristian"
+    ],
+    [
+     "Ramirez-Campillo",
+     "Rodrigo"
+    ],
+    [
+     "Moran",
+     "Jason"
+    ],
+    [
+     "Sáez de Villarreal",
+     "Eduardo"
+    ]
+   ],
+   "journal": "Sports Medicine",
+   "year": 2024,
+   "volume": "54",
+   "issue": "4",
+   "page": "895-932",
+   "ctitle": "Effect of Strength Training Programs in Middle- and Long-Distance Runners’ Economy at Different Running Speeds: A Systematic Review with Meta-analysis",
+   "rel": [],
+   "upd": []
+  }
+ },
+ "R26": {
+  "head": "Llanos-Lagos et al. (2024)",
+  "doi": "10.1007/s40279-024-02018-z",
+  "title": "The Effect of Strength Training Methods on Middle-Distance and Long-Distance Runners' Athletic Performance: A Systematic Review with Meta-analysis",
+  "cr": {
+   "authors": [
+    [
+     "Llanos-Lagos",
+     "Cristian"
+    ],
+    [
+     "Ramirez-Campillo",
+     "Rodrigo"
+    ],
+    [
+     "Moran",
+     "Jason"
+    ],
+    [
+     "Sáez de Villarreal",
+     "Eduardo"
+    ]
+   ],
+   "journal": "Sports Medicine",
+   "year": 2024,
+   "volume": "54",
+   "issue": "7",
+   "page": "1801-1833",
+   "ctitle": "The Effect of Strength Training Methods on Middle-Distance and Long-Distance Runners’ Athletic Performance: A Systematic Review with Meta-analysis",
+   "rel": [],
+   "upd": []
+  }
+ },
+ "R27": {
+  "head": "Lauersen et al. (2018)",
+  "doi": "10.1136/bjsports-2018-099078",
+  "title": "Strength training as superior, dose-dependent and safe prevention of acute and overuse sports injuries: a systematic review, qualitative analysis and meta-analysis",
+  "cr": {
+   "authors": [
+    [
+     "Lauersen",
+     "Jeppe Bo"
+    ],
+    [
+     "Andersen",
+     "Thor Einar"
+    ],
+    [
+     "Andersen",
+     "Lars Bo"
+    ]
+   ],
+   "journal": "British Journal of Sports Medicine",
+   "year": 2018,
+   "volume": "52",
+   "issue": "24",
+   "page": "1557-1563",
+   "ctitle": "Strength training as superior, dose-dependent and safe prevention of acute and overuse sports injuries: a systematic review, qualitative analysis and meta-analysis",
+   "rel": [],
+   "upd": []
+  }
+ },
+ "R28": {
+  "head": "Wu et al. (2024)",
+  "doi": "10.1007/s40279-024-01993-7",
+  "title": "Do Exercise-Based Prevention Programs Reduce Injury in Endurance Runners? A Systematic Review and Meta-Analysis",
+  "cr": {
+   "authors": [
+    [
+     "Wu",
+     "Han"
+    ],
+    [
+     "Brooke-Wavell",
+     "Katherine"
+    ],
+    [
+     "Fong",
+     "Daniel T. P."
+    ],
+    [
+     "Paquette",
+     "Max R."
+    ],
+    [
+     "Blagrove",
+     "Richard C."
+    ]
+   ],
+   "journal": "Sports Medicine",
+   "year": 2024,
+   "volume": "54",
+   "issue": "5",
+   "page": "1249-1267",
+   "ctitle": "Do Exercise-Based Prevention Programs Reduce Injury in Endurance Runners? A Systematic Review and Meta-Analysis",
+   "rel": [],
+   "upd": []
+  }
+ },
+ "R29": {
+  "head": "Bohm et al. (2015)",
+  "doi": "10.1186/s40798-015-0009-9",
+  "title": "Human tendon adaptation in response to mechanical loading: a systematic review and meta-analysis of exercise intervention studies on healthy adults",
+  "cr": {
+   "authors": [
+    [
+     "Bohm",
+     "Sebastian"
+    ],
+    [
+     "Mersmann",
+     "Falk"
+    ],
+    [
+     "Arampatzis",
+     "Adamantios"
+    ]
+   ],
+   "journal": "Sports Medicine - Open",
+   "year": 2015,
+   "volume": "1",
+   "issue": "1",
+   "page": null,
+   "ctitle": "Human tendon adaptation in response to mechanical loading: a systematic review and meta-analysis of exercise intervention studies on healthy adults",
+   "rel": [],
+   "upd": []
+  }
+ },
+ "R30": {
+  "head": "Lazarczuk et al. (2022)",
+  "doi": "10.1007/s40279-022-01695-y",
+  "title": "Mechanical, Material and Morphological Adaptations of Healthy Lower Limb Tendons to Mechanical Loading: A Systematic Review and Meta-Analysis",
+  "cr": {
+   "authors": [
+    [
+     "Lazarczuk",
+     "Stephanie L."
+    ],
+    [
+     "Maniar",
+     "Nirav"
+    ],
+    [
+     "Opar",
+     "David A."
+    ],
+    [
+     "Duhig",
+     "Steven J."
+    ],
+    [
+     "Shield",
+     "Anthony"
+    ],
+    [
+     "Barrett",
+     "Rod S."
+    ],
+    [
+     "Bourne",
+     "Matthew N."
+    ]
+   ],
+   "journal": "Sports Medicine",
+   "year": 2022,
+   "volume": "52",
+   "issue": "10",
+   "page": "2405-2429",
+   "ctitle": "Mechanical, Material and Morphological Adaptations of Healthy Lower Limb Tendons to Mechanical Loading: A Systematic Review and Meta-Analysis",
+   "rel": [],
+   "upd": []
+  }
+ }
+}

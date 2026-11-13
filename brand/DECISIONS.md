@@ -50,7 +50,16 @@ Bezpłatna dystrybucja zmniejsza to ryzyko, ale go nie usuwa.
 | T-1 | Tekst w e-bookach justowany, z dzieleniem wyrazów. | `book.css`, `publications/build.py` (pyphen) |
 | T-2 | Nowa kolorystyka (czerń, dwa kolory + akcent, industrial) i nowe logo: wybór spośród min. 3 makiet. | `brand/explorations-v2/` |
 
+## 2026-11-13 · Etap 4: pełne książki
+
+| # | Decyzja | Wdrożenie |
+|---|---|---|
+| P-1 | Próbki zatwierdzone. Etap 4: dwie gotowe książki w PDF po polsku. EPUB nie jest wykonywany na tym etapie. | `publications/*/HARDSET_*_PL.pdf` |
+| P-2 | Wydania jasne i ciemne z tego samego źródła HTML. | `publications/build.py` |
+
 ## Otwarte (do decyzji właściciela)
 
 - Wybór stylu i logo (T-2). Po wyborze Brand System zostanie przebudowany, a kontrasty przeliczone.
-- Akceptacja próbek stylu B5 (etap 3), potem etap 4.
+- Wersja angielska obu książek (język EN został ustalony, polski jest pierwszy).
+- EPUB (odłożony). Układ B5 z panelami i wykresami wymaga uproszczonej wersji reflowable.
+- Zgoda na publikację. Nic nie zostało opublikowane.

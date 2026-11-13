@@ -1,0 +1,67 @@
+<style>
+@page toc { @top-left { content: "SPIS TREŚCI"; } }
+@page src { @top-left { content: "SKĄD POCHODZĄ ZASADY"; } }
+</style>
+
+<section class="cover">
+  <div class="cv-top"><span>Adrian Drożdżyński</span><span>Wersja 1.2</span></div>
+  <div class="cv-lock">{{lockup}}</div>
+  <div class="cv-title2">Continuous<br>Bench<br>Priority</div>
+  <p class="cv-p">Trzy treningi w tygodniu po 60 minut. Czterotygodniowa fala, seria kontrolna, jasne reguły zmiany bazy.</p>
+  {{wavecover}}
+  <div class="cv-foot"><span>Program oparty na metodzie HARDSET v1.0</span>{{mark}}</div>
+</section>
+
+<section class="plain colophon">
+  <p class="title">HARDSET Powerbuilding. Continuous Bench Priority</p>
+  <p>Wersja 1.2 · Adrian Drożdżyński · 2026. Publikacja bezpłatna. Język polski.</p>
+  <p>To program specjalistyczny oparty na metodzie HARDSET v1.0, opisanej w książce <i>HARDSET. Controlled Brutality</i>. Nie zastępuje jej i niczego w niej nie zmienia. Odstępstwa od zasad metody są nazwane w tekście i zebrane w aneksie B.</p>
+  <p>Książka jest przeznaczona dla zdrowych dorosłych, którzy trenują samodzielnie. Nie zastępuje porady lekarza ani fizjoterapeuty. Wyciskanie leżąc w stylu zawodniczym wykonuje się w racku z ustawionymi zabezpieczeniami albo z asekuracją. Przed startem w zawodach sprawdź aktualny regulamin swojej federacji: komendy, pauzę i wymogi techniczne. Książka nie podaje treści regulaminu.</p>
+  <p><b>Dla kogo.</b> Program jest ułożony dla osoby, która trenuje trzy razy w tygodniu po najwyżej 60 minut i stawia wyciskanie leżąc na pierwszym miejscu. Przy tym limicie tylne aktony barków i pośladki mają status Optional, czyli bez wymaganego minimum. To skutek limitu czasu, a nie ocena ich ważności. Serie wyciskania zawodniczego przy RPE 6–8 liczą się do Chest P. To wyjątek od standardu Hard Set, a nie wynik badań. Wszystkie pozostałe ćwiczenia działają według zwykłych zasad HARDSET.</p>
+  <p>Limit 60 minut na trening to założenie programu, które nie zostało jeszcze sprawdzone na prawdziwej siłowni. Zmierz dwie lub trzy pierwsze sesje. Ciężary w przykładach (baza fali 120 kg) są syntetyczne i nie są zalecane żadnej osobie.</p>
+  <p>Źródła sprawdzono w listopadzie 2026 roku (DOI, dane bibliograficzne, status wycofania). Praca wycofana przez wydawcę nie jest cytowana jako dowód. Parametry fali, serii kontrolnej i kroku bazy są hipotezami programu do sprawdzenia w praktyce, a nie wynikami badań.</p>
+  <p>© 2026 Adrian Drożdżyński. Wszelkie prawa zastrzeżone. Książka jest udostępniana bezpłatnie do użytku osobistego. Zmienianie, rozpowszechnianie zmienionych wersji i użycie komercyjne wymagają zgody autora.</p>
+  <p class="muted">Skład: Archivo i IBM Plex Mono (SIL Open Font License 1.1). Źródło tekstu, szablon i skrypty składu: repozytorium HARDSET.</p>
+</section>
+
+<div style="page:toc">
+<section class="page-break">
+  <h1>Spis treści</h1>
+  <ol class="toc">
+    <li><span>–</span>Skąd pochodzą zasady tego programu<em>{{pg:src}}</em></li>
+    <li class="part">Program</li>
+    <li><span>01</span>Cel i granice programu<em>{{pg:ch01}}</em></li>
+    <li><span>02</span>Sześć wzorców ruchu i ćwiczenia izolowane<em>{{pg:ch02}}</em></li>
+    <li><span>03</span>Fala czterotygodniowa<em>{{pg:ch03}}</em></li>
+    <li><span>04</span>AMRAP, e1RM i baza fali<em>{{pg:ch04}}</em></li>
+    <li><span>05</span>Gotowy tydzień: 3 × 60 minut<em>{{pg:ch05}}</em></li>
+    <li><span>06</span>Opcjonalnie: test 1RM i przygotowanie do zawodów<em>{{pg:ch06}}</em></li>
+    <li><span>07</span>Ograniczenia, bezpieczeństwo i kiedy program nie działa<em>{{pg:ch07}}</em></li>
+    <li class="part">Uzupełnienia</li>
+    <li><span>A–C</span>Aneksy: dziennik, relacja z HARDSET, zmiany względem pakietu<em>{{pg:apx}}</em></li>
+    <li><span>–</span>Bibliografia<em>{{pg:bib}}</em></li>
+  </ol>
+</section>
+</div>
+
+<div style="page:src">
+<section class="page-break" id="src">
+  <h1>Skąd pochodzą zasady tego programu</h1>
+  <p class="lead" style="margin-top:5mm">Program łączy dwa cele: wzrost maksymalnego wyniku w wyciskaniu leżąc i ciągły bodziec do rozbudowy górnej części ciała. Te cele mają różne reguły, więc każda decyzja w tej książce należy do jednej z trzech grup.</p>
+  <table class="dt text">
+    <thead><tr><th>Grupa</th><th>Co do niej należy</th></tr></thead>
+    <tbody>
+      <tr><td>Zasada HARDSET</td><td>Ćwiczenia uzupełniające: domyślnie dwie serie, pierwsza około 1 RIR, druga 0–1 RIR przy bezpiecznym stopie, progresja serii prowadzącej. Dwanaście obszarów jako narzędzie kontroli planu. Zakaz 0 RIR bez bezpiecznego stopu.</td></tr>
+      <tr><td><span class="tg exception">Wyjątek siłowy</span></td><td>Wyciskanie zawodnicze przy RPE 6–8, czyli z zapasem 2–4 powtórzeń. Pojedyncze powtórzenie (singiel) w poniedziałek. Trzy ekspozycje wyciskania w tygodniu. Serie wyciskania liczą się do Chest P. Fala procentowa zamiast progresji serii prowadzącej. Lżejszy tydzień wyciskania co cztery tygodnie, z kalendarza, a nie z potrzeby.</td></tr>
+      <tr><td><span class="tg hypothesis">Hipoteza programu</span></td><td>Długość fali, konkretne zakresy procentowe, seria AMRAP przy 82,5% bazy jako punkt kontrolny, krok bazy o 2,5 kg, reguła korekty w górę, 35 serii w trzech treningach po 60 minut. To ustawienia do sprawdzenia w praktyce, a nie wyniki badań.</td></tr>
+    </tbody>
+  </table>
+  <p>Wyjątki mają jedno uzasadnienie. Rozdział 08 metody HARDSET dopuszcza periodyzację, gdy celem jest siła maksymalna w konkretnym boju. Program korzysta z niej tylko w wyciskaniu, reszta treningu działa według zwykłych zasad. Jeśli jakiś punkt programu odbiega od zatwierdzonej metody, jest nazwany jako wyjątek siłowy, a nie po cichu przepisany.</p>
+  <div class="panel">
+    <h3>Co z tego wynika</h3>
+    <p><span class="tg study">Badanie</span> Programy z większymi obciążeniami, powyżej 80% ciężaru maksymalnego, dawały największe przyrosty siły, a przyrost masy był porównywalny w szerokim zakresie obciążeń <cite class="ref">[Currier 2023; R17]</cite>.</p>
+    <p>To uzasadnia ciężkie wyciskanie. Nie uzasadnia konkretnej fali z tej książki.</p>
+  </div>
+  <p>Oznaczenia przy twierdzeniach: <span class="tg study">Badanie</span> opiera się na opublikowanej pracy (numer lub autor i rok w nawiasie), <span class="tg decision">Decyzja HARDSET</span> to konwencja metody, <span class="tg heuristic">Heurystyka</span> to liczba, którą możesz zmienić, <span class="tg exception">Wyjątek siłowy</span> i <span class="tg hypothesis">Hipoteza programu</span> opisano wyżej.</p>
+</section>
+</div>

@@ -1,19 +1,33 @@
 # Publikacje HARDSET
 
-| Katalog | Książka | Próbka |
+Dwie gotowe książki w PDF (język polski, B5 pionowo, wydanie jasne i ciemne):
+
+| Książka | Plik (jasne) | Stron |
 |---|---|---|
-| `hardset-v1/` | HARDSET. Controlled Brutality (metoda v1.0) | 9 stron, wydanie jasne i ciemne |
-| `bench-priority-v1.1/` | HARDSET Powerbuilding. Continuous Bench Priority (szkic v1.2) | 10 stron, wydanie jasne i ciemne |
+| HARDSET. Controlled Brutality (metoda v1.0) | `hardset-v1/HARDSET_Controlled_Brutality_PL.pdf` | 56 |
+| HARDSET Powerbuilding. Continuous Bench Priority (v1.2) | `bench-priority-v1.1/HARDSET_Powerbuilding_Continuous_Bench_Priority_PL.pdf` | 29 |
 
-Źródłem jest `*/sample/source.html` (HTML z miejscami na logo, wykresy i ikony). Szablon i tokeny: `../brand/system/`. Wykresy: `charts.py` (dane z programu i walidatora). Zasady tekstu: `../brand/system/EDITORIAL_STANDARD.md`.
+Wydanie ciemne ma przyrostek `_dark`. Nic z tego katalogu nie jest opublikowane. Publikacja wymaga osobnej zgody właściciela.
 
-Budowanie (Python 3 z pyphen, Node, Playwright z Chromium):
+## Źródła do edycji
+
+- `<książka>/book/*.html`: części książki (`00_front` okładka, kolofon, spis, wstęp; `01`–`09` rozdziały; `a` aneksy; `y_matrix` matryca dowodów; `z_bib` bibliografia). Kolejność składu wynika z nazw plików.
+- `hardset-v1/book/refs.json` i `make_bib.py`: dane bibliograficzne (REFERENCES.md i Crossref, 13 listopada 2026) i generator `z_bib.html`. Bibliografia Bench Priority: `bench-priority-v1.1/book/make_bib.py`.
+- `charts.py`: wykresy SVG z danych programu i walidatora. `../brand/system/`: szablon i tokeny. Zasady tekstu: `../brand/system/EDITORIAL_STANDARD.md`.
+- Znaczniki w częściach: `{{logo}}`, `{{mark}}`, `{{lockup}}`, `{{ruler}}`, `{{wavecover}}`, `{{icon:nazwa}}`, `{{chart:nazwa}}`, `{{pg:id}}` (numer strony w spisie).
+
+## Budowanie
+
+Wymagane: Python 3 z pyphen, Node z Playwright i Chromium, pdftotext (poppler).
 
 ```
-NODE_PATH=$(npm root -g) python3 publications/build.py        # HTML i PDF, jasne i ciemne
-python3 publications/build.py --html-only                      # tylko HTML
+NODE_PATH=$(npm root -g) python3 publications/build.py            # obie książki, jasne i ciemne
+NODE_PATH=$(npm root -g) python3 publications/build.py --samples  # stare próbki 10-stronicowe
+python3 publications/build.py --html-only                          # tylko HTML
 ```
 
-`build.py` podmienia znaczniki `{{logo}}`, `{{chart:...}}`, `{{icon:...}}`, dodaje polskie twarde spacje i miękkie dzielniki, zapisuje `sample.html` i `sample-dark.html` (pliki pochodne, poza repozytorium) i renderuje PDF. `render_pdf.js` przerywa pracę, jeśli fonty marki się nie załadowały.
+`build.py` składa części, podmienia znaczniki, dodaje polskie twarde spacje i miękkie dzielniki, renderuje PDF dwa razy (pierwszy przebieg służy do ustalenia numerów stron w spisie treści) i zapisuje `book.html` i `book-dark.html` (pliki pochodne, poza repozytorium). `render_pdf.js` przerywa pracę, jeśli fonty marki się nie załadowały.
 
-Nic z tego katalogu nie jest opublikowane. Publikacja wymaga osobnej zgody właściciela.
+## Kontrole
+
+`python3 brand/system/build_brand.py --check` (kontrasty, aktualność plików marki), `python3 -m unittest discover -s programs/continuous-bench-priority/tests` (reguły programu i arytmetyka). Skan fraz zakazanych: `brand/system/EDITORIAL_STANDARD.md`.
